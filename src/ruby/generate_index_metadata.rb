@@ -1,4 +1,5 @@
 require 'yaml'
+require 'date'
 
 posts = []
 
@@ -7,7 +8,7 @@ Dir["data/posts/*.md"].each do |file|
   contents = File.read(file).lines
   raise "invalid header: #{file}" unless contents[0] == "---\n"
   raw_metadata = contents.drop(1).take_while {|x| x != "---\n" }.join
-  metadata = YAML.load(raw_metadata)
+  metadata = YAML.load(raw_metadata, permitted_classes: [Date])
   unless metadata["date"]
     metadata["date"] = Date.parse(file)
   end
