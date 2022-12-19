@@ -5,7 +5,10 @@ ${ header() }
     <h1>Xavier Shay</h1>
 
 $for(posts)$
-  $posts.title$ $posts.date$
+<div>
+  <h2><a href="$posts.url$">$posts.title$</a></h2>
+  <p class='date'>$posts.day$</p>
+</div>
 $endfor$
 
 ${ footer() }
