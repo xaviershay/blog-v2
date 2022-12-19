@@ -12,6 +12,10 @@ Dir["data/posts/*.md"].each do |file|
     metadata["date"] = Date.parse(file)
   end
 
+  unless metadata["slug"]
+    metadata["slug"] = File.basename(file.split('-', 4).drop(3).first.to_s, ".md")
+  end
+
   File.write("out/metadata/posts/#{File.basename(file)}.yml", metadata.to_yaml)
   posts << metadata
 end
