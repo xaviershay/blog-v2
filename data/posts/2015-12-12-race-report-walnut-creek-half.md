@@ -25,7 +25,7 @@ I eased back into over August and September but just I was feeling comfortable e
 
 After some consisent <span data-alt="38mi">60K</span> weeks through October and early November I started to dream again. I wasn't interested in travelling, so started looking for nearby races. Brazen's [Quarry Turkey Half](http://brazenracing.com/quarryturkey.html) had an appealingly flat course, but was too soon. Also, you know, not really into turkeys. [Walnut Creek](http://www.runwalnutcreek.com/) would give me a final month to polish up. I signed up on November 14th.
 
-![Walnut Creek Half Marathon]({{ site.baseurl }}/images/walnut-creek-half.jpg)
+![Walnut Creek Half Marathon](/images/walnut-creek-half.jpg)
 
 I jumped on the tail end of a program from Brad Hudson's [Run Faster](http://www.amazon.com/gp/product/B001ANYD3Q/ref=dp-kindle-redirect) book ("Half-Marathon Level 3"), which was basically the same as what I had been doing. I didn't quite have the base for the full recommend mileage so eased it back. Still hit my first ever <span data-alt="62mi">100K</span> week though!
 
@@ -43,7 +43,7 @@ The course runs gently downhill for <span data-alt="4mi">7K</span>, where begins
 
 You can never tell a course from its elevation profile. To my delight, this one was particularly misleading. Which of these hills would you prefer to run?
 
-![Walnut Creek Half Marathon Elevation Comparison]({{ site.baseurl }}/images/walnut-creek-elevation.png)
+![Walnut Creek Half Marathon Elevation Comparison](/images/walnut-creek-elevation.png)
 <center><em>Claimed on the left, my measurement on the right.</em></center>
 
 <p/>
@@ -60,7 +60,7 @@ But you can't tell a course by it's elevation profile. From there to the finish 
 
 He beat me comfortably, but then I beat comfortably what I really wanted: my time. In the end the hill was blessing. Without it, I wouldn't have gone out so fast and set myself up for such a huge PR. My final time: [86:43!](https://www.strava.com/activities/448924490/overview) Fourth in my age group, though I was still eight minutes off the podium. I was also soundly beaten by three kids and a sixty year old.
 
-![Yearly miles]({{ site.baseurl }}/images/miles-2015.png)
+![Yearly miles](/images/miles-2015.png)
 <center><em>My year in distance.</em></center>
 
 <p />

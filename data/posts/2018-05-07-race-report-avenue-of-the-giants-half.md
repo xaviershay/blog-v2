@@ -29,7 +29,7 @@ don't get injured.
 As a bonus, Brent was also trying to do the same thing, so I had a training and
 race partner as well. (He posted a [race report](https://brentnowak.net/2018/05/07/race-report-avenue-of-the-giants-half-marathon/) also.)
 
-![Brent and I running]({{ site.baseurl }}/images/theave-running.jpg)
+![Brent and I running](/images/theave-running.jpg)
 <center><em>Brent on the left, me on the right. Those trees tho.</em></center>
 
 <p />
@@ -65,7 +65,7 @@ data-alt="10mi">16K</span> at the [Guardsmen's Presidio event](https://www.strav
 beforehand that I did as an easy tempo. Also nabbed a cheeky [mile PR](https://www.strava.com/activities/1477373729/overview) (5:34)
 midway through at the GGRC end-of-quarter time trial.
 
-![GGRC at napa]({{ site.baseurl }}/images/ggrc-napa.jpg)
+![GGRC at napa](/images/ggrc-napa.jpg)
 <center><em>GGRC representing at the Napa Marathon and 5K.</em></center>
 
 <p />
@@ -129,7 +129,7 @@ ticking over the fifties!
 
 I crossed the line with just five seconds to spare. Official time: 1:29:55.
 
-![Brent and I afterwards]({{ site.baseurl }}/images/theave-after.jpg)
+![Brent and I afterwards](/images/theave-after.jpg)
 <center><em>"Should I include your legs?" "They're the best part."</em></center>
 
 <p />

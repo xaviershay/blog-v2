@@ -17,7 +17,7 @@ This post is a collection of reading I found useful.
 
 First, [a map](http://www.linkingmelbourne.vic.gov.au/maps/east-west-link) of where the tunnel would be:
 
-![East West Link Map]({{ site.baseurl }}/images/east-west-link-map.png)
+![East West Link Map](/images/east-west-link-map.png)
 
 Not shown is a large amount of extra widening of Citylink on the western side that is included in the project.
 

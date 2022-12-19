@@ -11,11 +11,11 @@ In 1974 Ernő Rubik accidentally invented a puzzle he couldn't solve. It took hi
 
 This is a _Rubik's Cube_.
 
-![Rubik's Cube]({{ site.baseurl }}/images/rubiks-cube.png)
+![Rubik's Cube](/images/rubiks-cube.png)
 
 This is a _GuoGuan YueXiao Speed Cube_.
 
-![Rubik's Cube]({{ site.baseurl }}/images/guoguan-cube.png)
+![Rubik's Cube](/images/guoguan-cube.png)
 
 You could be forgiven for mistaking the two. The Rubik's patents expired in 2000, and the subsequent copies have surpassed the original in quality and manufacture. They each have a distinct feel, but anything listed on [bestspeedcubes.com](http://www.bestspeedcube.com/) is going to work well.
 

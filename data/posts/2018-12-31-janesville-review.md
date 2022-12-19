@@ -10,7 +10,7 @@ in 2008. _Janesville: An American Story_ follows a number of citizens of
 Janesville through the following years as the town and its people try to
 reinvent themselves.
 
-![Janesville]({{ site.baseurl }}/images/janesville.jpg)
+![Janesville](/images/janesville.jpg)
 
 I've read similar books (_The Unwinding_), so I knew what was coming, but I
 couldn't put this down. It hit me in the same kind of way _Grapes of Wrath_

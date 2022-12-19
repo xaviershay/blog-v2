@@ -29,7 +29,7 @@ O'Shaughnessy Dam was completed in 1923, over strenuous objection from John
 Muir and others, to provide a secure water supply for San Francisco. You need
 to hike over it for all trails leading out of the area.
 
-![O'Shaughnessy Dam]({{ site.baseurl }}/images/hetch-hetchy-dam.jpg)
+![O'Shaughnessy Dam](/images/hetch-hetchy-dam.jpg)
 <center><em>O'Shaughnessy Dam.</em></center>
 <p />
 
@@ -38,7 +38,7 @@ falls, a relatively flat start to the day. Started climbing up towards Tiltil
 valley on a mostly pleasant grade. Decent amount of water on the trail,
 including some sections where I just needed to wade through.
 
-![Wapama Falls]({{ site.baseurl }}/images/hetch-hetchy-falls.jpg)
+![Wapama Falls](/images/hetch-hetchy-falls.jpg)
 <center><em>Wapama Falls.</em></center>
 <p />
 
@@ -54,7 +54,7 @@ though weren't too much of a problem while I was moving. Found a nice campsite
 off the trail just before the junction at the top of a rise that was exposed
 enough for a breeze to be keeping the bugs mostly at bay.
 
-![Night one camp]({{ site.baseurl }}/images/hetch-hetchy-camp.jpg)
+![Night one camp](/images/hetch-hetchy-camp.jpg)
 <center><em>Night one camp.</em></center>
 <p />
 
@@ -66,7 +66,7 @@ The wind had died down so the mosquitoes were back. Cooked breakfast and packed
 up quickly to continue on to Tilden Lake. Arrived late morning and took a quick
 swim, paid for with a number of bites.
 
-![Tilden Lake]({{ site.baseurl }}/images/tilden-lake.jpg)
+![Tilden Lake](/images/tilden-lake.jpg)
 <center><em>Tilden Lake.</em></center>
 <p />
 
@@ -81,7 +81,7 @@ down Moraine ridge to Beehive Meadows, where I found a nice site. It already
 had one party camped so I considered hiking on, but the area was very boggy and
 I wasn't sure I'd be able to find something comparable before sunset.
 
-![Night two camp.]({{ site.baseurl }}/images/hetch-hetchy-camp-2.jpg)
+![Night two camp.](/images/hetch-hetchy-camp-2.jpg)
 <center><em>Night two camp.</em></center>
 <p />
 
@@ -94,7 +94,7 @@ Hiked up to Laurel Lake, was very wet for the first <span data-alt="half
 mile">kay</span> but soon found a fantastic campsite next to the lake that I
 could have easily made the day before. Oh well.
 
-![Laurel Lake]({{ site.baseurl }}/images/laurel-lake.jpg)
+![Laurel Lake](/images/laurel-lake.jpg)
 <center><em>Laurel Lake.</em></center>
 <p />
 
@@ -125,6 +125,6 @@ pair of Salomon's Sense Pros, but I was too lazy beforehand and didn't
 get around to it. I now dislike the Hokas even more --- I got terrible
 blisters, they never dry, and they smell really bad.
 
-![Topo]({{ site.baseurl }}/images/hetch-hetchy-topo.jpg)
+![Topo](/images/hetch-hetchy-topo.jpg)
 <center><em>Hetch Hetchy to Tilden Lake loop. 3 days, <span data-alt="48mi">78K</span> travelled.</em></center>
 <p />

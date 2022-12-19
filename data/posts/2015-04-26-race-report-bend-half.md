@@ -15,7 +15,7 @@ I'm three beers in so now seems as good a time as any to write up a race report.
  
 Let me start with this: Bend is fucking beautiful.
 
-![Bend]({{ site.baseurl }}/images/bend.jpg)
+![Bend](/images/bend.jpg)
 
 Look at that mountain. Look at it.
  
@@ -29,7 +29,7 @@ We rose with the sun at 6:15am. The weather forecast put us bang on freezing, bu
  
 Down at the start we snapped our first pic of the runners.
  
-![Bend runners]({{ site.baseurl }}/images/bend-runners.jpg)
+![Bend runners](/images/bend-runners.jpg)
 
 You'll recognize me on the right from the sensible ear warming headband and high viz (i.e. pink) gloves. To my left is Jodie, the missus, running her first big race. Then Meg in the middle, who hasn't run one in a while but is excited to be back at it. She's lucky enough to have snagged Ned, who's sporting the best shorts in the galaxy there on the right. Number 44 Nick missed the registration cutoff for the half a few weeks back, so he's the only one running the full. He knocked over a <span data-alt='20 miler'>30K</span> last weekend so he should be fine.
  
@@ -88,6 +88,6 @@ Sian and Jason (you haven't met them yet) weren't running. Sian is a physiothera
  
 And those screws? For mounting your medal on the wall. It doubles as a bottle opener.
 
-![Bend bottle opener]({{ site.baseurl }}/images/bend-bottle-opener.jpg) 
+![Bend bottle opener](/images/bend-bottle-opener.jpg) 
 
 Oregon.

@@ -35,7 +35,7 @@ I had to be back on my feet late July for a Chipotle Trifecta with Mark, which I
 
 Next up was pacing Sarah at the Santa Rosa Marathon late August. My goal: get through it with good nutrition and no injuries. Mission successful. In the month leading up to it I never topped <span data-alt="30mi">50K</span> in a week, but it was a flat course and a slower pace for me. I had a lot of fun rolling around with friends and posing for all the race photographers.
 
-![GGRC represents at Santa Rosa]({{ site.baseurl }}/images/ggrc-santa-rosa.jpg)
+![GGRC represents at Santa Rosa](/images/ggrc-santa-rosa.jpg)
 <center><em>GGRC represents at the Santa Rosa Marathon.</em></center>
 <p/>
 
@@ -43,7 +43,7 @@ After a precautionary week off, I started my lead up in September. The training 
 
 My favourite was a weekend away with about ten friends in the Pinnacles National Park. Over <span data-alt='35mi'>55K</span> of gorgeous trails, including a summit of North Chalone Peak with Erica.
 
-![North Chalone Peak]({{ site.baseurl }}/images/north-face-north-chalone.jpg)
+![North Chalone Peak](/images/north-face-north-chalone.jpg)
 <center><em>View from the summit of North Chalone Peak.</em></center>
 <p/>
 
@@ -55,15 +55,15 @@ Overall, I was pretty happy with my weekend long runs but would have liked a lot
 
 ### The Race
 
-![Map]({{ site.baseurl }}/images/north-face-map.png)
+![Map](/images/north-face-map.png)
 
-![North Face 50mi Elevation Profile]({{ site.baseurl }}/images/north-face-elevation.png)
+![North Face 50mi Elevation Profile](/images/north-face-elevation.png)
 
 These things start _early_. 2:40 wakeup to catch a 3:30 shuttle to arrive at 4:15 for a 5:00 start. The sun won't be up for another two hours. To my surprise and delight, the start area had a number of fires and gas heaters. I huddled under one with who I presume were some French pros who had flown in for the event. They weren't speaking English so I'm not sure, but they looked the part.
 
 Sunrise at the top of Miwok was a spectacular precursor to the sights to follow during the day. I can't emphasise enough just how beautiful this race is, and the weather was perfect. Not a cloud in the sky. Running up Coastal to the McKennan Gulch aid station a fellow runner remarked that it felt like running through a [Strava ad](http://www.youtube.com/watch?v=Afi2A7m4fWU&t=0m57s). "Actually," another corrected, "I'm pretty sure this trail _is_ in one."
 
-![Why is there a car]({{ site.baseurl }}/images/north-face-coastal-car.jpg)
+![Why is there a car](/images/north-face-coastal-car.jpg)
 <center><em>That's me in the pink shorts. I got a lot of compliments for those. Photo by 
 <a href="https://www.strava.com/activities/792832889">Bernhard Tepser</a>.
 </em></center>
@@ -75,7 +75,7 @@ The third quarter wasn't fun. My footing was getting sloppy on the root-filled s
 
 From Dipsea stairs onwards I was in survival mode up the climbs. Walking as fast as I could was still slower than most other people were hiking. I was still able to run the flats and descents, though the latter in particular were somewhat painful.
 
-![Dipsea Trail]({{ site.baseurl }}/images/north-face-dipsea.jpg)
+![Dipsea Trail](/images/north-face-dipsea.jpg)
 <center><em>The Dipsea Trail, by <a href="https://www.flickr.com/photos/eekim/7124997147/">Eugene Kim</a>.</em></center>
 
 <p/>
@@ -94,7 +94,7 @@ It's oddly specific, but I remember leaving the final aid station at Alta at 3:1
 
 Twenty four minutes later I crossed the finish line. Fifty trail miles, <span data-alt="11000ft">3600m</span> of elevation over eight climbs, in a final time of 10:38:56.
 
-![Medal]({{ site.baseurl }}/images/north-face-selfie.jpg)
+![Medal](/images/north-face-selfie.jpg)
 <center><em>Got the medal.</em></center>
 
 <p/>
@@ -126,7 +126,7 @@ On pacing, I came through half way in 4:30 but hadn't felt like I'd rushed it. G
 
 My nutrition plan combined Margarita shot blocks and roast potatoes, though I wasn't going to be too strict about it. "Never try anything you haven't tried in training" is the rule, but as my first race at this distance I was more interested in establishing a base case even if it went terribly. So my actual plan was shot blocks and potatoes while running to keep up minimum calories, combined with whatever I felt like at aid stations. Unfortunately the potato wasn't as appetizing as I'd found it in training, and I wasn't able to eat as much of it as planned. To compensate though, I tried all manner of things from the aid buffett. Mountain Dew and Skittles was just what I felt like at McKennan Gulch, the only time that has been true in the last decade. I settled into a routine of oranges and PB&J sandwiches for the last few stops which felt good. The latter needs water to wash down. Suprisingly, I wasn't all over the potato chips. I'd like to try hummus and olives in the future.
 
-![Aid Station]({{ site.baseurl }}/images/north-face-aid-station.jpg)
+![Aid Station](/images/north-face-aid-station.jpg)
 <center><em>One of the aid stations, by <a href="https://www.flickr.com/photos/activesteve/28925829336/">Active Steve</a>.</em></center>
 
 <p/>
@@ -137,7 +137,7 @@ This was the final outing of my [Salomon Sense Pro 2 shoes](http://www.salomon.c
 
 I'm not yet convinced I want to do something this long again, but I'm definitely still keen to keep trail running. Next time I want to drop back down to 50K. It's long enough to try addressing some of the problems and challenges I'm motivated to fix, without being crushing at my current level of fitness. I'm glad I signed up for the longer distance though. I think if I'd done a 50K it would have had many of the same issues, but given it didn't really start getting difficult until 40K I would have just chalked it up to "of course it's going to be hard" and wouldn't have reflected on what to change up. Having now seen how decisions extrapolate out to a longer distance, I know what I want to learn on a shorter course before thinking about a repeat long run.
 
-![Map]({{ site.baseurl }}/images/2016h2-heatmap.png)
+![Map](/images/2016h2-heatmap.png)
 <center><em>The last six months of running.</em></center>
 <p/>
 

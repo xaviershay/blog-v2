@@ -24,7 +24,7 @@ Play along at home with this [CalTopo map](http://caltopo.com/m/55TJ), or skip t
 
 Wilderness permits needs to be picked up by 10am the day of, so I drove up a day prior. Good thing too! Being a holiday weekend it took over an hour to get through the park entrance, making total trip time from San Francisco to Toulumne Meadows six and a half hours. With my permit and rented bear canister taken care of and the rest of an afternoon to kill, I drove back down to Tenaya Lake with my hydrapak for a [quick jaunt up to Clouds Rest](https://www.strava.com/activities/633654591) and back.
 
-![Clouds Rest Elevation Profile]({{ site.baseurl }}/images/clouds-rest-elevation.png)
+![Clouds Rest Elevation Profile](/images/clouds-rest-elevation.png)
 <center><em>First climb is just <span data-alt="over a mile">under 2K</span> at 17% grade. Gotta get that vert!</em></center>
 
 <p />
@@ -39,7 +39,7 @@ Thankfully woke up feeling fantastic. My bear canister was slightly too small to
 
 I'd planned an easy day with a short hike into Young Lakes to camp, then some off-trail exploring in the afternoon to get a feel for things. I added a lap of Dog Lake on the way, where I discovered an amazing population of blue dragon flies. After setting up camp on a small flat ledge uphill from the lake, I followed the contour line around to meet up with the river. From there, some pretty serious bush bashing and back tracking was needed to get to the source: a small glacier nestled in a valley below White Mountain. Coming back down the other side was easier, and I kept running into (and failing to follow) a cairned trail someone had left.
 
-![Lower Young Lake]({{ site.baseurl }}/images/lower-young-lake.jpg)
+![Lower Young Lake](/images/lower-young-lake.jpg)
 <center><em>The lower lake. I was actually camped by the middle one, but close enough. By <a href="https://www.flickr.com/photos/navin75/85860490/">Navin75</a>.</em></center>
 <p />
 
@@ -53,7 +53,7 @@ Heading north towards Roosevelt Lake, a botched river crossing left me with wet 
 
 After a pleasant walk across a meadow to the lake, I made an ill-advised decision to pass by on the eastern side. While barely a few hundred metres, it was a solid traverse across steep, loose, large rocks that felt like they were going to collapse down on top of me at any moment. I also had to go up and down a few times to avoid large snow deposits. It must have taken me an hour or two to get across. I was pretty nerve-wracked by the end, and comparatively thrilled for the climb to the pass.
 
-![Roosevelt Lake]({{ site.baseurl }}/images/roosevelt-lake.jpg)
+![Roosevelt Lake](/images/roosevelt-lake.jpg)
 <center><em>Looking North across Roosevelt Lake, with the pass at the back. By <a href="https://www.flickr.com/photos/bluecanoe/3719545806/">Blue Canoe</a>.</em></center>
 
 <p />
@@ -72,7 +72,7 @@ _Distance: <span data-alt="11mi (+2250ft)">17K (+685m)</span>_
 
 After yesterday I felt like spending a day on the trails. First I set off up Matterhorn Canyon, thinking I would loop up around Peeler Lake and down through Kerrick Lake. It begins with a number of crossings (wet feet again!) then meanders up the creek.
 
-![Matterhorn Canyon]({{ site.baseurl }}/images/matterhorn-canyon.jpg)
+![Matterhorn Canyon](/images/matterhorn-canyon.jpg)
 <center><em>Add more flowers. By <a href='https://www.flickr.com/photos/_jfr_/10915731926/'>JFR</a>.</em></center>
 <p/>
 
@@ -83,7 +83,7 @@ Getting back to the PCT with a few hours of sunlight left, my new plan was to re
 Cresting Benson Pass was a highlight of the trip. The exhiliration of finishing a climb and an incredible view mixed with the relief of finally finding a pass that wasn't covered in snow!
 
 
-![Benson Pass]({{ site.baseurl }}/images/benson-pass.jpg)
+![Benson Pass](/images/benson-pass.jpg)
 <center><em>Just imagine it at sunset. By <a href='https://www.flickr.com/photos/violettwilight/3047670618/'>Jeff</a>.</em></center>
 <p/>
 
@@ -99,7 +99,7 @@ The Rodgers Canyon trail wandered off the edge of my map, but looked like it _sh
 
 My heart was buoyed around lunch time coming across an AmeriCorps crew on trail maintenance duty. They confirmed the trails did link up and my descent wouldn't have to be reversed. I hit the signposted junction around noon: Glen Aulin, fourteen miles; Tuolumne Meadows: twenty one.
 
-![Tuolmone Canyon Signpost]({{ site.baseurl }}/images/tuolomne-canyon-signpost.jpg)
+![Tuolmone Canyon Signpost](/images/tuolomne-canyon-signpost.jpg)
 <center><em>A welcome sight. By <a href='https://www.flickr.com/photos/irishmick/3696014460/'>Irish Mick</a>.</em></center>
 <p/>
 
@@ -109,7 +109,7 @@ With nine hours of daylight left, it appeared possible I could leg it all the wa
 
 The start of the canyon trail was another highlight of the trip. Well constructed trail up a pleasant grade, alongside the roaring Tuolomne river. I set out aggresively.
 
-![Tuolomne Canyon]({{ site.baseurl }}/images/tuolomne-canyon.jpg)
+![Tuolomne Canyon](/images/tuolomne-canyon.jpg)
 <center><em>By <a href='https://www.flickr.com/photos/irishmick/3695936218/'>Irish Mick</a>.</em></center>
 <p/>
 
@@ -129,7 +129,7 @@ An easy exit along the PCT. I technically could have stayed another night, but w
 
 _Distance: <span data-alt="7mi (+1400ft)">12K (+435m)</span>_
 
-![Full trail]({{ site.baseurl }}/images/yosemite-google-earth.png)
+![Full trail](/images/yosemite-google-earth.png)
 <center><em>5 days, <span data-alt='75m'>120K</span> covered, <span data-alt='16,500ft'>5000m</span> elevation gained.</em></center>
 <p />
 
@@ -141,7 +141,7 @@ I carried about <span data-alt="35lbs">16kg</span> on my back, though my [itemiz
 
 I've had my Blackwolf Odyssey 65L pack for about a decade and a half by now, and it looks it. It has been heavily used for all my travel and backpacking in that time, and I've only needed to replace the waist clip. It's a tank. For this trip, I removed the detachable 10L day pack and lined it with a regular garbage bag. If I were to replace it, I'd be looking for water access from the front without stopping (either a reservoir or pockets), and likely something a bit lighter. I also don't use the interior divider that can be used to separate the bag into two sections.
 
-![Pack]({{ site.baseurl }}/images/gear-pack.jpg)
+![Pack](/images/gear-pack.jpg)
 
 I rented a bear canister from the Wilderness office for $5, which I'm pretty sure was a [Garcia Backpackers' Cache](https://www.amazon.com/Backpackers-Cache-Bear-Resistant-Container/dp/B003ZZWBWC). It was opaque and didn't quite fit all my food. I was envious of the [BearVault BV500](http://www.bearvault.com/) I saw others with, but in the end the Garcia worked fine.
 
@@ -159,7 +159,7 @@ The back of my wide-brimmed hat hit the top of my pack if I was sloppy in packin
 
 Salomon's [Sense Pro 2](http://www.salomon.com/us/product/sense-pro-2.html) were easily the most comfortable out of the dozen or so pairs of trail shoe that I tried. I use these primarily for running, but they work for hiking too. I was initially lukewarm on the lacing system but it's grown on me. I combined them with [Injinji toe socks](http://www.injinji.com/3-pack-run-2-0-original-weight-no-show.html), of which I had a spare pair packed that had dissappeared by the time I reached Young Lakes. As a result I had a hard time keeping my feet dry. I was basically hiking with wet feet for the first three days, which combined with sliding around off trail caused some minor blisters. Historically I've used bandaids to manage blisters, but for this trip I was carrying a roll of 0.5" Micropore surgical tape. It was a winner! While it did leave a bit of sticky residue, it stayed put even through a full day of damp hiking. I replaced it everyday, though likely didn't need to. I had to buy a 24-pack, so I'll be giving them out as presents for the foreseeable future.
 
-![Locomotion]({{ site.baseurl }}/images/gear-locomotion.jpg)
+![Locomotion](/images/gear-locomotion.jpg)
 
 This was also the first trip I've tried [hiking poles](http://blackdiamondequipment.com/en_US/trekking-poles/distance-carbon-z-pole-BD11217700001001.html). I didn't realise how much of a cheat they are! Climbs are so much easier, and even on flat ground they really propel you along. I avoided them for technical descents, as I found they made my footing generally worse.
 
@@ -171,7 +171,7 @@ The [Neoair sleeping mat](http://www.cascadedesigns.com/therm-a-rest/mattresses/
 
 I've put off buying a proper sleeping bag for a while now, so this trip I finally made the commitment. I went with [Sierra Design's Backcountry Quilt](https://www.amazon.com/Sierra-Designs-Backcountry-2-Season-Sleeping/dp/B00ICYUSBW) and am glad I did. As both a restless and a hot sleeper I've never been that comfortable in bags. The quilt let me control temperature easily, and didn't get tangled up as I rolled around. I used the hood on the third night when I picked a cold site, and it worked well.
 
-![Sleep & Shelter]({{ site.baseurl }}/images/gear-shelter-sleep.jpg)
+![Sleep & Shelter](/images/gear-shelter-sleep.jpg)
 
 Since I try to avoid products of animal suffering, I wasn't thrilled with buying a down product, but they are far more durable, warm, and light than synthetic alternatives. Sierra Design's down is traceable back to factories that don't use live plucking, and it is completely a by-product of the meat industry. Down typically accounts for [less than 10% the value of a bird](http://trackmydown.com/blendmix.aspx?lotno=1904L14F917). I also picked up a [down hoody](https://sierradesigns.com/elite-dridown-hoody/) which is much warmer than any other piece of clothing I own.
 
@@ -181,7 +181,7 @@ Something old and something new. My Sigg 750ml I've had about as long as my pack
 
 I was carrying [Aquamire](http://www.aquamira.com/product/aquamira-water-treatment/) decanted into small dropper bottles to treat water, but didn't use it much. That may be irresponsible – it's certainly against official recommendations – but I figure it's safer than driving. The water in Yosemite this time of year is all flowing fast and has literally just come from glaciers. I used Aquamire once when I collected water from a more stagnant lake and it was tasteless as advertised, but generally there were plentiful rivers along the route and I typically refilled my 1L multiple times a day.
 
-![Hydration]({{ site.baseurl }}/images/gear-hydration.jpg)
+![Hydration](/images/gear-hydration.jpg)
 
 ### Electronics
 

@@ -26,7 +26,7 @@ see how we could turn the dial towards honor, rather than flip the switch.
 This book gave me a richer understanding of some issues I've wrestled with
 around ethical altruism, violence, and justice.
 
-![Why Honor Matters]({{ site.baseurl }}/images/why-honor-matters.jpg)
+![Why Honor Matters](/images/why-honor-matters.jpg)
 
 #### Ethical Altruism
 
@@ -126,6 +126,6 @@ better critiques of the ideas in this book exist than the author presents, but
 that doesn't detract from the book. It has given me fuel for thought, not a stone
 tablet.
 
-Like the [_The Righteous Mind_]({{ site.baseurl }}/articles/2015-reading-list.html)
+Like the [_The Righteous Mind_](/articles/2015-reading-list.html)
 this book has given me new ideas to help understand and interpret the world.
 Highly recommended.

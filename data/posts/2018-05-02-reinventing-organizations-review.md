@@ -14,7 +14,7 @@ management structures and are instead self-managed. I liked that this book
 generally wasn't prescriptive. It presented a variety of processes: some
 resonated with me, some very much did not.
 
-![Reinventing Organizations book cover]({{ site.baseurl }}/images/reinventing-organizations.jpg)
+![Reinventing Organizations book cover](/images/reinventing-organizations.jpg)
 
 In my management experiences I always felt I was searching in the dark for ways
 to make work less alienating. This book shined a light.
