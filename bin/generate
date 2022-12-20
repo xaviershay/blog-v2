@@ -1,10 +1,3 @@
 #!/bin/bash
 
-set -ex
-
-mkdir -p out/metadata/posts
-time ruby src/ruby/generate_index_metadata.rb
-mkdir -p out/site/articles
-FILE=2013-12-31-2013-reading-list.md
-time pandoc --template src/template.html data/posts/$FILE --metadata-file=out/metadata/posts/$FILE.yml | gzip > out/site/articles/2013-reading-list.html
-echo "" | time pandoc --template src/index.html --metadata-file=out/metadata/index.yml | gzip > out/site/index.html
+exec rake build
