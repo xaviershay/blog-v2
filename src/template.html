@@ -6,6 +6,19 @@ ${ header() }
     <title>$title$</title>
   </head>
   <body>
+    <header>
+      <div class='overlay'>
+        $if(image.feature_credit)$
+        <div class="featured-image-credit">
+          <a href='$image.feature_credit.link$'>
+            <em>$image.feature_credit.title$</em> by $image.feature_credit.author$
+          </a>
+        </div>
+        $endif$
+      </div>
+      <div style="background-image: url(/images/$image.feature$)" class='featured-image'></div>
+      <h1><a href="/">Xavier Shay</a></h1>
+    </header>
     <article>
       <h1>$title$</h1>
       $body$
