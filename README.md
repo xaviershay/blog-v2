@@ -46,6 +46,8 @@ standard `Rakefile`.
 
 * **Ruby.** Building website has no further dependencies outside of the
   standard library. Testing requires bundler for a few gems.
+  * **WEBrick.** This used to be standard library but is now a gem. Extremely
+    stable still though.
   * **RSpec.** I'm ok with this, very stable. Might consider `Test::Unit`
     though if this was the only gem remaining.
   * **Capybara.** Less ok with this, in particularly due to dependency on
