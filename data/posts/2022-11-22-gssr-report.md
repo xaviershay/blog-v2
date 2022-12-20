@@ -53,11 +53,11 @@ Took literally the first possible wrong turn, following a group down a fire trai
 
 Had to run back through the sweeper along pretty runnable track to arrive at the first checkpoint 10 minutes before cutoff. (I think they retroactively extended this cutoff, it was pretty aggressive.)
 
-<div class='image-strip'>
-  <img width="52.5%" src="/images/gssr/sensible-hat.jpg" />
+<figure class='image-strip'>
+  <img width="51.5%" src="/images/gssr/sensible-hat.jpg" />
   <img width="46.9%" src="/images/gssr/dad-hike.jpg" />
-  <center><em>IT'S SENSIBLE HAT TIME</em></center>
-</div>
+  <figcaption>IT'S SENSIBLE HAT TIME</figcaption>
+</figure>
 
 Leg two was a lot of soft sand and rock hopping. This was not good for Dad's knee. As a result we had to hike most of leg three, which was somewhat sandy and undulating single track. It also included a canoe crossing!
 

@@ -7,6 +7,7 @@ tags: ["other"]
 
 This is a Twitter thread I posted on November 13 as a reaction to a prompt from Dan Luu, captured here for posterity.
 
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Some advice for line managers to help avoid similar situations (project getting cancelled). I&#39;m not at all familiar with the referenced project, nor any contributing organisational dysfunction, just using it as a launching point. 🧵 <a href="https://t.co/BIc7x614NS">https://t.co/BIc7x614NS</a></p>&mdash; Xavier Shay (@xshay) <a href="https://twitter.com/xshay/status/1591585095420612609?ref_src=twsrc%5Etfw">November 13, 2022</a></blockquote>
 
 Some advice for line managers to help avoid similar situations (project getting cancelled). I'm not at all familiar with the referenced project, nor any contributing organisational dysfunction, just using it as a launching point.

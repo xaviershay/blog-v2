@@ -1,0 +1,28 @@
+article {
+  border: none;
+  font-family: "Noto Serif",serif;
+}
+
+article h1, article h2, article h3, article h4 {
+  font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
+
+/* legacy stuff here for weird image stuff */
+center img, center iframe {
+  display: block;
+}
+
+em {
+    padding: 1px 2px;
+    border-radius: 2px;
+    font-style: italic;
+}
+
+.image-strip {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.image-strip img {
+    display: inline;
+    margin-top: 0;
+}

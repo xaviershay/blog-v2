@@ -1,10 +1,36 @@
+require 'digest/md5'
+require 'yaml'
+
+require_relative "./src/ruby/generate_index_metadata"
+require_relative "./src/ruby/generate_post_metadata"
+
 post_files = Dir["data/posts/*.md"]
+
+# https://github.com/mattmassicotte/rake-multifile
+module RakeMultifile
+  class MultiFileTask < Rake::FileTask
+    private
+    def invoke_prerequisites(task_args, invocation_chain)
+      invoke_prerequisites_concurrently(task_args, invocation_chain)
+    end
+  end
+end
+
+def multifile(*args, &block)
+  RakeMultifile::MultiFileTask.define_task(*args, &block)
+end
 
 directory 'out/site/articles'
 directory 'out/metadata/posts'
 
-file 'out/metadata/index.yml' => ['out/metadata/posts'] + post_files do
-  ruby "src/ruby/generate_index_metadata.rb"
+post_metadata_files = post_files.map do |file|
+  name = File.basename(file, ".md").split('-', 4).drop(3).first
+  "out/metadata/posts/#{File.basename(file)}.yml"
+end
+
+multifile 'out/metadata/index.yml' =>
+            ['out/metadata/posts'] + post_metadata_files do
+  generate_index_metadata(post_metadata_files)
 end
 
 out_files = post_files.map do |file|
@@ -13,11 +39,19 @@ out_files = post_files.map do |file|
   metadata = "out/metadata/posts/#{File.basename(file)}.yml"
   template = "src/template.html"
 
-  file metadata => ['out/metadata/index.yml']
+  file metadata => [File.dirname(metadata), file] do
+    generate_post_metadata(file)
+  end
 
-  file out => [ metadata , template, File.dirname(out) ] do
-
-    cmd = <<-EOS.gsub(/\n|\s+/, " ")
+  file out => [
+    file,
+    metadata,
+    template,
+    "src/header.html",
+    "src/footer.html",
+    File.dirname(out)
+  ] do
+    cmd = <<-EOS.gsub(/[\n\s]+/, " ").strip
       pandoc
         --template #{template}
         --metadata-file=#{metadata}
@@ -46,6 +80,7 @@ multitask :build => ['out/site/index.html'] + out_files do
   # Just do this everytime, it's quick and not worth replicating rsync
   # functionality inside this file.
   sh "rsync -a data/images out/site/"
+  sh "rsync -a src/static/ out/site/"
 end
 
 desc "Remove all generated files"
