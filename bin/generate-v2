@@ -104,7 +104,7 @@ time "Make the website" do
 
     pool.await_completion
   end
-  
+
   time "Copy images" do
     run "rsync -a data/images out/site/"
   end
