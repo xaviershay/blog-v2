@@ -6,6 +6,5 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'nokogiri'
 end

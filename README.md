@@ -50,13 +50,9 @@ standard `Rakefile`.
     stable still though.
   * **RSpec.** I'm ok with this, very stable. Might consider `Test::Unit`
     though if this was the only gem remaining.
-  * **Capybara.** Less ok with this, in particularly due to dependency on
-    Chromedriver. Might investigate alternate solution with `Net::HTTP` and
-    `REXML` since only using extremely limited functionality.
+  * **Nokogiri.** Stable gem for HTML parsing for tests, no option in stdlib.
 * **Pandoc.** Primary mechanism for converting Markdown to HTML. Note for
   Ubuntu: as of 2022-12-20, apt has an older version of pandoc that doesn't
   support templates. You'll need to install it from [the
   website](https://pandoc.org/installing.html). Current development is done
   with 2.19.2.
-* **Chromedriver.** For testing only, not required for development. Install
-  from https://chromedriver.chromium.org/

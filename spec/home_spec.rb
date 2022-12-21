@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'home page' do
+RSpec.describe 'home page' do
   it 'includes expected content and metadata' do
     visit '/'
     # Title
@@ -12,7 +12,7 @@ feature 'home page' do
   it 'segments posts by year'
 end
 
-feature 'URL structure' do
+RSpec.describe 'URL structure' do
   it 'has posts at consistent urls' do
     visit '/articles/a-system-for-email.html'
     expect(page).to have_content("A System for Email")
