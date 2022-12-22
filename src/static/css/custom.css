@@ -7,6 +7,7 @@ header h1, article h1, article h2, article h3, article h4 {
   font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
 }
 
+/* FEATURE IMAGE AND OVERLAY */
 body > header {
   padding: 0;
   height: 150px;
@@ -60,6 +61,22 @@ header h1 a, header h1 a:visited {
 
 .featured-image-credit a {
   color: white
+}
+
+/* POST HEADER */
+.post-header h1 {
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+.post-header .date {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #d9d9d9;
+  margin-top: 0;
 }
 
 .tiktok-strip blockquote {

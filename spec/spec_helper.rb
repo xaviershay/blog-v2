@@ -25,7 +25,7 @@ end
 
 RSpec::Matchers.define :have_content do |expected|
   match do |actual|
-    actual.xpath("//text()").any? {|x| x.text.match(expected) }
+    actual.xpath("//text()").map(&:text).join(" ").gsub(/\s+/, " ").match(expected)
   end
 
   def format_actual(actual)

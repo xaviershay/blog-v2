@@ -12,7 +12,7 @@ def generate_post_metadata(file)
   if metadata["date"].is_a?(String)
     metadata["date"] = DateTime.parse(metadata["date"])
   end
-  metadata["day"] = metadata["date"].to_date
+  metadata["day"] = metadata["date"].to_date.strftime("%b %e, %Y")
   metadata["date"] = metadata["date"].iso8601
 
   unless metadata["slug"]
