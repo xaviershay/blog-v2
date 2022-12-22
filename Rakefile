@@ -39,18 +39,24 @@ out_files = post_files.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   out = "out/site/articles/#{name}.html"
   metadata = "out/metadata/posts/#{File.basename(file)}.yml"
-  template = "src/template.html"
+  template = "src/erb/post.html.erb"
 
   file metadata => [File.dirname(metadata), file] do
     generate_post_metadata(file)
   end
 
+  # Technically this should depend on index metadata as well for changes to
+  # site metadata (such as for relevant posts) but since Rake is purely mtime
+  # based, and our metadata is mixed in with content, this would trigger a
+  # rebuild of everything for any source change even if metadata doesn't
+  # change.
+  #
+  # Unlikely to be an issue in practice since we'll do a clean build before
+  # deploy anyway.
   file out => [
     file,
     metadata,
     template,
-    "src/header.html",
-    "src/footer.html",
     File.dirname(out)
   ] do
     convert_post_to_html(file)
@@ -58,12 +64,12 @@ out_files = post_files.map do |file|
   out
 end
 
-file 'out/site/index.html' => ['out/metadata/index.yml', 'src/index.html', 'out/site'] do
+file 'out/site/index.html' => ['out/metadata/index.yml', 'src/erb/index.html.erb', 'out/site'] do
   convert_index_to_html
 end
 
 desc "Compile all files"
-multitask :build => ['out/site/index.html'] + out_files do
+task :build => ['out/site/index.html'] + out_files do
   # Just do this everytime, it's quick and not worth replicating rsync
   # functionality inside this file.
   sh "rsync -a data/images out/site/"

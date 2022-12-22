@@ -29,11 +29,18 @@ def convert_post_to_html(file)
     metadata = YAML.load(match[0])
 
     metadata['date'] = Date.parse(file.split('-', 4).take(3).join('-'))
+    @post = hash_to_ostruct(metadata)
     data = match.post_match
 
     doc = Kramdown::Document.new(data)
 
-    @post = hash_to_ostruct(metadata)
+    # TODO: DRY up with convert_index_to_html
+    metadata = YAML.load_file("out/metadata/index.yml", permitted_classes: [Date])
+    metadata["posts"].each do |p|
+      p["date"] = DateTime.parse(p["date"])
+    end
+    @site = hash_to_ostruct(metadata)
+
 
     @post.body_html = doc.to_html
     # TODO: We actually need the whole site metadata for things like recent

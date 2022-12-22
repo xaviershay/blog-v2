@@ -31,6 +31,18 @@
         <p class='date'><%= @post.date.strftime("%b %-e, %Y") %></p>
       </header>
       <%= @post.body_html %>
+
+      <% archive_type = (@post.tags & %w(reading-list year-review)).first %>
+      <% archive = archive_type && @site.yearly_archives[archive_type] %>
+      <% if archive %>
+        <nav class='yearly-archive'>
+          Archive –
+          <% archive.each.with_index do |summary, i| %>
+            <% if i != 0 %><span class="separator">|</span><% end %>
+            <a href='<%= summary.url %>'><%= summary.year %></a>
+          <% end %>
+        </nav>
+      <% end %>
     </article>
   </body>
 </html>
