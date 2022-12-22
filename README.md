@@ -49,7 +49,14 @@ used for this purpose, see `src/ruby/server.rb`.
 
 ## Dependencies
 
-Outside of Ruby itself, this library depends on the following gems:
+In addition to Ruby itself, the following standard library components are
+critical dependencies:
+
+* **ERB.** For templating HTML files.
+* **Rake.** In particular for incremental build support.
+* **Zlib.** For writing GZIP'ed files.
+
+Outside of the standard library, we depend on the following gems:
 
 * **Kramdown.** Pure ruby library to convert markdown to HTML. Transitive
   dependency on `rexml` which I consider standard library (it was extracted
