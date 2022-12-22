@@ -3,6 +3,7 @@ require 'yaml'
 
 require_relative "./src/ruby/generate_index_metadata"
 require_relative "./src/ruby/generate_post_metadata"
+require_relative "./src/ruby/convert_index_to_html"
 require_relative "./src/ruby/convert_post_to_html"
 
 post_files = Dir["data/posts/*.md"]
@@ -58,15 +59,7 @@ out_files = post_files.map do |file|
 end
 
 file 'out/site/index.html' => ['out/metadata/index.yml', 'src/index.html', 'out/site'] do
-  cmd = <<-EOS.gsub(/\n|\s+/, " ")
-      echo "" |
-      pandoc
-        --template src/index.html
-        --metadata-file=out/metadata/index.yml
-        | gzip > out/site/index.html
-  EOS
-
-  sh cmd
+  convert_index_to_html
 end
 
 desc "Compile all files"

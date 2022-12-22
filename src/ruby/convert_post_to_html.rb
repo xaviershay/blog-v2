@@ -36,6 +36,8 @@ def convert_post_to_html(file)
     @post = hash_to_ostruct(metadata)
 
     @post.body_html = doc.to_html
+    # TODO: We actually need the whole site metadata for things like recent
+    # posts, archive links, etc...
     html = POST_TEMPLATE.result
 
     Zlib::GzipWriter.open(out) do |f|

@@ -1,6 +1,10 @@
 # Blog
 
-Pandoc based static site generator for blog.
+Static site generator for blog optimized for long term stabilty: easily
+hackable, specific to my needs (not configurable), minimal dependencies.
+
+You likely wouldn't want to use this as is, but it might serve as inspiration
+for your own version.
 
 Still WIP.
 
@@ -28,31 +32,40 @@ Still WIP.
 
 ## Implementation
 
-Pandoc is optimized for single files and doesn't appear to have a great way to
-accumulate metadata from multiple files (e.g. to generate an index page). The
-solve for this is a bit gross: a pre-processing step using Ruby to load all
-files, extract YAML metadata, and aggregate and dump it out into standalone
-files that can be used with pandoc. See `src/ruby/generate_index_metadata.rb`.
+Ruby is used to pre-process markdown files to extract YAML metadata and
+transform it to support features like and index page and related posts.
+
+Kramdown is used for converting markdown files into HTML snippets.
+
+ERB is used to embed that HTML into a full page.
+
+`Rake` ties it all together and is used to support incremental builds,
+definitions can be found in the standard `Rakefile`.
 
 AWS serves gzip'd files by using AWS specific metadata. This is a problem for
 local development since we need our own way of knowing which files are
-compressed and serving up the appropriate headers. A custom WEBrick handler is used for this purpose, see `src/ruby/server.rb`.
-
-
-`Rake` is used to support incremental build, defintions can be found in the
-standard `Rakefile`.
+compressed and serving up the appropriate headers. A custom WEBrick handler is
+used for this purpose, see `src/ruby/server.rb`.
 
 ## Dependencies
 
-* **Ruby.** Building website has no further dependencies outside of the
-  standard library. Testing requires bundler for a few gems.
-  * **WEBrick.** This used to be standard library but is now a gem. Extremely
-    stable still though.
-  * **RSpec.** I'm ok with this, very stable. Might consider `Test::Unit`
-    though if this was the only gem remaining.
-  * **Nokogiri.** Stable gem for HTML parsing for tests, no option in stdlib.
-* **Pandoc.** Primary mechanism for converting Markdown to HTML. Note for
-  Ubuntu: as of 2022-12-20, apt has an older version of pandoc that doesn't
-  support templates. You'll need to install it from [the
-  website](https://pandoc.org/installing.html). Current development is done
-  with 2.19.2.
+Outside of Ruby itself, this library depends on the following gems:
+
+* **Kramdown.** Pure ruby library to convert markdown to HTML. Transitive
+  dependency on `rexml` which I consider standard library (it was extracted
+  to a gem in Ruby 3).
+* **WEBrick.** This used to be standard library but is now a gem. Extremely
+  stable still though.
+* **RSpec.** I'm ok with this, very stable. Might consider `Test::Unit`
+  though if this was the only gem remaining.
+* **Nokogiri.** Stable gem for HTML parsing for tests, no option in stdlib.
+
+## Wrong Turns
+
+* **Pandoc.** Doctemplates is too deficient as a templating language. In
+  particular: no support for basic formatting filters (i.e. for dates),
+  extremely limited support for things like checking if values are in arrays.
+  Required extra scaffolding anyway to support index generation, and then
+  layering in extra metadata to post generation (for things like
+  recent/relevant posts) was going to require even more. Probably not that much
+  more stable a dependency than `kramdown`.
