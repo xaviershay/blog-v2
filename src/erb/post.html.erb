@@ -9,7 +9,7 @@
 
     <title><%= @post.title %></title>
   </head>
-  <body>
+  <body class='post-body'>
     <header>
       <% if image = @post.image %>
         <div class='overlay'>
@@ -44,5 +44,10 @@
         </nav>
       <% end %>
     </article>
+    <footer>
+      <nav>
+        <a href="/">Back to Index</a>
+      </nav>
+    </footer>
   </body>
 </html>

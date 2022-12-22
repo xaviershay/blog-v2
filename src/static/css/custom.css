@@ -7,8 +7,30 @@ header h1, article h1, article h2, article h3, article h4 {
   font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
 }
 
+/* INDEX PAGE */
+
+.post-list .title {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+.post-list .date {
+  margin-top: 0
+}
+
+.icon {
+  vertical-align: sub;
+  padding-right: .25rem;
+  display: inline-block;
+  width: 1em;
+  height: 1.3em;
+  margin-right: 0.2rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 /* FEATURE IMAGE AND OVERLAY */
-body > header {
+body.post-body > header {
   padding: 0;
   height: 150px;
 }
@@ -32,7 +54,7 @@ body > header {
   background: rgba(0,0,0,0.55);
 }
 
-body > header h1 {
+body.post-body > header h1 {
   color: white;
   text-transform: uppercase;
   text-align: left;
@@ -89,6 +111,14 @@ header h1 a, header h1 a:visited {
 nav.yearly-archive {
   text-align: center;
   color: #d9d9d9;
+}
+
+/* FOOTER */
+
+/* Override simple.css defaults */
+body > footer {
+  border: none;
+  margin-top: 0;
 }
 
 /* legacy stuff here for weird image stuff */
