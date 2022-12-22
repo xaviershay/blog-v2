@@ -19,6 +19,11 @@ RSpec.describe "the blog" do
     it('has content') {
       expect(page).to have_content("you need to be able to move fast")
     }
+
+    it('has feature image credit') {
+      expect(page).to have_content("Person Using Silver Laptop")
+      expect(page).to have_content("John Schnobrich")
+    }
   end
 
   describe 'custom youtube tag' do

@@ -10,27 +10,35 @@
     <title><%= @post.title %></title>
   </head>
   <body class='post-body'>
-    <header>
-      <% if image = @post.image %>
-        <div class='overlay'>
-          <% if credit = image.feature_credit %>
+    <% image = @post.image %>
+    <% if image %>
+        <header style="background-image: url(/images/<%= image.feature %>)" class='page-header'>
+    <% else %>
+      <header class='page-header'>
+    <% end %>
+      <nav>
+        <% if image && credit = image.feature_credit %>
           <div class="featured-image-credit">
             <a href='<%= credit.link %>'>
               <em><%= credit.title %></em> by <%= credit.author %>
             </a>
           </div>
-          <% end %>
-        </div>
-        <div style="background-image: url(/images/<%= image.feature %>)" class='featured-image'></div>
-      <% end %>
-      <h1><a href="/">Xavier Shay</a></h1>
-    </header>
-    <article>
-      <header class='post-header'>
+        <% end %>
         <h1><%= @post.title %></h1>
         <p class='date'><%= @post.date.strftime("%b %-e, %Y") %></p>
-      </header>
+      </nav>
+    </header>
+    <article>
       <%= @post.body_html %>
+
+      <% if credit = @post.image&.feature_credit %>
+        <details class='footer-image-credit'>
+        <summary>Credits</summary>
+        <a href='<%= credit.link %>'>
+          <em><%= credit.title %></em> by <%= credit.author %>
+        </a>
+        </details>
+      <% end %>
 
       <% archive_type = (@post.tags & %w(reading-list year-review)).first %>
       <% archive = archive_type && @site.yearly_archives[archive_type] %>

@@ -29,6 +29,37 @@ header h1, article h1, article h2, article h3, article h4 {
   fill: currentColor;
 }
 
+header.page-header {
+    /* align-content: center; */
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    color: white;
+    background-color: #555;
+}
+
+.page-index .page-header {
+  background-image: url("/images/me-pointing.jpg");
+}
+
+header.page-header > nav a, .page-index header > nav a:visited {
+  color: white;
+}
+header.page-header > nav a:hover {
+  border-color: white;
+}
+
+header.page-header > nav {
+  backdrop-filter: opacity(0.5);
+  background-color: rgba(0,0,0,0.5);
+}
+
+header.page-header > nav p {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
 .embed-youtube {
     position: relative;
     padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
@@ -48,51 +79,21 @@ header h1, article h1, article h2, article h3, article h4 {
     width: 100%;
     height: 100%;
 }
+
 /* FEATURE IMAGE AND OVERLAY */
-body.post-body > header {
-  padding: 0;
-  height: 150px;
+@media only screen and (max-width: 720px) {
+  header > nav .featured-image-credit {
+    display: none;
+  }
 }
 
-.featured-image {
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.overlay {
-  vertical-align: middle;
-  width: 100%;
-  height: 150px;
-  position: absolute;
-  z-index: 2;
-  background: rgba(0,0,0,0.55);
-}
-
-body.post-body > header h1 {
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
-  font-size: 120%;
-  z-index: 3;
-  position: absolute;
-  left: 1em;
-  top: 1em;
-  margin: 0;
-}
-
-header h1 a, header h1 a:visited {
-  text-decoration: none;
-  color: white;
+.footer-image-credit {
+  font-size: 1rem;
 }
 
 .featured-image-credit {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   right: 5px;
   color: white;
   opacity: 0.3;
@@ -101,7 +102,10 @@ header h1 a, header h1 a:visited {
 }
 
 .featured-image-credit a {
-  color: white
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* POST HEADER */
