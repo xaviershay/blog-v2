@@ -79,6 +79,7 @@ end
 desc "Remove all generated files"
 task :clean do
   rm_rf "out"
+  rm_rf "tmp"
 end
 
 task default: :build

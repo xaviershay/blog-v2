@@ -47,6 +47,19 @@ def convert_post_to_html(file)
     # posts, archive links, etc...
     html = POST_TEMPLATE.result
 
+    html.gsub!(/{{\s*YOUTUBE\s+(.*?)(?:\s+(.*?))?\s*}}/mi) do |match|
+      caption = "<em>#{$2}</em>" if $2
+      id = $1.split('/').last
+      <<-EOS
+        <figure>
+        <div class='embed-youtube'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/#{id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+          <figcaption>#{caption}</figcaption>
+        </figure>
+      EOS
+    end
+
     Zlib::GzipWriter.open(out) do |f|
       f.write(html)
     end

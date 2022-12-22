@@ -25,11 +25,7 @@ This kind of crazy tends to only come out at [GGRC](http://goldengaterunningclub
 
 My first official weekend of training started the Saturday after my [Yosemite trip](yosemite-trip-report.html), with a hard <span data-alt="19 aggregate miles">30 aggregate kays</span> as part of a 3-person 6-hour relay team, backed up with another <span data-alt="18">28</span> easy in the headlands the day after. That wasn't smart. Laid me out for two weeks with a flair up of the foot problems I'd been having earlier in the year.
 
-
-<p class='embed'>
-<object width="480" height="274"><param name="movie" value="http://www.youtube.com/v/cmXYS6ZVKYw?version=3&amp;hl=en_US&amp;rel=0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="https://www.youtube.com/v/cmXYS6ZVKYw?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="480" height="274" allowscriptaccess="always" allowfullscreen="true"></object>
-<center><em>The infamous Chipotle Trifecta.</em></center>
-</p>
+{{ YOUTUBE https://www.youtube.com/v/cmXYS6ZVKYw The infamous Chipotle Trifecta. }}
 
 I had to be back on my feet late July for a Chipotle Trifecta with Mark, which I proceeded to DNF after a single burrito. That wasn't injury; just too much food for me. Amazingly he went on to finish, as far we know the only person in the world to do so.
 

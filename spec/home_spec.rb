@@ -20,4 +20,22 @@ RSpec.describe "the blog" do
       expect(page).to have_content("you need to be able to move fast")
     }
   end
+
+  describe 'custom youtube tag' do
+    describe 'processing' do
+      before(:all) { visit '/articles/2015-reading-list.html' }
+      it('has removed tag') { expect(page).to_not have_content("YOUTUBE") }
+      it('has included an iframe') { expect(page).to have_xpath('//iframe') }
+    end
+
+    it 'is used everywhere instead of hardcoded iframe embed' do
+      posts = `grep -rl "<iframe" data/posts`.lines
+      expect(posts).to eq([])
+    end
+
+    it 'is used everywhere instead of hardcoded object embed' do
+      posts = `grep -rl "<object" data/posts`.lines
+      expect(posts).to eq([])
+    end
+  end
 end

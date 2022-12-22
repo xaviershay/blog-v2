@@ -47,6 +47,20 @@ local development since we need our own way of knowing which files are
 compressed and serving up the appropriate headers. A custom WEBrick handler is
 used for this purpose, see `src/ruby/server.rb`.
 
+### Quirks
+
+#### Youtube Embeds
+
+Youtube embeds aren't responsive and require some hacks to fix. Previously the
+embed code was placed directly in markdown, which was a bit gross but also made
+it hard to place the hacks.
+
+There's no standard way to add custom markup to markdown.
+
+Solution I've landed on is that Markdown is now post-processed (with a regex)
+to replace a new custom tag `{{ YOUTUBE }}` with appropriate embed, with a
+caption if provided.
+
 ## Dependencies
 
 In addition to Ruby itself, the following standard library components are

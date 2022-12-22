@@ -20,12 +20,7 @@ Though just as you are feeling sympathetic for activists the film includes inter
 
 In watching you are asked to grapple with some tricky concepts: what are the limits of peaceful protest? Or non-peaceful protest? When is a charge of terrorism justified? _If A Tree Falls_ doggedly avoids attempting to provide answers. In a [Dot Earth interview with the director][nytimes], Andrew Revkin described it as a "fearless exploration of complexity in a world drawn to oversimplified depictions of events and problems, heroes and villains." This comes through in the trailer:
 
-<p class='embed'>
-<object width="480" height="274"><param name="movie" value="http://www.youtube.com/v/QAGxy85R380?version=3&amp;hl=en_US&amp;rel=0"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="https://www.youtube.com/v/QAGxy85R380?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="480" height="274" allowscriptaccess="always" allowfullscreen="true"></object>
-</p>
-
-<p/>
-
+{{ YOUTUBE https://www.youtube.com/v/QAGxy85R380 }}
 
 In the aforementioned interview, director Marshall Curry describes:
 
