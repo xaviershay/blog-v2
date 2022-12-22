@@ -43,4 +43,17 @@ RSpec.describe "the blog" do
       expect(posts).to eq([])
     end
   end
+
+  describe 'atom feed' do
+    before(:all) { visit "/feed.xml" }
+    it('has id') { expect(page).to have_xpath("//feed/title[contains('https://blog.xaviershay.com')]") }
+    it('has title') { expect(page).to have_xpath("//feed/title") }
+    it('has author') {
+      expect(page).to have_xpath("//feed/author/name")
+      expect(page).to have_xpath("//feed/author/uri")
+      expect(page).to have_xpath("//feed/author/email")
+    }
+
+    it('does not include html in ID')
+  end
 end

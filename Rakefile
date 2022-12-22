@@ -3,6 +3,7 @@ require 'yaml'
 
 require_relative "./src/ruby/generate_index_metadata"
 require_relative "./src/ruby/generate_post_metadata"
+require_relative "./src/ruby/generate_atom_feed"
 require_relative "./src/ruby/convert_index_to_html"
 require_relative "./src/ruby/convert_post_to_html"
 
@@ -68,8 +69,12 @@ file 'out/site/index.html' => ['out/metadata/index.yml', 'src/erb/index.html.erb
   convert_index_to_html
 end
 
+file 'out/site/feed.xml' do
+  generate_atom_feed("out/side/feed.xml")
+end
+
 desc "Compile all files"
-task :build => ['out/site/index.html'] + out_files do
+task :build => ['out/site/index.html', 'out/site/feed.xml'] + out_files do
   # Just do this everytime, it's quick and not worth replicating rsync
   # functionality inside this file.
   sh "rsync -a data/images out/site/"
