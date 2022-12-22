@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="date" content='<%= @post.date %>'>
+    <link rel="stylesheet" href="/css/simple.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <title><%= @post.title %></title>
+  </head>
+  <body>
+    <header>
+      <% if image = @post.image %>
+        <div class='overlay'>
+          <% if credit = image.feature_credit %>
+          <div class="featured-image-credit">
+            <a href='<%= credit.link %>'>
+              <em><%= credit.title %></em> by <%= credit.author %>
+            </a>
+          </div>
+          <% end %>
+        </div>
+        <div style="background-image: url(/images/<%= image.feature %>)" class='featured-image'></div>
+      <% end %>
+      <h1><a href="/">Xavier Shay</a></h1>
+    </header>
+    <article>
+      <header class='post-header'>
+        <h1><%= @post.title %></h1>
+        <p class='date'><%= @post.date.strftime("%b %-e, %Y") %></p>
+      </header>
+      <%= @post.body_html %>
+    </article>
+  </body>
+</html>
