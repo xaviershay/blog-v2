@@ -1,5 +1,6 @@
 require 'digest/md5'
 require 'yaml'
+require 'zlib'
 
 $LOAD_PATH.unshift "src/ruby"
 
@@ -16,21 +17,36 @@ require 'actions/compile_atom'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
 
+STATIC_FILES = Dir["src/static/**/*.{js,css}"]
 POST_FILES = Dir["data/posts/*.md"]
 FRAGMENT_FILES = POST_FILES.map do |x|
   "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
 end
 
 directory 'out/site/articles'
+directory 'out/site/css'
+directory 'out/site/js'
 directory 'out/metadata/posts'
 directory 'out/html/posts'
+
+site_files = []
+site_files += STATIC_FILES.map do |file|
+  target = File.join("out/site", file["src/static".length..-1])
+
+  file target => [File.dirname(target), file] do
+    contents = File.read(file)
+    Zlib::GzipWriter.open(target) {|f| f.write(contents) }
+  end
+
+  target
+end
 
 POST_METADATA_FILES = POST_FILES.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   "out/metadata/posts/#{File.basename(file)}.yml"
 end
 
-OUT_FILES = POST_FILES.map do |file|
+site_files += POST_FILES.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   out = "out/site/articles/#{name}.html"
   metadata = "out/metadata/posts/#{File.basename(file)}.yml"
@@ -88,11 +104,10 @@ file 'out/site/feed.xml' => [
 end
 
 desc "Compile all files"
-task :build => ['out/site/index.html', 'out/site/feed.xml'] + OUT_FILES do
+task :build => ['out/site/index.html', 'out/site/feed.xml'] + site_files do
   # Just do this everytime, it's quick and not worth replicating rsync
   # functionality inside this file.
   sh "rsync -a data/images out/site/"
-  sh "rsync -a src/static/ out/site/"
 end
 
 desc "Remove all generated files"

@@ -7,7 +7,7 @@ KNOWN_FILES = Set
   .select {|x| File.file?(x) }
   .map {|x| x[PREFIX.length..-1] })
 
-GZIP_EXTS = Set.new(%w(.html .xml))
+GZIP_EXTS = Set.new(%w(.html .xml .css .js))
 
 # Some content types are gzip'd on disk, since that's the format we need to
 # upload to AWS and have them serve correctly. This servlet "knows" which
