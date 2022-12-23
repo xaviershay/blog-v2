@@ -4,6 +4,7 @@ title: "Race Report: Great Southern Stage Race"
 category: articles
 tags: ["other"]
 image:
+  card: 'gssr/trio-finish.jpg'
   feature: 'gssr/hero.jpg'
 ---
 

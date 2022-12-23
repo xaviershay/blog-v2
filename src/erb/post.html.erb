@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/css/simple.css">
     <link rel="stylesheet" href="/css/custom.css">
 
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:title" content="<%= @post.title %>">
+    <meta property="og:description" content="<%= @post.summary %>">
+    <meta property="og:url" content="<%= HOST %><%= @post.url %>">
+    <% if @post.card_image %>
+      <meta property="og:image" content="<%= HOST %>/images/<%= @post.card_image %>">
+    <% end %>
+    <meta property="og:site_name" content="Xavier Shay">
+
     <title><%= @post.title %></title>
   </head>
   <body class='post-body'>

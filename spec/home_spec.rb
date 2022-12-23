@@ -24,6 +24,12 @@ RSpec.describe "the blog" do
       expect(page).to have_content("Person Using Silver Laptop")
       expect(page).to have_content("John Schnobrich")
     }
+
+    it('has opengraph tags to support card preview on FB, Twitter, et al') do
+      expect(page).to have_xpath("//head/meta[@property='og:title']")
+      expect(page).to have_xpath("//head/meta[@property='og:description']")
+      expect(page).to have_xpath("//head/meta[@property='og:image']")
+    end
   end
 
   describe 'custom youtube tag' do
@@ -46,7 +52,7 @@ RSpec.describe "the blog" do
 
   describe 'atom feed' do
     before(:all) { visit "/feed.xml" }
-    it('has id') { expect(page).to have_xpath("//feed/id[text()='https://blog.xaviershay.com']") }
+    it('has id') { expect(page).to have_xpath("//feed/id") }
     it('has title') { expect(page).to have_xpath("//feed/title") }
     it('has author') {
       expect(page).to have_xpath("//feed/author/name")

@@ -7,6 +7,8 @@ require_relative "./src/ruby/generate_atom_feed"
 require_relative "./src/ruby/convert_index_to_html"
 require_relative "./src/ruby/convert_post_to_html"
 
+HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
+
 post_files = Dir["data/posts/*.md"]
 fragment_files = post_files.map do |x|
   "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
@@ -51,7 +53,7 @@ out_files = post_files.map do |file|
     generate_post_metadata(file)
   end
 
-  file fragment => [File.dirname(fragment), file] do
+  file fragment => [File.dirname(fragment), file, template] do
     convert_post_to_html_fragment(file, fragment)
   end
 
@@ -67,6 +69,7 @@ out_files = post_files.map do |file|
     file,
     metadata,
     fragment,
+    template,
     File.dirname(out)
   ] do
     convert_post_to_html(fragment, metadata, out)

@@ -1,11 +1,18 @@
 require 'yaml'
 require 'date'
 
+def truncate(str, n)
+  return str if str.length < n
+
+  str[0..n] + "…"
+end
+
 def generate_post_metadata(file)
-  contents = File.read(file).lines
-  raise "invalid header: #{file}" unless contents[0] == "---\n"
-  raw_metadata = contents.drop(1).take_while {|x| x != "---\n" }.join
-  metadata = YAML.load(raw_metadata, permitted_classes: [Date])
+  raw = File.read(file)
+  match = raw.match(YAML_FRONTMATTER_REGEX)
+  raise "invalid header: #{file}" unless match
+  metadata = YAML.load(match[0], permitted_classes: [Date])
+  content = match.post_match
   unless metadata["date"]
     metadata["date"] = DateTime.parse(file)
   end
@@ -14,6 +21,8 @@ def generate_post_metadata(file)
   end
   metadata["day"] = metadata["date"].to_date.strftime("%b %e, %Y")
   metadata["date"] = metadata["date"].iso8601
+  metadata["summary"] = metadata["description"] || truncate(content, 120)
+  metadata["card_image"] = metadata.fetch("image", {}).values_at("card", "feature").compact.first
   metadata["source"] = file
 
   unless metadata["slug"]
