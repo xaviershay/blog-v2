@@ -9,8 +9,8 @@ def xml_escape(input)
   input.to_s.encode(:xml => :attr).gsub(%r!\A"|"\Z!, "")
 end
 
-def generate_atom_feed(out)
-  metadata = YAML.load_file("out/metadata/index.yml", permitted_classes: [Date])
+def compile_atom(out)
+  metadata = YAML.load_file("out/metadata/index.yml")
   metadata["posts"].each do |p|
     p["date"] = DateTime.parse(p["date"])
     p["body_html"] = File.read("out/html/posts/#{p["slug"]}.html")

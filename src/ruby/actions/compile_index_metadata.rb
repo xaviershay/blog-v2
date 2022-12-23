@@ -1,12 +1,12 @@
 require 'yaml'
 require 'date'
 
-def generate_index_metadata(post_metadata)
+def compile_index_metadata(post_metadata, out)
   posts = []
   yearly_archives = {}
 
   post_metadata.each do |post|
-    metadata = YAML.load(File.read(post), permitted_classes: [Date])
+    metadata = YAML.load(File.read(post))
     %w(reading-list year-review).each do |yearly_type|
       if metadata['tags'].include?(yearly_type)
         yearly_archives[yearly_type] ||= []
@@ -22,5 +22,5 @@ def generate_index_metadata(post_metadata)
   end
   posts = posts.sort_by {|x| x.fetch("date") { raise x.inspect } }.reverse
   yaml = {"yearly_archives" => yearly_archives, "posts" => posts}.to_yaml
-  File.write("out/metadata/index.yml", yaml)
+  File.write(out, yaml)
 end

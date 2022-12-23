@@ -1,11 +1,16 @@
 require 'digest/md5'
 require 'yaml'
 
-require_relative "./src/ruby/generate_index_metadata"
-require_relative "./src/ruby/generate_post_metadata"
-require_relative "./src/ruby/generate_atom_feed"
-require_relative "./src/ruby/convert_index_to_html"
-require_relative "./src/ruby/convert_post_to_html"
+$LOAD_PATH.unshift "src/ruby"
+
+require 'actions/markdown_to_metadata'
+require 'actions/markdown_to_html_fragment'
+
+require 'actions/compile_index_metadata'
+
+require 'actions/compile_post'
+require 'actions/compile_index'
+require 'actions/compile_atom'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
 
@@ -39,7 +44,7 @@ end
 
 multifile 'out/metadata/index.yml' =>
             ['out/metadata/posts'] + post_metadata_files do
-  generate_index_metadata(post_metadata_files)
+  compile_index_metadata(post_metadata_files, "out/metadata/index.yml")
 end
 
 out_files = post_files.map do |file|
@@ -50,11 +55,11 @@ out_files = post_files.map do |file|
   template = "src/erb/post.html.erb"
 
   file metadata => [File.dirname(metadata), file] do
-    generate_post_metadata(file)
+    markdown_to_metadata(file, metadata)
   end
 
   file fragment => [File.dirname(fragment), file, template] do
-    convert_post_to_html_fragment(file, fragment)
+    markdown_to_html_fragment(file, fragment)
   end
 
   # Technically this should depend on index metadata as well for changes to
@@ -72,17 +77,17 @@ out_files = post_files.map do |file|
     template,
     File.dirname(out)
   ] do
-    convert_post_to_html(fragment, metadata, out)
+    compile_post(fragment, metadata, out)
   end
   out
 end
 
 file 'out/site/index.html' => ['out/metadata/index.yml', 'src/erb/index.html.erb', 'out/site'] do
-  convert_index_to_html
+  compile_index('out/metadata/index.yml', 'out/site/index.html')
 end
 
 file 'out/site/feed.xml' => ['src/erb/feed.xml.erb', 'out/site', 'out/metadata/index.yml'] + fragment_files do
-  generate_atom_feed("out/site/feed.xml")
+  compile_atom("out/site/feed.xml")
 end
 
 desc "Compile all files"
