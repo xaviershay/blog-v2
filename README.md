@@ -51,18 +51,21 @@ and/or have reputations for similar backwards incompatible changes and/or bring
 in a whole suite of transitive dependencies. (This is somewhat inevitable with
 a growing user base.)
 
-I identified the following as the only "interesting" problems I needed to
+I identified the following as the "interesting" problems I needed to
 solve:
 
 * Converting markdown to HTML fragments.
 * Assembling HTML fragments into full webpages.
-* Incremental compilation.
+* (Optional) Incremental compilation.
 
 Those can mostly be solved neatly with the Ruby standard library, or old stable
 gems. This project is an experiment in doing exactly that: **rolling my own
 static site generator without using a framework.**
 
 ## Implementation
+
+Post markdown and images are stored in `data`. All source files are stored by
+type in `src/{ruby,erb,static}`.
 
 Ruby is used to pre-process markdown files to extract YAML metadata and
 transform it to support features like and index page and related posts.
@@ -169,3 +172,6 @@ Other dependencies include:
   things like recent/relevant posts) was going to require even more. Required a
   custom install on ubuntu for partial support (which I ultimately didn't use).
   Probably not that much more stable a dependency than `kramdown`.
+* **Capybara.** Way overkill for what I needed, and required an extra
+  dependency on webdriver. Replaced with ~50 lines of code for the subset I
+  needed.
