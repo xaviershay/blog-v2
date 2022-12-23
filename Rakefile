@@ -3,6 +3,8 @@ require 'yaml'
 
 $LOAD_PATH.unshift "src/ruby"
 
+require 'support/multifile'
+
 require 'actions/markdown_to_metadata'
 require 'actions/markdown_to_html_fragment'
 
@@ -14,40 +16,21 @@ require 'actions/compile_atom'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
 
-post_files = Dir["data/posts/*.md"]
-fragment_files = post_files.map do |x|
+POST_FILES = Dir["data/posts/*.md"]
+FRAGMENT_FILES = POST_FILES.map do |x|
   "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
-end
-
-# https://github.com/mattmassicotte/rake-multifile
-module RakeMultifile
-  class MultiFileTask < Rake::FileTask
-    private
-    def invoke_prerequisites(task_args, invocation_chain)
-      invoke_prerequisites_concurrently(task_args, invocation_chain)
-    end
-  end
-end
-
-def multifile(*args, &block)
-  RakeMultifile::MultiFileTask.define_task(*args, &block)
 end
 
 directory 'out/site/articles'
 directory 'out/metadata/posts'
 directory 'out/html/posts'
 
-post_metadata_files = post_files.map do |file|
+POST_METADATA_FILES = POST_FILES.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   "out/metadata/posts/#{File.basename(file)}.yml"
 end
 
-multifile 'out/metadata/index.yml' =>
-            ['out/metadata/posts'] + post_metadata_files do
-  compile_index_metadata(post_metadata_files, "out/metadata/index.yml")
-end
-
-out_files = post_files.map do |file|
+OUT_FILES = POST_FILES.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   out = "out/site/articles/#{name}.html"
   metadata = "out/metadata/posts/#{File.basename(file)}.yml"
@@ -82,16 +65,30 @@ out_files = post_files.map do |file|
   out
 end
 
-file 'out/site/index.html' => ['out/metadata/index.yml', 'src/erb/index.html.erb', 'out/site'] do
+multifile 'out/metadata/index.yml' => [
+  'out/metadata/posts'
+] + POST_METADATA_FILES do
+  compile_index_metadata(POST_METADATA_FILES, "out/metadata/index.yml")
+end
+
+file 'out/site/index.html' => [
+  'out/metadata/index.yml',
+  'src/erb/index.html.erb',
+  'out/site'
+] do
   compile_index('out/metadata/index.yml', 'out/site/index.html')
 end
 
-file 'out/site/feed.xml' => ['src/erb/feed.xml.erb', 'out/site', 'out/metadata/index.yml'] + fragment_files do
+file 'out/site/feed.xml' => [
+  'src/erb/feed.xml.erb',
+  'out/site',
+  'out/metadata/index.yml'
+] + FRAGMENT_FILES do
   compile_atom("out/site/feed.xml")
 end
 
 desc "Compile all files"
-task :build => ['out/site/index.html', 'out/site/feed.xml'] + out_files do
+task :build => ['out/site/index.html', 'out/site/feed.xml'] + OUT_FILES do
   # Just do this everytime, it's quick and not worth replicating rsync
   # functionality inside this file.
   sh "rsync -a data/images out/site/"
