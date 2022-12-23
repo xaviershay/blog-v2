@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require "open3"
+require 'yaml'
+require 'pp'
+
+$LOAD_PATH.unshift "src/ruby"
+
+require 'support/gzip_exts'
+
+bucket = "blog.xaviershay.com"
+cloudfront_id = "EXEJL82NAU4RW"
+staging = "out/site"
+
+cmds = []
+
+cmds << "rake clean"
+cmds << "HOST=https://blog.xaviershay.com rake build"
+
+# Files will only be uploaded if they have a different size. _Technically_ a
+# different file of the same size could fail to be uploaded, but this seems
+# unlikely to occur, particularly with gzip compression.
+
+params = GZIP_EXTS.map {|x| "--include \"*#{x}\"" }.join(" ")
+cmds << "aws s3 sync %s s3://%s/ --size-only --content-encoding gzip --exclude \"*\" #{params}" % [staging, bucket]
+
+params = GZIP_EXTS.map {|x| "--exclude \"*#{x}\"" }.join(" ")
+cmds << "aws s3 sync %s s3://%s/ --size-only #{params}" % [staging, bucket]
+
+cmds << "aws cloudfront create-invalidation --distribution-id %s --paths \"/*\"" % [cloudfront_id]
+
+def run(command)
+  Open3.popen2e(command) do |stdin, stdout_and_stderr, wait_thr|
+    stdout_and_stderr.each_line do |line|
+      puts line
+    end
+
+    exit_status = wait_thr.value
+    unless exit_status.success?
+      abort "Command failed with exit status #{exit_status.exitstatus}"
+    end
+  end
+end
+
+cmds.each do |cmd|
+  puts cmd
+  run(cmd)
+end

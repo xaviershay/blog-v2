@@ -14,7 +14,7 @@ Still WIP.
     bin/serve       # Serve website at http://localhost:4001
     bin/test-local  # Run specs against local server (assumes already running)
     bin/test-remote # Run specs against production server
-    bin/publish     # TODO: Publish website to S3/Cloudfront
+    bin/publish     # Publish website to S3/Cloudfront
 
 ## Design Goals
 

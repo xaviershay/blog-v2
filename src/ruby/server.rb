@@ -1,13 +1,15 @@
 require 'webrick'
 require 'set'
 
+require 'support/gzip_exts'
+
 PREFIX = "out/site"
 KNOWN_FILES = Set
   .new(Dir["#{PREFIX}/**/*"]
   .select {|x| File.file?(x) }
   .map {|x| x[PREFIX.length..-1] })
 
-GZIP_EXTS = Set.new(%w(.html .xml .css .js))
+GZIP_EXTS_SET = Set.new(GZIP_EXTS)
 
 # Some content types are gzip'd on disk, since that's the format we need to
 # upload to AWS and have them serve correctly. This servlet "knows" which
@@ -20,7 +22,7 @@ class Server < WEBrick::HTTPServlet::DefaultFileHandler
       super(req, res)
       ext = File.extname(req.path)
 
-      if GZIP_EXTS.include?(ext) || ext.empty?
+      if GZIP_EXTS_SET.include?(ext) || ext.empty?
         res['Content-Encoding'] = 'gzip'
       end
     else
