@@ -14,6 +14,7 @@ def generate_post_metadata(file)
   end
   metadata["day"] = metadata["date"].to_date.strftime("%b %e, %Y")
   metadata["date"] = metadata["date"].iso8601
+  metadata["source"] = file
 
   unless metadata["slug"]
     metadata["slug"] = File.basename(file.split('-', 4).drop(3).first.to_s, ".md")

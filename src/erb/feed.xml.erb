@@ -3,7 +3,7 @@
   <title type="text">Xavier Shay</title>
   <link rel="self" type="application/atom+xml" href="/feed.xml" />
   <link rel="alternate" type="text/html" href="/" />
-  <updated><%= date_to_xmlschema @posts.first.date %></updated>
+  <updated><%= @posts.first.date.xmlschema %></updated>
   <id>https://blog.xaviershay.com</id>
   <author>
     <name>Xavier Shay</name>
@@ -15,8 +15,8 @@
     <entry>
       <title><%= post.title %></title>
       <link rel="alternate" type="text/html" href="<%= post.url %>" />
-      <id><%= post.url %></id>
-      <updated><%= date_to_xmlschema post.date %></updated>
+      <id><%= File.join(File.dirname(post.url), File.basename(post.url, ".html")) %></id>
+      <updated><%= post.date.xmlschema %></updated>
       <content type="html"><%= xml_escape post.body_html %></content>
     </entry>
   <% end %>

@@ -8,6 +8,9 @@ require_relative "./src/ruby/convert_index_to_html"
 require_relative "./src/ruby/convert_post_to_html"
 
 post_files = Dir["data/posts/*.md"]
+fragment_files = post_files.map do |x|
+  "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
+end
 
 # https://github.com/mattmassicotte/rake-multifile
 module RakeMultifile
@@ -25,6 +28,7 @@ end
 
 directory 'out/site/articles'
 directory 'out/metadata/posts'
+directory 'out/html/posts'
 
 post_metadata_files = post_files.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
@@ -40,10 +44,15 @@ out_files = post_files.map do |file|
   name = File.basename(file, ".md").split('-', 4).drop(3).first
   out = "out/site/articles/#{name}.html"
   metadata = "out/metadata/posts/#{File.basename(file)}.yml"
+  fragment = "out/html/posts/#{name}.html"
   template = "src/erb/post.html.erb"
 
   file metadata => [File.dirname(metadata), file] do
     generate_post_metadata(file)
+  end
+
+  file fragment => [File.dirname(fragment), file] do
+    convert_post_to_html_fragment(file, fragment)
   end
 
   # Technically this should depend on index metadata as well for changes to
@@ -57,10 +66,10 @@ out_files = post_files.map do |file|
   file out => [
     file,
     metadata,
-    template,
+    fragment,
     File.dirname(out)
   ] do
-    convert_post_to_html(file)
+    convert_post_to_html(fragment, metadata, out)
   end
   out
 end
@@ -69,8 +78,8 @@ file 'out/site/index.html' => ['out/metadata/index.yml', 'src/erb/index.html.erb
   convert_index_to_html
 end
 
-file 'out/site/feed.xml' do
-  generate_atom_feed("out/side/feed.xml")
+file 'out/site/feed.xml' => ['src/erb/feed.xml.erb', 'out/site', 'out/metadata/index.yml'] + fragment_files do
+  generate_atom_feed("out/site/feed.xml")
 end
 
 desc "Compile all files"
