@@ -80,6 +80,13 @@ header.page-header > nav p {
     height: 100%;
 }
 
+/* TABLES */
+td, th {
+  border: none;
+  padding: 0;
+  padding-right: 1em;
+}
+
 /* FEATURE IMAGE AND OVERLAY */
 @media only screen and (max-width: 720px) {
   header > nav .featured-image-credit {
