@@ -81,6 +81,10 @@ Outside of the standard library, we depend on the following gems:
   though if this was the only gem remaining.
 * **Nokogiri.** Stable gem for HTML parsing for tests, no option in stdlib.
 
+Other dependencies include:
+
+* **AWS CLI.** For publishing the site to production.
+
 ## Wrong Turns
 
 * **Pandoc.** Doctemplates is too deficient as a templating language. In
