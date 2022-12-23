@@ -87,6 +87,18 @@ td, th {
   padding-right: 1em;
 }
 
+table.breakdown { font-family: monospace; width: 100% }
+
+/* IMAGE STRIPS */
+
+figure.image-strip img { width: 49% }
+
+.image-strip-2-to-1 img:nth-child(1) { width: 63%; }
+.image-strip-2-to-1 img:nth-child(2) { width: 35.5%; }
+
+.image-strip-1-to-2 img:nth-child(1) { width: 35.5%; }
+.image-strip-1-to-2 img:nth-child(2) { width: 63%; }
+
 /* FEATURE IMAGE AND OVERLAY */
 @media only screen and (max-width: 720px) {
   header > nav .featured-image-credit {

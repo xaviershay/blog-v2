@@ -55,8 +55,8 @@ Took literally the first possible wrong turn, following a group down a fire trai
 Had to run back through the sweeper along pretty runnable track to arrive at the first checkpoint 10 minutes before cutoff. (I think they retroactively extended this cutoff, it was pretty aggressive.)
 
 <figure class='image-strip'>
-  <img width="51.5%" src="/images/gssr/sensible-hat.jpg" />
-  <img width="46.9%" src="/images/gssr/dad-hike.jpg" />
+  <img src="/images/gssr/sensible-hat.jpg" />
+  <img src="/images/gssr/dad-hike.jpg" />
   <figcaption>IT'S SENSIBLE HAT TIME</figcaption>
 </figure>
 
