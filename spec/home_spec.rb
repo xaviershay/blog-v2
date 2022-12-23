@@ -9,7 +9,9 @@ RSpec.describe "the blog" do
       expect(page).to have_content("A System for Email")
     end
 
-    it 'segments posts by year'
+    it 'segments posts by year' do
+      expect(page).to have_xpath("//h2[text()='2022']")
+    end
   end
 
   describe 'post page' do
