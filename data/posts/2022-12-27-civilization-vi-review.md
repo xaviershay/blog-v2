@@ -1,6 +1,6 @@
 ---
 title: Civilization VI Expansion Review
-description: A summary of my games this year plus a review of the expansions.
+description: A summary of my games this year plus a review of the first three expansions.
 tags: ['review']
 image:
   feature: 'civ6/header.jpg'
