@@ -16,6 +16,11 @@ Deployed to [https://blog.xaviershay.com](https://blog.xaviershay.com)
     bin/test-remote # Run specs against production server
     bin/publish     # Publish website to S3/Cloudfront
 
+Optional supporting tools:
+
+* `aspell` for spell-checking.
+* `ImageOptim` (OSX) or `Trimage` (Linux) for image optimization.
+
 ## History & Motivation
 
 Previously I used Jekyll with a 3rd party theme. Over many years I accumulated
