@@ -29,6 +29,10 @@ def load_markdown_from_file(input_file)
       metadata.fetch("image", {}).values_at("card", "feature").compact.first
     metadata["source"] = input_file
     metadata["tags"] ||= []
+    metadata.fetch("image", {}).values_at("card", "feature").compact.first
+    if metadata["image"] && metadata["image"]["feature_credit"]
+      metadata["image"]["feature_credit"]["emphasis"] = true
+    end
 
     unless metadata["slug"]
       metadata["slug"] =

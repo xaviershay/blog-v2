@@ -52,6 +52,14 @@ RSpec.describe "the blog" do
     end
   end
 
+  describe 'custom reading graphs tag' do
+    describe 'processing' do
+      before(:all) { visit '/articles/2022-reading-list.html' }
+      it('has removed tag') { expect(page).to_not have_content("READINGGRAPHS") }
+      it('has included chart') { expect(page).to have_xpath("//table[contains(@class,'charts-css')]") }
+    end
+  end
+
   describe 'atom feed' do
     before(:all) { visit "/feed.xml" }
     it('has id') { expect(page).to have_xpath("//feed/id") }

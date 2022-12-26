@@ -3,7 +3,7 @@ article {
   font-family: "Noto Serif",serif;
 }
 
-header h1, article h1, article h2, article h3, article h4 {
+header h1, article h1, article h2, article h3, article h4, article th {
   font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
 }
 
@@ -88,6 +88,57 @@ td, th {
 }
 
 table.breakdown { font-family: monospace; width: 100% }
+
+/* BOOK REVIEWS */
+
+img.cover {
+  border-radius: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reading-analysis {
+  margin-top: 2rem; /* Make room for negatively positioned labels */
+}
+
+.reading-analysis table.charts-css {
+  height: 150px;
+}
+
+.ratings-histogram {
+  width: 25%;
+}
+
+.pages-histogram {
+  width: 65%;
+}
+
+.reading-analysis > div {
+  display: flex;
+}
+
+.reading-analysis .data {
+  margin-top: -1rem;
+  font-size: 0.6rem;
+  font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
+
+.reading-analysis tbody tr th {
+  font-size: 0.6rem;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+figure.reading-analysis table {
+  --color: var(--accent-bg);
+}
+
+.reading-analysis table td {
+  background-color: red;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid var(--border);
+}
 
 /* DEFINITION LISTS */
 

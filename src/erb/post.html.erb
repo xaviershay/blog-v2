@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="date" content='<%= @post.date %>'>
     <link rel="stylesheet" href="/css/simple.css">
+    <link rel="stylesheet" href="/css/charts.css">
     <link rel="stylesheet" href="/css/custom.css">
 
     <meta property="og:locale" content="en_AU">
@@ -40,12 +41,29 @@
     <article>
       <%= @post.body_html %>
 
-      <% if credit = @post.image&.feature_credit %>
+      <% credits = @post.all_credits %>
+      <% if credits.any? %>
         <details class='footer-image-credit'>
         <summary>Credits</summary>
-        <a href='<%= credit.link %>'>
-          <em><%= credit.title %></em> by <%= credit.author %>
-        </a>
+        <% if credits.length > 1 %>
+          <ul>
+          <% credits.each do |credit| %>
+            <li>
+              <a href='<%= credit.link %>'>
+                <% if credit.emphasis %>
+                  <em><%= credit.title %></em>
+                <% else %>
+                  <%= credit.title %>
+                <% end %> by <%= credit.author %>
+              </a>
+            </li>
+          <% end %>
+          </ul>
+        <% else %>
+          <a href='<%= credit.link %>'>
+            <em><%= credit.title %></em> by <%= credit.author %>
+          </a>
+        <% end %>
         </details>
       <% end %>
 
