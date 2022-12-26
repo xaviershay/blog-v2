@@ -89,6 +89,23 @@ td, th {
 
 table.breakdown { font-family: monospace; width: 100% }
 
+/* DEFINITION LISTS */
+
+/* https://stackoverflow.com/a/63291972/379639 */
+dl {
+  display: grid;
+  grid-template-columns: auto 100%;
+}
+
+dt {
+  grid-column: 1;
+}
+
+dd {
+  grid-column: 2;
+  margin-inline-start: 20px;
+}
+
 /* IMAGE STRIPS */
 
 figure.image-strip img { width: 49% }
