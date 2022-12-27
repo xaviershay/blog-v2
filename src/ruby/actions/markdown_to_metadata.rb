@@ -5,3 +5,9 @@ def markdown_to_metadata(input, output)
 
   File.write(output, metadata.to_yaml)
 end
+
+def book_markdown_to_metadata(input, output)
+  metadata, _ = *load_book_markdown_from_file(input)
+
+  File.write(output, metadata.to_yaml)
+end

@@ -1,0 +1,11 @@
+---
+id: OL1947904W
+slug: mathematics-for-the-nonmathematician
+title: Mathematics for the Nonmathematician
+author: Morris Kline
+rating: 2
+pages: 0
+reads:
+- finished_at: '2021-08-06'
+---
+Far too many words and incessantly gendered. Ended up skipping a lot of the history parts. Bits about the actual math were interesting enough.

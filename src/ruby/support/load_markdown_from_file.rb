@@ -45,3 +45,18 @@ def load_markdown_from_file(input_file)
     raise "Invalid markdown file: #{input_file}"
   end
 end
+
+def load_book_markdown_from_file(input_file)
+  raw = File.read(input_file)
+
+  match = raw.match(YAML_FRONTMATTER_REGEX)
+
+  if match
+    metadata = YAML.load(match[0])
+    data = match.post_match
+
+    [metadata, data]
+  else
+    raise "Invalid markdown file: #{input_file}"
+  end
+end

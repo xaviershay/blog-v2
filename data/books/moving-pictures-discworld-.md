@@ -1,0 +1,11 @@
+---
+id: OL7815509M
+slug: moving-pictures-discworld-
+title: Moving Pictures (Discworld)
+author: Terry Pratchett
+rating: 2
+pages: 396
+reads:
+- finished_at: '2015-10-05'
+---
+Couple of good scenes but mostly felt too forced.

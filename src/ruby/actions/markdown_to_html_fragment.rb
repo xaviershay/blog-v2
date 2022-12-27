@@ -25,14 +25,16 @@ def markdown_to_html_fragment(input, output)
   end
 
   # TODO: Actually generate these
-  book_data = {
-    2022 => {
-      'ratings' => [ 0, 1, 13, 15, 9 ],
-      'pages' => [ 0, 2, 7, 13, 7, 4, 1, 2, 1, 1 ]
-    }
-  }
+ #  book_data = {
+ #    2022 => {
+ #      'ratings' => [ 0, 1, 13, 15, 9 ],
+ #      'pages' => [ 0, 2, 7, 13, 7, 4, 1, 2, 1, 1 ]
+ #    }
+ #  }
   html.gsub!(/{{\s*READINGGRAPHS\s+(\d+)\s*}}/mi) do |match|
     year = $1
+    book_data = YAML.load_file("out/metadata/book_index.yml").fetch('stats')
+    
     if data = book_data[year.to_i]
       ratings = data.fetch('ratings')
       m = ratings.max.to_f

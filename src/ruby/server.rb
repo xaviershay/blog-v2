@@ -34,10 +34,11 @@ class Server < WEBrick::HTTPServlet::DefaultFileHandler
 end
 server = WEBrick::HTTPServer.new(:Port => 4001)
 
-server.mount '/', Server, File.join(PREFIX, 'index.html')
+server.mount '/books/', Server, File.join(PREFIX, 'books/index.html')
 KNOWN_FILES.each do |file|
   server.mount file, Server, File.join(PREFIX, file)
 end
+server.mount '/', Server, File.join(PREFIX, 'index.html')
 
 trap("INT") {
   server.shutdown

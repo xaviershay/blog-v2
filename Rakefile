@@ -13,12 +13,14 @@ require 'actions/compile_index_metadata'
 
 require 'actions/compile_post'
 require 'actions/compile_index'
+require 'actions/compile_book_index'
 require 'actions/compile_atom'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
 
 STATIC_FILES = Dir["src/static/**/*.{js,css}"]
 POST_FILES = Dir["data/posts/*.md"]
+BOOK_FILES = Dir["data/books/*.md"]
 FRAGMENT_FILES = POST_FILES.map do |x|
   "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
 end
@@ -26,8 +28,11 @@ end
 directory 'out/site/articles'
 directory 'out/site/css'
 directory 'out/site/js'
+directory 'out/site/books'
 directory 'out/metadata/posts'
+directory 'out/metadata/books'
 directory 'out/html/posts'
+directory 'out/html/books'
 
 site_files = []
 site_files += STATIC_FILES.map do |file|
@@ -42,8 +47,11 @@ site_files += STATIC_FILES.map do |file|
 end
 
 POST_METADATA_FILES = POST_FILES.map do |file|
-  name = File.basename(file, ".md").split('-', 4).drop(3).first
   "out/metadata/posts/#{File.basename(file)}.yml"
+end
+
+BOOK_METADATA_FILES = BOOK_FILES.map do |file|
+  "out/metadata/books/#{File.basename(file)}.yml"
 end
 
 site_files += POST_FILES.map do |file|
@@ -57,7 +65,7 @@ site_files += POST_FILES.map do |file|
     markdown_to_metadata(file, metadata)
   end
 
-  file fragment => [File.dirname(fragment), file, template] do
+  file fragment => [File.dirname(fragment), file, template, 'out/metadata/book_index.yml'] do
     markdown_to_html_fragment(file, fragment)
   end
 
@@ -81,11 +89,38 @@ site_files += POST_FILES.map do |file|
   out
 end
 
+site_files += BOOK_FILES.map do |file|
+  name = File.basename(file, ".md")
+  out = "out/site/books/#{name}.html"
+  metadata = "out/metadata/books/#{File.basename(file)}.yml"
+  fragment = "out/html/books/#{name}.html"
+  template = "src/erb/book.html.erb"
+
+  file metadata => [File.dirname(metadata), file] do
+    book_markdown_to_metadata(file, metadata)
+  end
+end
+
 multifile 'out/metadata/index.yml' => [
   'out/metadata/posts'
 ] + POST_METADATA_FILES do
   compile_index_metadata(POST_METADATA_FILES, "out/metadata/index.yml")
 end
+
+multifile 'out/metadata/book_index.yml' => [
+  'out/metadata/books'
+] + BOOK_METADATA_FILES do
+  compile_book_index_metadata(BOOK_METADATA_FILES, "out/metadata/book_index.yml")
+end
+
+file 'out/site/books/index.html' => [
+  'out/metadata/book_index.yml',
+  'src/erb/book_index.html.erb',
+  'out/site/books'
+] do
+  compile_book_index('out/metadata/book_index.yml', 'out/site/books/index.html')
+end
+site_files << "out/site/books/index.html"
 
 file 'out/site/index.html' => [
   'out/metadata/index.yml',

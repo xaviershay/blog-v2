@@ -80,6 +80,16 @@ header.page-header > nav p {
     height: 100%;
 }
 
+/* BOOK INDEX */
+
+/* TODO: Mobile friendly */
+.book-summary .date {
+  white-space: nowrap;
+}
+.book-summary .title {
+  text-transform: capitalize
+}
+
 /* TABLES */
 td, th {
   border: none;
