@@ -11,6 +11,7 @@ require 'actions/markdown_to_html_fragment'
 
 require 'actions/compile_index_metadata'
 
+require 'actions/book'
 require 'actions/compile_post'
 require 'actions/compile_index'
 require 'actions/compile_book_index'
@@ -96,8 +97,14 @@ site_files += BOOK_FILES.map do |file|
   fragment = "out/html/books/#{name}.html"
   template = "src/erb/book.html.erb"
 
+  builder = Actions::Book.new
+
   file metadata => [File.dirname(metadata), file] do
-    book_markdown_to_metadata(file, metadata)
+    builder.markdown_to_metadata(file, metadata)
+  end
+
+  file fragment => [File.dirname(fragment), file] do
+    builder.markdown_to_html_fragment(file, fragment)
   end
 end
 

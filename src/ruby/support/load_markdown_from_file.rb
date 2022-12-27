@@ -46,7 +46,7 @@ def load_markdown_from_file(input_file)
   end
 end
 
-def load_book_markdown_from_file(input_file)
+def load_markdown_from_file2(input_file)
   raw = File.read(input_file)
 
   match = raw.match(YAML_FRONTMATTER_REGEX)
