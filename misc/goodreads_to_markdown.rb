@@ -48,7 +48,7 @@ OVERRIDES = {
   22299763 => "OL17597665W",
   23437156 => "OL17332479W",
   14061957 => "OL17293267W",
-  14061955 => "OL2626368W", 
+  14061955 => "OL2626368W",
   10194157 => "OL16239519W",
   34602136 => "OL21156417W",
   44020966 => "OL20840033W",
@@ -66,7 +66,121 @@ OVERRIDES = {
   25489625 => "OL31380291W", #  Between the World and Me
   40053431 => "OL19351310W", #  Exactly: How Precision Engineers Created the Modern World
   8153988  => "OL2189633M", #  The Eye of the World (The Wheel of Time, #1)
-}
+  12982713 => 'OL16495247W', # El Narco: Inside Mexico's Criminal Insurgency
+  42267971 => '', # Eliud Kipchoge - History's fastest marathoner: An insight into the Kenyan life that shapes legends
+  36556202 => 'OL28202924M', # The Coddling of the American Mind: How Good Intentions and Bad Ideas Are Setting Up a Generation for Failure
+  8249187 => 'OL14993212W', # Bright Shiny Morning
+  35016990 => 'OL20199686W', # The End of the World Running Club
+  38908293 => 'OL1895753W', # Red Moon
+  20190519 => 'OL25651604M', # Age of Ambition: Chasing Fortune, Truth, and Faith in the New China
+  36500398 => 'OL32198773M', # The Order of Time
+  29584452 => 'OL25034040W', # The Underground Railroad
+  38897904 => 'OL9232188M', # Cryptonomicon
+  41431734 => 'OL4300550W', # The Dream Machine
+  23450640 => 'OL3259371W', # The Man Who Walked Through Time: The Story of the First Trip Afoot Through the Grand Canyon (Vintage Departures)
+  6589085 => 'OL679266W', # Anansi Boys
+  20025567 => 'OL17635445W', # The Prize: Who's in Charge of America's Schools?
+  40876575 => 'OL27689776W', # Utopia for Realists: How We Can Build the Ideal World
+  32970931 => 'OL24715437W', # The Spider Network: The Wild Story of a Math Genius, a Gang of Backstabbing Bankers, and One of the Greatest Scams in Financial History
+  38117105 => 'OL19774355W', # The Monster Baru Cormorant (The Masquerade, #2)
+  18831377 => 'OL16572140W', # The New Geography of Jobs
+  40611510 => 'OL7952998W', # The Last Lecture
+  38799469 => 'OL17892614W', # Bad Blood: Secrets and Lies in a Silicon Valley Startup
+  37655127 => 'OL27358713M', # Black Edge: Inside Information, Dirty Money, and the Quest to Bring Down the Most Wanted Man on Wall Street
+  30007916 => 'OL17797130W', # A Gentleman in Moscow
+  20528604 => 'OL17558854W', # The Rise of Superman: Decoding the Science of Ultimate Human Performance
+  28700715 => 'OL27371991M', # The Cosmic Web: Mysterious Architecture of the Universe
+  37761175 => 'OL47320M', # A People's History of the United States
+  39913669 => 'OL19745058W', # The Battle For Paradise: Puerto Rico Takes on the Disaster Capitalists
+  35404824 => 'OL27340415M', # North: Finding My Way While Running the Appalachian Trail
+  8343753 => 'OL8135246W', # To the Edge: A Man, Death Valley, and the Mystery of Endurance
+  40004706 => 'OL17828326W', # Evicted: Poverty and Profit in the American City
+  6088007 => 'OL27258W', # Neuromancer (Sprawl, #1)
+  20787425 => 'OL16929196W', # Reinventing Organizations: A Guide to Creating Organizations Inspired by the Next Stage of Human Consciousness
+  25251264 => 'OL20494296W', # On Palestine
+  13183999 => 'OL16298712W', # Extra Virginity: The Sublime and Scandalous World of Olive Oil
+  34445060 => 'OL20166987W', # Janesville: An American Story
+  6323016 => 'OL4311885W', # Boyd: The Fighter Pilot Who Changed the Art of War
+  6451669 => 'OL24752012W', # Altered Carbon (Takeshi Kovacs, #1)
+  10809340 => 'OL5829273W', # The Happiness Hypothesis: Finding Modern Truth in Ancient Wisdom
+  10814191 => 'OL15680047W', # The Most Human Human
+  34593435 => 'OL20170111W', # Exoplanets: Diamond Worlds, Super Earths, Pulsar Planets, and the New Search for Life beyond Our Solar System
+  35696749 => 'OL17062644W', # Ancillary Justice (Imperial Radch, #1)
+  16160706 => 'OL16489931W', # Steal Like an Artist: 10 Things Nobody Told You About Being Creative
+  25884323 => 'OL20003842W', # Aurora
+  18245960 => 'OL17267881W', # The Three-Body Problem (Remembrance of Earth’s Past, #1)
+  34599304 => 'OL20053398W', # Asteroid Hunters (TED Books)
+  34039808 => 'OL17834026W', # Oathbringer (The Stormlight Archive, #3)
+  18219313 => 'OL19920887W', # Encounter with Tiber
+  22816087 => 'OL17829905W', # Seveneves
+  12802745 => 'OL25690739M', # The Better Angels of Our Nature: Why Violence Has Declined
+  17786270 => '', # Out of the Crises
+  6521829 => 'OL3783464W', # Generation Kill
+  33411603 => 'OL26499490W', # Away with Words: An Irreverent Tour Through the World of Pun Competitions
+  6567239 => 'OL15335590W', # High Fidelity
+  21943284 => 'OL24505310W', # Zeroes
+  25927585 => 'OL17543143W', # The Secret Life of Musical Notation: Defying Interpretive Traditions (Amadeus)
+  31138556 => 'OL26247313M', # Homo Deus: A History of Tomorrow
+  19887474 => 'OL17363125W', # The Fifth Season (The Broken Earth, #1)
+  21955107 => 'OL25692795W', # Running and Stuff
+  28684704 => 'OL25936656M', # Dark Matter
+  6303927 => 'OL38501W', # Snow Crash
+  25600228 => 'OL20475117W', # The Traitor Baru Cormorant (The Masquerade, #1)
+  8702101 => 'OL14991370W', # Ghost: Confessions of a Counterterrorism Agent
+  11421926 => 'OL7969104W', # Clockers
+  18940614 => 'OL19707566W', # Senlin Ascends (The Books of Babel, #1)
+  20150777 => 'OL16813053W', # Words of Radiance (The Stormlight Archive, #2)
+  18663149 => 'OL17074648W', # Abaddon's Gate (Expanse, #3)
+  95558 => 'OL109524W', # Solaris
+  27833494 => 'OL19773866W', # Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right
+  18188241 => '', # Fundamental Chess Patterns
+  23692271 => 'OL17075811W', # Sapiens: A Brief History of Humankind
+  21611 => 'OL271163W', # The Forever War (The Forever War, #1)
+  25813921 => 'OL20244267W', # Grit: Passion, Perseverance, and the Science of Success
+  18891113 => 'OL15172684W', # What Got You Here Won't Get You There
+  40745 => 'OL2003465W', # Mindset: The New Psychology of Success
+  20448494 => 'OL19991282W', # Racing Weight (The Racing Weight Series)
+  18581676 => 'OL28671263W', # Be Slightly Evil: A Playbook for Sociopaths (Ribbonfarm Roughs)
+  18581690 => 'OL28670515W', # The Gervais Principle: The Complete Series, with a Bonus Essay on Office Space (Ribbonfarm Roughs)
+  10984768 => 'OL24144598W', # Tempo: Timing, Tactics and Strategy in Narrative-Driven Decision-Making
+  12067 => 'OL453936W', # Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch
+  11324722 => 'OL20355235W', # The Righteous Mind: Why Good People Are Divided by Politics and Religion
+  18401393 => 'OL17091839W', # The Martian
+  16049171 => 'OL28966677W', # Don't Go To Law School (Unless): A Law Professor's Inside Guide to Maximizing Opportunity and Minimizing Risk
+  15622 => 'OL275128W', # Native Son
+  17905709 => 'OL32166590M', # The Narrow Road to the Deep North
+  11389457 => 'OL16151796W', # Writing Movies for Fun and Profit: How We Made a Billion Dollars at the Box Office and You Can, Too!
+  10345973 => 'OL19839274W', # Cyropaedia: the education of Cyrus
+  6581994 => 'OL1821254W', # The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It
+  8125726 => 'OL2463051W', # The Goal: A Process of Ongoing Improvement
+  17938142 => 'OL2929969W', # Town Smokes
+  86147 => 'OL18322283M', # Bright Lights, Big City
+  18901790 => '', # Posterior Chain Linked: Don't Lift Without It (Simple Strength Book 6)
+  17830292 => '', # Squat Every Day
+  17279627 => '', # Disequilibrium
+  17306293 => 'OL17366206W', # Shift (Silo, #2)
+  13453029 => 'OL19790424W', # Wool Omnibus (Silo, #1)
+  7640261 => 'OL15568568W', # Sex at Dawn: The Prehistoric Origins of Modern Sexuality
+  17280927 => '', # Work out lose weight and stop being single
+  17166225 => 'OL19629024W', # The Miracle Morning: The Not-So-Obvious Secret Guaranteed to Transform Your Life: Before 8AM
+  23419 => 'OL107928W', # The Consolations of Philosophy
+  4407 => 'OL679360W', # American Gods (American Gods, #1)
+  10374 => 'OL2625421W', # Hard-Boiled Wonderland and the End of the World
+  13306525 => '', # Ikigai
+  242472 => 'OL3295030W', # The Black Swan: The Impact of the Highly Improbable
+  10557318 => 'OL19644560W', # Running on Empty: An Ultramarathoner's Story of Love, Loss, and a Record-Setting Run Across America
+  12978407 => '', # The Long Run
+  262731 => 'OL18149735W', # The Definitive Book of Body Language
+  13274256 => '', # Betterness: Economics for Humans
+  4395 => 'OL23205W', # The Grapes of Wrath
+  4138 => 'OL2693098W', # Naked
+  9938211 => 'OL24531400M', # The 4-Hour Body: An Uncommon Guide to Rapid Fat-Loss, Incredible Sex, and Becoming Superhuman
+  5048174 => 'OL20288512W', # 2BR02B
+  320 => 'OL274505W', # One Hundred Years of Solitude
+  6289283 => 'OL13805586W', # Born to Run: A Hidden Tribe, Superathletes, and the Greatest Race the World Has Never Seen
+  1713426 => 'OL9302660W', # Predictably Irrational: The Hidden Forces That Shape Our Decisions
+  119787 => 'OL103123W', # Fahrenheit 451
+}.filter {|k, v| v.length > 0 }
 
 books = doc.css('#booksBody tr.review').map do |row|
   shelves = row.css('.field.shelves .value .shelfLink').map(&:text)
@@ -109,7 +223,7 @@ books = doc.css('#booksBody tr.review').map do |row|
     when 200, 302
       JSON.parse(response.body)
     when 404
-      raise "404, bad ol id in overrides"
+      raise "404, bad ol id in overrides for #{gr_id} #{title}: #{ol_id}"
     else
       raise "Unhandled response code: #{response.code}"
     end
@@ -125,7 +239,7 @@ books = doc.css('#booksBody tr.review').map do |row|
       JSON.parse(response.body)
     when 404
       puts "not found by ISBN, abandoning"
-      $stderr.puts "MISSING: #{gr_id} #{title}"
+      $stderr.puts "#{gr_id} => '', # #{title}"
       next
     else
       raise "Unhandled response code: #{ol_data.code}"
@@ -155,7 +269,7 @@ books = doc.css('#booksBody tr.review').map do |row|
     end
 
     unless ol_id
-      $stderr.puts "MISSING: #{gr_id} #{title}"
+      $stderr.puts "#{gr_id} => '', # #{title}"
       next
     end
 
