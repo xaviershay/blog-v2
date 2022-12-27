@@ -5,6 +5,7 @@ title: The art of doing
 author: Camille Sweeney
 rating: 3
 pages: 272
+categories: []
 reads:
 - finished_at: '2013-03-16'
 ---

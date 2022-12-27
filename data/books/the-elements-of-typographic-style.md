@@ -5,6 +5,7 @@ title: The Elements of Typographic Style
 author: Robert Bringhurst
 rating: 4
 pages: 352
+categories: []
 reads:
 - finished_at: '2010-10-15'
 ---

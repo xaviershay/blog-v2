@@ -5,6 +5,7 @@ title: An Artist of the Floating World
 author: Kazuo Ishiguro
 rating: 3
 pages: 206
+categories: []
 reads:
 - finished_at: '2020-09-28'
 ---

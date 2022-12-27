@@ -5,6 +5,7 @@ title: The broom of the system
 author: David Foster Wallace
 rating: 4
 pages: 467
+categories: []
 reads:
 - finished_at: '2013-01-22'
 ---

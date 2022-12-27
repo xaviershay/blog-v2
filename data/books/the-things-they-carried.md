@@ -5,6 +5,8 @@ title: The Things They Carried
 author: Tim O'Brien
 rating: 5
 pages: 246
+categories:
+- literature
 reads:
 - finished_at: '2021-06-15'
 ---

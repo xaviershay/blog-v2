@@ -5,6 +5,8 @@ title: Jesus' son
 author: Denis Johnson
 rating: 4
 pages: 160
+categories:
+- literature
 reads:
 - finished_at: '2021-04-08'
 ---

@@ -5,6 +5,7 @@ title: Moneyball
 author: Michael Lewis
 rating: 4
 pages: 317
+categories: []
 reads:
 - finished_at: '2012-03-31'
 ---

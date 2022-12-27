@@ -5,6 +5,7 @@ title: Flash Boys
 author: Michael Lewis
 rating: 4
 pages: 274
+categories: []
 reads:
 - finished_at: '2014-08-22'
 ---

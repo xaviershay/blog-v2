@@ -5,6 +5,7 @@ title: Walden and Civil Disobedience (150th Anniversary) (Signet Classics)
 author: Henry David Thoreau
 rating: 4
 pages: 320
+categories: []
 reads:
 - finished_at: '2010-06-01'
 ---

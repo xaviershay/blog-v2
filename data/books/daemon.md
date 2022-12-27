@@ -5,6 +5,8 @@ title: Daemon
 author: Daniel Suarez
 rating: 3
 pages: 632
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-07-31'
 ---

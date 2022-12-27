@@ -5,6 +5,7 @@ title: The Internet of Garbage
 author: Sarah Jeong
 rating: 4
 pages: 92
+categories: []
 reads:
 - finished_at: '2015-11-29'
 ---

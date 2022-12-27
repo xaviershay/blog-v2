@@ -5,6 +5,7 @@ title: Mindfulness in Plain English
 author: Henepola Gunaratana
 rating: 4
 pages: 208
+categories: []
 reads:
 - finished_at: '2011-03-08'
 ---

@@ -5,6 +5,7 @@ title: Eccentric Orbits
 author: John Bloom
 rating: 5
 pages: 560
+categories: []
 reads:
 - finished_at: '2017-07-09'
 ---

@@ -5,6 +5,8 @@ title: Starsight EXPORT
 author: Brandon Sanderson
 rating: 4
 pages: 461
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-01-19'
 ---

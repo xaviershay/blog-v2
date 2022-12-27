@@ -5,6 +5,8 @@ title: Consider Phlebas
 author: Iain M. Banks
 rating: 2
 pages: 467
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-05-16'
 ---

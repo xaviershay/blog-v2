@@ -5,6 +5,7 @@ title: Shantaram
 author: Gregory David Roberts
 rating: 4
 pages: 936
+categories: []
 reads:
 - finished_at: '2011-03-27'
 ---

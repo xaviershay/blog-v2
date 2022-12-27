@@ -5,6 +5,7 @@ title: Eating Animals
 author: Jonathan Safran  Foer
 rating: 5
 pages: 341
+categories: []
 reads:
 - finished_at: '2014-09-14'
 ---

@@ -5,6 +5,7 @@ title: The End of America
 author: Naomi Wolf
 rating: 5
 pages: 176
+categories: []
 reads:
 - finished_at: '2011-03-02'
 ---

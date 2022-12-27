@@ -5,6 +5,8 @@ title: Normal People
 author: Sally Rooney
 rating: 5
 pages: 273
+categories:
+- literature
 reads:
 - finished_at: '2019-12-24'
 ---

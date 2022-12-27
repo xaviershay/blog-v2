@@ -5,6 +5,8 @@ title: Writing Tools
 author: Roy Peter Clark
 rating: 4
 pages: 260
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-12-29'
 ---

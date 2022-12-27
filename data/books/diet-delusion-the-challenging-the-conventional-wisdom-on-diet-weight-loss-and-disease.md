@@ -6,6 +6,7 @@ title: Diet Delusion, the Challenging the Conventional Wisdom on Diet, Weight Lo
 author: Gary Taubes
 rating: 0
 pages: 640
+categories: []
 reads:
 - finished_at: '2010-05-20'
 ---

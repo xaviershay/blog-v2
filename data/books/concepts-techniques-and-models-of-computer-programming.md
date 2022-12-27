@@ -5,6 +5,7 @@ title: Concepts, Techniques, and Models of Computer Programming
 author: Peter Van Roy
 rating: 4
 pages: 936
+categories: []
 reads:
 - finished_at: '2012-01-08'
 ---

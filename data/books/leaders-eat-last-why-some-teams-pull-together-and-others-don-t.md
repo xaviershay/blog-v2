@@ -5,6 +5,7 @@ title: 'Leaders Eat Last: Why Some Teams Pull Together and Others Don''t'
 author: Simon Sinek
 rating: 3
 pages: 350
+categories: []
 reads:
 - finished_at: '2014-04-20'
 ---

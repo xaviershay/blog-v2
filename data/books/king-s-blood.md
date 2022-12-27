@@ -5,6 +5,8 @@ title: King's Blood
 author: Daniel Abraham
 rating: 4
 pages: 501
+categories:
+- fantasy
 reads:
 - finished_at: '2020-10-10'
 ---

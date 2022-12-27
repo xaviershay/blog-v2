@@ -5,6 +5,7 @@ title: Just Food
 author: James McWilliams
 rating: 5
 pages: 288
+categories: []
 reads:
 - finished_at: '2011-05-06'
 ---

@@ -5,6 +5,8 @@ title: Walking the Talk
 author: Carolyn Taylor
 rating: 4
 pages: 416
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-11-16'
 ---

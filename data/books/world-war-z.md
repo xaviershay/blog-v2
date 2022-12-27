@@ -5,6 +5,7 @@ title: World War Z
 author: Max Brooks
 rating: 2
 pages: 342
+categories: []
 reads:
 - finished_at: '2020-04-24'
 ---

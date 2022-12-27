@@ -5,6 +5,7 @@ title: The art of being unreasonable
 author: Eli Broad
 rating: 3
 pages: 256
+categories: []
 reads:
 - finished_at: '2012-12-09'
 ---

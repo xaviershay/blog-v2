@@ -5,6 +5,7 @@ title: House of Suns
 author: Alastair Reynolds
 rating: 1
 pages: 516
+categories: []
 reads:
 - finished_at: '2018-08-12'
 ---

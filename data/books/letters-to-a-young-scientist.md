@@ -5,6 +5,7 @@ title: Letters to a young scientist
 author: Edward O. Wilson
 rating: 4
 pages: 256
+categories: []
 reads:
 - finished_at: '2015-12-24'
 ---

@@ -5,6 +5,7 @@ title: Wealth, poverty and politics
 author: Thomas Sowell
 rating: 3
 pages: 328
+categories: []
 reads:
 - finished_at: '2015-11-02'
 ---

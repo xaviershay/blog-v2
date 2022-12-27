@@ -5,6 +5,7 @@ title: Red Plenty
 author: Francis Spufford
 rating: 5
 pages: 434
+categories: []
 reads:
 - finished_at: '2012-09-10'
 ---

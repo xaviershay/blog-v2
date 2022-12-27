@@ -5,6 +5,8 @@ title: The great game of business
 author: Jack Stack
 rating: 5
 pages: 304
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-02-21'
 ---

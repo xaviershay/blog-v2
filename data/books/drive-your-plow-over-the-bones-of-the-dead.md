@@ -5,6 +5,8 @@ title: Drive Your Plow Over The Bones Of The Dead
 author: Olga Tokarczuk
 rating: 4
 pages: 274
+categories:
+- literature
 reads:
 - finished_at: '2020-03-08'
 ---

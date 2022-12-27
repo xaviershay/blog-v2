@@ -5,6 +5,7 @@ title: Neither Here nor There
 author: Bill Bryson
 rating: 2
 pages: 254
+categories: []
 reads:
 - finished_at: '2016-06-16'
 ---

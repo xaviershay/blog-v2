@@ -5,6 +5,7 @@ title: A Supposedly Fun Thing I'll Never Do Again
 author: David Foster Wallace
 rating: 5
 pages: 353
+categories: []
 reads:
 - finished_at: '2013-05-23'
 ---

@@ -6,6 +6,7 @@
     <link href="/feed.xml" type="application/atom+xml" rel="alternate">
 
     <link rel="stylesheet" href="/css/simple.css">
+    <link rel="stylesheet" href="/css/charts.css">
     <link rel="stylesheet" href="/css/custom.css">
 
     <title>Xavier Shay</title>
@@ -22,6 +23,59 @@
     </header>
     <nav class='book-list'>
       <h2>Books I've Read</h2>
+      <h3>Analysis</h3>
+      <div class='yearly-summaries'>
+        <div>
+          <table class="year-total-summary charts-css column multiple data-spacing-2 show-labels show-heading">
+            <caption>Volume</caption>
+            <tbody>
+              <% book_total = @site.stats.flat_map {|x| x[1].book_total }.max.to_f %>
+              <% page_total = @site.stats.flat_map {|x| x[1].page_total }.max.to_f %>
+              <% @site.stats.sort_by(&:first).each do |year, stats| %>
+                <tr>
+                  <th scope="row"><%= year %></th>
+                    <td style="--size:<%= stats.book_total / book_total %>">
+                      <span style='display:none' class='data'><%= stats.book_total %></span>
+                    </td>
+                    <td style="--size:<%= stats.page_total / page_total %>">
+                      <span style='display:none' class='data'><%= stats.page_total %></span>
+                    </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <ul class="charts-css legend legend-rectangle">
+          <li>Books</li>
+          <li>Pages</li>
+        </ul>
+        </div>
+          <table class="year-genre-summary charts-css column multiple data-spacing-1 show-labels show-heading">
+            <caption>Genre</caption>
+            <tbody>
+            <% total = @site.stats.flat_map {|x| x[1].categories.to_h.values }.max %>
+        <% @site.stats.sort_by(&:first).each do |year, stats| %>
+
+          <% categories = stats['categories'].to_h %>
+              <tr>
+                <th scope="row"><%= year %></th>
+                <% %i(non-fiction sci-fi fantasy literature other).each do |c| %>
+                  <td style="--size:<%= categories[c].to_f / total %>">
+                    <%# hide-data doesn't work for skinny bars because it keeps the content around. %>
+                    <span style='display:none' class='data'><%= categories[c].to_f  %></span>
+                  </td>
+                <% end %>
+              </tr>
+        <% end %>
+            </tbody>
+          </table>
+        <ul class="charts-css legend legend-rectangle">
+          <li>Non-Fiction</li>
+          <li>Sci-Fi</li>
+          <li>Fantasy</li>
+          <li>Literature</li>
+          <li>Other</li>
+        </ul>
+      </div>
       <% @site.readings.group_by {|x| x.finished_at.year }.each do |year, books| %>
         <h3><%= year %></h3>
         <table>

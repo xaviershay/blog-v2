@@ -5,6 +5,7 @@ title: Mort
 author: Terry Pratchett
 rating: 4
 pages: 243
+categories: []
 reads:
 - finished_at: '2015-05-21'
 ---

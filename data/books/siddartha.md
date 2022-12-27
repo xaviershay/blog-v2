@@ -5,6 +5,8 @@ title: Siddartha
 author: Hermann Hesse
 rating: 4
 pages: 131
+categories:
+- literature
 reads:
 - finished_at: '2021-02-21'
 ---

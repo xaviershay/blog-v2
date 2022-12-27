@@ -5,6 +5,7 @@ title: Visual Explanations
 author: Edward R. Tufte
 rating: 0
 pages: 156
+categories: []
 reads:
 - finished_at: '2010-07-27'
 ---

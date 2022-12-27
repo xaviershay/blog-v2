@@ -5,6 +5,8 @@ title: The Fractal Prince
 author: Hannu Rajaniemi
 rating: 3
 pages: 320
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-03-13'
 ---

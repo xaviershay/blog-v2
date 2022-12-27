@@ -5,6 +5,7 @@ title: Catch-22
 author: Joseph Heller
 rating: 5
 pages: 453
+categories: []
 reads:
 - finished_at: '2011-07-26'
 ---

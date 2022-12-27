@@ -5,6 +5,7 @@ title: Being Mortal
 author: Atul Gawande
 rating: 5
 pages: 282
+categories: []
 reads:
 - finished_at: '2015-01-02'
 ---

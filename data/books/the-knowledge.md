@@ -5,6 +5,7 @@ title: The Knowledge
 author: Lewis Dartnell
 rating: 3
 pages: 340
+categories: []
 reads:
 - finished_at: '2015-12-14'
 ---

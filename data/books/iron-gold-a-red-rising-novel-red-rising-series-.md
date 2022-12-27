@@ -5,6 +5,8 @@ title: 'Iron Gold: A Red Rising Novel (Red Rising Series)'
 author: Pierce Brown
 rating: 3
 pages: 605
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-12-28'
 - finished_at: '2018-02-24'

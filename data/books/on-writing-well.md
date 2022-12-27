@@ -5,6 +5,7 @@ title: On Writing Well
 author: William Zinsser
 rating: 5
 pages: 336
+categories: []
 reads:
 - finished_at: '2013-10-06'
 ---

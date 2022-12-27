@@ -5,6 +5,7 @@ title: The Five Dysfunctions of a Team
 author: Patrick Lencioni
 rating: 3
 pages: 227
+categories: []
 reads:
 - finished_at: '2016-10-05'
 ---

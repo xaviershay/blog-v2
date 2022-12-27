@@ -5,6 +5,7 @@ title: Seeing Like a State
 author: James C. Scott
 rating: 3
 pages: 445
+categories: []
 reads:
 - finished_at: '2015-09-15'
 ---

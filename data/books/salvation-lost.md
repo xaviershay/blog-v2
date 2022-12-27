@@ -5,6 +5,8 @@ title: Salvation Lost
 author: Peter F. Hamilton
 rating: 2
 pages: 494
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-03-17'
 ---

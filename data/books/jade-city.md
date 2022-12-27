@@ -5,6 +5,8 @@ title: Jade City
 author: Fonda Lee
 rating: 5
 pages: 560
+categories:
+- fantasy
 reads:
 - finished_at: '2022-09-21'
 ---

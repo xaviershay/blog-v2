@@ -5,6 +5,7 @@ title: Consider Your Options
 author: Kaye A. Thomas
 rating: 3
 pages: 249
+categories: []
 reads:
 - finished_at: '2016-04-16'
 ---

@@ -5,6 +5,7 @@ title: Free will
 author: Sam Harris
 rating: 3
 pages: 96
+categories: []
 reads:
 - finished_at: '2013-12-31'
 ---

@@ -5,6 +5,8 @@ title: Velocity Weapon
 author: Megan E. O'Keefe
 rating: 4
 pages: 544
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-09-28'
 ---

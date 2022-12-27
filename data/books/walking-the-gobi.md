@@ -5,6 +5,8 @@ title: Walking the Gobi
 author: Helen Thayer
 rating: 3
 pages: 251
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-11-15'
 ---

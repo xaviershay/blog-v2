@@ -5,6 +5,7 @@ title: Leviathan Wakes
 author: James S.A. Corey
 rating: 3
 pages: 592
+categories: []
 reads:
 - finished_at: '2017-04-06'
 ---

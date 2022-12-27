@@ -5,6 +5,7 @@ title: Debt
 author: David Graeber
 rating: 5
 pages: 534
+categories: []
 reads:
 - finished_at: '2012-06-15'
 ---

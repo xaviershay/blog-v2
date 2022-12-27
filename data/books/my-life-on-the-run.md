@@ -5,6 +5,7 @@ title: My life on the run
 author: Bart Yasso
 rating: 3
 pages: 270
+categories: []
 reads:
 - finished_at: '2015-12-10'
 ---

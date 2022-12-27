@@ -5,6 +5,7 @@ title: Marine Sniper
 author: Charles Henderson
 rating: 3
 pages: 336
+categories: []
 reads:
 - finished_at: '2015-03-30'
 ---

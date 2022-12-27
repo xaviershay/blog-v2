@@ -5,6 +5,7 @@ title: You are having a good time
 author: Amie Barrodale
 rating: 4
 pages: 208
+categories: []
 reads:
 - finished_at: '2016-12-17'
 ---

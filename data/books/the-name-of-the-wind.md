@@ -5,6 +5,7 @@ title: The Name of the Wind
 author: Patrick Rothfuss
 rating: 2
 pages: 662
+categories: []
 reads:
 - finished_at: '2015-07-18'
 ---

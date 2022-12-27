@@ -5,6 +5,7 @@ title: The payoff
 author: Jeff Connaughton
 rating: 3
 pages: 288
+categories: []
 reads:
 - finished_at: '2013-12-01'
 ---

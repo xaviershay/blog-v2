@@ -5,6 +5,7 @@ title: Letters to a Young Contrarian (Art of Mentoring)
 author: Christopher Hitchens
 rating: 5
 pages: 141
+categories: []
 reads:
 - finished_at: '2010-09-24'
 ---

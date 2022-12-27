@@ -5,6 +5,8 @@ title: Getting together
 author: Roger Fisher
 rating: 3
 pages: 216
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-12-23'
 ---

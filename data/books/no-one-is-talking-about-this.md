@@ -5,6 +5,8 @@ title: No One Is Talking About This
 author: Patricia Lockwood
 rating: 5
 pages: 210
+categories:
+- literature
 reads:
 - finished_at: '2021-10-20'
 ---

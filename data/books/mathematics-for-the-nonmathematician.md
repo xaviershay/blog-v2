@@ -5,6 +5,8 @@ title: Mathematics for the Nonmathematician
 author: Morris Kline
 rating: 2
 pages: 0
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-08-06'
 ---

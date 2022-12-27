@@ -5,6 +5,7 @@ title: What it takes
 author: Richard Ben Cramer
 rating: 4
 pages: 1
+categories: []
 reads:
 - finished_at: '2014-08-02'
 ---

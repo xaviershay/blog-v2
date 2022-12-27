@@ -5,6 +5,8 @@ title: The Man Who Solved the Market
 author: Gregory Zuckerman
 rating: 4
 pages: 359
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-12-19'
 ---

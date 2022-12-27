@@ -5,6 +5,7 @@ title: Ex Libris
 author: Anne Fadiman
 rating: 4
 pages: 162
+categories: []
 reads:
 - finished_at: '2011-06-25'
 ---

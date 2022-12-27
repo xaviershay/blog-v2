@@ -5,6 +5,7 @@ title: Lucifer's banker
 author: Bradley C. Birkenfeld
 rating: 1
 pages: 344
+categories: []
 reads:
 - finished_at: '2016-12-07'
 ---

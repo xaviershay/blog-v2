@@ -5,6 +5,7 @@ title: Ancillary Justice
 author: Ann Leckie
 rating: 3
 pages: 416
+categories: []
 reads:
 - finished_at: '2017-11-01'
 ---

@@ -5,6 +5,8 @@ title: Like, Comment, Subscribe
 author: Mark Bergen
 rating: 4
 pages: 416
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-09-23'
 ---

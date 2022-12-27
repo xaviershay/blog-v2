@@ -5,6 +5,7 @@ title: Extremely Loud and Incredibly Close
 author: Jonathan Safran  Foer
 rating: 4
 pages: 326
+categories: []
 reads:
 - finished_at: '2014-09-08'
 ---

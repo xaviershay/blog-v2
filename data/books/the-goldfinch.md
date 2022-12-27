@@ -5,6 +5,7 @@ title: The Goldfinch
 author: Donna Tartt
 rating: 4
 pages: 771
+categories: []
 reads:
 - finished_at: '2016-07-16'
 ---

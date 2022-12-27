@@ -5,6 +5,8 @@ title: How to listen to jazz
 author: Ted Gioia
 rating: 4
 pages: 272
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-03-07'
 ---

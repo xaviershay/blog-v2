@@ -5,6 +5,7 @@ title: The art of language invention
 author: David J. Peterson
 rating: 3
 pages: 292
+categories: []
 reads:
 - finished_at: '2015-10-23'
 ---

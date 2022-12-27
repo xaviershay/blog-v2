@@ -5,6 +5,7 @@ title: The second life of Nick Mason
 author: Steve Hamilton
 rating: 1
 pages: 288
+categories: []
 reads:
 - finished_at: '2016-07-01'
 ---

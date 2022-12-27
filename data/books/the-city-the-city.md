@@ -5,6 +5,7 @@ title: The City & The City
 author: China Miéville
 rating: 4
 pages: 312
+categories: []
 reads:
 - finished_at: '2011-10-02'
 ---

@@ -5,6 +5,7 @@ title: 'Racing the Rain: A Novel'
 author: John L. Parker Jr.
 rating: 4
 pages: 368
+categories: []
 reads:
 - finished_at: '2016-03-07'
 ---

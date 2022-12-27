@@ -5,6 +5,8 @@ title: Lifespan
 author: David Sinclair
 rating: 4
 pages: 432
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-07-15'
 ---

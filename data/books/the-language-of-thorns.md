@@ -5,6 +5,8 @@ title: The Language of Thorns
 author: Leigh Bardugo
 rating: 3
 pages: 281
+categories:
+- literature
 reads:
 - finished_at: '2020-03-06'
 ---

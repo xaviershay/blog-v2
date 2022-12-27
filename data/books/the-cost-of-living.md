@@ -5,6 +5,8 @@ title: The cost of living
 author: Deborah Levy
 rating: 4
 pages: 144
+categories:
+- literature
 reads:
 - finished_at: '2022-06-30'
 ---

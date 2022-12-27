@@ -5,6 +5,8 @@ title: In the distance
 author: Hernan Diaz
 rating: 3
 pages: 256
+categories:
+- literature
 reads:
 - finished_at: '2020-09-10'
 ---

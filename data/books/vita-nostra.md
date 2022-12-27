@@ -5,6 +5,8 @@ title: Vita nostra
 author: Marina Dyachenko
 rating: 3
 pages: 416
+categories:
+- fantasy
 reads:
 - finished_at: '2022-02-08'
 ---

@@ -5,6 +5,7 @@ title: Thinking, fast and slow
 author: Daniel Kahneman
 rating: 5
 pages: 499
+categories: []
 reads:
 - finished_at: '2012-03-18'
 ---

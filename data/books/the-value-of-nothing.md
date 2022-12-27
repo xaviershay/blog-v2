@@ -5,6 +5,7 @@ title: The value of nothing
 author: Raj Patel
 rating: 5
 pages: 256
+categories: []
 reads:
 - finished_at: '2010-04-15'
 ---

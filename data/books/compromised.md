@@ -5,6 +5,8 @@ title: Compromised
 author: Peter Strzok
 rating: 3
 pages: 384
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-10-10'
 ---

@@ -5,6 +5,7 @@ title: Command and Control
 author: Eric Schlosser
 rating: 4
 pages: 656
+categories: []
 reads:
 - finished_at: '2015-04-12'
 ---

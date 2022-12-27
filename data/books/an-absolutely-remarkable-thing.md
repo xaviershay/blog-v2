@@ -5,6 +5,8 @@ title: An Absolutely Remarkable Thing
 author: Hank Green
 rating: 4
 pages: 343
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-01-08'
 ---

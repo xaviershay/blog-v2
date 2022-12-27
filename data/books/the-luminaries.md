@@ -5,6 +5,8 @@ title: The Luminaries
 author: Eleanor Catton
 rating: 3
 pages: 848
+categories:
+- literature
 reads:
 - finished_at: '2022-09-01'
 ---

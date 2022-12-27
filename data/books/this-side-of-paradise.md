@@ -5,6 +5,7 @@ title: This side of paradise
 author: F. Scott Fitzgerald
 rating: 5
 pages: 275
+categories: []
 reads:
 - finished_at: '2012-02-07'
 ---

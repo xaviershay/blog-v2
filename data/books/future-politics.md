@@ -5,6 +5,8 @@ title: Future Politics
 author: Jamie Susskind
 rating: 3
 pages: 544
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-09-12'
 ---

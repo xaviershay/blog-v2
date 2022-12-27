@@ -5,6 +5,8 @@ title: Ministry for the Future
 author: Kim Stanley Robinson
 rating: 5
 pages: 563
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-12-28'
 ---

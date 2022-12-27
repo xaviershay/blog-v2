@@ -5,6 +5,8 @@ title: Reamde
 author: Neal Stephenson
 rating: 4
 pages: 1
+categories:
+- sci-fi
 reads:
 - finished_at: '2019-04-14'
 ---

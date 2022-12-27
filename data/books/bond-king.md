@@ -5,6 +5,8 @@ title: Bond King
 author: Mary Childs
 rating: 4
 pages: 336
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-05-25'
 ---

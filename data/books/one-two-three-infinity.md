@@ -5,6 +5,8 @@ title: One Two Three ... Infinity
 author: George Gamow
 rating: 2
 pages: 352
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-07-26'
 ---

@@ -5,6 +5,7 @@ title: New New Thing
 author: Michael Lewis
 rating: 4
 pages: 349
+categories: []
 reads:
 - finished_at: '2016-12-11'
 ---

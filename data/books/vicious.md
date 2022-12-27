@@ -5,6 +5,8 @@ title: Vicious
 author: V.E. Schwab
 rating: 4
 pages: 366
+categories:
+- fantasy
 reads:
 - finished_at: '2019-11-05'
 ---

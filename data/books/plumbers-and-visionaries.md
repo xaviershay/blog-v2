@@ -5,6 +5,7 @@ title: Plumbers and Visionaries
 author: Peter Norman
 rating: 2
 pages: 368
+categories: []
 reads:
 - finished_at: '2010-03-16'
 ---

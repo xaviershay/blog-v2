@@ -5,6 +5,7 @@ title: The Way of Kings
 author: Brandon Sanderson
 rating: 4
 pages: 1
+categories: []
 reads:
 - finished_at: '2017-04-30'
 ---

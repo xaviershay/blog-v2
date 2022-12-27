@@ -5,6 +5,7 @@ title: 'Getting more : how to negotiate to achieve your goals in the real world'
 author: Stuart Diamond
 rating: 5
 pages: 400
+categories: []
 reads:
 - finished_at: '2016-07-30'
 ---

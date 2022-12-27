@@ -5,6 +5,8 @@ title: How to Hide an Empire
 author: Daniel Immerwahr
 rating: 5
 pages: 425
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-03-20'
 ---

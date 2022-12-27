@@ -5,6 +5,7 @@ title: Light in August
 author: William Faulkner
 rating: 4
 pages: 507
+categories: []
 reads:
 - finished_at: '2014-07-10'
 ---

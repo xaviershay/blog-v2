@@ -5,6 +5,8 @@ title: Another Now
 author: Yanis Varoufakis
 rating: 3
 pages: 235
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-05-08'
 ---

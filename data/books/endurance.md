@@ -5,6 +5,8 @@ title: Endurance
 author: Alfred Lansing
 rating: 5
 pages: 282
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-11-05'
 ---

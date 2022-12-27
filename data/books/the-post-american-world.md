@@ -5,6 +5,7 @@ title: The post-American world
 author: Fareed Zakaria
 rating: 4
 pages: 292
+categories: []
 reads:
 - finished_at: '2010-01-21'
 ---

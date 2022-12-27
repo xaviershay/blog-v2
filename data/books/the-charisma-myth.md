@@ -5,6 +5,7 @@ title: The charisma myth
 author: Olivia Fox Cabane
 rating: 4
 pages: 264
+categories: []
 reads:
 - finished_at: '2013-02-13'
 ---

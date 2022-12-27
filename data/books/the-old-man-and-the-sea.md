@@ -5,6 +5,7 @@ title: The old man and the sea
 author: Ernest Hemingway
 rating: 4
 pages: 96
+categories: []
 reads:
 - finished_at: '2012-02-01'
 ---

@@ -5,6 +5,7 @@ title: Domain-driven design
 author: Eric Evans
 rating: 4
 pages: 560
+categories: []
 reads:
 - finished_at: '2011-09-11'
 ---

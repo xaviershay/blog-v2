@@ -5,6 +5,8 @@ title: Things I Don't Want to Know
 author: Deborah Levy
 rating: 4
 pages: 109
+categories:
+- literature
 reads:
 - finished_at: '2022-11-12'
 ---

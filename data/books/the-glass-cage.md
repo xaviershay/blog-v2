@@ -5,6 +5,7 @@ title: The Glass Cage
 author: Nicholas Carr
 rating: 5
 pages: 288
+categories: []
 reads:
 - finished_at: '2014-10-12'
 ---

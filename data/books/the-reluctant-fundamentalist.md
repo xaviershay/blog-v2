@@ -5,6 +5,7 @@ title: The reluctant fundamentalist
 author: Mohsin Hamid
 rating: 4
 pages: 184
+categories: []
 reads:
 - finished_at: '2010-10-19'
 ---

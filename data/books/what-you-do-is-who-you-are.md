@@ -5,6 +5,8 @@ title: What You Do Is Who You Are
 author: Ben Horowitz
 rating: 3
 pages: 288
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-09-10'
 ---

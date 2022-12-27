@@ -5,6 +5,8 @@ title: The Gene
 author: Siddhartha Mukherjee
 rating: 5
 pages: 592
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-09-19'
 ---

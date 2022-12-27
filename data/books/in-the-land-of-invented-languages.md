@@ -5,6 +5,7 @@ title: In the land of invented languages
 author: Arika Okrent
 rating: 4
 pages: 342
+categories: []
 reads:
 - finished_at: '2015-10-20'
 ---

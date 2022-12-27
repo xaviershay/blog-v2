@@ -5,6 +5,7 @@ title: Going long
 author: David Willey
 rating: 3
 pages: 400
+categories: []
 reads:
 - finished_at: '2015-04-27'
 ---

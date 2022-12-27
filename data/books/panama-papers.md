@@ -5,6 +5,8 @@ title: Panama Papers
 author: Frederik Obermaier
 rating: 2
 pages: 384
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-12-02'
 ---

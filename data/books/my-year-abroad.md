@@ -5,6 +5,8 @@ title: My Year Abroad
 author: Chang-rae Lee
 rating: 5
 pages: 672
+categories:
+- literature
 reads:
 - finished_at: '2021-10-15'
 ---

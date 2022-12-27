@@ -5,6 +5,8 @@ title: Advanced Marathoning
 author: Pete Pfitzinger
 rating: 4
 pages: 248
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-08-10'
 ---

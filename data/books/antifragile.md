@@ -5,6 +5,7 @@ title: Antifragile
 author: Nassim Nicholas Taleb
 rating: 5
 pages: 426
+categories: []
 reads:
 - finished_at: '2013-01-05'
 ---

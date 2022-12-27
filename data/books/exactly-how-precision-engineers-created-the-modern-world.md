@@ -5,6 +5,8 @@ title: 'Exactly: How Precision Engineers Created the Modern World'
 author: Simon Winchester
 rating: 4
 pages: 336
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-06-25'
 ---

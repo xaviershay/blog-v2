@@ -5,6 +5,7 @@ title: Waking Up
 author: Sam Harris
 rating: 4
 pages: 256
+categories: []
 reads:
 - finished_at: '2014-09-20'
 ---

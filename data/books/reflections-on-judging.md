@@ -5,6 +5,7 @@ title: Reflections On Judging
 author: Richard A. Posner
 rating: 4
 pages: 380
+categories: []
 reads:
 - finished_at: '2014-10-29'
 ---

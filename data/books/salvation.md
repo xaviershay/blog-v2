@@ -5,6 +5,8 @@ title: Salvation
 author: Peter F. Hamilton
 rating: 3
 pages: 576
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-03-03'
 ---

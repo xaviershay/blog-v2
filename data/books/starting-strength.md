@@ -5,6 +5,7 @@ title: Starting Strength
 author: Mark Rippetoe
 rating: 4
 pages: 320
+categories: []
 reads:
 - finished_at: '2012-10-12'
 ---

@@ -5,6 +5,8 @@ title: Attack Surface
 author: Cory Doctorow
 rating: 3
 pages: 384
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-12-07'
 ---

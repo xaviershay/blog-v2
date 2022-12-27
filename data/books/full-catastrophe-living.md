@@ -5,6 +5,7 @@ title: Full catastrophe living
 author: Jon Kabat-Zinn
 rating: 3
 pages: 467
+categories: []
 reads:
 - finished_at: '2011-04-26'
 ---

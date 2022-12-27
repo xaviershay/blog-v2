@@ -5,6 +5,7 @@ title: Gravity's Rainbow (Penguin Classics Deluxe Edition)
 author: Thomas Pynchon
 rating: 4
 pages: 776
+categories: []
 reads:
 - finished_at: '2012-10-20'
 ---

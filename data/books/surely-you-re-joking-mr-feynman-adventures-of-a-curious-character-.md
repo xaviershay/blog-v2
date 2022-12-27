@@ -5,6 +5,7 @@ title: Surely You're Joking, Mr. Feynman! (Adventures of a Curious Character)
 author: Richard Feynman
 rating: 5
 pages: 391
+categories: []
 reads:
 - finished_at: '2012-07-18'
 ---

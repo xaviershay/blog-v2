@@ -5,6 +5,7 @@ title: Clean Code
 author: Robert C. Martin
 rating: 4
 pages: 464
+categories: []
 reads:
 - finished_at: '2011-05-17'
 ---

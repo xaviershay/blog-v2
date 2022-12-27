@@ -5,6 +5,7 @@ title: Modern coin magic
 author: J.B. Bobo
 rating: 4
 pages: 384
+categories: []
 reads:
 - finished_at: '2012-11-25'
 ---

@@ -5,6 +5,7 @@ title: Like life
 author: Lorrie Moore
 rating: 4
 pages: 192
+categories: []
 reads:
 - finished_at: '2015-02-16'
 ---

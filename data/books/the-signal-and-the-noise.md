@@ -5,6 +5,7 @@ title: The Signal and the Noise
 author: Nate Silver
 rating: 5
 pages: 534
+categories: []
 reads:
 - finished_at: '2012-11-27'
 ---

@@ -5,6 +5,7 @@ title: The End of the Performance Review
 author: Tim Baker
 rating: 2
 pages: 256
+categories: []
 reads:
 - finished_at: '2015-09-23'
 ---

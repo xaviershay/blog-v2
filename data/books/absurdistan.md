@@ -5,6 +5,8 @@ title: Absurdistan
 author: Gary Shteyngart
 rating: 3
 pages: 333
+categories:
+- literature
 reads:
 - finished_at: '2020-05-01'
 ---

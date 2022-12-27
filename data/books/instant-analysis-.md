@@ -5,6 +5,7 @@ title: Instant analysis.
 author: David J. Lieberman
 rating: 0
 pages: 320
+categories: []
 reads:
 - finished_at: '2010-10-23'
 ---

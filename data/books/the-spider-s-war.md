@@ -5,6 +5,8 @@ title: The spider's war
 author: Daniel Abraham
 rating: 4
 pages: 492
+categories:
+- fantasy
 reads:
 - finished_at: '2020-11-28'
 ---

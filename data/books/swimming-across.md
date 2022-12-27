@@ -5,6 +5,7 @@ title: Swimming Across
 author: Andrew S. Grove
 rating: 3
 pages: 304
+categories: []
 reads:
 - finished_at: '2013-05-31'
 ---

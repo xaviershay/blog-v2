@@ -5,6 +5,8 @@ title: The Halo Effect
 author: Philip M. Rosenzweig
 rating: 5
 pages: 232
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-11-20'
 ---

@@ -5,6 +5,7 @@ title: Two Hours
 author: Ed Caesar
 rating: 4
 pages: 256
+categories: []
 reads:
 - finished_at: '2016-03-16'
 ---

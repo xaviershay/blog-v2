@@ -5,6 +5,7 @@ title: Silent spring
 author: Rachel Carson
 rating: 3
 pages: 378
+categories: []
 reads:
 - finished_at: '2011-03-16'
 ---

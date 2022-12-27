@@ -5,6 +5,7 @@ title: The vital question
 author: Nick Lane
 rating: 4
 pages: 368
+categories: []
 reads:
 - finished_at: '2016-01-08'
 ---

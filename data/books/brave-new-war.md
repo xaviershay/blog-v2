@@ -5,6 +5,7 @@ title: Brave New War
 author: John Robb
 rating: 3
 pages: 208
+categories: []
 reads:
 - finished_at: '2014-01-03'
 ---

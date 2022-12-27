@@ -5,6 +5,8 @@ title: The best land under heaven
 author: Michael Wallis
 rating: 3
 pages: 496
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-09-26'
 ---

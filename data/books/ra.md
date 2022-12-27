@@ -5,6 +5,8 @@ title: Ra
 author: qntm
 rating: 4
 pages: 504
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-08-02'
 ---

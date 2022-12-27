@@ -5,6 +5,8 @@ title: The 5 elements of effective thinking
 author: Edward B. Burger
 rating: 5
 pages: 157
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-12-28'
 ---

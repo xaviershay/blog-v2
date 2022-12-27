@@ -5,6 +5,8 @@ title: Ruin and Rising
 author: Leigh Bardugo
 rating: 4
 pages: 422
+categories:
+- fantasy
 reads:
 - finished_at: '2021-05-04'
 - finished_at: '2020-03-04'

@@ -5,6 +5,8 @@ title: Neoreaction a Basilisk
 author: Elizabeth Sandifer
 rating: 4
 pages: 356
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-04-15'
 ---

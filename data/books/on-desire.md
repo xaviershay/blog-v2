@@ -5,6 +5,7 @@ title: On desire
 author: William B. Irvine
 rating: 4
 pages: 336
+categories: []
 reads:
 - finished_at: '2011-12-20'
 ---

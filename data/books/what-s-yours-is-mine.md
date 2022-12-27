@@ -5,6 +5,7 @@ title: What's Yours Is Mine
 author: Tom Slee
 rating: 4
 pages: 212
+categories: []
 reads:
 - finished_at: '2016-12-29'
 ---

@@ -5,6 +5,7 @@ title: Constitutional cliffhangers
 author: Brian C. Kalt
 rating: 4
 pages: 264
+categories: []
 reads:
 - finished_at: '2018-07-08'
 ---

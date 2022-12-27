@@ -5,6 +5,8 @@ title: Gideon the Ninth
 author: Tamsyn Muir
 rating: 4
 pages: 448
+categories:
+- fantasy
 reads:
 - finished_at: '2020-07-10'
 ---

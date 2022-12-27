@@ -90,6 +90,35 @@ header.page-header > nav p {
   text-transform: capitalize
 }
 
+.yearly-summaries table.charts-css {
+  height: 150px;
+  margin-top: 5px;
+}
+
+.yearly-summaries .legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  padding: 0.5em;
+  padding-left: 1em;
+  border: none;
+  width: fit-content;
+}
+
+.yearly-summaries table caption {
+  font-size: 0.8em;
+}
+
+.yearly-summaries .legend li {
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+
+.yearly-summaries tbody tr th {
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
 /* TABLES */
 td, th {
   border: none;

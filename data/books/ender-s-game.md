@@ -5,6 +5,8 @@ title: Ender's game
 author: Orson Scott Card
 rating: 3
 pages: 324
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-07-25'
 ---

@@ -5,6 +5,8 @@ title: We are the weather
 author: Jonathan Safran  Foer
 rating: 5
 pages: 288
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-12-05'
 ---

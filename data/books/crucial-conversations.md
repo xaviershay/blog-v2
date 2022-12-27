@@ -5,6 +5,7 @@ title: Crucial Conversations
 author: Kerry Patterson
 rating: 5
 pages: 240
+categories: []
 reads:
 - finished_at: '2012-07-25'
 ---

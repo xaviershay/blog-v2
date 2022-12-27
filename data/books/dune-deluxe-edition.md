@@ -5,6 +5,8 @@ title: 'Dune: Deluxe Edition'
 author: Frank Herbert
 rating: 5
 pages: 658
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-08-15'
 ---

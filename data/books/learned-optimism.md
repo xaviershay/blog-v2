@@ -5,6 +5,7 @@ title: Learned Optimism
 author: Martin E.P. Seligman
 rating: 5
 pages: 319
+categories: []
 reads:
 - finished_at: '2017-06-01'
 - finished_at: '2010-07-10'

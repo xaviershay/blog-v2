@@ -5,6 +5,7 @@ title: High output management
 author: Andrew S. Grove
 rating: 4
 pages: 272
+categories: []
 reads:
 - finished_at: '2012-04-08'
 ---

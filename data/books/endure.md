@@ -5,6 +5,8 @@ title: Endure
 author: Alex Hutchinson
 rating: 5
 pages: 321
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-11-26'
 ---

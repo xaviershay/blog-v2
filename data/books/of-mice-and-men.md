@@ -5,6 +5,7 @@ title: Of Mice and Men
 author: John Steinbeck
 rating: 5
 pages: 103
+categories: []
 reads:
 - finished_at: '2012-09-08'
 ---

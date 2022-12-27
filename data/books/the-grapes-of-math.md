@@ -5,6 +5,7 @@ title: The grapes of math
 author: Alex Bellos
 rating: 4
 pages: 322
+categories: []
 reads:
 - finished_at: '2016-09-05'
 ---

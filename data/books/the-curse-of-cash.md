@@ -5,6 +5,7 @@ title: The curse of cash
 author: Kenneth S. Rogoff
 rating: 4
 pages: 283
+categories: []
 reads:
 - finished_at: '2016-11-05'
 ---

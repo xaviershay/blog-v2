@@ -5,6 +5,7 @@ title: Eat the Rich
 author: P.J. O'Rourke
 rating: 4
 pages: 246
+categories: []
 reads:
 - finished_at: '2010-10-28'
 ---

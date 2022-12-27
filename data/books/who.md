@@ -5,6 +5,7 @@ title: Who
 author: Geoff Smart
 rating: 5
 pages: 208
+categories: []
 reads:
 - finished_at: '2012-09-02'
 ---

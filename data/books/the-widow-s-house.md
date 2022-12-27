@@ -5,6 +5,8 @@ title: The widow's house
 author: Daniel Abraham
 rating: 4
 pages: 495
+categories:
+- fantasy
 reads:
 - finished_at: '2020-11-28'
 ---

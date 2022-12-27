@@ -5,6 +5,8 @@ title: Hounded
 author: Kevin Hearne
 rating: 3
 pages: 304
+categories:
+- fantasy
 reads:
 - finished_at: '2022-09-19'
 ---

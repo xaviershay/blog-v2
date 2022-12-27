@@ -5,6 +5,7 @@ title: Pre
 author: Tom Jordan
 rating: 3
 pages: 176
+categories: []
 reads:
 - finished_at: '2015-05-19'
 ---

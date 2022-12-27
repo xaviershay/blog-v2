@@ -5,6 +5,8 @@ title: Who fears death
 author: Nnedi Okorafor
 rating: 2
 pages: 386
+categories:
+- fantasy
 reads:
 - finished_at: '2022-09-08'
 ---

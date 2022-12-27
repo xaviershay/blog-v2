@@ -5,6 +5,7 @@ title: Gaming the Vote
 author: William Poundstone
 rating: 4
 pages: 352
+categories: []
 reads:
 - finished_at: '2014-01-15'
 ---

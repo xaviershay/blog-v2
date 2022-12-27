@@ -5,6 +5,8 @@ title: Hyperion
 author: Dan Simmons
 rating: 4
 pages: 500
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-11-25'
 ---

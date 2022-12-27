@@ -5,6 +5,7 @@ title: American Psycho
 author: Bret Easton Ellis
 rating: 3
 pages: 399
+categories: []
 reads:
 - finished_at: '2010-10-19'
 ---

@@ -5,6 +5,7 @@ title: The tyranny of experts
 author: William Easterly
 rating: 4
 pages: 416
+categories: []
 reads:
 - finished_at: '2014-07-03'
 ---

@@ -5,6 +5,8 @@ title: How to Measure Anything
 author: Douglas W. Hubbard
 rating: 5
 pages: 287
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-03-08'
 ---

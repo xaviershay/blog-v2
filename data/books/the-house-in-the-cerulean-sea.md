@@ -5,6 +5,8 @@ title: The house in the Cerulean Sea
 author: T.J. Klune
 rating: 3
 pages: 394
+categories:
+- fantasy
 reads:
 - finished_at: '2022-03-11'
 ---

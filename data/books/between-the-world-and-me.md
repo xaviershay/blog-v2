@@ -5,6 +5,8 @@ title: Between the World and Me
 author: Ta-Nehisi Coates
 rating: 5
 pages: 152
+categories:
+- literature
 reads:
 - finished_at: '2019-07-27'
 ---

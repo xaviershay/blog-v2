@@ -5,6 +5,7 @@ title: Strong Enough?
 author: Mark Rippetoe
 rating: 3
 pages: 204
+categories: []
 reads:
 - finished_at: '2012-11-22'
 ---

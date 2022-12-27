@@ -5,6 +5,8 @@ title: Play on
 author: Jeff Bercovici
 rating: 4
 pages: 293
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-05-20'
 ---

@@ -5,6 +5,8 @@ title: 'Barbarian Days: A Surfing Life'
 author: William Finnegan
 rating: 4
 pages: 447
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-04-03'
 ---

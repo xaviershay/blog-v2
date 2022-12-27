@@ -5,6 +5,7 @@ title: Why honor matters
 author: Tamler Sommers
 rating: 5
 pages: 261
+categories: []
 reads:
 - finished_at: '2018-09-03'
 ---

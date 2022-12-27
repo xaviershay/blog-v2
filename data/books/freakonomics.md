@@ -5,6 +5,7 @@ title: Freakonomics
 author: Steven D. Levitt
 rating: 2
 pages: 268
+categories: []
 reads:
 - finished_at: '2010-10-04'
 ---

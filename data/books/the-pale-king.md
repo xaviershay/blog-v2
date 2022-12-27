@@ -5,6 +5,7 @@ title: The Pale King
 author: David Foster Wallace
 rating: 5
 pages: 548
+categories: []
 reads:
 - finished_at: '2013-01-05'
 ---

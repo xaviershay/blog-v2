@@ -5,6 +5,7 @@ title: Girl With Curious Hair (Norton Paperback Fiction)
 author: David Foster Wallace
 rating: 5
 pages: 373
+categories: []
 reads:
 - finished_at: '2011-07-31'
 ---

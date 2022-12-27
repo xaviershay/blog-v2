@@ -5,6 +5,7 @@ title: Equal rites
 author: Terry Pratchett
 rating: 4
 pages: 240
+categories: []
 reads:
 - finished_at: '2015-05-11'
 ---

@@ -5,6 +5,7 @@ title: Raising the Bar The Definitive Guide to Pull-up Bar Calisthenics
 author: Al Kavadlo
 rating: 3
 pages: 203
+categories: []
 reads:
 - finished_at: '2014-02-02'
 ---

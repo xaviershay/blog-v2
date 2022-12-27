@@ -5,6 +5,8 @@ title: The Gulf
 author: Anna Spargo-Ryan
 rating: 5
 pages: 0
+categories:
+- literature
 reads:
 - finished_at: '2021-03-20'
 ---

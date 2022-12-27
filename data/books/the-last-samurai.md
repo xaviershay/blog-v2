@@ -5,6 +5,8 @@ title: The Last Samurai
 author: Helen DeWitt
 rating: 3
 pages: 530
+categories:
+- literature
 reads:
 - finished_at: '2020-03-23'
 ---

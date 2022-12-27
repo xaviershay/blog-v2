@@ -5,6 +5,8 @@ title: Crooked Kingdom
 author: Leigh Bardugo
 rating: 5
 pages: 561
+categories:
+- fantasy
 reads:
 - finished_at: '2021-05-16'
 - finished_at: '2020-01-24'

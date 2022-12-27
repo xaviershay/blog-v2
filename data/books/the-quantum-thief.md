@@ -5,6 +5,8 @@ title: The Quantum Thief
 author: Hannu Rajaniemi
 rating: 4
 pages: 336
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-02-21'
 ---

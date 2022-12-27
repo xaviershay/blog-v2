@@ -5,6 +5,8 @@ title: A Memory Called Empire
 author: Arkady Martine
 rating: 5
 pages: 462
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-05-02'
 ---

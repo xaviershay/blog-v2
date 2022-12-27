@@ -5,6 +5,8 @@ title: The Deficit Myth
 author: Stephanie Kelton
 rating: 4
 pages: 336
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-08-10'
 ---

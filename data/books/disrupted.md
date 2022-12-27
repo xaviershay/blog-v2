@@ -5,6 +5,7 @@ title: Disrupted
 author: Dan Lyons
 rating: 3
 pages: 272
+categories: []
 reads:
 - finished_at: '2016-04-16'
 ---

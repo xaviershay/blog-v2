@@ -5,6 +5,7 @@ title: The big short
 author: Michael Lewis
 rating: 5
 pages: 264
+categories: []
 reads:
 - finished_at: '2012-04-26'
 ---

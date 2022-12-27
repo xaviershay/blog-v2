@@ -5,6 +5,7 @@ title: Teaching To Transgress
 author: bell hooks
 rating: 4
 pages: 216
+categories: []
 reads:
 - finished_at: '2013-12-01'
 ---

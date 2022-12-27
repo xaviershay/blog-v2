@@ -5,6 +5,8 @@ title: Jonathan Livingston Seagull
 author: Richard Bach
 rating: 2
 pages: 112
+categories:
+- literature
 reads:
 - finished_at: '2019-06-18'
 - finished_at: '2014-09-20'

@@ -5,6 +5,7 @@ title: To Sell Is Human The Surprising Truth About Moving Others
 author: Daniel H. Pink
 rating: 4
 pages: 272
+categories: []
 reads:
 - finished_at: '2013-01-06'
 ---

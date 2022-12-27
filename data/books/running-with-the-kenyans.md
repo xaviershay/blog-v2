@@ -5,6 +5,7 @@ title: Running with the Kenyans
 author: Adharanand Finn
 rating: 3
 pages: 288
+categories: []
 reads:
 - finished_at: '2015-06-26'
 ---

@@ -5,6 +5,7 @@ title: Walkaway
 author: Cory Doctorow
 rating: 3
 pages: 384
+categories: []
 reads:
 - finished_at: '2017-08-25'
 ---

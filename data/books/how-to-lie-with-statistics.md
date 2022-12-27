@@ -5,6 +5,7 @@ title: How to lie with statistics
 author: Darrell Huff
 rating: 3
 pages: 142
+categories: []
 reads:
 - finished_at: '2014-11-02'
 ---

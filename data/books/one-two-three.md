@@ -5,6 +5,7 @@ title: One, two, three
 author: David Berlinski
 rating: 4
 pages: 210
+categories: []
 reads:
 - finished_at: '2015-12-22'
 ---

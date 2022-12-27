@@ -5,6 +5,8 @@ title: Starfish (Rifters Trilogy)
 author: Peter Watts
 rating: 4
 pages: 384
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-09-01'
 ---

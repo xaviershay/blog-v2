@@ -5,6 +5,8 @@ title: The Causal Angel
 author: Hannu Rajaniemi
 rating: 3
 pages: 292
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-03-04'
 ---

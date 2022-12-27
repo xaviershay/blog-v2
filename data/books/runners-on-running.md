@@ -5,6 +5,7 @@ title: Runners on running
 author: Rich Elliott
 rating: 3
 pages: 300
+categories: []
 reads:
 - finished_at: '2012-03-16'
 ---

@@ -5,6 +5,8 @@ title: Images of Organization
 author: Gareth Morgan
 rating: 4
 pages: 520
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-12-01'
 ---

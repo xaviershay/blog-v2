@@ -5,6 +5,8 @@ title: Thinking in bets
 author: Annie Duke
 rating: 3
 pages: 288
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-01-31'
 ---

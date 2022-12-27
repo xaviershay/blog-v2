@@ -5,6 +5,8 @@ title: Extreme ownership
 author: Jocko Willink
 rating: 3
 pages: 320
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-05-09'
 ---

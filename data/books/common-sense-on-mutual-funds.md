@@ -5,6 +5,7 @@ title: Common Sense on Mutual Funds
 author: John C. Bogle
 rating: 3
 pages: 468
+categories: []
 reads:
 - finished_at: '2016-05-16'
 ---

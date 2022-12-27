@@ -5,6 +5,8 @@ title: Siege and Storm
 author: Leigh Bardugo
 rating: 4
 pages: 435
+categories:
+- fantasy
 reads:
 - finished_at: '2021-05-03'
 - finished_at: '2020-03-02'

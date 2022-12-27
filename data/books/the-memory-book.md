@@ -5,6 +5,7 @@ title: The Memory Book
 author: Harry Lorayne
 rating: 4
 pages: 224
+categories: []
 reads:
 - finished_at: '2013-07-16'
 ---

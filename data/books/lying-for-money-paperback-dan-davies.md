@@ -5,6 +5,8 @@ title: Lying for Money [Paperback] Dan Davies
 author: Dan Davies
 rating: 5
 pages: 320
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-07-27'
 ---

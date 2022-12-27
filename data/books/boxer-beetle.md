@@ -5,6 +5,7 @@ title: Boxer, beetle
 author: Ned Beauman
 rating: 4
 pages: 246
+categories: []
 reads:
 - finished_at: '2016-04-16'
 ---

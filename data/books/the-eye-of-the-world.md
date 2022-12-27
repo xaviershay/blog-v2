@@ -5,6 +5,8 @@ title: The Eye of the World
 author: Robert Jordan
 rating: 1
 pages: 753
+categories:
+- fantasy
 reads:
 - finished_at: '2019-06-13'
 ---

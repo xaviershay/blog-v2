@@ -5,6 +5,7 @@ title: What I talk about when I talk about running
 author: Haruki Murakami
 rating: 3
 pages: 188
+categories: []
 reads:
 - finished_at: '2010-05-04'
 ---

@@ -5,6 +5,7 @@ title: The Right Stuff
 author: Tom Wolfe
 rating: 4
 pages: 352
+categories: []
 reads:
 - finished_at: '2017-04-06'
 ---

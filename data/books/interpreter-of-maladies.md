@@ -5,6 +5,8 @@ title: Interpreter of Maladies
 author: Jhumpa Lahiri
 rating: 4
 pages: 198
+categories:
+- literature
 reads:
 - finished_at: '2021-03-14'
 ---

@@ -5,6 +5,7 @@ title: The phoenix project
 author: Gene Kim
 rating: 3
 pages: 345
+categories: []
 reads:
 - finished_at: '2013-03-16'
 ---

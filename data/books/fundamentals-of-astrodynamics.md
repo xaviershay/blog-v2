@@ -5,6 +5,7 @@ title: Fundamentals of astrodynamics
 author: Roger R. Bate
 rating: 4
 pages: 480
+categories: []
 reads:
 - finished_at: '2017-11-24'
 ---

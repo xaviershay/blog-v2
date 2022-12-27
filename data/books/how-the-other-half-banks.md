@@ -5,6 +5,7 @@ title: How the other half banks
 author: Mehrsa Baradaran
 rating: 4
 pages: 336
+categories: []
 reads:
 - finished_at: '2016-03-01'
 ---

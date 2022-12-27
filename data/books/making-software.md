@@ -5,6 +5,7 @@ title: Making Software
 author: Andy Oram
 rating: 4
 pages: 624
+categories: []
 reads:
 - finished_at: '2011-06-04'
 ---

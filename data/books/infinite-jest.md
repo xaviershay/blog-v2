@@ -5,6 +5,7 @@ title: Infinite jest
 author: David Foster Wallace
 rating: 5
 pages: 1
+categories: []
 reads:
 - finished_at: '2011-11-27'
 ---

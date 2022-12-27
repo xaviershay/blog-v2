@@ -5,6 +5,8 @@ title: Red Notice
 author: Bill Browder
 rating: 4
 pages: 380
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-07-25'
 ---

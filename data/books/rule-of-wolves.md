@@ -5,6 +5,8 @@ title: Rule of Wolves
 author: Leigh Bardugo
 rating: 5
 pages: 592
+categories:
+- fantasy
 reads:
 - finished_at: '2021-08-24'
 ---

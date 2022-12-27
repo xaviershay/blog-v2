@@ -5,6 +5,8 @@ title: Foundation
 author: Isaac Asimov
 rating: 4
 pages: 244
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-05-20'
 ---

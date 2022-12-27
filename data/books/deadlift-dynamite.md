@@ -5,6 +5,7 @@ title: Deadlift Dynamite
 author: Andy Bolton
 rating: 4
 pages: 285
+categories: []
 reads:
 - finished_at: '2014-02-06'
 ---

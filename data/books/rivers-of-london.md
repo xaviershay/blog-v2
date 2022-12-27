@@ -5,6 +5,8 @@ title: Rivers of London
 author: Ben Aaronovitch
 rating: 4
 pages: 392
+categories:
+- fantasy
 reads:
 - finished_at: '2019-11-05'
 ---

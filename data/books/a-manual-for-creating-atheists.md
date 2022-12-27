@@ -5,6 +5,7 @@ title: A Manual for Creating Atheists
 author: Peter Boghossian
 rating: 5
 pages: 278
+categories: []
 reads:
 - finished_at: '2013-12-30'
 ---

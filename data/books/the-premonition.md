@@ -5,6 +5,8 @@ title: The Premonition
 author: Michael Lewis
 rating: 5
 pages: 304
+categories:
+- non-fiction
 reads:
 - finished_at: '2021-07-15'
 ---

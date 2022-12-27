@@ -5,6 +5,8 @@ title: Blindsight
 author: Peter Watts
 rating: 5
 pages: 384
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-11-28'
 ---

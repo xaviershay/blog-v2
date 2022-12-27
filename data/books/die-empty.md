@@ -5,6 +5,7 @@ title: Die empty
 author: Todd Henry
 rating: 4
 pages: 240
+categories: []
 reads:
 - finished_at: '2014-03-21'
 ---

@@ -5,6 +5,8 @@ title: From Secret Ballot to Democracy Sausage
 author: Judith Brett
 rating: 4
 pages: 176
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-02-12'
 ---

@@ -6,6 +6,7 @@ title: Sins of South Beach The True Story of Corruption, Violence and the Making
 author: Alex Daoud
 rating: 3
 pages: 513
+categories: []
 reads:
 - finished_at: '2012-04-21'
 ---

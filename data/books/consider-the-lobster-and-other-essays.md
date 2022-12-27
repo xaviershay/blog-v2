@@ -5,6 +5,7 @@ title: Consider the lobster, and other essays
 author: David Foster Wallace
 rating: 5
 pages: 343
+categories: []
 reads:
 - finished_at: '2012-01-09'
 ---

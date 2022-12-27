@@ -5,6 +5,8 @@ title: 'The Traitor Baru Cormorant (Baru Cormorant #1)'
 author: Seth Dickinson
 rating: 4
 pages: 399
+categories:
+- fantasy
 reads:
 - finished_at: '2018-11-10'
 ---

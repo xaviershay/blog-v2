@@ -5,6 +5,7 @@ title: The Loneliness Of The Long Distance Book Runner
 author: Bill Rees
 rating: 2
 pages: 300
+categories: []
 reads:
 - finished_at: '2015-11-15'
 ---

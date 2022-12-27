@@ -5,6 +5,7 @@ title: Reality Sandwiches, 1953-1960 (Pocket Poets Series, No. 18)
 author: Allen Ginsberg
 rating: 3
 pages: 104
+categories: []
 reads:
 - finished_at: '2014-04-27'
 ---

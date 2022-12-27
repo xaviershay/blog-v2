@@ -5,6 +5,8 @@ title: Fleishman is in Trouble
 author: Taffy Brodesser-Akner
 rating: 5
 pages: 373
+categories:
+- literature
 reads:
 - finished_at: '2020-07-10'
 ---

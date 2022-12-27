@@ -5,6 +5,7 @@ title: The design of everyday things
 author: Donald A. Norman
 rating: 5
 pages: 240
+categories: []
 reads:
 - finished_at: '2013-03-17'
 ---

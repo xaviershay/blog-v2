@@ -5,6 +5,7 @@ title: The Utopia of Rules
 author: David Graeber
 rating: 5
 pages: 261
+categories: []
 reads:
 - finished_at: '2015-04-02'
 ---

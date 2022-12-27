@@ -5,6 +5,7 @@ title: Playing to win
 author: A.G. Lafley
 rating: 2
 pages: 272
+categories: []
 reads:
 - finished_at: '2013-03-02'
 ---

@@ -5,6 +5,7 @@ title: Smarter faster better
 author: Charles Duhigg
 rating: 5
 pages: 400
+categories: []
 reads:
 - finished_at: '2016-07-16'
 ---

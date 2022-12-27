@@ -5,6 +5,8 @@ title: Introduction to topology
 author: Bert Mendelson
 rating: 3
 pages: 224
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-04-08'
 ---

@@ -5,6 +5,7 @@ title: The Life-Changing Magic of Tidying Up
 author: Marie Kondo
 rating: 4
 pages: 213
+categories: []
 reads:
 - finished_at: '2015-04-12'
 ---

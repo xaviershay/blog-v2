@@ -5,6 +5,7 @@ title: How to Be Vegan
 author: Elizabeth Castoria
 rating: 2
 pages: 224
+categories: []
 reads:
 - finished_at: '2014-05-28'
 ---

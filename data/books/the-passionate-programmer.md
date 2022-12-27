@@ -5,6 +5,7 @@ title: The passionate programmer
 author: Chad Fowler
 rating: 0
 pages: 0
+categories: []
 reads:
 - finished_at: '2010-08-30'
 ---

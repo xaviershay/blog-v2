@@ -5,6 +5,8 @@ title: We Are Legion
 author: Dennis E. Taylor
 rating: 2
 pages: 400
+categories:
+- sci-fi
 reads:
 - finished_at: '2019-08-11'
 ---

@@ -5,6 +5,8 @@ title: Skyward
 author: Brandon Sanderson
 rating: 4
 pages: 513
+categories:
+- fantasy
 reads:
 - finished_at: '2019-12-28'
 ---

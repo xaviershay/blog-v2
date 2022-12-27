@@ -5,6 +5,8 @@ title: The Fifth Risk
 author: Michael Lewis
 rating: 4
 pages: 221
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-01-12'
 ---

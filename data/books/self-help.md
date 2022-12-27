@@ -5,6 +5,7 @@ title: Self-Help
 author: Lorrie Moore
 rating: 4
 pages: 163
+categories: []
 reads:
 - finished_at: '2014-02-21'
 ---

@@ -5,6 +5,8 @@ title: Shadow and Bone
 author: Leigh Bardugo
 rating: 4
 pages: 358
+categories:
+- fantasy
 reads:
 - finished_at: '2021-04-14'
 - finished_at: '2020-03-01'

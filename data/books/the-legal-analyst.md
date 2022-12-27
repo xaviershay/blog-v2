@@ -5,6 +5,7 @@ title: The Legal Analyst
 author: Ward Farnsworth
 rating: 4
 pages: 326
+categories: []
 reads:
 - finished_at: '2014-11-30'
 ---

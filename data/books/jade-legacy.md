@@ -5,6 +5,8 @@ title: Jade Legacy
 author: Fonda Lee
 rating: 5
 pages: 713
+categories:
+- fantasy
 reads:
 - finished_at: '2022-10-31'
 ---

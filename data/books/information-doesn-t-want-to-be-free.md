@@ -5,6 +5,8 @@ title: Information doesn't want to be free
 author: Cory Doctorow
 rating: 4
 pages: 192
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-07-27'
 ---

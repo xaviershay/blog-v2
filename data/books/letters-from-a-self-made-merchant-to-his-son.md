@@ -5,6 +5,7 @@ title: Letters from a Self Made Merchant to His Son
 author: George Lorimer
 rating: 4
 pages: 364
+categories: []
 reads:
 - finished_at: '2017-04-06'
 ---

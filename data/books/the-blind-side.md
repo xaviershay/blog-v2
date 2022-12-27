@@ -5,6 +5,7 @@ title: The Blind Side
 author: Michael Lewis
 rating: 4
 pages: 339
+categories: []
 reads:
 - finished_at: '2016-12-11'
 ---

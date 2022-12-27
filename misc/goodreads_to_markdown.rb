@@ -23,7 +23,7 @@ CSV.foreach('data/goodreads-export-enriched.csv', headers: true) do |row|
   obj = []
   obj << 'fantasy' if row['Fantasy'].to_s.length > 0
   obj << 'sci-fi' if row['Sci-Fi'].to_s.length > 0
-  obj << 'fiction' if row['Fiction'].to_s.length > 0
+  # obj << 'fiction' if row['Fiction'].to_s.length > 0
   obj << 'non-fiction' if row['Non-Fiction'].to_s.length > 0
   obj << 'literature' if row['Literature'].to_s.length > 0
   enriched[row['Book Id']] = obj
@@ -217,11 +217,11 @@ books.each do |book|
   }
   content = book.fetch(:review)
 
-  puts "Writing out/#{slug}.md"
+  puts "Writing #{slug}.md"
   raw = <<-EOS
 #{metadata.to_yaml.gsub(/\n\Z/, '')}
 ---
 #{content}
   EOS
-  File.write("out/#{slug}.md", raw)
+  File.write("../data/books/#{slug}.md", raw)
 end

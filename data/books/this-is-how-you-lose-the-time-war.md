@@ -5,6 +5,8 @@ title: This Is How You Lose the Time War
 author: Amal El-Mohtar
 rating: 3
 pages: 209
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-09-15'
 ---

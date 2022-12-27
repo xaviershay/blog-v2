@@ -5,6 +5,7 @@ title: Zero K
 author: Don DeLillo
 rating: 2
 pages: 274
+categories: []
 reads:
 - finished_at: '2016-08-10'
 ---

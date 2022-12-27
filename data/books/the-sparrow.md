@@ -5,6 +5,8 @@ title: The Sparrow
 author: Mary Doria Russell
 rating: 5
 pages: 419
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-01-29'
 ---

@@ -5,6 +5,8 @@ title: Strong Towns
 author: Charles L. Marohn Jr.
 rating: 4
 pages: 256
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-12-11'
 ---

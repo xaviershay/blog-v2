@@ -5,6 +5,7 @@ title: Squirrel Seeks Chipmunk
 author: David Sedaris
 rating: 3
 pages: 163
+categories: []
 reads:
 - finished_at: '2012-08-01'
 ---

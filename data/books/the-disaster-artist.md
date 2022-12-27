@@ -5,6 +5,7 @@ title: The disaster artist
 author: Greg Sestero
 rating: 3
 pages: 270
+categories: []
 reads:
 - finished_at: '2014-12-28'
 ---

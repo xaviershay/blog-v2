@@ -5,6 +5,7 @@ title: Lush Life
 author: Richard Price
 rating: 5
 pages: 464
+categories: []
 reads:
 - finished_at: '2017-04-06'
 ---

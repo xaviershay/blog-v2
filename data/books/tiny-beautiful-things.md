@@ -5,6 +5,7 @@ title: Tiny beautiful things
 author: Cheryl Strayed
 rating: 4
 pages: 354
+categories: []
 reads:
 - finished_at: '2016-09-02'
 ---

@@ -5,6 +5,8 @@ title: Uncanny Valley
 author: Anna Wiener
 rating: 4
 pages: 281
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-03-01'
 ---

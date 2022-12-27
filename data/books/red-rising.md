@@ -5,6 +5,8 @@ title: Red Rising
 author: Pierce Brown
 rating: 4
 pages: 382
+categories:
+- sci-fi
 reads:
 - finished_at: '2021-12-10'
 - finished_at: '2016-10-02'

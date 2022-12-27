@@ -5,6 +5,7 @@ title: A capitalism for the people
 author: Luigi Zingales
 rating: 5
 pages: 336
+categories: []
 reads:
 - finished_at: '2012-07-25'
 ---

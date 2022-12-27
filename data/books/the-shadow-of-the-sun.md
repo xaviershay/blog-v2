@@ -5,6 +5,7 @@ title: The Shadow Of The Sun
 author: Ryszard Kapuściński
 rating: 5
 pages: 336
+categories: []
 reads:
 - finished_at: '2012-08-24'
 ---

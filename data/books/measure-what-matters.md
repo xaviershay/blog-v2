@@ -5,6 +5,8 @@ title: Measure what matters
 author: John Doerr
 rating: 3
 pages: 320
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-12-29'
 ---

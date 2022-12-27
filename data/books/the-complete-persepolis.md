@@ -5,6 +5,7 @@ title: The complete Persepolis
 author: Marjane Satrapi
 rating: 4
 pages: 341
+categories: []
 reads:
 - finished_at: '2017-07-09'
 ---

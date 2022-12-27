@@ -5,6 +5,7 @@ title: Ready for Anything
 author: David Allen
 rating: 3
 pages: 165
+categories: []
 reads:
 - finished_at: '2012-07-27'
 ---

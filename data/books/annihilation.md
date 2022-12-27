@@ -5,6 +5,8 @@ title: Annihilation
 author: Jeff VanderMeer
 rating: 3
 pages: 195
+categories:
+- sci-fi
 reads:
 - finished_at: '2019-11-06'
 ---

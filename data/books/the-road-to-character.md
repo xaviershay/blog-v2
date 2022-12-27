@@ -5,6 +5,7 @@ title: The Road to Character
 author: David Brooks
 rating: 3
 pages: 320
+categories: []
 reads:
 - finished_at: '2016-02-26'
 ---

@@ -5,6 +5,7 @@ title: Fragments of an anarchist anthropology
 author: David Graeber
 rating: 3
 pages: 118
+categories: []
 reads:
 - finished_at: '2015-05-01'
 ---

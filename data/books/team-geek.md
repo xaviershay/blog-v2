@@ -5,6 +5,7 @@ title: Team Geek
 author: Brian W. Fitzpatrick
 rating: 3
 pages: 194
+categories: []
 reads:
 - finished_at: '2012-10-12'
 ---

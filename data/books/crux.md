@@ -5,6 +5,8 @@ title: Crux
 author: Ramez Naam
 rating: 5
 pages: 512
+categories:
+- sci-fi
 reads:
 - finished_at: '2020-06-07'
 ---

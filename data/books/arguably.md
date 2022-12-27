@@ -5,6 +5,7 @@ title: Arguably
 author: Christopher Hitchens
 rating: 4
 pages: 816
+categories: []
 reads:
 - finished_at: '2012-04-29'
 ---

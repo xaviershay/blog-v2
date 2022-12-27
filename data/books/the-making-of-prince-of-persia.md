@@ -5,6 +5,7 @@ title: The Making of Prince of Persia
 author: Jordan Mechner
 rating: 3
 pages: 330
+categories: []
 reads:
 - finished_at: '2015-09-19'
 ---

@@ -5,6 +5,7 @@ title: How to Solve It
 author: George Pólya
 rating: 1
 pages: 288
+categories: []
 reads:
 - finished_at: '2015-08-19'
 ---

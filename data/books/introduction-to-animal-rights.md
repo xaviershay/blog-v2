@@ -5,6 +5,7 @@ title: Introduction to Animal Rights
 author: Gary L. Francione
 rating: 5
 pages: 280
+categories: []
 reads:
 - finished_at: '2010-12-20'
 ---

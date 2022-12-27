@@ -5,6 +5,7 @@ title: Even Cowgirls Get the Blues
 author: Tom Robbins
 rating: 4
 pages: 366
+categories: []
 reads:
 - finished_at: '2015-06-29'
 ---

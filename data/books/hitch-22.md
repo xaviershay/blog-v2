@@ -5,6 +5,7 @@ title: Hitch-22
 author: Christopher Hitchens
 rating: 4
 pages: 435
+categories: []
 reads:
 - finished_at: '2012-01-22'
 ---

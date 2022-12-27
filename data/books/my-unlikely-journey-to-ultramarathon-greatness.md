@@ -5,6 +5,7 @@ title: My unlikely journey to ultramarathon greatness
 author: Scott Jurek
 rating: 4
 pages: 272
+categories: []
 reads:
 - finished_at: '2012-06-15'
 ---

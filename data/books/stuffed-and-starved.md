@@ -5,6 +5,7 @@ title: Stuffed and starved
 author: Raj Patel
 rating: 5
 pages: 448
+categories: []
 reads:
 - finished_at: '2009-12-10'
 ---

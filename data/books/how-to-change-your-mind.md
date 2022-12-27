@@ -5,6 +5,8 @@ title: How to Change Your Mind
 author: Michael Pollan
 rating: 5
 pages: 480
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-01-24'
 ---

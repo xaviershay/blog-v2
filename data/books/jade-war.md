@@ -5,6 +5,8 @@ title: Jade War
 author: Fonda Lee
 rating: 5
 pages: 590
+categories:
+- fantasy
 reads:
 - finished_at: '2022-10-27'
 ---

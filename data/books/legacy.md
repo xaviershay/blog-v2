@@ -5,6 +5,8 @@ title: Legacy
 author: James Kerr
 rating: 4
 pages: 225
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-12-30'
 ---

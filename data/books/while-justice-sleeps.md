@@ -5,6 +5,7 @@ title: While Justice Sleeps
 author: Stacey Abrams
 rating: 2
 pages: 367
+categories: []
 reads:
 - finished_at: '2021-08-11'
 ---

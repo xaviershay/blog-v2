@@ -5,6 +5,8 @@ title: Exit West
 author: Mohsin Hamid
 rating: 4
 pages: 231
+categories:
+- literature
 reads:
 - finished_at: '2019-11-05'
 ---

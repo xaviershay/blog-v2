@@ -5,6 +5,7 @@ title: You are not a gadget
 author: Jaron Lanier
 rating: 4
 pages: 221
+categories: []
 reads:
 - finished_at: '2013-05-12'
 ---

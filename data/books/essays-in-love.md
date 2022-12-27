@@ -5,6 +5,7 @@ title: Essays in Love
 author: Alain de Botton
 rating: 2
 pages: 249
+categories: []
 reads:
 - finished_at: '2013-12-30'
 ---

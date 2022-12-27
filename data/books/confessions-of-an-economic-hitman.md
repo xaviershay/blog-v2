@@ -5,6 +5,7 @@ title: Confessions of an Economic Hitman
 author: John Perkins
 rating: 5
 pages: 303
+categories: []
 reads:
 - finished_at: '2010-11-22'
 ---

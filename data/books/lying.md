@@ -5,6 +5,7 @@ title: Lying
 author: Sam Harris
 rating: 4
 pages: 47
+categories: []
 reads:
 - finished_at: '2013-12-12'
 ---

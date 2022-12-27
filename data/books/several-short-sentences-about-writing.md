@@ -5,6 +5,7 @@ title: Several short sentences about writing
 author: Verlyn Klinkenborg
 rating: 3
 pages: 224
+categories: []
 reads:
 - finished_at: '2014-09-20'
 ---

@@ -5,6 +5,7 @@ title: Power of Full Engagement
 author: Jim Loehr
 rating: 4
 pages: 244
+categories: []
 reads:
 - finished_at: '2015-05-19'
 ---

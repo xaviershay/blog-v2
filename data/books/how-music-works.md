@@ -5,6 +5,8 @@ title: How music works
 author: David Byrne
 rating: 3
 pages: 345
+categories:
+- non-fiction
 reads:
 - finished_at: '2019-11-05'
 ---

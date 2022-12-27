@@ -5,6 +5,7 @@ title: Growing object-oriented software, guided by tests
 author: Steve Freeman
 rating: 4
 pages: 345
+categories: []
 reads:
 - finished_at: '2011-05-27'
 ---

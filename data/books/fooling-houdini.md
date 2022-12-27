@@ -5,6 +5,7 @@ title: Fooling Houdini
 author: Alex Stone
 rating: 4
 pages: 320
+categories: []
 reads:
 - finished_at: '2013-07-17'
 ---

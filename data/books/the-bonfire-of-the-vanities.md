@@ -5,6 +5,8 @@ title: The Bonfire of the Vanities
 author: Tom Wolfe
 rating: 2
 pages: 690
+categories:
+- literature
 reads:
 - finished_at: '2021-07-15'
 ---

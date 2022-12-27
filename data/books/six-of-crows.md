@@ -5,6 +5,8 @@ title: Six of Crows
 author: Leigh Bardugo
 rating: 5
 pages: 465
+categories:
+- fantasy
 reads:
 - finished_at: '2021-05-11'
 - finished_at: '2020-01-16'

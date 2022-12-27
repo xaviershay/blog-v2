@@ -5,6 +5,7 @@ title: Seven Languages in Seven Weeks
 author: Bruce A. Tate
 rating: 4
 pages: 328
+categories: []
 reads:
 - finished_at: '2011-01-30'
 ---

@@ -5,6 +5,7 @@ title: Crafting rails applications
 author: José Valim
 rating: 3
 pages: 180
+categories: []
 reads:
 - finished_at: '2013-02-03'
 ---

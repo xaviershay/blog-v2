@@ -5,6 +5,7 @@ title: Zero History
 author: William Gibson
 rating: 2
 pages: 404
+categories: []
 reads:
 - finished_at: '2011-09-14'
 ---

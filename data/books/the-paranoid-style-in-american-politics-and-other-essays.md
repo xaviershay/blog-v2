@@ -5,6 +5,7 @@ title: The paranoid style in American politics, and other essays
 author: Richard Hofstadter
 rating: 2
 pages: 346
+categories: []
 reads:
 - finished_at: '2015-11-27'
 ---

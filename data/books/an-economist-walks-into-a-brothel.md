@@ -5,6 +5,8 @@ title: An Economist Walks into a Brothel
 author: Allison Schrager
 rating: 3
 pages: 240
+categories:
+- non-fiction
 reads:
 - finished_at: '2020-12-15'
 ---

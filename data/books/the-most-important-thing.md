@@ -5,6 +5,7 @@ title: The most important thing
 author: Howard Marks
 rating: 4
 pages: 200
+categories: []
 reads:
 - finished_at: '2016-05-16'
 ---

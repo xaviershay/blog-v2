@@ -5,6 +5,7 @@ title: The score takes care of itself
 author: Bill Walsh
 rating: 2
 pages: 288
+categories: []
 reads:
 - finished_at: '2012-11-13'
 ---

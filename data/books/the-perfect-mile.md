@@ -5,6 +5,7 @@ title: The Perfect Mile
 author: Neal Bascomb
 rating: 3
 pages: 322
+categories: []
 reads:
 - finished_at: '2012-03-18'
 ---

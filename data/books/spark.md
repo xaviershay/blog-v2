@@ -5,6 +5,7 @@ title: Spark
 author: John J. Ratey
 rating: 3
 pages: 304
+categories: []
 reads:
 - finished_at: '2013-01-05'
 ---

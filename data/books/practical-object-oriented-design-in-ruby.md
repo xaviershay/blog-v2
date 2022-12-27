@@ -5,6 +5,7 @@ title: Practical Object Oriented Design In Ruby
 author: Sandi Metz
 rating: 5
 pages: 247
+categories: []
 reads:
 - finished_at: '2014-05-24'
 ---

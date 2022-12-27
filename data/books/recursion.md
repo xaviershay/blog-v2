@@ -5,6 +5,8 @@ title: Recursion
 author: Blake Crouch
 rating: 4
 pages: 336
+categories:
+- sci-fi
 reads:
 - finished_at: '2022-02-17'
 ---

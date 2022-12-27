@@ -5,6 +5,8 @@ title: Atomic Habits
 author: James Clear
 rating: 5
 pages: 319
+categories:
+- non-fiction
 reads:
 - finished_at: '2022-11-30'
 ---
