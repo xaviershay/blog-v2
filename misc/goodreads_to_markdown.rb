@@ -3,6 +3,7 @@ require 'http'
 require 'json'
 require 'date'
 require 'yaml'
+require 'csv'
 
 def cache(key, &block)
   filename = "cache/#{key.gsub(/[^a-zA-Z\d]/, '--')}"
@@ -16,6 +17,17 @@ def cache(key, &block)
 end
 
 doc = Nokogiri::HTML(File.read('data/goodreads-scrape.html'))
+
+enriched = {}
+CSV.foreach('data/goodreads-export-enriched.csv', headers: true) do |row|
+  obj = []
+  obj << 'fantasy' if row['Fantasy'].to_s.length > 0
+  obj << 'sci-fi' if row['Sci-Fi'].to_s.length > 0
+  obj << 'fiction' if row['Fiction'].to_s.length > 0
+  obj << 'non-fiction' if row['Non-Fiction'].to_s.length > 0
+  obj << 'literature' if row['Literature'].to_s.length > 0
+  enriched[row['Book Id']] = obj
+end
 
 BASE = "https://openlibrary.org"
 
@@ -166,6 +178,7 @@ books = doc.css('#booksBody tr.review').map do |row|
   {
     title: title,
     author: author,
+    categories: enriched.fetch(gr_id),
     openlibrary: {
       key: ol["key"].split('/').last,
       title: ol["title"],
@@ -184,6 +197,7 @@ books = doc.css('#booksBody tr.review').map do |row|
   }
 end.compact
 
+`mkdir -p out`
 books.each do |book|
   pages = book[:pages].to_i
   title = book[:openlibrary][:title]
@@ -198,6 +212,7 @@ books.each do |book|
     "author" => book[:author],
     "rating" => book[:rating],
     "pages" => book[:pages].to_i,
+    "categories" => book[:categories],
     "reads" => book[:dates_read].map {|x| {"finished_at" => x}}
   }
   content = book.fetch(:review)
