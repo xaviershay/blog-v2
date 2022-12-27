@@ -5,7 +5,8 @@ title: Caliban's war
 author: James S.A. Corey
 rating: 4
 pages: 624
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2017-04-06'
 ---

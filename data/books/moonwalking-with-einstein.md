@@ -5,7 +5,8 @@ title: Moonwalking with Einstein
 author: Joshua Foer
 rating: 5
 pages: 307
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-04-14'
 ---

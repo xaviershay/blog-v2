@@ -5,7 +5,8 @@ title: The great disruption
 author: Paul Gilding
 rating: 4
 pages: 292
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-11-13'
 ---

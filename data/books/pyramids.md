@@ -5,7 +5,8 @@ title: Pyramids
 author: Terry Pratchett
 rating: 3
 pages: 341
-categories: []
+categories:
+- fantasy
 reads:
 - finished_at: '2015-06-29'
 ---

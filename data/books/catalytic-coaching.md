@@ -5,7 +5,8 @@ title: Catalytic Coaching
 author: Garold L. Markle
 rating: 4
 pages: 0
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-09-05'
 ---

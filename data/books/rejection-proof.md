@@ -5,7 +5,8 @@ title: Rejection proof
 author: Jia Jiang
 rating: 4
 pages: 240
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-12-09'
 ---

@@ -5,7 +5,8 @@ title: Exercises in style
 author: Raymond Queneau
 rating: 4
 pages: 204
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2011-08-25'
 ---

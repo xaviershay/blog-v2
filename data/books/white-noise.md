@@ -5,7 +5,8 @@ title: White Noise
 author: Don DeLillo
 rating: 4
 pages: 310
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2011-07-19'
 ---

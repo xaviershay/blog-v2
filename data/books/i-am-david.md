@@ -5,7 +5,8 @@ title: I am David
 author: Anne Holm
 rating: 2
 pages: 256
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2011-08-03'
 ---

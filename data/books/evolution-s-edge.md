@@ -5,7 +5,8 @@ title: Evolution's edge
 author: Graeme Taylor
 rating: 3
 pages: 320
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-02-26'
 ---

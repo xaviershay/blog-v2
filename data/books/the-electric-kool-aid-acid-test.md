@@ -5,7 +5,8 @@ title: The electric kool-aid acid test
 author: Tom Wolfe
 rating: 4
 pages: 416
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-03-12'
 ---

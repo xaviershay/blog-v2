@@ -5,7 +5,8 @@ title: Vagabonding
 author: Rolf Potts
 rating: 2
 pages: 205
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-04-01'
 ---

@@ -5,7 +5,8 @@ title: The noble hustle
 author: Colson Whitehead
 rating: 4
 pages: 258
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-05-06'
 ---

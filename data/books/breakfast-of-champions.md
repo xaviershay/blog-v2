@@ -5,7 +5,8 @@ title: Breakfast of Champions
 author: Kurt Vonnegut Jr.
 rating: 4
 pages: 303
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-06-19'
 ---

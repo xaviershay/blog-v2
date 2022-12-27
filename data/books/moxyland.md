@@ -5,7 +5,8 @@ title: Moxyland
 author: Lauren Beukes
 rating: 5
 pages: 367
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2017-04-06'
 ---

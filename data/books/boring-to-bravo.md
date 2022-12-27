@@ -5,7 +5,8 @@ title: Boring to bravo
 author: Kristin Arnold
 rating: 4
 pages: 256
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-08-30'
 ---

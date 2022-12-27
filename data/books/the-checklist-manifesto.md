@@ -5,7 +5,8 @@ title: The checklist manifesto
 author: Atul Gawande
 rating: 4
 pages: 208
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-08-20'
 ---

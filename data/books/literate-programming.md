@@ -5,7 +5,8 @@ title: Literate programming
 author: Donald Ervin Knuth
 rating: 3
 pages: 384
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-11-14'
 ---

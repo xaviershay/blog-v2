@@ -5,7 +5,8 @@ title: The road
 author: Cormac McCarthy
 rating: 4
 pages: 287
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2011-12-11'
 ---

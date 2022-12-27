@@ -5,7 +5,8 @@ title: The Cyberiad
 author: Stanisław Lem
 rating: 4
 pages: 295
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2017-05-05'
 ---

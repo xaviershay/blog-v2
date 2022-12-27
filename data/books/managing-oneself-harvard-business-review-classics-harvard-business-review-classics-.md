@@ -6,7 +6,8 @@ title: Managing Oneself (Harvard Business Review Classics) (Harvard Business Rev
 author: Peter F. Drucker
 rating: 4
 pages: 72
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-12-27'
 ---

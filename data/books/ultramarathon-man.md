@@ -5,7 +5,8 @@ title: Ultramarathon Man
 author: Dean Karnazes
 rating: 4
 pages: 295
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-02-19'
 ---

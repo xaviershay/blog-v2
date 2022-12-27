@@ -5,7 +5,8 @@ title: Mastery
 author: Robert Greene
 rating: 4
 pages: 318
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-04-07'
 ---

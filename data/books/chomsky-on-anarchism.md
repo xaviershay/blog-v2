@@ -5,7 +5,8 @@ title: Chomsky On Anarchism
 author: Noam Chomsky
 rating: 3
 pages: 241
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-01-04'
 ---

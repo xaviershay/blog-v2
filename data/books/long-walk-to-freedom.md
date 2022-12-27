@@ -5,7 +5,8 @@ title: Long Walk to Freedom
 author: Nelson Mandela
 rating: 5
 pages: 656
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2009-12-28'
 ---

@@ -5,7 +5,8 @@ title: The Long Way to a Small, Angry Planet
 author: Becky Chambers
 rating: 4
 pages: 423
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2017-10-14'
 ---

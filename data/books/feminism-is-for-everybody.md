@@ -5,7 +5,8 @@ title: Feminism Is for Everybody
 author: bell hooks
 rating: 5
 pages: 123
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-12-15'
 ---

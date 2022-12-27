@@ -5,7 +5,8 @@ title: Turning pro
 author: Steven Pressfield
 rating: 2
 pages: 148
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-01-06'
 ---

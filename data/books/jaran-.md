@@ -5,7 +5,8 @@ title: 'Jaran:'
 author: Kate Elliott
 rating: 4
 pages: 496
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2017-04-06'
 ---

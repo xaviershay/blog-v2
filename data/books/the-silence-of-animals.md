@@ -5,7 +5,8 @@ title: The silence of animals
 author: John N. Gray
 rating: 2
 pages: 240
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-11-04'
 ---

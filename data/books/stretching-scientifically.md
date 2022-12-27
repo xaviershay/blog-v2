@@ -5,7 +5,8 @@ title: Stretching Scientifically
 author: Thomas Kurz
 rating: 4
 pages: 213
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-11-07'
 ---

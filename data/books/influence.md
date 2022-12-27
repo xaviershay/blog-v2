@@ -5,7 +5,8 @@ title: Influence
 author: Robert B. Cialdini
 rating: 4
 pages: 320
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-03-02'
 ---

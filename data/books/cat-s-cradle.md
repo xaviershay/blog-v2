@@ -5,7 +5,8 @@ title: Cat's Cradle
 author: Kurt Vonnegut Jr.
 rating: 5
 pages: 179
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-09-02'
 ---

@@ -5,7 +5,8 @@ title: The Seven Principles for Making Marriage Work
 author: John M. Gottman
 rating: 4
 pages: 271
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-01-25'
 ---

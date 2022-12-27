@@ -5,7 +5,8 @@ title: Dreaming in Code
 author: Scott Rosenberg
 rating: 2
 pages: 400
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-01-25'
 ---

@@ -5,7 +5,8 @@ title: The professional
 author: Subroto Bagchi
 rating: 5
 pages: 240
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-05-05'
 ---

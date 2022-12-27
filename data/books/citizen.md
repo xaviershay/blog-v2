@@ -5,7 +5,8 @@ title: Citizen
 author: Claudia Rankine
 rating: 2
 pages: 169
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-12-28'
 ---

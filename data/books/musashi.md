@@ -5,7 +5,8 @@ title: Musashi
 author: Eiji Yoshikawa
 rating: 4
 pages: 970
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2013-07-07'
 ---

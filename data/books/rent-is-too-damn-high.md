@@ -5,7 +5,8 @@ title: Rent Is Too Damn High
 author: Matthew Yglesias
 rating: 3
 pages: 80
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-02-12'
 ---

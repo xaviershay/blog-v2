@@ -5,7 +5,8 @@ title: First, Break All the Rules
 author: Marcus Buckingham
 rating: 5
 pages: 272
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-02-26'
 ---

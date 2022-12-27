@@ -5,7 +5,8 @@ title: The Man in the High Castle
 author: Philip K. Dick
 rating: 4
 pages: 259
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2016-11-05'
 ---

@@ -5,7 +5,8 @@ title: Heat and light
 author: Jennifer Haigh
 rating: 5
 pages: 430
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2017-01-21'
 ---

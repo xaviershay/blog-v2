@@ -5,7 +5,8 @@ title: Overcoming gravity
 author: Steven Low
 rating: 5
 pages: 542
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-12-04'
 ---

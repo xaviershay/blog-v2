@@ -5,7 +5,8 @@ title: Ready Player One
 author: Ernest Cline
 rating: 1
 pages: 374
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2016-10-12'
 ---

@@ -5,7 +5,8 @@ title: The Heart and the Fist
 author: Eric Greitens
 rating: 4
 pages: 320
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-05-01'
 ---

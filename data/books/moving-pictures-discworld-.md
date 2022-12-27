@@ -5,7 +5,8 @@ title: Moving Pictures (Discworld)
 author: Terry Pratchett
 rating: 2
 pages: 396
-categories: []
+categories:
+- fantasy
 reads:
 - finished_at: '2015-10-05'
 ---

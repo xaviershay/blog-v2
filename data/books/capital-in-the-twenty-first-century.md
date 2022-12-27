@@ -5,7 +5,8 @@ title: Capital in the Twenty-First Century
 author: Thomas Piketty
 rating: 3
 pages: 685
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-11-01'
 ---

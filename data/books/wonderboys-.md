@@ -5,7 +5,8 @@ title: Wonderboys.
 author: Michael Chabon
 rating: 3
 pages: 383
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-09-12'
 ---

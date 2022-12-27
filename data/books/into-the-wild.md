@@ -5,7 +5,8 @@ title: Into the wild
 author: Jon Krakauer
 rating: 4
 pages: 203
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-03-14'
 ---

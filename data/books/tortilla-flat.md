@@ -5,7 +5,8 @@ title: Tortilla Flat
 author: John Steinbeck
 rating: 4
 pages: 256
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-04-29'
 ---

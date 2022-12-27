@@ -5,7 +5,8 @@ title: Running with the Buffaloes
 author: Chris Lear
 rating: 3
 pages: 288
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-03-03'
 ---

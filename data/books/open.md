@@ -5,7 +5,8 @@ title: Open
 author: Andre Agassi
 rating: 4
 pages: 388
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-02-22'
 ---

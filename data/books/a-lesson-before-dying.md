@@ -5,7 +5,8 @@ title: A Lesson Before Dying
 author: Ernest J. Gaines
 rating: 2
 pages: 256
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-12-31'
 ---

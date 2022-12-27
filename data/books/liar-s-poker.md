@@ -5,7 +5,8 @@ title: Liar's poker
 author: Michael Lewis
 rating: 5
 pages: 256
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-03-22'
 ---

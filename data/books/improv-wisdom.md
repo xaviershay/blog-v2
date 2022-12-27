@@ -5,7 +5,8 @@ title: Improv Wisdom
 author: Patricia Ryan Madson
 rating: 3
 pages: 160
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-02-02'
 ---

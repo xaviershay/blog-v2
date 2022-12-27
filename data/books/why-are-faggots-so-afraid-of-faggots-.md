@@ -5,7 +5,8 @@ title: Why Are Faggots So Afraid of Faggots?
 author: Mattilda Bernstein Sycamore
 rating: 4
 pages: 212
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-05-26'
 ---

@@ -5,7 +5,8 @@ title: Should we eat meat?
 author: Vaclav Smil
 rating: 4
 pages: 276
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-05-20'
 ---

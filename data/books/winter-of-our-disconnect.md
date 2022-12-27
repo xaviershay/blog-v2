@@ -5,7 +5,8 @@ title: Winter of Our Disconnect
 author: Susan Maushart
 rating: 5
 pages: 296
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-01-29'
 ---

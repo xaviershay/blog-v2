@@ -5,7 +5,8 @@ title: The Investment Answer
 author: Daniel C. Goldie
 rating: 4
 pages: 85
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-02-03'
 ---

@@ -5,7 +5,8 @@ title: A Perfect Mess
 author: Eric Abrahamson
 rating: 1
 pages: 327
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-10-06'
 ---

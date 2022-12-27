@@ -5,7 +5,8 @@ title: Willful blindness
 author: Margaret Heffernan
 rating: 4
 pages: 304
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-05-24'
 ---

@@ -5,7 +5,8 @@ title: Working Effectively with Legacy Code
 author: Michael C. Feathers
 rating: 3
 pages: 464
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-01-02'
 ---

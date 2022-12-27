@@ -5,7 +5,8 @@ title: No Logo
 author: Naomi Klein
 rating: 5
 pages: 528
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-10-06'
 ---

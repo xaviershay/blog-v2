@@ -5,7 +5,8 @@ title: How to Race the Mile
 author: Jeff Hollobaugh
 rating: 4
 pages: 336
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-06-07'
 ---

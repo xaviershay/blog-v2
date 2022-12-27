@@ -5,7 +5,8 @@ title: BLACK HOLE BLUES AND OTHER SONGS
 author: Janna Levin
 rating: 4
 pages: 256
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2017-01-29'
 ---

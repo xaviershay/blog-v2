@@ -5,7 +5,8 @@ title: Haroun and the Sea of Stories
 author: Salman Rushdie
 rating: 3
 pages: 224
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2012-05-01'
 ---

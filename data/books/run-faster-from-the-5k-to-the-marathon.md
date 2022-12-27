@@ -5,7 +5,8 @@ title: Run Faster from the 5K to the Marathon
 author: Brad Hudson
 rating: 4
 pages: 278
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-03-12'
 ---

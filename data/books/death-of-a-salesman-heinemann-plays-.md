@@ -5,7 +5,8 @@ title: Death of a Salesman (Heinemann Plays)
 author: Arthur Miller
 rating: 3
 pages: 117
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2010-11-27'
 ---

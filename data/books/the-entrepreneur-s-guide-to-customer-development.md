@@ -5,7 +5,8 @@ title: The entrepreneur's guide to customer development
 author: Brant Cooper
 rating: 3
 pages: 104
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-02-01'
 ---

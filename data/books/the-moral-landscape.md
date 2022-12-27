@@ -5,7 +5,8 @@ title: The moral landscape
 author: Sam Harris
 rating: 5
 pages: 291
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-01-12'
 ---

@@ -5,7 +5,8 @@ title: How bad do you want it?
 author: Matt Fitzgerald
 rating: 5
 pages: 265
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-04-16'
 ---

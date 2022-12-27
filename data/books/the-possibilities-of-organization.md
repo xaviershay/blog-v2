@@ -5,7 +5,8 @@ title: The Possibilities of Organization
 author: Barry Oshry
 rating: 5
 pages: 216
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-06-11'
 ---

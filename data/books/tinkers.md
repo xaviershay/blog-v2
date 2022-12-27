@@ -5,7 +5,8 @@ title: Tinkers
 author: Paul Harding
 rating: 3
 pages: 192
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2011-08-20'
 ---

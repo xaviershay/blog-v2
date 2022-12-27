@@ -5,7 +5,8 @@ title: You say potato
 author: Ben Crystal
 rating: 3
 pages: 248
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-11-15'
 ---

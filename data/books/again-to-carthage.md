@@ -5,7 +5,8 @@ title: Again to Carthage
 author: John L. Parker Jr.
 rating: 3
 pages: 344
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-05-10'
 ---

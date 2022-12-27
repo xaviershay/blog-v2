@@ -5,7 +5,8 @@ title: Revolutions in Reverse
 author: David Graeber
 rating: 3
 pages: 114
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-04-04'
 ---

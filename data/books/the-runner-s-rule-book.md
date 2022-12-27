@@ -5,7 +5,8 @@ title: The runner's rule book
 author: Mark Remy
 rating: 3
 pages: 166
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-05-23'
 ---

@@ -5,7 +5,8 @@ title: Conversations with David Foster Wallace
 author: David Foster Wallace
 rating: 4
 pages: 186
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2013-10-11'
 ---

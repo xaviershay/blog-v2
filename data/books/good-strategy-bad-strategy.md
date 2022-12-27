@@ -5,7 +5,8 @@ title: Good Strategy Bad Strategy
 author: Richard P. Rumelt
 rating: 5
 pages: 320
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-02-25'
 ---

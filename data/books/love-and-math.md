@@ -5,7 +5,8 @@ title: Love and math
 author: Edward Frenkel
 rating: 3
 pages: 292
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-11-15'
 ---

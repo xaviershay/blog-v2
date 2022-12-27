@@ -5,7 +5,8 @@ title: Atlas Shrugged
 author: Ayn Rand
 rating: 4
 pages: 1
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2010-08-22'
 ---

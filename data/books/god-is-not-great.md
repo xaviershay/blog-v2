@@ -5,7 +5,8 @@ title: God is not great
 author: Christopher Hitchens
 rating: 4
 pages: 307
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-04-15'
 ---

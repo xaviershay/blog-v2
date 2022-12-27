@@ -5,7 +5,8 @@ title: The Rise of Theodore Roosevelt
 author: Edmund Morris
 rating: 5
 pages: 816
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-01-02'
 ---

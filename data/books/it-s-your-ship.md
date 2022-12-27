@@ -5,7 +5,8 @@ title: It's Your Ship
 author: D. Michael Abrashoff
 rating: 3
 pages: 212
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-01-10'
 ---

@@ -6,7 +6,8 @@ title: 'The hard thing about hard things : building a business when there are no
 author: Ben Horowitz
 rating: 5
 pages: 304
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-05-29'
 ---

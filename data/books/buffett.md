@@ -5,7 +5,8 @@ title: Buffett
 author: Roger Lowenstein
 rating: 4
 pages: 475
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-08-22'
 ---

@@ -5,7 +5,8 @@ title: The Ascent of Humanity
 author: Charles Eisenstein
 rating: 4
 pages: 604
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-02-13'
 ---

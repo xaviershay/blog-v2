@@ -5,7 +5,8 @@ title: No Place to Hide
 author: Glenn Greenwald
 rating: 3
 pages: 260
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-01-05'
 ---

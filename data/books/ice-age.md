@@ -5,7 +5,8 @@ title: Ice Age
 author: John Gribbin
 rating: 3
 pages: 123
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2017-12-15'
 ---

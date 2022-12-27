@@ -59,6 +59,6 @@ def compile_book_index_metadata(book_metadata, out)
     end
   end
   readings = readings.sort_by {|x| x.fetch("finished_at") }.reverse
-  yaml = {"stats" => stats, "readings" => readings}.to_yaml
+  yaml = {"stats" => stats.filter {|k, v| k > stats.keys.max - 15}, "readings" => readings}.to_yaml
   File.write(out, yaml)
 end

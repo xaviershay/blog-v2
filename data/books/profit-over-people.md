@@ -5,7 +5,8 @@ title: Profit Over People
 author: Noam Chomsky
 rating: 4
 pages: 175
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-11-09'
 ---

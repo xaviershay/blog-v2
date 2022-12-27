@@ -5,7 +5,8 @@ title: Managing Humans
 author: Michael Lopp
 rating: 4
 pages: 209
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-01-14'
 ---

@@ -5,7 +5,8 @@ title: Fast Food Nation
 author: Eric Schlosser
 rating: 5
 pages: 399
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-12-16'
 ---

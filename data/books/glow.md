@@ -5,7 +5,8 @@ title: Glow
 author: Ned Beauman
 rating: 5
 pages: 258
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2016-04-16'
 ---

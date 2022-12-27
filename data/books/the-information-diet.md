@@ -5,7 +5,8 @@ title: The Information Diet
 author: Clay A. Johnson
 rating: 5
 pages: 150
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-01-23'
 ---

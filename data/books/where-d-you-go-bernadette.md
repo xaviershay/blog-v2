@@ -5,7 +5,8 @@ title: Where'd You Go, Bernadette
 author: Maria Semple
 rating: 5
 pages: 330
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2016-05-16'
 ---

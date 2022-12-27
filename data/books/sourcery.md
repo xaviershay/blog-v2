@@ -5,7 +5,8 @@ title: Sourcery
 author: Terry Pratchett
 rating: 3
 pages: 276
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-06-01'
 ---

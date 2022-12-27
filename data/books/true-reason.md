@@ -5,7 +5,8 @@ title: True reason
 author: Carson Weitnauer
 rating: 2
 pages: 278
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-12-31'
 ---

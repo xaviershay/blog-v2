@@ -5,7 +5,8 @@ title: Slack
 author: Tom DeMarco
 rating: 5
 pages: 256
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2017-02-28'
 ---

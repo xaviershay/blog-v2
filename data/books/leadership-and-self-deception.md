@@ -5,7 +5,8 @@ title: Leadership and Self Deception
 author: Arbinger Institute
 rating: 4
 pages: 180
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-04-16'
 ---

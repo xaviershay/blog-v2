@@ -5,7 +5,8 @@ title: How I became a famous novelist
 author: Steve Hely
 rating: 3
 pages: 322
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2013-05-12'
 ---

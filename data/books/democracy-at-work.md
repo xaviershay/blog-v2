@@ -5,7 +5,8 @@ title: Democracy at work
 author: Richard D. Wolff
 rating: 4
 pages: 220
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-05-24'
 ---

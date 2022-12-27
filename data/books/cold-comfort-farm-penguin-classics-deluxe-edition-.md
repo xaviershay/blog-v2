@@ -5,7 +5,8 @@ title: Cold Comfort Farm (Penguin Classics Deluxe Edition)
 author: Stella Gibbons
 rating: 2
 pages: 233
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2012-12-09'
 ---

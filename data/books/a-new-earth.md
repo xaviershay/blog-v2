@@ -5,7 +5,8 @@ title: A New Earth
 author: Eckhart Tolle
 rating: 4
 pages: 316
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-12-04'
 ---

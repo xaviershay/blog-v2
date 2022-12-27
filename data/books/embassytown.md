@@ -5,7 +5,8 @@ title: Embassytown
 author: China Miéville
 rating: 4
 pages: 368
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2018-02-10'
 ---

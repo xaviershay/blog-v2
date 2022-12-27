@@ -5,7 +5,8 @@ title: The rule of law
 author: Tom Bingham
 rating: 4
 pages: 203
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-11-14'
 ---

@@ -5,7 +5,8 @@ title: Corporate America
 author: Jack Dougherty
 rating: 4
 pages: 350
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-05-24'
 ---

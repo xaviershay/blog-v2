@@ -5,7 +5,8 @@ title: How Will You Measure Your Life?
 author: Clayton M. Christensen
 rating: 4
 pages: 240
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-09-06'
 ---

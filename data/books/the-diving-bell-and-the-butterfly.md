@@ -5,7 +5,8 @@ title: The Diving Bell and the Butterfly
 author: Jean-Dominique Bauby
 rating: 3
 pages: 132
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2016-12-21'
 ---

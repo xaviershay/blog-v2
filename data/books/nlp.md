@@ -5,7 +5,8 @@ title: Nlp
 author: Tom Hoobyar
 rating: 4
 pages: 480
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-03-16'
 ---

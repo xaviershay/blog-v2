@@ -5,7 +5,8 @@ title: Moab is my washpot
 author: Stephen Fry
 rating: 3
 pages: 366
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-09-29'
 ---

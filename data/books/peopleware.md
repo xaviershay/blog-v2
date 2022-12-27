@@ -5,7 +5,8 @@ title: Peopleware
 author: Tom DeMarco
 rating: 5
 pages: 245
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-02-07'
 ---

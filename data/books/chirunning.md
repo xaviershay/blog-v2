@@ -5,7 +5,8 @@ title: ChiRunning
 author: Danny Dreyer
 rating: 4
 pages: 236
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-12-15'
 ---

@@ -5,7 +5,8 @@ title: The painted bird
 author: Jerzy Kosiński
 rating: 2
 pages: 234
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2013-11-14'
 ---

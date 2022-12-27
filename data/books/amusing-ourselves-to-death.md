@@ -5,7 +5,8 @@ title: Amusing Ourselves to Death
 author: Neil Postman
 rating: 5
 pages: 184
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-07-24'
 ---

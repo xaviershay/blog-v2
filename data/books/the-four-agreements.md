@@ -5,7 +5,8 @@ title: The Four Agreements
 author: Miguel Ruiz
 rating: 3
 pages: 168
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-02-26'
 ---

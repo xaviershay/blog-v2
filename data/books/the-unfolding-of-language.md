@@ -5,7 +5,8 @@ title: The Unfolding of Language
 author: Guy Deutscher
 rating: 5
 pages: 368
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-10-07'
 ---

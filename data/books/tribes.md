@@ -5,7 +5,8 @@ title: Tribes
 author: Seth Godin
 rating: 2
 pages: 151
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-08-23'
 ---

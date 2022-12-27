@@ -5,7 +5,8 @@ title: Making habits, breaking habits
 author: Jeremy Dean
 rating: 3
 pages: 272
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-04-23'
 ---

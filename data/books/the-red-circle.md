@@ -5,7 +5,8 @@ title: The red circle
 author: Brandon Webb
 rating: 3
 pages: 380
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-05-17'
 ---

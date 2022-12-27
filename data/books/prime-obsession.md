@@ -5,7 +5,8 @@ title: Prime Obsession
 author: John Derbyshire
 rating: 4
 pages: 422
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-12-09'
 ---

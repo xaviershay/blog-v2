@@ -5,7 +5,8 @@ title: 14 minutes
 author: Alberto Salazar
 rating: 4
 pages: 280
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-06-26'
 ---

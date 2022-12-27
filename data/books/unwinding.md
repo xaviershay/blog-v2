@@ -5,7 +5,8 @@ title: Unwinding
 author: George Packer
 rating: 5
 pages: 448
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-11-02'
 ---

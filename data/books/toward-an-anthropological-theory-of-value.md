@@ -5,7 +5,8 @@ title: Toward an Anthropological Theory of Value
 author: David Graeber
 rating: 3
 pages: 352
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-04-12'
 ---

@@ -5,7 +5,8 @@ title: The Bond Book
 author: Annette Thau
 rating: 3
 pages: 394
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-05-16'
 ---

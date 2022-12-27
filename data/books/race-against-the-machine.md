@@ -5,7 +5,8 @@ title: Race Against The Machine
 author: Erik Brynjolfsson
 rating: 3
 pages: 98
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-11-02'
 ---

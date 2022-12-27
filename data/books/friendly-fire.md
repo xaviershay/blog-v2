@@ -5,7 +5,8 @@ title: Friendly Fire
 author: Scott A. Snook
 rating: 3
 pages: 280
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-01-12'
 ---

@@ -5,7 +5,8 @@ title: Flow
 author: Mihaly Csikszentmihalyi
 rating: 5
 pages: 303
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-12-13'
 ---

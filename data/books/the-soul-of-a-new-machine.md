@@ -5,7 +5,8 @@ title: The Soul of a New Machine
 author: Tracy Kidder
 rating: 4
 pages: 297
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-08-28'
 ---

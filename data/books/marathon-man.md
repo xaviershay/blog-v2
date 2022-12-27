@@ -5,7 +5,8 @@ title: Marathon Man
 author: Bill Rodgers
 rating: 4
 pages: 336
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-08-06'
 ---

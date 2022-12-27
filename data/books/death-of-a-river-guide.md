@@ -5,7 +5,8 @@ title: Death of a River Guide
 author: Richard Flanagan
 rating: 2
 pages: 382
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-03-05'
 ---

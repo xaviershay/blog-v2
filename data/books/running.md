@@ -5,7 +5,8 @@ title: Running
 author: Jean Echenoz
 rating: 4
 pages: 128
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-03-08'
 ---

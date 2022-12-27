@@ -5,7 +5,8 @@ title: Both flesh and not
 author: David Foster Wallace
 rating: 4
 pages: 328
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-02-17'
 ---

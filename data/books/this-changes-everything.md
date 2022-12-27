@@ -5,7 +5,8 @@ title: This Changes Everything
 author: Naomi Klein
 rating: 5
 pages: 576
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-10-01'
 ---

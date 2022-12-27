@@ -5,7 +5,8 @@ title: The Origins of Virtue
 author: Matt Ridley
 rating: 5
 pages: 265
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-11-08'
 ---

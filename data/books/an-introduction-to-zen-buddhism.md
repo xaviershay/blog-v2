@@ -5,7 +5,8 @@ title: An Introduction to Zen Buddhism
 author: D.T. Suzuki
 rating: 2
 pages: 132
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-03-12'
 ---

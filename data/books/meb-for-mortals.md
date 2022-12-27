@@ -5,7 +5,8 @@ title: Meb for mortals
 author: Meb Keflezighi
 rating: 2
 pages: 224
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-03-04'
 ---

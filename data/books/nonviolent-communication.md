@@ -5,7 +5,8 @@ title: Nonviolent communication
 author: Marshall B. Rosenberg
 rating: 5
 pages: 220
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-02-03'
 ---

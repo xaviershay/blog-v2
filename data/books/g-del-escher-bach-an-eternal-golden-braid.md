@@ -5,7 +5,8 @@ title: 'Gödel, Escher, Bach : an eternal golden braid'
 author: Douglas R. Hofstadter
 rating: 4
 pages: 756
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2011-09-21'
 ---

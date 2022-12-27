@@ -5,7 +5,8 @@ title: Understanding Computation
 author: Tom Stuart
 rating: 4
 pages: 332
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-07-11'
 ---

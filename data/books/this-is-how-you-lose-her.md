@@ -5,7 +5,8 @@ title: This is how you lose her
 author: Junot Díaz
 rating: 4
 pages: 217
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2013-12-11'
 ---

@@ -5,7 +5,8 @@ title: The Night Circus
 author: Erin Morgenstern
 rating: 3
 pages: 387
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2016-03-16'
 ---

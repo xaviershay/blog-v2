@@ -5,7 +5,8 @@ title: The Emperor's New Mind
 author: Roger Penrose
 rating: 4
 pages: 602
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2014-02-01'
 ---

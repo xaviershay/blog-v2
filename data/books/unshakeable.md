@@ -5,7 +5,8 @@ title: Unshakeable
 author: Anthony Robbins
 rating: 4
 pages: 272
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-01-22'
 ---

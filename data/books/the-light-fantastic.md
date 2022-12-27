@@ -5,7 +5,8 @@ title: The Light Fantastic
 author: Terry Pratchett
 rating: 3
 pages: 277
-categories: []
+categories:
+- fantasy
 reads:
 - finished_at: '2015-04-27'
 ---

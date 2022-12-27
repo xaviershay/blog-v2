@@ -5,7 +5,8 @@ title: The Demon-Haunted World
 author: Carl Sagan
 rating: 5
 pages: 459
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2013-12-27'
 ---

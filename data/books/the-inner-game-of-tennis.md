@@ -5,7 +5,8 @@ title: The Inner Game of Tennis
 author: W. Timothy Gallwey
 rating: 3
 pages: 161
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2018-03-29'
 ---

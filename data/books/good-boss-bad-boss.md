@@ -5,7 +5,8 @@ title: Good boss, bad boss
 author: Robert I. Sutton
 rating: 3
 pages: 320
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2012-05-02'
 ---

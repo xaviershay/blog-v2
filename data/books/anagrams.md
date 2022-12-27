@@ -5,7 +5,8 @@ title: Anagrams
 author: Lorrie Moore
 rating: 3
 pages: 228
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2015-01-05'
 ---

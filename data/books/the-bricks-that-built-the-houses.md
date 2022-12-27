@@ -5,7 +5,8 @@ title: The bricks that built the houses
 author: Kate Tempest
 rating: 5
 pages: 416
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2017-04-15'
 ---

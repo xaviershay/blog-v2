@@ -5,7 +5,8 @@ title: The Satanic Verses
 author: Salman Rushdie
 rating: 5
 pages: 561
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2012-03-29'
 ---

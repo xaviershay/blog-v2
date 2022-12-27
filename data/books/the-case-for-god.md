@@ -5,7 +5,8 @@ title: The case for God
 author: Karen Armstrong
 rating: 2
 pages: 406
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-10-11'
 ---

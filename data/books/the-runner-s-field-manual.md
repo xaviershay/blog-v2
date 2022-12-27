@@ -5,7 +5,8 @@ title: The Runner's Field Manual
 author: Mark Remy
 rating: 3
 pages: 224
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-02-18'
 ---

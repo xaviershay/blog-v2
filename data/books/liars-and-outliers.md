@@ -5,7 +5,8 @@ title: Liars and outliers
 author: Bruce Schneier
 rating: 4
 pages: 348
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2017-01-08'
 ---

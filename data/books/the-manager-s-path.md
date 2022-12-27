@@ -5,7 +5,8 @@ title: The Manager's Path
 author: Camille Fournier
 rating: 5
 pages: 244
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2017-07-20'
 ---

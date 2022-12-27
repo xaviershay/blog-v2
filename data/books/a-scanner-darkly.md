@@ -5,7 +5,8 @@ title: A Scanner Darkly
 author: Philip K. Dick
 rating: 3
 pages: 219
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2013-04-26'
 ---

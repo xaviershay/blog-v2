@@ -5,7 +5,8 @@ title: The Windup Girl
 author: Paolo Bacigalupi
 rating: 4
 pages: 359
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2013-07-12'
 ---

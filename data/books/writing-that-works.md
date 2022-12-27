@@ -5,7 +5,8 @@ title: Writing that works
 author: Kenneth Roman
 rating: 4
 pages: 208
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2015-08-15'
 ---

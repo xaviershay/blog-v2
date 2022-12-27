@@ -5,7 +5,8 @@ title: The Child in Time
 author: Ian McEwan
 rating: 4
 pages: 263
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2012-01-31'
 ---

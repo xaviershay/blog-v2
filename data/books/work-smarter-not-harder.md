@@ -5,7 +5,8 @@ title: Work Smarter Not Harder
 author: Jack Collis
 rating: 3
 pages: 202
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2010-11-16'
 ---

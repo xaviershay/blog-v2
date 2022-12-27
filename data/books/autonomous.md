@@ -5,7 +5,8 @@ title: Autonomous
 author: Annalee Newitz
 rating: 3
 pages: 298
-categories: []
+categories:
+- sci-fi
 reads:
 - finished_at: '2018-06-08'
 ---

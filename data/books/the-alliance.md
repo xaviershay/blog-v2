@@ -5,7 +5,8 @@ title: The Alliance
 author: Reid Hoffman
 rating: 3
 pages: 224
-categories: []
+categories:
+- non-fiction
 reads:
 - finished_at: '2016-08-04'
 ---

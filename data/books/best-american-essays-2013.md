@@ -5,7 +5,8 @@ title: Best American essays 2013
 author: Cheryl Strayed
 rating: 3
 pages: 336
-categories: []
+categories:
+- literature
 reads:
 - finished_at: '2014-03-06'
 ---
