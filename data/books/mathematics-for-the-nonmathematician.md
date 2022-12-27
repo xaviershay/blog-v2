@@ -1,7 +1,7 @@
 ---
-id: OL1947904W
+id: OL2863025M
 slug: mathematics-for-the-nonmathematician
-title: Mathematics for the Nonmathematician
+title: Mathematics for the nonmathematician
 author: Morris Kline
 rating: 2
 pages: 0

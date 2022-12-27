@@ -41,8 +41,8 @@ OVERRIDES = {
   33361943 => "OL20071029W",
   27276428 => "OL17762235W",
   43352954 => "OL20639540W",
-  #43075560 => "", Mortgage Meltdown: Mapping the Past, Present, and Future of Fannie Mae
-  18218384 => "OL1947904W",
+  43075560 => "OL44959390M", # Mortgage Meltdown: Mapping the Past, Present, and Future of Fannie Mae
+  18218384 => "OL2863025M", # Mathematics for the nonmathematician
   2666  => "OL1925470W",
   36307634 => "OL19070821W",
   22299763 => "OL17597665W",
@@ -50,14 +50,14 @@ OVERRIDES = {
   14061957 => "OL17293267W",
   14061955 => "OL2626368W",
   10194157 => "OL16239519W",
-  34602136 => "OL21156417W",
+  34602136 => "OL28641102M",
   44020966 => "OL20840033W",
   12074927 => "OL17400059W",
   30141085 => "OL25736603W",
   18890191 => "OL29544330M",
   54114318 => "OL21399105W",
   41085049 => "OL20896432W",
-  #33246443 => "", # World's Best: Coaching with the Kookaburras and the Hockeyroos
+  33246443 => "OL44958366M", # World's Best: Coaching with the Kookaburras and the Hockeyroos
   13651    => "OL59863W", #  The Dispossessed: An Ambiguous Utopia
   39286958 => "OL19746884W", #  Measure What Matters
   139069   => "OL874159W", # Endurance: Shackleton's Incredible Voyage
@@ -67,7 +67,7 @@ OVERRIDES = {
   40053431 => "OL19351310W", #  Exactly: How Precision Engineers Created the Modern World
   8153988  => "OL2189633M", #  The Eye of the World (The Wheel of Time, #1)
   12982713 => 'OL16495247W', # El Narco: Inside Mexico's Criminal Insurgency
-  42267971 => '', # Eliud Kipchoge - History's fastest marathoner: An insight into the Kenyan life that shapes legends
+  42267971 => 'OL44958593M', # Eliud Kipchoge - History's fastest marathoner: An insight into the Kenyan life that shapes legends
   36556202 => 'OL28202924M', # The Coddling of the American Mind: How Good Intentions and Bad Ideas Are Setting Up a Generation for Failure
   8249187 => 'OL14993212W', # Bright Shiny Morning
   35016990 => 'OL20199686W', # The End of the World Running Club
@@ -108,13 +108,13 @@ OVERRIDES = {
   35696749 => 'OL17062644W', # Ancillary Justice (Imperial Radch, #1)
   16160706 => 'OL16489931W', # Steal Like an Artist: 10 Things Nobody Told You About Being Creative
   25884323 => 'OL20003842W', # Aurora
-  18245960 => 'OL17267881W', # The Three-Body Problem (Remembrance of Earth’s Past, #1)
+  18245960 => 'OL25840917M', # The Three-Body Problem (Remembrance of Earth’s Past, #1)
   34599304 => 'OL20053398W', # Asteroid Hunters (TED Books)
   34039808 => 'OL17834026W', # Oathbringer (The Stormlight Archive, #3)
   18219313 => 'OL19920887W', # Encounter with Tiber
   22816087 => 'OL17829905W', # Seveneves
   12802745 => 'OL25690739M', # The Better Angels of Our Nature: Why Violence Has Declined
-  17786270 => '', # Out of the Crises
+  17786270 => 'OL22322511M', # Out of the Crises
   6521829 => 'OL3783464W', # Generation Kill
   33411603 => 'OL26499490W', # Away with Words: An Irreverent Tour Through the World of Pun Competitions
   6567239 => 'OL15335590W', # High Fidelity
@@ -133,7 +133,7 @@ OVERRIDES = {
   18663149 => 'OL17074648W', # Abaddon's Gate (Expanse, #3)
   95558 => 'OL109524W', # Solaris
   27833494 => 'OL19773866W', # Dark Money: The Hidden History of the Billionaires Behind the Rise of the Radical Right
-  18188241 => '', # Fundamental Chess Patterns
+  18188241 => 'OL44958794M', # Fundamental Chess Patterns
   23692271 => 'OL17075811W', # Sapiens: A Brief History of Humankind
   21611 => 'OL271163W', # The Forever War (The Forever War, #1)
   25813921 => 'OL20244267W', # Grit: Passion, Perseverance, and the Science of Success
@@ -150,28 +150,28 @@ OVERRIDES = {
   15622 => 'OL275128W', # Native Son
   17905709 => 'OL32166590M', # The Narrow Road to the Deep North
   11389457 => 'OL16151796W', # Writing Movies for Fun and Profit: How We Made a Billion Dollars at the Box Office and You Can, Too!
-  10345973 => 'OL19839274W', # Cyropaedia: the education of Cyrus
+  10345973 => 'OL27028617M', # Cyropaedia: the education of Cyrus
   6581994 => 'OL1821254W', # The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It
   8125726 => 'OL2463051W', # The Goal: A Process of Ongoing Improvement
   17938142 => 'OL2929969W', # Town Smokes
   86147 => 'OL18322283M', # Bright Lights, Big City
-  18901790 => '', # Posterior Chain Linked: Don't Lift Without It (Simple Strength Book 6)
-  17830292 => '', # Squat Every Day
-  17279627 => '', # Disequilibrium
+  18901790 => 'OL44958880M', # Posterior Chain Linked: Don't Lift Without It (Simple Strength Book 6)
+  17830292 => 'OL44958928M', # Squat Every Day
+  17279627 => 'OL44959078M', # Disequilibrium
   17306293 => 'OL17366206W', # Shift (Silo, #2)
   13453029 => 'OL19790424W', # Wool Omnibus (Silo, #1)
   7640261 => 'OL15568568W', # Sex at Dawn: The Prehistoric Origins of Modern Sexuality
-  17280927 => '', # Work out lose weight and stop being single
+  17280927 => 'OL44959139M', # Work out lose weight and stop being single
   17166225 => 'OL19629024W', # The Miracle Morning: The Not-So-Obvious Secret Guaranteed to Transform Your Life: Before 8AM
   23419 => 'OL107928W', # The Consolations of Philosophy
   4407 => 'OL679360W', # American Gods (American Gods, #1)
-  10374 => 'OL2625421W', # Hard-Boiled Wonderland and the End of the World
-  13306525 => '', # Ikigai
+  10374 => 'OL25118521M', # Hard-Boiled Wonderland and the End of the World
+  13306525 => 'OL44959190M', # Ikigai
   242472 => 'OL3295030W', # The Black Swan: The Impact of the Highly Improbable
   10557318 => 'OL19644560W', # Running on Empty: An Ultramarathoner's Story of Love, Loss, and a Record-Setting Run Across America
-  12978407 => '', # The Long Run
+  12978407 => 'OL44959278M', # The Long Run
   262731 => 'OL18149735W', # The Definitive Book of Body Language
-  13274256 => '', # Betterness: Economics for Humans
+  13274256 => 'OL44959327M', # Betterness: Economics for Humans
   4395 => 'OL23205W', # The Grapes of Wrath
   4138 => 'OL2693098W', # Naked
   9938211 => 'OL24531400M', # The 4-Hour Body: An Uncommon Guide to Rapid Fat-Loss, Incredible Sex, and Becoming Superhuman
@@ -185,7 +185,8 @@ OVERRIDES = {
 books = doc.css('#booksBody tr.review').map do |row|
   shelves = row.css('.field.shelves .value .shelfLink').map(&:text)
   next unless shelves.include?("read")
-
+  rating = row.css('.field.rating .value .stars').attr('data-rating').value.to_i
+  next unless rating > 0
   dates_read = begin
     raw = row.css('.field.date_read .value .date_read_value').map(&:text)
     raw.map do |date_raw|
@@ -238,7 +239,6 @@ books = doc.css('#booksBody tr.review').map do |row|
     when 200, 302
       JSON.parse(response.body)
     when 404
-      puts "not found by ISBN, abandoning"
       $stderr.puts "#{gr_id} => '', # #{title}"
       next
     else
@@ -248,7 +248,6 @@ books = doc.css('#booksBody tr.review').map do |row|
     ol_id = begin
       query = URI.encode_www_form(q: %|title:"#{short_title}" author:"#{author}"|)
       path = %|/search.json?#{query}|
-      puts path
       response = cache(path) {|path|
         url = "#{BASE}#{path}"
         puts "Fetching #{url}"
@@ -262,9 +261,7 @@ books = doc.css('#booksBody tr.review').map do |row|
         raise "#{doc['type']}" unless doc['type'] == "work"
         ol_id = doc['key'].split('/').last
       when 0
-        puts "not found"
       else
-        puts "Ambiguous match"
       end
     end
 
@@ -313,10 +310,11 @@ end.compact
 
 `mkdir -p out`
 books.each do |book|
-  pages = book[:pages].to_i
+  pages = (book[:openlibrary][:pages] || book[:pages]).to_i
   title = book[:openlibrary][:title]
   slug = title.downcase.gsub(/[^a-z0-9]+/, '-')
   if pages == 0
+    puts book.inspect
     $stderr.puts "PAGE ERROR: #{title}"
   end
   metadata = {
@@ -331,7 +329,7 @@ books.each do |book|
   }
   content = book.fetch(:review)
 
-  puts "Writing #{slug}.md"
+  # puts "Writing #{slug}.md"
   raw = <<-EOS
 #{metadata.to_yaml.gsub(/\n\Z/, '')}
 ---

@@ -1,7 +1,7 @@
 ---
-id: OL2625421W
-slug: "-"
-title: 世界の終りとハードボイルド・ワンダーランド
+id: OL25118521M
+slug: hard-boiled-wonderland-and-the-end-of-the-world
+title: Hard-Boiled Wonderland and the End of the World
 author: Haruki Murakami
 rating: 4
 pages: 400
