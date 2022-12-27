@@ -10,7 +10,7 @@ categories:
 reads:
 - finished_at: '2019-12-05'
 ---
-Stand out book of the year. Loved the author making a genuine attempt at introspecting his dissonance between "I believe climate change is real" and "I'm not changing my behaviour". It's directly written to people like me - I already accept the science ... what now?
+Stand out book of the year. Loved the author making a genuine attempt at introspecting his dissonance between "I believe climate change is real" and "I'm not changing my behaviour". It's directly written to people like me - I already accept  the science ... what now?
 
 Surprisingly not about veganism so much, which was unexpected but welcome - it's a much better and deeper book than "eating animals is bad for the environment". Kind of wish they hadn't given it the subtitle it has. (Or maybe I read through those parts because I already "knew" it?)
 

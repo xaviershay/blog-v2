@@ -83,7 +83,8 @@
             <tr class='book-summary'>
               <td class='date'><%= book.finished_at.strftime("%b %-e, %Y") %></td>
               <td class='rating'><%= book.rating.times.map {|_| "★" }.join %></td>
-              <td class='title'><%= book.title %></td>
+              <td class='title'><a href="/books/<%= book.slug %>.html">
+                  <%= book.title %></a></td>
               <td class='author'><%= book.author %></td>
             </tr>
           <% end %>

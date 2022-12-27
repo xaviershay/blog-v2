@@ -10,6 +10,6 @@ categories:
 reads:
 - finished_at: '2013-05-12'
 ---
-I exactly agree with Dave's review: <a target="_blank" rel="noopener nofollow" href="https://www.goodreads.com/review/show/281756581">http://www.goodreads.com/review/show/...</a>
+I exactly agree with Dave's review: http://www.goodreads.com/review/show/281756581
 
 Worth a read.

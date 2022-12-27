@@ -10,7 +10,7 @@ categories:
 reads:
 - finished_at: '2016-12-16'
 ---
-This book has been on my list for years, but I only just noticed it was written by Schlosser, whose "Command &amp; Control" I loved. It's a similar style of book - in depth research, but accessible and very engaging.
+This book has been on my list for years, but I only just noticed it was written by Schlosser, whose "Command & Control" I loved. It's a similar style of book - in depth research, but accessible and very engaging.
 
 "Every month about 90 percent of American children between the ages of three and nine visit a McDonald’s."
 

@@ -119,6 +119,13 @@ header.page-header > nav p {
   font-size: 0.7rem;
   white-space: nowrap;
 }
+
+/* BOOK SHOW */
+
+.category-dd {
+  text-transform: capitalize;
+}
+
 /* TABLES */
 td, th {
   border: none;

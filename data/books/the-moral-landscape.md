@@ -15,4 +15,4 @@ I am consistently impressed by Harris' ability to clearly lay out and investigat
 * Brain imaging shows no difference in activity between considering truth of "beliefs", "values" and "facts".
 * Morals can be thought of as being similar to health in that: you can't really measure it well, people often act in ways that are not healthy, yet we can still use science to learn about it.
 
-Here is a critical review from someone who has actually read the book and isn't insane: <a target="_blank" rel="noopener nofollow" href="http://jetpress.org/v21/blackford3.htm">http://jetpress.org/v21/blackford3.htm</a>
+Here is a critical review from someone who has actually read the book and isn't insane: http://jetpress.org/v21/blackford3.htm

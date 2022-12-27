@@ -10,7 +10,7 @@ categories:
 reads:
 - finished_at: '2017-04-06'
 ---
-**spoiler alert** This is a combined review of the book and the TV series, because I consumed both at the same time.
+This is a combined review of the book and the TV series, because I consumed both at the same time.
 
 The characters are flat, dialog weak, but the setting is really interesting to me. In the author's words (in an included interview), it's the "middle time" where we've reached out from earth but haven't left the solar system. The relationship between Earth, Mars, and the belt is pretty interesting.
 

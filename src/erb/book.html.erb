@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="date" content='<%= @book.updated_at %>'>
+    <link rel="stylesheet" href="/css/simple.css">
+    <link rel="stylesheet" href="/css/charts.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:title" content="<%= @book.title %>">
+    <meta property="og:description" content="<%= @book.summary %>">
+    <meta property="og:url" content="<%= HOST %><%= @book.url %>">
+    <% if false %>
+      <% if @post.card_image %>
+        <meta property="og:image" content="<%= HOST %>/images/<%= @post.card_image %>">
+      <% end %>
+    <% end %>
+    <meta property="og:site_name" content="Xavier Shay">
+
+    <title><%= @book.title %></title>
+  </head>
+  <body class='book-body'>
+    <header class='page-header'>
+      <nav>
+        <h1><%= @book.title %></h1>
+        <p class='date'><%= @book.author %></p>
+      </nav>
+    </header>
+    <article>
+      <dl>
+        <dt>Rating</dt>
+        <dd class='rating' data-value='<%= @book.rating %>'>
+          <%= @book.rating.times.map {|_| "★" }.join %>
+        </dd>
+        <% if @book.categories.any? %>
+          <dt>Category</dt>
+          <dd class='category-dd'><%= @book.categories.join(', ') %></dd>
+        <% end %>
+        <dt>Read</dt>
+        <dd><%= @book.reads.map(&:finished_at).join(", ") %></dd>
+        <dt>Pages</dt>
+        <dd><%= @book.pages %></dd>
+      </dl>
+      <%= @book.body_html %>
+
+      <img class='cover' src="https://covers.openlibrary.org/b/olid/<%= @book.id %>-L.jpg" alt="Cover image for <%= @book.title %>" onerror="this.style.display='none'" />
+      <%# TODO: escape title in attribute %>
+    </article>
+    <footer>
+      <nav>
+        <a href="https://openlibrary.org/books/<%= @book.id %>">Openlibrary</a>
+        <span class='separator'>|</span>
+        <a href="/books/">Back to Index</a>
+      </nav>
+    </footer>
+  </body>
+</html>

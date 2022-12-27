@@ -12,7 +12,7 @@ reads:
 ---
 Each chapter is written about a different application by a different author, and the quality varies widely.
 
-The following are worth reading (and available online at <a target="_blank" rel="noopener nofollow" href="http://www.aosabook.org/en/index.html">http://www.aosabook.org/en/index.html</a> though I read the kindle version):
+The following are worth reading (and available online at http://www.aosabook.org/en/index.html though I read the kindle version):
 * Graphite
 * LLVM
 * Selenium Webdriver

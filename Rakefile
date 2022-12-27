@@ -106,6 +106,17 @@ site_files += BOOK_FILES.map do |file|
   file fragment => [File.dirname(fragment), file] do
     builder.markdown_to_html_fragment(file, fragment)
   end
+
+  file out => [
+    metadata,
+    fragment,
+    template,
+    File.dirname(out)
+  ] do
+    builder.compile_erb(template, metadata, fragment, out)
+  end
+
+  out
 end
 
 multifile 'out/metadata/index.yml' => [

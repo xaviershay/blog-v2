@@ -26,7 +26,10 @@ CSV.foreach('data/goodreads-export-enriched.csv', headers: true) do |row|
   # obj << 'fiction' if row['Fiction'].to_s.length > 0
   obj << 'non-fiction' if row['Non-Fiction'].to_s.length > 0
   obj << 'literature' if row['Literature'].to_s.length > 0
-  enriched[row['Book Id']] = obj
+  enriched[row['Book Id']] = {
+    categories: obj,
+    review: row['My Review']
+  }
 end
 
 BASE = "https://openlibrary.org"
@@ -176,11 +179,22 @@ OVERRIDES = {
   4138 => 'OL2693098W', # Naked
   9938211 => 'OL24531400M', # The 4-Hour Body: An Uncommon Guide to Rapid Fat-Loss, Incredible Sex, and Becoming Superhuman
   5048174 => 'OL20288512W', # 2BR02B
-  320 => 'OL274505W', # One Hundred Years of Solitude
+  320 => 'OL30448691M', # One Hundred Years of Solitude
   6289283 => 'OL13805586W', # Born to Run: A Hidden Tribe, Superathletes, and the Greatest Race the World Has Never Seen
   1713426 => 'OL9302660W', # Predictably Irrational: The Hidden Forces That Shape Our Decisions
   119787 => 'OL103123W', # Fahrenheit 451
+
+  44492285 => 'OL15048950M', # Dune Messiah
+  22578294 => 'OL44973498M', # Glitch
+  8967425 => 'OL3510570W', # Mythical Man Month
+  27430326 => 'OL32744351M', # Black Hole Blues
+  42769202 => 'OL30154357M', # Starsight
 }.filter {|k, v| v.length > 0 }
+
+bust_cache = %w(
+  OL44947948M
+  OL11857204M
+)
 
 books = doc.css('#booksBody tr.review').map do |row|
   shelves = row.css('.field.shelves .value .shelfLink').map(&:text)
@@ -289,21 +303,19 @@ books = doc.css('#booksBody tr.review').map do |row|
   {
     title: title,
     author: author,
-    categories: enriched.fetch(gr_id),
+    categories: enriched.fetch(gr_id).fetch(:categories),
     openlibrary: {
       key: ol["key"].split('/').last,
       title: ol["title"],
       pages: ol['number_of_pages'],
-      full_title: ol["full_title"]
+      full_title: ol["full_title"],
+      cover: (ol['covers'].first rescue nil)
     },
     rating: row.css('.field.rating .value .stars').attr('data-rating').value.to_i,
     isbn: isbn,
     asin: row.css('.field.asin .value').text.strip,
     pages: row.css('.field.num_pages .value').text.gsub('pp', '').strip,
-    review: row.css('.field.review .value span').last
-      &.inner_html
-      &.gsub("<br>", "\n")
-      &.gsub("&gt;", ">"),
+    review: enriched.fetch(gr_id).fetch(:review).to_s.gsub("<br/>", "\n").gsub("&gt;", ">"),
     dates_read: dates_read,
   }
 end.compact
@@ -312,6 +324,9 @@ end.compact
 books.each do |book|
   pages = (book[:openlibrary][:pages] || book[:pages]).to_i
   title = book[:openlibrary][:title]
+  title = title.gsub(/:.*\Z/, '')
+  title = title.gsub(/\(.*?\)/, '')
+  title = title.strip
   slug = title.downcase.gsub(/[^a-z0-9]+/, '-')
   if pages == 0
     puts book.inspect
@@ -327,6 +342,8 @@ books.each do |book|
     "categories" => book[:categories],
     "reads" => book[:dates_read].map {|x| {"finished_at" => x}}
   }
+  # metadata["cover"] = book[:openlibrary][:cover] if book[:openlibrary][:cover]
+
   content = book.fetch(:review)
 
   # puts "Writing #{slug}.md"

@@ -24,4 +24,4 @@ This book got me amped up to run, which is really the main thing I want out of a
  
 "In football, you might get your bell rung, but you go in with the expectation that you might get hurt, and you hope to win and come out unscathed. As a distance runner, you know you're going to get your bell rung. Distance runners are experts at pain, discomfort, and fear. You're not coming away feeling good. It's a matter of how much pain you can deal with on those days. It's not a strategy. It's just a callusing of the mind and body to deal with discomfort. Any serious runner bounces back. That's the nature of their game. Taking pain."
  
-[1] <a target="_blank" rel="noopener nofollow" href="http://www.runnersworld.com/college-training/mark-wetmore-some-is-tradition-some-is-brand-new">http://www.runnersworld.com/college-t...</a> yeah I'm quoting Runner's World as a primary source deal with it.
+[1] http://www.runnersworld.com/college-training/mark-wetmore-some-is-tradition-some-is-brand-new yeah I'm quoting Runner's World as a primary source deal with it.

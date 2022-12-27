@@ -10,7 +10,7 @@ categories:
 reads:
 - finished_at: '2015-07-10'
 ---
-Picked up after reading about it in <a target="_blank" rel="noopener nofollow" href="https://www.farnamstreetblog.com/2015/06/the-three-marriages/">https://www.farnamstreetblog.com/2015...</a>
+Picked up after reading about it in https://www.farnamstreetblog.com/2015/06/the-three-marriages/
 
 I highlighted a decent chuck of this but nothing much stuck beyond that blog post.
 

@@ -10,4 +10,4 @@ categories:
 reads:
 - finished_at: '2013-03-02'
 ---
-Felt like mostly an advertisement for P&amp;G.
+Felt like mostly an advertisement for P&G.

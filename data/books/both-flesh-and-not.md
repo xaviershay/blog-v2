@@ -10,6 +10,6 @@ categories:
 reads:
 - finished_at: '2014-02-17'
 ---
-DFW &lt;3 &lt;3 &lt;3
+DFW <3 <3 <3
 
 If you're a fan, read it. If you're not a fan yet, start with something else first.

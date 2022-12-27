@@ -16,4 +16,4 @@ E.g. crushing loneliness of space, craziness of meeting yourself, meeting future
 
 Along another axis resource/time management and logistics could have been interesting but wasn't given any depth.
 
-Also feel like books should be banned from referencing any nerd culture, it never lands for me. (See: <a target="_blank" rel="noopener nofollow" href="https://twitter.com/electrolemon/status/971208968323280896?lang=en">https://twitter.com/electrolemon/stat...</a> )
+Also feel like books should be banned from referencing any nerd culture, it never lands for me. (See: https://twitter.com/electrolemon/status/971208968323280896?lang=en )

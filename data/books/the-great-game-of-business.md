@@ -10,9 +10,9 @@ categories:
 reads:
 - finished_at: '2021-02-21'
 ---
-Very clear. Have been thinking a lot about the similarities/differences between manufacturing companies (subject of this book) and R&amp;D focused companies, where outcomes are far more variables and activities more abstractly removed from the financials (and often more risk, say in VC funded business).
+Very clear. Have been thinking a lot about the similarities/differences between manufacturing companies (subject of this book) and R&D focused companies, where outcomes are far more variables and activities more abstractly removed from the financials (and often more risk, say in VC funded business).
 
-e.g. "Most important, no one tells people how to make money and generate cash. Nine times out of ten, employees don’t even know the difference between the two." This isn't really a critical distinction for many of the types of companies I've worked in. Is it so useful in R&amp;D for that to be the focusing educational point?
+e.g. "Most important, no one tells people how to make money and generate cash. Nine times out of ten, employees don’t even know the difference between the two." This isn't really a critical distinction for many of the types of companies I've worked in. Is it so useful in R&D for that to be the focusing educational point?
 
 "The best, most efficient, most profitable way to operate a business is to give everybody in the company a voice in saying how the company is run and a stake in the financial outcome, good or bad."
 

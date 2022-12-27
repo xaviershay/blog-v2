@@ -10,4 +10,4 @@ categories:
 reads:
 - finished_at: '2018-05-01'
 ---
-Read it. Full review here: <a target="_blank" rel="noopener nofollow" href="https://blog.xaviershay.com/articles/reinventing-organizations-review.html">https://blog.xaviershay.com/articles/...</a>
+Read it. Full review here: https://blog.xaviershay.com/articles/reinventing-organizations-review.html
