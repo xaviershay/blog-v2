@@ -38,6 +38,10 @@ Kramdown::Parser::Html::HTML_CONTENT_MODEL["x-youtube"] = :block
 Kramdown::Parser::Html::HTML_BLOCK_ELEMENTS << "x-youtube"
 Kramdown::Parser::Html::HTML_ELEMENT["x-youtube"] = true
 
+# <x-reading-graphs year='2022'> tag that expands to a standard set of charts.
+# Requires chart data to be passed through document options.
+Kramdown::Parser::Html::HTML_ELEMENT["x-reading-graphs"] = true
+
 class Kramdown::Converter::PostHtml < Kramdown::Converter::Html
   def convert_html_element(el, indent)
     case el.value
@@ -47,14 +51,65 @@ class Kramdown::Converter::PostHtml < Kramdown::Converter::Html
       caption = title.length > 0 ? "<figcaption>#{title}</figcaption>" : ""
       id = href.split('/').last
 
-      <<-HTML.lines.map {|x| (" " * indent) + x }.join
-<figure>
-  <div class='embed-youtube'>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/#{id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  #{caption}
-</figure>
+      <<-HTML
+        <figure>
+          <div class='embed-youtube'>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/#{id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          #{caption}
+        </figure>
       HTML
+    when "x-reading-graphs"
+      book_data = options.fetch(:book_data)
+      year = el.attr['year']
+      if data = book_data[year.to_i]
+        ratings = data.fetch('ratings')
+        m = ratings.max.to_f
+        rating_rows = ratings.map.with_index {|n, index|
+          <<-EOS
+            <tr>
+              <th scope='row'>#{index + 1}</th>
+              <td style='--size:#{n / m};'><span class='data'>#{n}</span></td>
+            </tr>
+          EOS
+        }.join("\n")
+
+        pages = data.fetch('pages')
+        m = pages.max.to_f
+        pages_rows = pages.map.with_index {|n, index|
+          <<-EOS
+            <tr>
+              <th scope='row'>#{(index + 1) * 100}</th>
+              <td style='--size:#{n / m};'><span class='data'>#{n}</span></td>
+            </tr>
+          EOS
+        }.join("\n")
+
+        styles = "charts-css data-spacing-1 column show-labels"
+        <<-EOS
+          <figure class='reading-analysis'>
+            <div>
+              <table class='ratings-histogram #{styles}'>
+                <caption>Ratings</caption>
+                <tbody>
+                  #{rating_rows}
+                </tbody>
+              </table>
+              <table class='pages-histogram #{styles}'>
+                <caption>Length</caption>
+                <tbody>
+                  #{pages_rows}
+                </tbody>
+              </table>
+            </div>
+            <figcaption>
+              Histogram of ratings (left) and length in pages (right).
+            </figcaption>
+          </figure>
+        EOS
+      else
+        ""
+      end
     else
       super
     end

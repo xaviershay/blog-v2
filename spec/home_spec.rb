@@ -52,7 +52,7 @@ RSpec.describe "the blog" do
   describe 'custom youtube tag' do
     describe 'processing' do
       before(:all) { visit '/articles/2015-reading-list.html' }
-      it('has removed tag') { expect(page).to_not have_content("YOUTUBE") }
+      it('has removed tag') { expect(page).to_not have_content("x-youtube") }
       it('has included an iframe') { expect(page).to have_xpath('//iframe') }
     end
 
@@ -70,7 +70,7 @@ RSpec.describe "the blog" do
   describe 'custom reading graphs tag' do
     describe 'processing' do
       before(:all) { visit '/articles/2022-reading-list.html' }
-      it('has removed tag') { expect(page).to_not have_content("READINGGRAPHS") }
+      it('has removed tag') { expect(page).to_not have_content("x-reading-graphs") }
       it('has included chart') { expect(page).to have_xpath("//table[contains(@class,'charts-css')]") }
     end
   end
