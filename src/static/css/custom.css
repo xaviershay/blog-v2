@@ -90,6 +90,34 @@ header.page-header > nav p {
   text-transform: capitalize
 }
 
+.yearly-summaries {
+  margin-block-start: 1rem;
+}
+
+.year-total-summary {
+  margin-top: 2rem; /* Make room for negatively positioned labels */
+  --color: var(--color-2);
+}
+
+.year-genre-summary td:nth-of-type(1) { --color: var(--color-1) }
+.year-genre-summary td:nth-of-type(2) { --color: var(--color-3) }
+.year-genre-summary td:nth-of-type(3) { --color: var(--color-4) }
+.year-genre-summary td:nth-of-type(4) { --color: var(--color-5) }
+.year-genre-summary td:nth-of-type(5) { --color: var(--color-6) }
+.charts-css.genre-legend li:nth-of-type(1)::before { background-color: var(--color-1) }
+.charts-css.genre-legend li:nth-of-type(2)::before { background-color: var(--color-3) }
+.charts-css.genre-legend li:nth-of-type(3)::before { background-color: var(--color-4) }
+.charts-css.genre-legend li:nth-of-type(4)::before { background-color: var(--color-5) }
+.charts-css.genre-legend li:nth-of-type(5)::before { background-color: var(--color-6) }
+
+.yearly-summaries table.year-total-summary caption {
+  margin-bottom: 1.2rem;
+}
+.year-total-summary .data {
+  margin-top: -1rem;
+  font-size: 0.6rem;
+  font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
 .yearly-summaries table.charts-css {
   height: 150px;
   margin-top: 5px;
