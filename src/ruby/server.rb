@@ -18,7 +18,10 @@ class Server < WEBrick::HTTPServlet::DefaultFileHandler
   def do_GET(req, res)
     to_match = @local_path[PREFIX.length .. -1]
 
-    if req.path == to_match || req.path == "/" && to_match == "/index.html"
+    if req.path == to_match ||
+       req.path == "/" && to_match == "/index.html" ||
+       req.path == "/books/" && to_match == "/books/index.html"
+
       super(req, res)
       ext = File.extname(req.path)
 

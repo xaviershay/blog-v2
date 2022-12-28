@@ -34,6 +34,17 @@ RSpec.describe "the blog" do
     end
   end
 
+  describe 'book index page' do
+    before(:all) { visit '/books/' }
+    it('has title') { expect(page).to have_content("Books I've Read") }
+
+    xit('has opengraph tags to support card preview on FB, Twitter, et al') do
+      expect(page).to have_xpath("//head/meta[@property='og:title']")
+      expect(page).to have_xpath("//head/meta[@property='og:description']")
+      expect(page).to have_xpath("//head/meta[@property='og:image']")
+    end
+  end
+
   describe 'custom youtube tag' do
     describe 'processing' do
       before(:all) { visit '/articles/2015-reading-list.html' }
