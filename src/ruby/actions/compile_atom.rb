@@ -18,6 +18,8 @@ def compile_atom(out)
 
   metadata = hash_to_ostruct(metadata)
 
+  @id = HOST
+  @title = "Xavier Shay's Posts"
   @posts = metadata.posts.take(20)
 
   html = ATOM_TEMPLATE.result

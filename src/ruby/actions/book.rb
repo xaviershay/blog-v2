@@ -70,12 +70,23 @@ class Actions::Book
   end
 
   module BookMethods
+    def url
+      "/books/#{slug}.html"
+    end
+
+    def date
+      DateTime.parse(finished_at)
+    rescue
+      raise "No finished_at, maybe using outside of index context?"
+    end
+
     def updated_at
       Date.parse(reads.flat_map(&:finished_at).compact.max)
     end
 
-    def cover_id
-      cover || id
+    def stars
+      rating.times.map {|_| "★" }.join +
+        (5 - rating).times.map {|_| "☆" }.join
     end
   end
 

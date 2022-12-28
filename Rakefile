@@ -12,6 +12,7 @@ require 'actions/markdown_to_html_fragment'
 require 'actions/compile_index_metadata'
 
 require 'actions/book'
+require 'actions/book_index'
 require 'actions/compile_post'
 require 'actions/compile_index'
 require 'actions/compile_book_index'
@@ -24,6 +25,9 @@ POST_FILES = Dir["data/posts/*.md"]
 BOOK_FILES = Dir["data/books/*.md"]
 FRAGMENT_FILES = POST_FILES.map do |x|
   "out/html/posts/#{File.basename(x, ".md").split('-', 4).drop(3).first}.html"
+end
+BOOK_FRAGMENT_FILES = BOOK_FILES.map do |x|
+  "out/html/books/#{File.basename(x, ".md")}.html"
 end
 
 directory 'out/site/articles'
@@ -155,6 +159,21 @@ file 'out/site/feed.xml' => [
 ] + FRAGMENT_FILES do
   compile_atom("out/site/feed.xml")
 end
+
+file 'out/site/books/feed.xml' => [
+  'src/erb/feed.xml.erb',
+  'out/site/books',
+  'out/metadata/book_index.yml'
+] + BOOK_FRAGMENT_FILES do
+  builder = Actions::BookIndex.new
+  builder.compile_atom(
+    'src/erb/feed.xml.erb',
+    'out/metadata/book_index.yml',
+    'out/html/books',
+    'out/site/books/feed.xml'
+  )
+end
+site_files << 'out/site/books/feed.xml'
 
 desc "Compile all files"
 task :build => ['out/site/index.html', 'out/site/feed.xml'] + site_files do

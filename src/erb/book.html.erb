@@ -32,7 +32,7 @@
       <dl>
         <dt>Rating</dt>
         <dd class='rating' data-value='<%= @book.rating %>'>
-          <%= @book.rating.times.map {|_| "★" }.join %>
+          <%= @book.stars %>
         </dd>
         <% if @book.categories.any? %>
           <dt>Category</dt>

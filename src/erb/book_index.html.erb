@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/feed.xml" type="application/atom+xml" rel="alternate">
+    <link href="/books/feed.xml" type="application/atom+xml" rel="alternate">
 
     <link rel="stylesheet" href="/css/simple.css">
     <link rel="stylesheet" href="/css/charts.css">
@@ -72,9 +72,7 @@
             <div class='book-summary'>
                 <div class='date-and-rating'>
                   <span class='date'><%= book.finished_at.strftime("%b %-e, %Y") %></span>
-                  <span class='rating'>
-                    <%= book.rating.times.map {|_| "★" }.join %><%= (5 - book.rating).times.map {|_| "☆" }.join %>
-                  </span>
+                  <span class='rating'><%= book.stars %></span>
                 </div>
                 <div class='title-and-author'>
                   <a class='title' href="/books/<%= book.slug %>.html">

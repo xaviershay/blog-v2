@@ -2,6 +2,7 @@ require 'erb'
 require 'yaml'
 require "zlib"
 
+require 'actions/book'
 require 'support/hash_to_ostruct'
 require 'support/load_index_metadata'
 
@@ -18,6 +19,9 @@ def compile_book_index(metadata_file, out)
 
   @site = hash_to_ostruct(metadata)
   @site.extend(BookSiteMethods)
+  @site.readings.each do |book|
+    book.extend(Actions::Book::BookMethods)
+  end
 
   html = BOOK_INDEX_TEMPLATE.result
   Zlib::GzipWriter.open(out) do |f|
