@@ -9,14 +9,10 @@
     <link rel="stylesheet" href="/css/custom.css">
 
     <meta property="og:locale" content="en_AU">
-    <meta property="og:title" content="<%= @book.title %>">
+    <meta property="og:title" content="<%= @book.title %> Review">
     <meta property="og:description" content="<%= @book.summary %>">
     <meta property="og:url" content="<%= HOST %><%= @book.url %>">
-    <% if false %>
-      <% if @post.card_image %>
-        <meta property="og:image" content="<%= HOST %>/images/<%= @post.card_image %>">
-      <% end %>
-    <% end %>
+    <meta property="og:image" content="https://covers.openlibrary.org/b/olid/<%= @book.id %>-M.jpg">
     <meta property="og:site_name" content="Xavier Shay">
 
     <title><%= @book.title %></title>
@@ -25,7 +21,7 @@
     <header class='page-header'>
       <nav>
         <h1><%= @book.title %></h1>
-        <p class='date'><%= @book.author %></p>
+        <p><%= @book.author %></p>
       </nav>
     </header>
     <article>

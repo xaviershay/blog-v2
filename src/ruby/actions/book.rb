@@ -84,6 +84,10 @@ class Actions::Book
       Date.parse(reads.flat_map(&:finished_at).compact.max)
     end
 
+    def summary
+      stars
+    end
+
     def stars
       rating.times.map {|_| "★" }.join +
         (5 - rating).times.map {|_| "☆" }.join
