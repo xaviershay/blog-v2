@@ -67,7 +67,13 @@
         </ul>
       </div>
       <% @site.readings.group_by {|x| x.finished_at.year }.each do |year, books| %>
-        <h3><%= year %></h3>
+        <div class='year-group'>
+          <h3 id='list-<%=year %>'><%= year %></h3>
+          <% if url = @site.recommendations_for(year) %>
+            <p class='recommendations'>
+              <a href='<%= url %>'>Recommendations</a>
+            </p>
+          <% end %>
           <% books.each do |book| %>
             <div class='book-summary'>
                 <div class='date-and-rating'>
@@ -81,6 +87,7 @@
                 </div>
             </div>
           <% end %>
+        </div>
       <% end %>
     </nav>
     <%

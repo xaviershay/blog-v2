@@ -25,12 +25,19 @@ def compile_index_metadata(post_metadata, out)
   File.write(out, yaml)
 end
 
-def compile_book_index_metadata(book_metadata, out)
+def compile_book_index_metadata(book_metadata, post_index_metadata, out)
   readings = []
   stats = {}
 
+  post_index = YAML.load_file(post_index_metadata)
+  year_reviews = post_index
+    .fetch('yearly_archives')
+    .fetch("reading-list")
+    .map {|x| [x.fetch('year'), x.fetch('url')] }
+    .to_h
+
   book_metadata.each do |book|
-    metadata = YAML.load(File.read(book))
+    metadata = YAML.load_file(book)
     metadata.fetch('reads').each do |read|
       date = read.fetch('finished_at')
       x = metadata.except('reads')
@@ -59,6 +66,10 @@ def compile_book_index_metadata(book_metadata, out)
     end
   end
   readings = readings.sort_by {|x| x.fetch("finished_at") }.reverse
-  yaml = {"stats" => stats.filter {|k, v| k > stats.keys.max - 15}, "readings" => readings}.to_yaml
+  yaml = {
+    "year_reviews" => year_reviews,
+    "stats" => stats.filter {|k, v| k > stats.keys.max - 15},
+    "readings" => readings
+  }.to_yaml
   File.write(out, yaml)
 end

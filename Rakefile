@@ -131,9 +131,14 @@ end
 begin
   builder = Actions::BookIndex.new
   multifile 'out/metadata/book_index.yml' => [
-    'out/metadata/books'
+    'out/metadata/books',
+    'out/metadata/index.yml',
   ] + BOOK_METADATA_FILES do
-    compile_book_index_metadata(BOOK_METADATA_FILES, "out/metadata/book_index.yml")
+    compile_book_index_metadata(
+      BOOK_METADATA_FILES,
+      "out/metadata/index.yml",
+      "out/metadata/book_index.yml"
+    )
   end
 
   file 'out/site/books/index.html' => [

@@ -1,7 +1,7 @@
 ---
 id: OL39808025M
-slug: raising-the-bar-the-definitive-guide-to-pull-up-bar-calisthenics
-title: Raising the Bar The Definitive Guide to Pull-up Bar Calisthenics
+slug: raising-the-bar
+title: Raising the Bar
 author: Al Kavadlo
 rating: 3
 pages: 203
