@@ -82,6 +82,14 @@ header.page-header > nav p {
 
 /* BOOK INDEX */
 
+.book-index .page-header {
+  background-image: url("/images/book-header.jpg");
+}
+
+nav.book-list {
+  margin-bottom: 1em;
+}
+
 /* TODO: Mobile friendly */
 .book-summary .date {
   white-space: nowrap;

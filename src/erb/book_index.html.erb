@@ -85,5 +85,24 @@
           <% end %>
       <% end %>
     </nav>
+    <%
+      credit = OpenStruct.new(
+        link: "https://unsplash.com/photos/zveMakq36UM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        title: 'Books on Brown Wooden Shelf',
+        author: 'Mohammad Naderi'
+      )
+    %>
+
+    <div>
+      <details>
+        <summary>Credits</summary>
+        <a href='<%= credit.link %>'>
+          <em><%= credit.title %></em> by <%= credit.author %>
+        </a>
+      </details>
+    </div>
+    <footer>
+      <a href='/'>Back to Index</a>
+    </footer>
   </body>
 </html>
