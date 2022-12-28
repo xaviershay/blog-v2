@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="/css/custom.css">
 
     <meta property="og:locale" content="en_AU">
-    <meta property="og:title" content="<%= @book.title %> Review">
-    <meta property="og:description" content="<%= @book.summary %>">
+    <meta property="og:title" content="<%=h @book.title %> Review">
+    <meta property="og:description" content="<%=h @book.summary %>">
     <meta property="og:url" content="<%= HOST %><%= @book.url %>">
     <meta property="og:image" content="https://covers.openlibrary.org/b/olid/<%= @book.id %>-M.jpg">
     <meta property="og:site_name" content="Xavier Shay">
 
-    <title><%= @book.title %></title>
+    <title><%=h @book.title %></title>
   </head>
   <body class='book-body'>
     <header class='page-header'>
       <nav>
-        <h1><%= @book.title %></h1>
-        <p><%= @book.author %></p>
+        <h1><%=h @book.title %></h1>
+        <p><%=h @book.author %></p>
       </nav>
     </header>
     <article>
@@ -41,8 +41,7 @@
       </dl>
       <%= @book.body_html %>
 
-      <img class='cover' src="https://covers.openlibrary.org/b/olid/<%= @book.id %>-L.jpg" alt="Cover image for <%= @book.title %>" onerror="this.style.display='none'" />
-      <%# TODO: escape title in attribute %>
+      <img class='cover' src="https://covers.openlibrary.org/b/olid/<%= @book.id %>-L.jpg" alt='Cover image for <%=h @book.title %>' onerror="this.style.display='none'" />
     </article>
     <footer>
       <nav>

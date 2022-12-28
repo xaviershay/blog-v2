@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="/css/custom.css">
 
     <meta property="og:locale" content="en_AU">
-    <meta property="og:title" content="<%= @post.title %>">
-    <meta property="og:description" content="<%= @post.summary %>">
+    <meta property="og:title" content="<%=h @post.title %>">
+    <meta property="og:description" content="<%=h @post.summary %>">
     <meta property="og:url" content="<%= HOST %><%= @post.url %>">
     <% if @post.card_image %>
       <meta property="og:image" content="<%= HOST %>/images/<%= @post.card_image %>">
     <% end %>
     <meta property="og:site_name" content="Xavier Shay">
 
-    <title><%= @post.title %></title>
+    <title><%=h @post.title %></title>
   </head>
   <body class='post-body'>
     <% image = @post.image %>
@@ -30,11 +30,11 @@
         <% if image && credit = image.feature_credit %>
           <div class="featured-image-credit">
             <a href='<%= credit.link %>'>
-              <em><%= credit.title %></em> by <%= credit.author %>
+              <em><%=h credit.title %></em> by <%=h credit.author %>
             </a>
           </div>
         <% end %>
-        <h1><%= @post.title %></h1>
+        <h1><%=h @post.title %></h1>
         <p class='date'><%= @post.date.strftime("%b %-e, %Y") %></p>
       </nav>
     </header>
@@ -51,17 +51,17 @@
             <li>
               <a href='<%= credit.link %>'>
                 <% if credit.emphasis %>
-                  <em><%= credit.title %></em>
+                  <em><%=h credit.title %></em>
                 <% else %>
-                  <%= credit.title %>
-                <% end %> by <%= credit.author %>
+                  <%=h credit.title %>
+                <% end %> by <%=h credit.author %>
               </a>
             </li>
           <% end %>
           </ul>
         <% else %>
           <a href='<%= credit.link %>'>
-            <em><%= credit.title %></em> by <%= credit.author %>
+            <em><%=h credit.title %></em> by <%=h credit.author %>
           </a>
         <% end %>
         </details>

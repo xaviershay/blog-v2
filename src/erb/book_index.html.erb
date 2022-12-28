@@ -76,8 +76,8 @@
                 </div>
                 <div class='title-and-author'>
                   <a class='title' href="/books/<%= book.slug %>.html">
-                    <%= book.title %></a>
-                  <em>by <%= book.author %></em>
+                    <%=h book.title %></a>
+                  <em>by <%=h book.author %></em>
                 </div>
             </div>
           <% end %>

@@ -13,7 +13,7 @@
 
   <% @posts.each do |post| %>
     <entry>
-      <title><%= post.title %></title>
+      <title><%= xml_escape post.title %></title>
       <link rel="alternate" type="text/html" href="<%= post.url %>" />
       <id><%= File.join(File.dirname(post.url), File.basename(post.url, ".html")) %></id>
       <updated><%= post.date.xmlschema %></updated>

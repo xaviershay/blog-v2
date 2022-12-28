@@ -5,6 +5,7 @@ require 'zlib'
 
 require 'support/load_markdown_from_file'
 require 'support/hash_to_ostruct'
+require 'support/html_utils'
 
 require 'kramdown/parser/kramdown'
 
