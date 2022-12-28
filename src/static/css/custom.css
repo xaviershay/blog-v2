@@ -1,4 +1,4 @@
-article {
+article, .book-summary {
   border: none;
   font-family: "Noto Serif",serif;
 }
@@ -152,6 +152,35 @@ header.page-header > nav p {
 
 .category-dd {
   text-transform: capitalize;
+}
+
+.rating, .date { font-size: 80% }
+.author { font-size: 60% }
+
+.title-and-author {
+  line-height: 1.0;
+  display: inline-block;
+}
+.date-and-rating {
+  display: inline-block;
+}
+.rating {
+  display: inline-block;
+  width: 78px;
+}
+.date {
+  display: inline-block;
+  width: 100px;
+}
+
+@media only screen and (max-width: 720px) {
+  .book-summary {
+    margin-bottom: 1em;
+  }
+  .title-and-author {
+    line-height: 1.0;
+    display: block;
+  }
 }
 
 /* BLOCK QUOTES */

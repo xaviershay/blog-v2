@@ -68,17 +68,21 @@
       </div>
       <% @site.readings.group_by {|x| x.finished_at.year }.each do |year, books| %>
         <h3><%= year %></h3>
-        <table>
           <% books.each do |book| %>
-            <tr class='book-summary'>
-              <td class='date'><%= book.finished_at.strftime("%b %-e, %Y") %></td>
-              <td class='rating'><%= book.rating.times.map {|_| "★" }.join %></td>
-              <td class='title'><a href="/books/<%= book.slug %>.html">
-                  <%= book.title %></a></td>
-              <td class='author'><%= book.author %></td>
-            </tr>
+            <div class='book-summary'>
+                <div class='date-and-rating'>
+                  <span class='date'><%= book.finished_at.strftime("%b %-e, %Y") %></span>
+                  <span class='rating'>
+                    <%= book.rating.times.map {|_| "★" }.join %><%= (5 - book.rating).times.map {|_| "☆" }.join %>
+                  </span>
+                </div>
+                <div class='title-and-author'>
+                  <a class='title' href="/books/<%= book.slug %>.html">
+                    <%= book.title %></a>
+                  <em>by <%= book.author %></em>
+                </div>
+            </div>
           <% end %>
-        </table>
       <% end %>
     </nav>
   </body>
