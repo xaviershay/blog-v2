@@ -6,6 +6,27 @@ require 'zlib'
 require 'support/load_markdown_from_file'
 require 'support/hash_to_ostruct'
 
+require 'kramdown/parser/kramdown'
+
+Kramdown::Parser::Html::HTML_CONTENT_MODEL_BLOCK << "x-spoiler"
+Kramdown::Parser::Html::HTML_CONTENT_MODEL["x-spoiler"] = :block
+Kramdown::Parser::Html::HTML_BLOCK_ELEMENTS << "x-spoiler"
+Kramdown::Parser::Html::HTML_ELEMENT["x-spoiler"] = true
+
+class Kramdown::Converter::BookHtml < Kramdown::Converter::Html
+  def convert_html_element(el, indent)
+    if el.value == "x-spoiler"
+      summary = Kramdown::Element.new(:html_element, "summary", nil)
+      summary.children << Kramdown::Element.new(:text, "Spoiler", nil)
+      el.children.unshift summary
+      el.value = "details"
+      super(el, indent)
+    else
+      super
+    end
+  end
+end
+
 module Actions; end
 class Actions::Book
   def initialize
@@ -25,9 +46,9 @@ class Actions::Book
   def markdown_to_html_fragment(input, output)
     _, data = load_markdown(input)
 
-    doc = Kramdown::Document.new(data)
+    doc = Kramdown::Document.new(data, parse_block_html: true)
 
-    html = doc.to_html
+    html = doc.to_book_html
 
     File.write(output, html)
   end

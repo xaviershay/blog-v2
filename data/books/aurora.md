@@ -12,6 +12,6 @@ reads:
 ---
 Great sci-fi. If you liked Seveneves this is probably up your alley.
 
-<spoiler>
+<x-spoiler>
 I _love_ sci-fi like this about how maybe humans weren't really meant for the stars after all. Closing scene could have been much shorter, but that's just a nit.
-</spoiler>
+</x-spoiler>

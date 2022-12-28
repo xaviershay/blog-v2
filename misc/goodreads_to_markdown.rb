@@ -315,7 +315,12 @@ books = doc.css('#booksBody tr.review').map do |row|
     isbn: isbn,
     asin: row.css('.field.asin .value').text.strip,
     pages: row.css('.field.num_pages .value').text.gsub('pp', '').strip,
-    review: enriched.fetch(gr_id).fetch(:review).to_s.gsub("<br/>", "\n").gsub("&gt;", ">"),
+    review: enriched.fetch(gr_id).fetch(:review).to_s
+      .gsub("<br/>", "\n")
+      .gsub("&gt;", ">")
+      .gsub(/<blockquote>(.*)<\/blockquote>/, "> \\1")
+      .gsub(/<spoiler>(.*)<\/spoiler>/, "<spoiler>\n\\1\n</spoiler>")
+      .gsub(/<([\/]?)spoiler>/, "<\\1x-spoiler>"),
     dates_read: dates_read,
   }
 end.compact

@@ -126,6 +126,13 @@ header.page-header > nav p {
   text-transform: capitalize;
 }
 
+/* BLOCK QUOTES */
+
+/* Most block quotes are going to be a single paragraph, and without this
+ * styling they have redundant margin */
+blockquote p:first-child { margin-block-start: 0em; }
+blockquote p:last-child { margin-block-end: 0em; }
+
 /* TABLES */
 td, th {
   border: none;
