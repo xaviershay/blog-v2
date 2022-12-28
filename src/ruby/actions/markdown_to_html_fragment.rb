@@ -9,20 +9,7 @@ def markdown_to_html_fragment(input, output)
 
   doc = Kramdown::Document.new(data)
 
-  html = doc.to_html
-
-  html.gsub!(/{{\s*YOUTUBE\s+(.*?)(?:\s+(.*?))?\s*}}/mi) do |match|
-    caption = "<em>#{$2}</em>" if $2
-    id = $1.split('/').last
-    <<-EOS
-      <figure>
-      <div class='embed-youtube'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/#{id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-        <figcaption>#{caption}</figcaption>
-      </figure>
-    EOS
-  end
+  html = doc.to_post_html
 
   # TODO: Actually generate these
  #  book_data = {
@@ -34,7 +21,7 @@ def markdown_to_html_fragment(input, output)
   html.gsub!(/{{\s*READINGGRAPHS\s+(\d+)\s*}}/mi) do |match|
     year = $1
     book_data = YAML.load_file("out/metadata/book_index.yml").fetch('stats')
-    
+
     if data = book_data[year.to_i]
       ratings = data.fetch('ratings')
       m = ratings.max.to_f
