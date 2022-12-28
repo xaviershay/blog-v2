@@ -15,7 +15,6 @@ require 'actions/book'
 require 'actions/book_index'
 require 'actions/compile_post'
 require 'actions/compile_index'
-require 'actions/compile_book_index'
 require 'actions/compile_atom'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
@@ -129,20 +128,41 @@ multifile 'out/metadata/index.yml' => [
   compile_index_metadata(POST_METADATA_FILES, "out/metadata/index.yml")
 end
 
-multifile 'out/metadata/book_index.yml' => [
-  'out/metadata/books'
-] + BOOK_METADATA_FILES do
-  compile_book_index_metadata(BOOK_METADATA_FILES, "out/metadata/book_index.yml")
-end
+begin
+  builder = Actions::BookIndex.new
+  multifile 'out/metadata/book_index.yml' => [
+    'out/metadata/books'
+  ] + BOOK_METADATA_FILES do
+    compile_book_index_metadata(BOOK_METADATA_FILES, "out/metadata/book_index.yml")
+  end
 
-file 'out/site/books/index.html' => [
-  'out/metadata/book_index.yml',
-  'src/erb/book_index.html.erb',
-  'out/site/books'
-] do
-  compile_book_index('out/metadata/book_index.yml', 'out/site/books/index.html')
+  file 'out/site/books/index.html' => [
+    'out/metadata/book_index.yml',
+    'src/erb/book_index.html.erb',
+    'out/site/books'
+  ] do
+    builder.compile_erb(
+      'src/erb/book_index.html.erb',
+      'out/metadata/book_index.yml',
+      'out/site/books/index.html'
+    )
+  end
+  site_files << "out/site/books/index.html"
+
+  file 'out/site/books/feed.xml' => [
+    'src/erb/feed.xml.erb',
+    'out/site/books',
+    'out/metadata/book_index.yml'
+  ] + BOOK_FRAGMENT_FILES do
+    builder.compile_atom(
+      'src/erb/feed.xml.erb',
+      'out/metadata/book_index.yml',
+      'out/html/books',
+      'out/site/books/feed.xml'
+    )
+  end
+  site_files << 'out/site/books/feed.xml'
 end
-site_files << "out/site/books/index.html"
 
 file 'out/site/index.html' => [
   'out/metadata/index.yml',
@@ -159,21 +179,6 @@ file 'out/site/feed.xml' => [
 ] + FRAGMENT_FILES do
   compile_atom("out/site/feed.xml")
 end
-
-file 'out/site/books/feed.xml' => [
-  'src/erb/feed.xml.erb',
-  'out/site/books',
-  'out/metadata/book_index.yml'
-] + BOOK_FRAGMENT_FILES do
-  builder = Actions::BookIndex.new
-  builder.compile_atom(
-    'src/erb/feed.xml.erb',
-    'out/metadata/book_index.yml',
-    'out/html/books',
-    'out/site/books/feed.xml'
-  )
-end
-site_files << 'out/site/books/feed.xml'
 
 desc "Compile all files"
 task :build => ['out/site/index.html', 'out/site/feed.xml'] + site_files do

@@ -11,6 +11,21 @@ class Actions::BookIndex
     @templates = {}
   end
 
+  def compile_erb(template, metadata_file, output)
+    metadata = load_book_index_metadata(metadata_file)
+
+    @site = hash_to_ostruct(metadata)
+    @site.extend(BookSiteMethods)
+    @site.readings.each do |book|
+      book.extend(Actions::Book::BookMethods)
+    end
+
+    html = load_template(template).result(binding)
+    Zlib::GzipWriter.open(output) do |f|
+      f.write(html)
+    end
+  end
+
   def compile_atom(template, metadata, fragment_dir, output)
     metadata = YAML.load_file(metadata)
     metadata = hash_to_ostruct(metadata)
@@ -33,9 +48,19 @@ class Actions::BookIndex
     end
   end
 
+  module BookSiteMethods
+    def yearly_stats
+      @yearly_stats ||= stats.sort_by(&:first).filter {|k, v| k > 2009 }
+    end
+  end
+
   protected
 
   def load_template(file)
-    @templates[file] ||= ERB.new(File.read(file))
+    @templates[file] ||= begin
+      erb = ERB.new(File.read(file))
+      erb.filename = File.expand_path(file)
+      erb
+    end
   end
 end
