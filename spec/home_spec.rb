@@ -73,7 +73,7 @@ RSpec.describe "the blog" do
 
   describe 'atom feed' do
     before(:all) { visit "/feed.xml" }
-    it('has id') { expect(page).to have_xpath("//feed/id") }
+    it('has id') { expect(page).to have_xpath("//feed/id[text()='#{APP_HOST}']") }
     it('has title') { expect(page).to have_xpath("//feed/title") }
     it('has author') {
       expect(page).to have_xpath("//feed/author/name")
@@ -87,6 +87,25 @@ RSpec.describe "the blog" do
 
     it('includes /articles prefix in ID') do
       expect(page).to have_xpath("//feed/entry/id[contains(text(), '/articles/')]")
+    end
+  end
+
+  describe 'book atom feed' do
+    before(:all) { visit "/books/feed.xml" }
+    it('has id') { expect(page).to have_xpath("//feed/id[text()='#{APP_HOST}/books/']") }
+    it('has title') { expect(page).to have_xpath("//feed/title[contains(text(), 'Books')]") }
+    it('has author') {
+      expect(page).to have_xpath("//feed/author/name")
+      expect(page).to have_xpath("//feed/author/uri")
+      expect(page).to have_xpath("//feed/author/email")
+    }
+
+    it('does not include html in ID') do
+      expect(page).to_not have_xpath("//feed/entry/id[contains(text(), '.html')]")
+    end
+
+    it('includes /books prefix in ID') do
+      expect(page).to have_xpath("//feed/entry/id[contains(text(), '/books/')]")
     end
   end
 end
