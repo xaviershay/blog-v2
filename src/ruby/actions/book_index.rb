@@ -1,16 +1,9 @@
-require 'erb'
-require 'yaml'
-require 'zlib'
-
-require 'support/hash_to_ostruct'
+require 'support/builder'
 require 'actions/book'
 
-module Actions; end
-class Actions::BookIndex
-  def initialize
-    @templates = {}
-  end
+require 'support/load_index_metadata'
 
+class Actions::BookIndex < Builder
   def compile_erb(template, metadata_file, output)
     metadata = load_book_index_metadata(metadata_file)
 
@@ -21,9 +14,7 @@ class Actions::BookIndex
     end
 
     html = load_template(template).result(binding)
-    Zlib::GzipWriter.open(output) do |f|
-      f.write(html)
-    end
+    write_gzip output, html
   end
 
   def compile_atom(template, metadata, fragment_dir, output)
@@ -43,24 +34,12 @@ class Actions::BookIndex
     erb = load_template(template)
     html = erb.result(binding)
 
-    Zlib::GzipWriter.open(output) do |f|
-      f.write(html)
-    end
+    write_gzip output, html
   end
 
   module BookSiteMethods
     def yearly_stats
       @yearly_stats ||= stats.sort_by(&:first).filter {|k, v| k > 2009 }
-    end
-  end
-
-  protected
-
-  def load_template(file)
-    @templates[file] ||= begin
-      erb = ERB.new(File.read(file))
-      erb.filename = File.expand_path(file)
-      erb
     end
   end
 end

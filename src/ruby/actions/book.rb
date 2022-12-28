@@ -1,39 +1,11 @@
-require 'kramdown'
-require 'erb'
-require 'yaml'
-require 'zlib'
+require 'support/kramdown'
+require 'support/builder'
 
 require 'support/load_markdown_from_file'
-require 'support/hash_to_ostruct'
-require 'support/html_utils'
 
 require 'kramdown/parser/kramdown'
 
-Kramdown::Parser::Html::HTML_CONTENT_MODEL_BLOCK << "x-spoiler"
-Kramdown::Parser::Html::HTML_CONTENT_MODEL["x-spoiler"] = :block
-Kramdown::Parser::Html::HTML_BLOCK_ELEMENTS << "x-spoiler"
-Kramdown::Parser::Html::HTML_ELEMENT["x-spoiler"] = true
-
-class Kramdown::Converter::BookHtml < Kramdown::Converter::Html
-  def convert_html_element(el, indent)
-    if el.value == "x-spoiler"
-      summary = Kramdown::Element.new(:html_element, "summary", nil)
-      summary.children << Kramdown::Element.new(:text, "Spoiler", nil)
-      el.children.unshift summary
-      el.value = "details"
-      super(el, indent)
-    else
-      super
-    end
-  end
-end
-
-module Actions; end
-class Actions::Book
-  def initialize
-    @templates = {}
-  end
-
+class Actions::Book < Builder
   def load_markdown(input)
     load_markdown_from_file2(input)
   end
@@ -65,9 +37,7 @@ class Actions::Book
 
     html = erb.result(binding)
 
-    Zlib::GzipWriter.open(output) do |f|
-      f.write(html)
-    end
+    write_gzip(output, html)
   end
 
   module BookMethods
@@ -93,11 +63,5 @@ class Actions::Book
       rating.times.map {|_| "★" }.join +
         (5 - rating).times.map {|_| "☆" }.join
     end
-  end
-
-  protected
-
-  def load_template(file)
-    @templates[file] ||= ERB.new(File.read(file))
   end
 end
