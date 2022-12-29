@@ -165,6 +165,8 @@ Other dependencies include:
 * **AWS CLI.** For publishing the site to production.
 * **Simple.css** Not a real dependency, it's vendored and used as a starting
   point rather than something I intend to upgrade.
+* **Chart.css** Not a real dependency, it's vendored and used as a starting
+  point rather than something I intend to upgrade.
 
 ## Wrong Turns
 
