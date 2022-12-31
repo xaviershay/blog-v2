@@ -50,6 +50,9 @@ This led to the following design goals for this project:
 * Mobile friendly with accessible colors.
 * Smoke tests to aid migration and ensure critical content was being rendered.
 * At least as fast as Jekyll (~1s build time).
+  * Like-for-like with just posts this goal was achieved, but with the addition
+    of ~650 source markdown files for books the time has blown out
+    unsatisfactorily to many seconds and now requires a different approach.
 
 Other static site generators require familiarity with languages other than Ruby
 and/or have reputations for similar backwards incompatible changes and/or bring
