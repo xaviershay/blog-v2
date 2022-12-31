@@ -181,7 +181,7 @@ nav.book-list {
   display: inline-block;
   width: 78px;
 }
-.date {
+.book-summary .date {
   display: inline-block;
   width: 100px;
 }
