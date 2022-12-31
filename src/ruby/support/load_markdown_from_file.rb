@@ -52,7 +52,7 @@ def load_markdown_from_file2(input_file)
   match = raw.match(YAML_FRONTMATTER_REGEX)
 
   if match
-    metadata = YAML.load(match[0])
+    metadata = YAML.load(match[0], permitted_classes: [Date])
     data = match.post_match
 
     [metadata, data]

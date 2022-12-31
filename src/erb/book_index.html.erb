@@ -77,7 +77,7 @@
           <% books.each do |book| %>
             <div class='book-summary'>
                 <div class='date-and-rating'>
-                  <span class='date'><%= book.finished_at.strftime("%b %-e, %Y") %></span>
+                  <%= format_read(book) %>
                   <span class='rating'><%= book.stars %></span>
                 </div>
                 <div class='title-and-author'>

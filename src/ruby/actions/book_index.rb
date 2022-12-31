@@ -18,7 +18,7 @@ class Actions::BookIndex < Builder
   end
 
   def compile_atom(template, metadata, fragment_dir, output)
-    metadata = YAML.load_file(metadata)
+    metadata = YAML.load_file(metadata, permitted_classes: [Date])
     metadata = hash_to_ostruct(metadata)
 
     @id = File.join(HOST, "/books/")

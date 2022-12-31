@@ -7,7 +7,9 @@ def markdown_to_html_fragment(input, output)
 
   out = File.join("out/site", metadata.fetch("url"))
 
-  book_data = YAML.load_file("out/metadata/book_index.yml").fetch('stats')
+  book_data = YAML
+    .load_file("out/metadata/book_index.yml", permitted_classes: [Date])
+    .fetch('stats')
   doc = Kramdown::Document.new(data, :book_data => book_data)
 
   html = doc.to_post_html

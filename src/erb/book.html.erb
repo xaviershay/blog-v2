@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="date" content='<%= @book.updated_at %>'>
+    <% if @book.updated_at %>
+      <meta name="date" content='<%= @book.updated_at %>'>
+    <% end %>
     <link rel="stylesheet" href="/css/simple.css">
     <link rel="stylesheet" href="/css/charts.css">
     <link rel="stylesheet" href="/css/custom.css">
@@ -35,7 +37,7 @@
           <dd class='category-dd'><%= @book.categories.join(', ') %></dd>
         <% end %>
         <dt>Read</dt>
-        <dd><%= @book.reads.map(&:finished_at).join(", ") %></dd>
+        <dd><%= @book.formatted_reads.join(", ") %></dd>
         <dt>Pages</dt>
         <dd><%= @book.pages %></dd>
       </dl>

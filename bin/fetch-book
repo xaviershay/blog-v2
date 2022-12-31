@@ -1,0 +1,89 @@
+#!/usr/bin/env ruby
+
+require 'http'
+require 'json'
+require 'yaml'
+
+`mkdir -p tmp/cache`
+
+def cache(key, &block)
+  filename = "tmp/cache/#{key.gsub(/[^a-zA-Z\d]/, '--')}"
+  if File.exists?(filename)
+    Marshal.load(File.read(filename))
+  else
+    contents = block.call(key)
+    File.write(filename, Marshal.dump(contents))
+    contents
+  end
+end
+
+ol_id = ARGV.shift
+
+
+BASE = "https://openlibrary.org"
+
+Response = Struct.new(:code, :body)
+
+path = "/books/#{ol_id}"
+
+response = cache(path) do
+  url = "#{BASE}#{path}.json"
+  raw = HTTP.follow.get(url)
+  Response.new(raw.code, raw.body.to_s)
+end
+
+JSON.parse(response.body)
+
+data = case response.code
+when 200, 302
+  JSON.parse(response.body)
+else
+  raise "Unexpected code: #{response.code}"
+end
+
+require 'pp'
+
+title = data.fetch('title')
+author_id = begin
+              data.fetch('authors')[0].fetch('key')
+            rescue
+              puts "NO AUTHOR"
+              pp data
+              nil
+            end
+
+path = "#{author_id}"
+author = if author_id
+  author_response = cache(path) do
+    url = "#{BASE}#{path}.json"
+    raw = HTTP.follow.get(url)
+    Response.new(raw.code, raw.body.to_s)
+  end
+
+  case author_response.code
+  when 200, 302
+    JSON.parse(author_response.body).fetch('name')
+  else
+    puts author_response.inspect
+    raise "Author not found: #{author_id}"
+  end
+else
+  data['by_statement']
+end
+pages = data.fetch('number_of_pages')
+
+slug = title.downcase.gsub(/[^a-zA-Z\d]/, '-')
+
+template = {
+  "id" => ol_id,
+  "title" => title,
+  "author" => author,
+  "pages" => pages,
+  "rating" => nil,
+  "categories" => %w(sci-fi fantasy literature non-fiction),
+  "reads" => [{"finished_at" => nil, "started_at" => nil}]
+}
+
+puts template.to_yaml
+
+File.write("data/books/#{slug}.md", template.to_yaml + "---\n")

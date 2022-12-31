@@ -28,7 +28,7 @@ class Actions::Book < Builder
 
   def compile_erb(template, metadata, fragment, output)
     fragment = File.read(fragment)
-    metadata = YAML.load_file(metadata)
+    metadata = YAML.load_file(metadata, permitted_classes: [Date])
 
     @book = hash_to_ostruct(metadata).extend(BookMethods)
     @book.body_html = fragment
@@ -46,22 +46,44 @@ class Actions::Book < Builder
     end
 
     def date
-      DateTime.parse(finished_at)
+      ensure_date(finished_at)
     rescue
       raise "No finished_at, maybe using outside of index context?"
     end
 
     def updated_at
-      Date.parse(reads.flat_map(&:finished_at).compact.max)
+      ensure_date(reads.flat_map(&:finished_at).compact.max)
     end
 
     def summary
-      stars
+      stars.to_s
     end
 
     def stars
+      return unless rating
+
       rating.times.map {|_| "★" }.join +
         (5 - rating).times.map {|_| "☆" }.join
     end
+
+    def formatted_reads
+      reads.map do |x|
+        format_read(x)
+      end.compact
+    end
+  end
+end
+
+def format_read(read)
+  if read['abandoned_at']
+    <<-HTML
+    <span class='date' title='Abandoned @ #{read['percentage']}%'>
+      #{read['abandoned_at']}*
+    </span>
+    HTML
+  elsif read['finished_at']
+    "<span class='date'>#{read['finished_at']}</span>"
+  else
+    ""
   end
 end

@@ -167,7 +167,7 @@ nav.book-list {
   text-transform: capitalize;
 }
 
-.rating, .date { font-size: 80% }
+.rating, .book-summary .date { font-size: 80% }
 .author { font-size: 60% }
 
 .title-and-author {

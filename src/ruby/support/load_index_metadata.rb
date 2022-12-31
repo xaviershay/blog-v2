@@ -9,9 +9,9 @@ def load_index_metadata(metadata_file)
 end
 
 def load_book_index_metadata(metadata_file)
-  metadata = YAML.load_file(metadata_file)
+  metadata = YAML.load_file(metadata_file, permitted_classes: [Date])
   metadata["readings"].each do |p|
-    p["finished_at"] = DateTime.parse(p["finished_at"])
+    p["finished_at"] = ensure_date(p["finished_at"])
   end
   metadata
 end
