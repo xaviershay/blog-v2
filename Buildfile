@@ -21,6 +21,11 @@ STATIC_FILES = Dir["src/static/**/*.{js,css}"]
 POST_FILES = Dir["data/posts/*.md"]
 BOOK_FILES = Dir["data/books/*.md"]
 
+def gfile(opts, &block)
+  # opts[opts.keys.first] += SRC_FILES
+  file(opts, &block)
+end
+
 post_metadata_files = []
 post_fragment_files = []
 
@@ -36,7 +41,7 @@ build_plan.load do
   STATIC_FILES.each do |file|
     target = File.join("out/site", file["src/static".length..-1])
 
-    file target => [File.dirname(target), file] do
+    gfile target => [File.dirname(target), file] do
       contents = File.read(file)
       Zlib::GzipWriter.open(target) {|f| f.write(contents) }
     end
@@ -53,11 +58,11 @@ build_plan.load do
       template = "src/erb/post.html.erb"
 
 
-      file metadata => [File.dirname(metadata), file] do
+      gfile metadata => [File.dirname(metadata), file] do
         markdown_to_metadata(file, metadata)
       end
 
-      file fragment => [
+      gfile fragment => [
         File.dirname(fragment),
         file,
         template,
@@ -66,7 +71,7 @@ build_plan.load do
         markdown_to_html_fragment(file, fragment)
       end
 
-      file out => [
+      gfile out => [
         file,
         metadata,
         fragment,
@@ -79,13 +84,13 @@ build_plan.load do
       end
     end
 
-    file 'out/metadata/index.yml' => [
+    gfile 'out/metadata/index.yml' => [
       'out/metadata/posts'
     ] + post_metadata_files do
       compile_index_metadata(post_metadata_files, "out/metadata/index.yml")
     end
 
-    file 'out/site/index.html' => [
+    gfile 'out/site/index.html' => [
       'out/metadata/index.yml',
       'src/erb/index.html.erb',
       'out/site'
@@ -93,7 +98,7 @@ build_plan.load do
       compile_index('out/metadata/index.yml', 'out/site/index.html')
     end
 
-    file 'out/site/feed.xml' => [
+    gfile 'out/site/feed.xml' => [
       'src/erb/feed.xml.erb',
       'out/site',
       'out/metadata/index.yml'
@@ -112,15 +117,15 @@ build_plan.load do
       template = "src/erb/book.html.erb"
       out = "out/site/books/#{name}.html"
 
-      file metadata => [File.dirname(metadata), input] do
+      gfile metadata => [File.dirname(metadata), input] do
         builder.markdown_to_metadata(input, metadata)
       end
 
-      file fragment => [File.dirname(fragment), input] do
+      gfile fragment => [File.dirname(fragment), input] do
         builder.markdown_to_html_fragment(input, fragment)
       end
 
-      file out => [
+      gfile out => [
         metadata,
         fragment,
         template,
@@ -132,7 +137,7 @@ build_plan.load do
   end
 
   Actions::BookIndex.new.tap do |builder|
-    file 'out/metadata/book_index.yml' => [
+    gfile 'out/metadata/book_index.yml' => [
       'out/metadata/books',
       'out/metadata/index.yml',
     ] + book_metadata_files do
@@ -143,7 +148,7 @@ build_plan.load do
       )
     end
 
-    file 'out/site/books/index.html' => [
+    gfile 'out/site/books/index.html' => [
       'out/metadata/book_index.yml',
       'src/erb/book_index.html.erb',
       'out/site/books'
@@ -155,7 +160,7 @@ build_plan.load do
       )
     end
 
-    file 'out/site/books/feed.xml' => [
+    gfile 'out/site/books/feed.xml' => [
       'src/erb/feed.xml.erb',
       'out/site/books',
       'out/metadata/book_index.yml'
