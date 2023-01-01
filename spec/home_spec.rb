@@ -5,7 +5,7 @@ RSpec.describe "the blog" do
     before(:all) { visit '/' }
     it('has title') { expect(page).to have_content(/Xavier Shay/i) }
     it('has index of posts') do
-      expect(page).to have_content("2021: A Review")
+      expect(page).to have_content("2021 Review")
       expect(page).to have_content("A System for Email")
     end
 

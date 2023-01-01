@@ -36,6 +36,18 @@ class BuildPlan
       end
     end
 
+    class Synthetic < Base
+      def initialize(target, deps, &block)
+        super(target, deps)
+        @block = block
+      end
+
+      def run(digests)
+        @block.call
+        true
+      end
+    end
+
     class IntermediaryFile < Base
       def initialize(target, deps, &block)
         super(target, deps)
@@ -191,6 +203,20 @@ class BuildPlan
   def directory(target)
     task = Target::Directory.new(target)
     tasks[task.target] = task
+  end
+
+  def task(opts, &block)
+    opts.each do |target, deps|
+      deps = [*deps]
+      deps.each do |dep|
+        # Generate default source file targets if target hasn't been defined
+        # yet.  Defining it explicitly later on will override this default.
+        task = Target::SourceFile.new(dep)
+        tasks[task.target] ||= task
+      end
+      task = Target::Synthetic.new(target, deps, &block)
+      tasks[task.target] = task
+    end
   end
 
   def save_digests!(file)

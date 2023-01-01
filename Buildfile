@@ -175,6 +175,7 @@ build_plan.load do
   end
 end
 
+SITE_FILES = build_plan.tasks.keys.select {|x| x.start_with?("out/site") }
 DIRS = build_plan.tasks.values
   .select {|x| x.is_a?(BuildPlan::Target::IntermediaryFile) }
   .map {|x| File.dirname(x.target) }
@@ -184,10 +185,15 @@ build_plan.load do
   DIRS.each do |d|
     directory d
   end
+
+  task "build" => SITE_FILES do
+    # Just do this everytime, it's quick and not worth replicating rsync
+    # functionality inside this file.
+    `rsync -a data/images out/site/`
+  end
 end
 
-SITE_FILES = build_plan.tasks.keys.select {|x| x.start_with?("out/site") }
+build_plan.build "build"
 
-build_plan.build *SITE_FILES
 
 build_plan.save_digests!(DIGEST_FILE)

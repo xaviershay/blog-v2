@@ -166,5 +166,17 @@ RSpec.describe BuildPlan do
 
     expect(run).to eq(1)
   end
+
+  it 'supports synthetic tasks' do
+    run = 0
+    builder.load do
+      task 'build' => [] do
+        run += 1
+      end
+    end
+    builder.build "build"
+
+    expect(run).to eq(1)
+  end
 end
 
