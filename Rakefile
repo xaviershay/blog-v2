@@ -122,7 +122,7 @@ site_files += BOOK_FILES.map do |file|
   out
 end
 
-multifile 'out/metadata/index.yml' => [
+file 'out/metadata/index.yml' => [
   'out/metadata/posts'
 ] + POST_METADATA_FILES do
   compile_index_metadata(POST_METADATA_FILES, "out/metadata/index.yml")
@@ -130,7 +130,7 @@ end
 
 begin
   builder = Actions::BookIndex.new
-  multifile 'out/metadata/book_index.yml' => [
+  file 'out/metadata/book_index.yml' => [
     'out/metadata/books',
     'out/metadata/index.yml',
   ] + BOOK_METADATA_FILES do
