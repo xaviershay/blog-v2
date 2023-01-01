@@ -1,10 +1,16 @@
+require 'set'
+require 'digest/md5'
+require 'logger'
+require 'fileutils'
+require 'json'
+
 class BuildPlan
   module Target
     class Base
       attr_reader :target, :deps
       attr_accessor :dep_changed
 
-      def initialize(target, deps)
+      def initialize(target, deps = [])
         @target = target
         @deps = deps
         @dep_changed = false
@@ -14,6 +20,21 @@ class BuildPlan
       def changed?(digests)
         false
       end
+
+      def current_digest
+        nil
+      end
+    end
+
+    class Directory < Base
+      def run(digests)
+        if Dir.exists?(target)
+          false
+        else
+          FileUtils.mkdir_p(target)
+          true
+        end
+      end
     end
 
     class IntermediaryFile < Base
@@ -22,14 +43,11 @@ class BuildPlan
         @block = block
       end
 
-      def id
-        target
-      end
-
       def run(digests)
         old_digest = current_digest
         @block.call
         new_digest = Digest::MD5.hexdigest(File.read(@target)) rescue nil
+        @current_digest = new_digest
         old_digest != new_digest
       end
 
@@ -50,10 +68,6 @@ class BuildPlan
 
       def initialize(target)
         super(target, [])
-      end
-
-      def id
-        target
       end
 
       def run(digests)
@@ -81,8 +95,12 @@ class BuildPlan
     @logger = logger
   end
 
-  def initialize
-    @digests = {}
+  def initialize(digest_file: nil)
+    @digests = if digest_file
+       JSON.parse(File.read(digest_file))
+    else
+      {}
+    end
     @tasks = {}
   end
 
@@ -124,12 +142,11 @@ class BuildPlan
       logger.debug ""
       logger.debug "Available: #{seeds}"
       seed = seeds.shift
-      logger.debug "Running #{seed}"
       t = tasks[seed]
 
       notify = backward[seed]
 
-      logger.debug "Rebuilding #{seed}"
+      logger.info "Building #{seed}"
       changed = t.run(digests)
       logger.debug "#{seed} changed: #{changed}. notifying parents: #{notify}"
       notify.each do |parent, _|
@@ -138,6 +155,11 @@ class BuildPlan
         x = forward[parent]
         x.delete(seed)
         logger.debug "  Dependencies remaining: #{x.inspect}"
+        dep_changed = parent_task.dep_changed
+        parent_changed = parent_task.changed?(digests)
+
+        logger.debug "  Deps changed?: #{dep_changed}"
+        logger.debug "  Target changed?: #{parent_changed}"
         if x.empty? && (parent_task.dep_changed || parent_task.changed?(digests))
           seeds << parent
         end
@@ -153,11 +175,27 @@ class BuildPlan
         # Generate default source file targets if target hasn't been defined
         # yet.  Defining it explicitly later on will override this default.
         task = Target::SourceFile.new(dep)
-        tasks[task.id] ||= task
+        tasks[task.target] ||= task
       end
       task = Target::IntermediaryFile.new(target, deps, &block)
-      tasks[task.id] = task
+      tasks[task.target] = task
     end
+  end
+
+  def directory(target)
+    task = Target::Directory.new(target)
+    tasks[task.target] = task
+  end
+
+  def save_digests!(file)
+    new_digests = {}
+    tasks.each do |_, task|
+      if d = task.current_digest
+        new_digests[task.target] = d
+      end
+    end
+
+    File.write(file, JSON.pretty_generate(new_digests))
   end
 
   attr_reader :digests, :tasks

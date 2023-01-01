@@ -1,8 +1,5 @@
 require 'rspec'
-require 'set'
 require 'tmpdir'
-require 'digest/md5'
-require 'logger'
 
 $LOAD_PATH.unshift File.expand_path("../src/ruby", File.dirname(__FILE__))
 
@@ -112,6 +109,42 @@ RSpec.describe BuildPlan do
       end
     end
     builder.build "target1.txt", "target2.txt"
+
+    expect(run).to eq(1)
+  end
+
+  it 'can build directories' do
+    builder.load do
+      directory "out"
+    end
+    builder.build "out"
+
+    expect(Dir.exists?("out")).to eq(true)
+  end
+
+  it 'does not generate file again on subsequent run' do
+    digest_file = ".digests.json"
+    changing_file "source.txt", "hello", "goodbye"
+    unchanging_file "target.txt", "hello"
+
+    run = 0
+    builder.load do
+      file "target.txt" => "source.txt" do
+        FileUtils.cp("source.txt", "target.txt")
+        run += 1
+      end
+    end
+    builder.build "target.txt"
+    builder.save_digests!(digest_file)
+
+    builder = BuildPlan.new(digest_file: digest_file)
+    builder.load do
+      file "target.txt" => "source.txt" do
+        FileUtils.cp("source.txt", "target.txt")
+        run += 1
+      end
+    end
+    builder.build "target.txt"
 
     expect(run).to eq(1)
   end

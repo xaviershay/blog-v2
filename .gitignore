@@ -2,3 +2,4 @@ out
 .vscode
 data/.vscode
 tmp
+.digests.json
