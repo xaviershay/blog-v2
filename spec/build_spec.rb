@@ -122,16 +122,6 @@ class Builder
         @dep_changed = false
       end
 
-      def walk(tasks, forward, backward, parent)
-        forward[target] ||= Set.new
-        deps.each do |dep|
-          tasks.fetch(dep).walk(tasks, forward, backward, self)
-          forward[target] << dep
-        end
-
-        backward[target] << parent.target if parent
-      end
-
       # TODO
       def changed?(digests)
         false
@@ -215,8 +205,19 @@ class Builder
     forward = Hash.new {|h, k| h[k] = Set.new }
     backward = Hash.new {|h, k| h[k] = Set.new }
 
+    walk = ->(target, parent) do
+      task = tasks.fetch(target)
+      forward[target] ||= Set.new
+      task.deps.each do |dep|
+        walk.(dep, task)
+        forward[target] << dep
+      end
+
+      backward[target] << parent.target if parent
+    end
+
     targets.each do |target|
-      tasks.fetch(target).walk(tasks, forward, backward, nil)
+      walk.(target, nil)
     end
 
     seeds = forward.select {|k, v| v.empty? }.keys
