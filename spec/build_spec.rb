@@ -2,6 +2,7 @@ require 'rspec'
 require 'set'
 require 'tmpdir'
 require 'digest/md5'
+require 'logger'
 
 require 'pp'
 
@@ -12,6 +13,10 @@ RSpec.describe 'builder' do
         example.run
       end
     end
+  end
+
+  before :each do
+    Builder.logger = Logger.new("/dev/null")
   end
 
   let(:builder) { Builder.new }
@@ -139,7 +144,6 @@ class Builder
       end
 
       def run(digests)
-        puts "Rebuilding #{target}"
         old_digest = current_digest
         @block.call
         new_digest = Digest::MD5.hexdigest(File.read(@target)) rescue nil
@@ -173,8 +177,6 @@ class Builder
         if current_digest.nil?
           raise "source file does not exist: #{target}"
         else
-          puts "current: #{current_digest}"
-          puts "saved: #{digests.inspect}"
           current_digest != digests[target]
         end
       end
@@ -188,6 +190,14 @@ class Builder
     end
   end
 
+  def self.logger
+    @logger ||= Logger.new(STDOUT)
+  end
+
+  def self.logger=(logger)
+    @logger = logger
+  end
+
   def initialize
     @digests = {}
     @tasks = {}
@@ -199,6 +209,10 @@ class Builder
 
   def load(&block)
     instance_exec(&block)
+  end
+
+  def logger
+    self.class.logger
   end
 
   def build(*targets)
@@ -221,24 +235,26 @@ class Builder
     end
 
     seeds = forward.select {|k, v| v.empty? }.keys
-    pp forward
+
     # TODO: Build loop
     while seeds.any?
-      puts "Available: #{seeds}"
+      logger.debug ""
+      logger.debug "Available: #{seeds}"
       seed = seeds.shift
-      puts
-      puts "Running #{seed}"
+      logger.debug "Running #{seed}"
       t = tasks[seed]
 
       notify = backward[seed]
+
+      logger.debug "Rebuilding #{seed}"
       changed = t.run(digests)
-      puts "#{seed} changed: #{changed}. notifying parents: #{notify}"
+      logger.debug "#{seed} changed: #{changed}. notifying parents: #{notify}"
       notify.each do |parent, _|
         parent_task = tasks[parent]
         parent_task.dep_changed ||= changed
         x = forward[parent]
         x.delete(seed)
-        puts "  Dependencies remaining: #{x.inspect}"
+        logger.debug "  Dependencies remaining: #{x.inspect}"
         if x.empty? && (parent_task.dep_changed || parent_task.changed?(digests))
           seeds << parent
         end
