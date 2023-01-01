@@ -132,24 +132,18 @@ nav.book-list {
   margin-top: 5px;
 }
 
-.yearly-summaries .legend {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 1em;
-  padding: 0.5em;
-  padding-left: 1em;
-  border: none;
-  width: fit-content;
+.legend-inline {
+  width: fit-content
+}
+
+.legend-inline li {
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
 }
 
 .yearly-summaries table caption {
   font-size: 0.8em;
-}
-
-.yearly-summaries .legend li {
-  white-space: nowrap;
-  font-size: 0.7rem;
 }
 
 .yearly-summaries tbody tr th {
@@ -370,4 +364,26 @@ em {
 .image-strip img {
     display: inline;
     margin-top: 0;
+}
+
+/* MUSIC GRAPHS REVIEW 2022 */
+
+.music-punchcard-legend, .music-analysis table.charts-css {
+  --color-3: var(--color-4);
+}
+
+.music-analysis table.charts-css {
+  height: 200px;
+}
+
+.music-analysis .data {
+  margin-top: -1rem;
+  font-size: 0.6rem;
+  white-space: nowrap;
+  font-family: "Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+}
+
+.music-analysis tbody tr th {
+  font-size: 0.7rem;
+  white-space: nowrap;
 }

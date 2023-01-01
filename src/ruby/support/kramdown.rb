@@ -50,6 +50,7 @@ class Kramdown::Converter::PostHtml < Kramdown::Converter::Html
       title = el.children.map {|x| convert(x, indent) }.join.strip
       caption = title.length > 0 ? "<figcaption>#{title}</figcaption>" : ""
       id = href.split('/').last
+      id = id.split('=').last # account for watch= style urls
 
       <<-HTML
         <figure>
