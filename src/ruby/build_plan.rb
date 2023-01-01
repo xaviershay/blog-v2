@@ -16,9 +16,8 @@ class BuildPlan
         @dep_changed = false
       end
 
-      # TODO
-      def changed?(digests)
-        false
+      def changed?(_)
+        true
       end
 
       def current_digest
@@ -137,30 +136,33 @@ class BuildPlan
 
     seeds = forward.select {|k, v| v.empty? }.keys
 
-    # TODO: Build loop
     while seeds.any?
       logger.debug ""
-      logger.debug "Available: #{seeds}"
+      logger.debug { "Available: #{seeds}" }
       seed = seeds.shift
       t = tasks[seed]
 
       notify = backward[seed]
 
-      logger.info "Building #{seed}"
-      changed = t.run(digests)
-      logger.debug "#{seed} changed: #{changed}. notifying parents: #{notify}"
+      changed = if t.dep_changed || t.changed?(digests)
+                  if t.is_a?(Target::IntermediaryFile)
+                    logger.info "Building #{seed}"
+                  end
+                  t.run(digests)
+                else
+                  false
+                end
+      logger.debug { "#{seed} changed: #{changed}. notifying parents: #{notify.to_a}" }
       notify.each do |parent, _|
         parent_task = tasks[parent]
         parent_task.dep_changed ||= changed
         x = forward[parent]
         x.delete(seed)
-        logger.debug "  Dependencies remaining: #{x.inspect}"
+        logger.debug { "  Dependencies remaining: #{x.inspect}" }
         dep_changed = parent_task.dep_changed
         parent_changed = parent_task.changed?(digests)
 
-        logger.debug "  Deps changed?: #{dep_changed}"
-        logger.debug "  Target changed?: #{parent_changed}"
-        if x.empty? && (parent_task.dep_changed || parent_task.changed?(digests))
+        if x.empty?
           seeds << parent
         end
       end

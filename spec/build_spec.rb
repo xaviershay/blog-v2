@@ -148,5 +148,23 @@ RSpec.describe BuildPlan do
 
     expect(run).to eq(1)
   end
+
+  it 'propagates changes through multiple dependencies' do
+    unchanging_file "source.txt", "hello"
+    unchanging_file "intermediary.txt", "hello"
+
+    run = 0
+    builder.load do
+      file "intermediary.txt" => "source.txt" do
+      end
+
+      file "target1.txt" => "intermediary.txt" do
+        run += 1
+      end
+    end
+    builder.build "target1.txt"
+
+    expect(run).to eq(1)
+  end
 end
 
