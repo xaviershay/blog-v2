@@ -76,7 +76,7 @@ RSpec.describe 'builder' do
   end
 
   it 'builds intermediary file if file does not exist' do
-    unchanging_file "source1.txt", "hello"
+    unchanging_file "source.txt", "hello"
 
     run = false
     builder.load do
@@ -90,7 +90,7 @@ RSpec.describe 'builder' do
   end
 
   it 'only builds tasks once' do
-    unchanging_file "source1.txt", "hello"
+    changing_file "source.txt", "hello", "goodbye"
 
     run = 0
     builder.load do
@@ -114,13 +114,16 @@ class Builder
   module Target
     class Base
       attr_reader :target, :deps
+      attr_accessor :dep_changed
 
       def initialize(target, deps)
         @target = target
         @deps = deps
+        @dep_changed = false
       end
 
       def walk(tasks, forward, backward, parent)
+        forward[target] ||= Set.new
         deps.each do |dep|
           tasks.fetch(dep).walk(tasks, forward, backward, self)
           forward[target] << dep
@@ -128,11 +131,40 @@ class Builder
 
         backward[target] << parent.target if parent
       end
+
+      # TODO
+      def changed?(digests)
+        false
+      end
     end
 
     class IntermediaryFile < Base
+      def initialize(target, deps, &block)
+        super(target, deps)
+        @block = block
+      end
+
       def id
         target
+      end
+
+      def run(digests)
+        puts "Rebuilding #{target}"
+        old_digest = current_digest
+        @block.call
+        new_digest = Digest::MD5.hexdigest(File.read(@target)) rescue nil
+        old_digest != new_digest
+      end
+
+      def current_digest
+        if !defined?(@current_digest)
+          @current_digest = Digest::MD5.hexdigest(File.read(target)) rescue nil
+        end
+        @current_digest
+      end
+
+      def changed?(digests)
+        !current_digest || current_digest != digests[target]
       end
     end
 
@@ -145,6 +177,23 @@ class Builder
 
       def id
         target
+      end
+
+      def run(digests)
+        if current_digest.nil?
+          raise "source file does not exist: #{target}"
+        else
+          puts "current: #{current_digest}"
+          puts "saved: #{digests.inspect}"
+          current_digest != digests[target]
+        end
+      end
+
+      def current_digest
+        if !defined?(@current_digest)
+          @current_digest = Digest::MD5.hexdigest(File.read(target)) rescue nil
+        end
+        @current_digest
       end
     end
   end
@@ -170,10 +219,34 @@ class Builder
       tasks.fetch(target).walk(tasks, forward, backward, nil)
     end
 
+    seeds = forward.select {|k, v| v.empty? }.keys
+    pp forward
     # TODO: Build loop
+    while seeds.any?
+      puts "Available: #{seeds}"
+      seed = seeds.shift
+      puts
+      puts "Running #{seed}"
+      t = tasks[seed]
+
+      notify = backward[seed]
+      changed = t.run(digests)
+      puts "#{seed} changed: #{changed}. notifying parents: #{notify}"
+      notify.each do |parent, _|
+        parent_task = tasks[parent]
+        parent_task.dep_changed ||= changed
+        x = forward[parent]
+        x.delete(seed)
+        puts "  Dependencies remaining: #{x.inspect}"
+        if x.empty? && (parent_task.dep_changed || parent_task.changed?(digests))
+          seeds << parent
+        end
+      end
+      backward.delete(seed)
+    end
   end
 
-  def file(opts)
+  def file(opts, &block)
     opts.each do |target, deps|
       deps = [*deps]
       deps.each do |dep|
@@ -182,7 +255,7 @@ class Builder
         task = Target::SourceFile.new(dep)
         tasks[task.id] ||= task
       end
-      task = Target::IntermediaryFile.new(target, deps)
+      task = Target::IntermediaryFile.new(target, deps, &block)
       tasks[task.id] = task
     end
   end
