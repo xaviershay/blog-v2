@@ -115,6 +115,10 @@ class BuildPlan
     self.class.logger
   end
 
+  def inspect
+    "<BuildPlan: #{tasks.length} targets>"
+  end
+
   def build(*targets)
     forward = Hash.new {|h, k| h[k] = Set.new }
     backward = Hash.new {|h, k| h[k] = Set.new }

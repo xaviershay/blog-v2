@@ -12,7 +12,7 @@ def compile_index(metadata_file, out)
 
   @site = hash_to_ostruct(metadata)
 
-  html = INDEX_TEMPLATE.result
+  html = INDEX_TEMPLATE.result(binding)
   Zlib::GzipWriter.open(out) do |f|
     f.write(html)
   end

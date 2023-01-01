@@ -28,7 +28,7 @@ def compile_post(fragment_file, metadata_file, out)
 
   @site = hash_to_ostruct(metadata)
 
-  html = POST_TEMPLATE.result
+  html = POST_TEMPLATE.result(binding)
 
   Zlib::GzipWriter.open(out) do |f|
     f.write(html)
