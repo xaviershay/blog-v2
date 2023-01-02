@@ -51,8 +51,7 @@ This led to the following design goals for this project:
 * Smoke tests to aid migration and ensure critical content was being rendered.
 * At least as fast as Jekyll (~1s build time).
   * Like-for-like with just posts this goal was achieved, but with the addition
-    of ~650 source markdown files for books the time has blown out
-    unsatisfactorily to many seconds and now requires a different approach.
+    of ~650 source markdown files for books it takes a bit longer now.
 
 Other static site generators require familiarity with languages other than Ruby
 and/or have reputations for similar backwards incompatible changes and/or bring
@@ -82,30 +81,11 @@ Kramdown is used for converting markdown files into HTML snippets.
 
 ERB is used as a templating language to embed that HTML into a full page.
 
-Rake ties it all together and is used to support incremental builds,
-definitions can be found in the standard `Rakefile`.
+A custom dependency builder (`src/ruby/build_plan.rb`) ties it all together.
+This does digest based checking of files and is much faster than whatever Rake
+is doing.
 
 ### Quirks
-
-#### Incremental Builds
-
-Each post technically depends on the index metadata (for possible yearly
-archive links), but this relationship is not expressed in the build file as a
-deliberate compromise.
-
-Rake uses modification time to determine if a rebuild is necessary. A change of
-any post triggers a rebuild of index metadata, which even if its content did
-not change would then trigger a rebuild of all posts. For the primary case of
-"editing a post" this effectively eliminated incremental builds and means a 1s
-recompilation rather than a 0.1s one.
-
-A fix for this would be to not trigger dependent tasks if file contents of an
-intermediary artifact does not change (which I believe is how other build
-systems like Buck work). I haven't figured out a neat way to either extend or
-replace Rake to do this yet however.
-
-A clean build is always used for production deployments to avoid any issues
-this might cause.
 
 #### GZIP'd assets
 
@@ -139,9 +119,12 @@ it hard to place the hacks.
 
 There's no standard way to add custom markup to markdown.
 
-Solution I've landed on is that Markdown is now post-processed (with a regex)
-to replace a new custom tag `{{ YOUTUBE }}` with appropriate embed, with a
-caption if provided.
+Solution I've landed on is to add a custom converter to Kramdwon that converts
+a custom tag into the appropriate embed:
+
+    <x-youtube href="https://youtube.com/watch&v=SOMEID">
+    Optional caption
+    </x-youtube>
 
 ## Dependencies
 
@@ -149,7 +132,6 @@ In addition to Ruby itself, the following standard library components are
 critical dependencies:
 
 * **ERB.** For templating HTML files.
-* **Rake.** In particular for incremental build support.
 * **Zlib.** For writing GZIP'ed files.
 
 Outside of the standard library, we depend on the following gems:
@@ -185,3 +167,7 @@ Other dependencies include:
 * **Capybara.** Way overkill for what I needed, and required an extra
   dependency on webdriver. Replaced with ~50 lines of code for the subset I
   needed.
+* **Rake.** Worked well until I added ~650 extra source files migrating books
+  over. Incremental no-op was taking 2s! I wanted to switch to digest based
+  dependency tracking anyway so that post pages could depend on index metadata
+  but not rebuild if only the body of another post changed.
