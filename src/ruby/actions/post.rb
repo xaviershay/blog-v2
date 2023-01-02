@@ -36,7 +36,7 @@ class Actions::Post < Builder
 
     doc = Kramdown::Document.new(data, :book_data => book_data)
 
-    html = doc.to_book_html
+    html = doc.to_post_html
 
     File.write(output, html)
   end
