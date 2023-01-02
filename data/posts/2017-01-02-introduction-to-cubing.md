@@ -27,7 +27,7 @@ The first layer of the cube can be solved _intuitively_, meaning no moves need t
 
 At this point, it's also worth learning how to best hold and rotate the cube using your fingers, rather than moving your entire hand for each rotation.
 
-{% youtube rzvW3dI03ws %}
+<x-youtube href="https://youtube.com/watch?v=rzvW3dI03ws"></x-youtube>
 
 ### Your Next Solve
 
@@ -35,17 +35,17 @@ The most common method of solving a cube today is known as either CFOP, or the F
 
 After the cross, CFOP proceeds to solve the remainder of the first two layers (_F2L_) at the same time. This can be done intuitively! This video provides a very clear explanation and demonstration:
 
-{% youtube 2EjpF8ORtVo %}
+<x-youtube href="https://youtube.com/watch?v=2EjpF8ORtVo"></x-youtube>
 
 After solving F2L, you can use the same algoritms from the beginner technique to complete. The CFOP method provides a different strategy though, first solving the yellow face (orienting the last layer, or OLL), and then rearranging the remaining pieces (permuting the last layer, or PLL). In total, this can be done efficiently with 78 different algorithms(!)
 
 I haven't learned all of them though. Instead, I'm currently on _two-look_ OLL and beginner two-look PLL which can be done with 9 and 2 algorithms respectively.
 
-{% youtube IMb7hOAgmng %}
+<x-youtube href="https://youtube.com/watch?v=IMb7hOAgmng"></x-youtube>
 
 My current average solve time is around 75 seconds, using [cubetimer.com](http://www.cubetimer.com) to scramble and measure. Learning a few more algorithms for a faster two-look PLL is next on my list. Putting it all together it could eventually look something like this:
 
-{% youtube Jcv4ePMPN_U %}
+<x-youtube href="https://youtube.com/watch?v=Jcv4ePMPN_U"></x-youtube>
 
 ### Bonus True Facts
 
