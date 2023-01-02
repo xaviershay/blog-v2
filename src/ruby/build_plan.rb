@@ -167,7 +167,7 @@ class BuildPlan
       changed = if t.dep_changed || t.changed?(digests)
 
                   s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-                  t.run(digests)
+                  ret = t.run(digests)
                   f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
                   if t.group
@@ -177,6 +177,7 @@ class BuildPlan
                       logger.info "Building #{seed}"
                     end
                   end
+                  ret
                 else
                   false
                 end
