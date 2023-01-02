@@ -3,14 +3,12 @@ $LOAD_PATH.unshift File.expand_path("./src/ruby", File.dirname(__FILE__))
 require 'build_plan'
 
 require 'actions/book'
+require 'actions/post'
 require 'actions/book_index'
 
 require 'actions/compile_index'
 require 'actions/compile_index_metadata'
 require 'actions/compile_atom'
-require 'actions/compile_post'
-require 'actions/markdown_to_metadata'
-require 'actions/markdown_to_html_fragment'
 
 HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
 
@@ -47,7 +45,7 @@ build_plan.load do
     end
   end
 
-  begin
+  Actions::Post.new.tap do |builder|
     POST_FILES.map do |file|
       name = File.basename(file, ".md").split('-', 4).drop(3).first
       out = "out/site/articles/#{name}.html"
@@ -62,7 +60,7 @@ build_plan.load do
         File.dirname(metadata),
         file
       ] do
-        markdown_to_metadata(file, metadata)
+        builder.markdown_to_metadata(file, metadata)
       end
 
       grouped_file "Post Fragments", fragment => [
@@ -71,7 +69,7 @@ build_plan.load do
         template,
         'out/metadata/book_index.yml'
       ] do
-        markdown_to_html_fragment(file, fragment)
+        builder.markdown_to_html_fragment(file, fragment)
       end
 
       grouped_file "Post Pages", out => [
@@ -83,10 +81,12 @@ build_plan.load do
         'out/metadata/book_index.yml', # Reading graphs
         File.dirname(out)
       ] do
-        compile_post(fragment, metadata, out)
+        builder.compile_erb(template, fragment, metadata, out)
       end
     end
+  end
 
+  begin
     gfile 'out/metadata/index.yml' => [
       'out/metadata/posts'
     ] + post_metadata_files do

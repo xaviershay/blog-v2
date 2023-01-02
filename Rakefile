@@ -6,14 +6,11 @@ $LOAD_PATH.unshift "src/ruby"
 
 require 'support/multifile'
 
-require 'actions/markdown_to_metadata'
-require 'actions/markdown_to_html_fragment'
-
 require 'actions/compile_index_metadata'
 
 require 'actions/book'
 require 'actions/book_index'
-require 'actions/compile_post'
+require 'actions/post'
 require 'actions/compile_index'
 require 'actions/compile_atom'
 
@@ -58,39 +55,41 @@ BOOK_METADATA_FILES = BOOK_FILES.map do |file|
   "out/metadata/books/#{File.basename(file)}.yml"
 end
 
-site_files += POST_FILES.map do |file|
-  name = File.basename(file, ".md").split('-', 4).drop(3).first
-  out = "out/site/articles/#{name}.html"
-  metadata = "out/metadata/posts/#{File.basename(file)}.yml"
-  fragment = "out/html/posts/#{name}.html"
-  template = "src/erb/post.html.erb"
+Actions::Post.new.tap do |builder|
+  site_files += POST_FILES.map do |file|
+    name = File.basename(file, ".md").split('-', 4).drop(3).first
+    out = "out/site/articles/#{name}.html"
+    metadata = "out/metadata/posts/#{File.basename(file)}.yml"
+    fragment = "out/html/posts/#{name}.html"
+    template = "src/erb/post.html.erb"
 
-  file metadata => [File.dirname(metadata), file] do
-    markdown_to_metadata(file, metadata)
-  end
+    file metadata => [File.dirname(metadata), file] do
+      builder.markdown_to_metadata(file, metadata)
+    end
 
-  file fragment => [File.dirname(fragment), file, template, 'out/metadata/book_index.yml'] do
-    markdown_to_html_fragment(file, fragment)
-  end
+    file fragment => [File.dirname(fragment), file, template, 'out/metadata/book_index.yml'] do
+      builder.markdown_to_html_fragment(file, fragment)
+    end
 
-  # Technically this should depend on index metadata as well for changes to
-  # site metadata (such as for relevant posts) but since Rake is purely mtime
-  # based, and our metadata is mixed in with content, this would trigger a
-  # rebuild of everything for any source change even if metadata doesn't
-  # change.
-  #
-  # Unlikely to be an issue in practice since we'll do a clean build before
-  # deploy anyway.
-  file out => [
-    file,
-    metadata,
-    fragment,
-    template,
-    File.dirname(out)
-  ] do
-    compile_post(fragment, metadata, out)
+    # Technically this should depend on index metadata as well for changes to
+    # site metadata (such as for relevant posts) but since Rake is purely mtime
+    # based, and our metadata is mixed in with content, this would trigger a
+    # rebuild of everything for any source change even if metadata doesn't
+    # change.
+    #
+    # Unlikely to be an issue in practice since we'll do a clean build before
+    # deploy anyway.
+    file out => [
+      file,
+      metadata,
+      fragment,
+      template,
+      File.dirname(out)
+    ] do
+      builder.compile_erb(template, fragment, metadata, out)
+    end
+    out
   end
-  out
 end
 
 site_files += BOOK_FILES.map do |file|
