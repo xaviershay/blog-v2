@@ -9,11 +9,13 @@ class BuildPlan
     class Base
       attr_reader :target, :deps
       attr_accessor :dep_changed
+      attr_accessor :group
 
       def initialize(target, deps = [])
         @target = target
         @deps = deps
         @dep_changed = false
+        @group = nil
       end
 
       def changed?(_)
@@ -132,6 +134,8 @@ class BuildPlan
   end
 
   def build(*targets)
+    group_stats = Hash.new {|h, k| h[k] = Array.new }
+
     forward = Hash.new {|h, k| h[k] = Set.new }
     backward = Hash.new {|h, k| h[k] = Set.new }
 
@@ -161,10 +165,18 @@ class BuildPlan
       notify = backward[seed]
 
       changed = if t.dep_changed || t.changed?(digests)
-                  if t.is_a?(Target::IntermediaryFile)
-                    logger.info "Building #{seed}"
-                  end
+
+                  s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
                   t.run(digests)
+                  f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+
+                  if t.group
+                    group_stats[t.group] << f - s
+                  else
+                    if t.is_a?(Target::IntermediaryFile)
+                      logger.info "Building #{seed}"
+                    end
+                  end
                 else
                   false
                 end
@@ -184,20 +196,38 @@ class BuildPlan
       end
       backward.delete(seed)
     end
+
+    if group_stats.any?
+      indent = group_stats.keys.map(&:length).max
+      group_stats.keys.sort.each do |k|
+        runs = group_stats.fetch(k)
+        sum = runs.sum * 1000
+        puts "%#{indent}s: #{runs.count} in %0.0fms (%0.0fms avg)" % [
+          k,
+          sum,
+          sum / runs.count
+        ]
+      end
+    end
+  end
+
+  def grouped_file(group, opts, &block)
+    t = file(opts, &block)
+    t.group = group
+    t
   end
 
   def file(opts, &block)
-    opts.each do |target, deps|
-      deps = [*deps]
-      deps.each do |dep|
-        # Generate default source file targets if target hasn't been defined
-        # yet.  Defining it explicitly later on will override this default.
-        task = Target::SourceFile.new(dep)
-        tasks[task.target] ||= task
-      end
-      task = Target::IntermediaryFile.new(target, deps, &block)
-      tasks[task.target] = task
+    target, deps = *opts.first
+    deps = [*deps]
+    deps.each do |dep|
+      # Generate default source file targets if target hasn't been defined
+      # yet.  Defining it explicitly later on will override this default.
+      task = Target::SourceFile.new(dep)
+      tasks[task.target] ||= task
     end
+    task = Target::IntermediaryFile.new(target, deps, &block)
+    tasks[task.target] = task
   end
 
   def directory(target)

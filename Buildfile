@@ -58,11 +58,14 @@ build_plan.load do
       template = "src/erb/post.html.erb"
 
 
-      gfile metadata => [File.dirname(metadata), file] do
+      grouped_file 'Post Metadata', metadata => [
+        File.dirname(metadata),
+        file
+      ] do
         markdown_to_metadata(file, metadata)
       end
 
-      gfile fragment => [
+      grouped_file "Post Fragments", fragment => [
         File.dirname(fragment),
         file,
         template,
@@ -71,7 +74,7 @@ build_plan.load do
         markdown_to_html_fragment(file, fragment)
       end
 
-      gfile out => [
+      grouped_file "Post Pages", out => [
         file,
         metadata,
         fragment,
@@ -117,15 +120,15 @@ build_plan.load do
       template = "src/erb/book.html.erb"
       out = "out/site/books/#{name}.html"
 
-      gfile metadata => [File.dirname(metadata), input] do
+      grouped_file "Book Metadata", metadata => [File.dirname(metadata), input] do
         builder.markdown_to_metadata(input, metadata)
       end
 
-      gfile fragment => [File.dirname(fragment), input] do
+      grouped_file "Book Fragments", fragment => [File.dirname(fragment), input] do
         builder.markdown_to_html_fragment(input, fragment)
       end
 
-      gfile out => [
+      grouped_file "Book Pages", out => [
         metadata,
         fragment,
         template,
