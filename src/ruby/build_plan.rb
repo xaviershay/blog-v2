@@ -139,6 +139,11 @@ class BuildPlan
     forward = Hash.new {|h, k| h[k] = Set.new }
     backward = Hash.new {|h, k| h[k] = Set.new }
 
+
+    f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    prebuild_time = (f - $s) * 1000
+
+    s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     walk = ->(target, parent) do
       task = tasks.fetch(target)
       forward[target] ||= Set.new
@@ -155,6 +160,8 @@ class BuildPlan
     end
 
     seeds = forward.select {|k, v| v.empty? }.keys
+    f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    tree_time = (f - s) * 1000
 
     while seeds.any?
       logger.debug ""
@@ -165,22 +172,22 @@ class BuildPlan
       notify = backward[seed]
 
       changed = if t.dep_changed || t.changed?(digests)
+        s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+        ret = t.run(digests)
+        f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
-                  s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-                  ret = t.run(digests)
-                  f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-
-                  if t.group
-                    group_stats[t.group] << f - s
-                  else
-                    if t.is_a?(Target::IntermediaryFile)
-                      logger.info "Building #{seed}"
-                    end
-                  end
-                  ret
-                else
-                  false
-                end
+        if t.group
+          group_stats[t.group] << f - s
+        else
+          group_stats["Misc"] << f - s
+          if t.is_a?(Target::IntermediaryFile)
+            logger.debug "Building #{seed}"
+          end
+        end
+        ret
+      else
+        false
+      end
       logger.debug { "#{seed} changed: #{changed}. notifying parents: #{notify.to_a}" }
       notify.each do |parent, _|
         parent_task = tasks[parent]
@@ -199,16 +206,28 @@ class BuildPlan
     end
 
     if group_stats.any?
-      indent = group_stats.keys.map(&:length).max
+      indent = [group_stats.keys.map(&:length).max, "Walking Tree".length].max
+      total = 0
       group_stats.keys.sort.each do |k|
         runs = group_stats.fetch(k)
         sum = runs.sum * 1000
+        total += sum
         puts "%#{indent}s: #{runs.count} in %0.0fms (%0.0fms avg)" % [
           k,
           sum,
           sum / runs.count
         ]
       end
+      f = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+      overhead = (f - $s) * 1000 - total - prebuild_time - tree_time
+      puts
+      puts "%#{indent}s: %0.0fms" % ["Prebuild", prebuild_time]
+      puts "%#{indent}s: %0.0fms" % ["Walking Tree", tree_time]
+      puts "%#{indent}s: %0.0fms" % ["Tasks", total]
+      puts "%#{indent}s: %0.0fms" % ["Overhead", overhead]
+      puts
+      puts "%#{indent}s: %0.0fms" %
+        ["Total", prebuild_time + tree_time + total + overhead]
     end
   end
 
