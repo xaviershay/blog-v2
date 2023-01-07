@@ -15,7 +15,7 @@ staging = "out/site"
 cmds = []
 
 cmds << "rake clean"
-cmds << "HOST=https://blog.xaviershay.com rake build"
+cmds << "HOST=https://blog.xaviershay.com ruby Buildfile"
 
 # Files will only be uploaded if they have a different size. _Technically_ a
 # different file of the same size could fail to be uploaded, but this seems
