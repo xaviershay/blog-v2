@@ -120,6 +120,8 @@ nav.book-list {
 
 .charts-css.genre-legend { margin-top: 1em }
 
+.year-group.first h3 { margin-top: 0 }
+
 .yearly-summaries table.year-total-summary caption {
   margin-bottom: 1.2rem;
 }

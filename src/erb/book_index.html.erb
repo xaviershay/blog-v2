@@ -66,8 +66,15 @@
           <li>Other</li>
         </ul>
       </div>
+      <p>
+      <label>
+      <input type="checkbox" id="book-filter" value="terms">
+      Only show 4 and 5 star books
+      </label>
+      </p>
+      <% first = true %>
       <% @site.readings.group_by {|x| x.finished_at.year }.each do |year, books| %>
-        <div class='year-group'>
+        <div class='year-group <%= "first" if first %>'>
           <h3 id='list-<%=year %>'><%= year %></h3>
           <% if url = @site.recommendations_for(year) %>
             <p class='recommendations'>
@@ -75,7 +82,7 @@
             </p>
           <% end %>
           <% books.each do |book| %>
-            <div class='book-summary'>
+            <div class='book-summary' data-rating='<%= book.rating %>'>
                 <div class='date-and-rating'>
                   <%= format_read(book) %>
                   <span class='rating'><%= book.stars %></span>
@@ -88,6 +95,7 @@
             </div>
           <% end %>
         </div>
+        <% first = false %>
       <% end %>
     </nav>
     <%
@@ -97,7 +105,6 @@
         author: 'Mohammad Naderi'
       )
     %>
-
     <div>
       <details>
         <summary>Credits</summary>
@@ -109,5 +116,6 @@
     <footer>
       <a href='/'>Back to Index</a>
     </footer>
+    <script src='/js/book-filter.js' type='text/javascript'></script>
   </body>
 </html>
