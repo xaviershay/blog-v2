@@ -21,11 +21,6 @@ STATIC_FILES = Dir["src/static/**/*.{js,css}"]
 POST_FILES = Dir["data/posts/*.md"]
 BOOK_FILES = Dir["data/books/*.md"]
 
-def gfile(opts, &block)
-  # opts[opts.keys.first] += SRC_FILES
-  file(opts, &block)
-end
-
 post_metadata_files = []
 post_fragment_files = []
 
@@ -41,7 +36,7 @@ build_plan.load do
   STATIC_FILES.each do |file|
     target = File.join("out/site", file["src/static".length..-1])
 
-    gfile target => [File.dirname(target), file] do
+    grouped_file 'Static Files', target => [File.dirname(target), file] do
       contents = File.read(file)
       Zlib::GzipWriter.open(target) {|f| f.write(contents) }
     end
@@ -89,13 +84,13 @@ build_plan.load do
   end
 
   begin
-    gfile 'out/metadata/index.yml' => [
+    grouped_file 'Index', 'out/metadata/index.yml' => [
       'out/metadata/posts'
     ] + post_metadata_files do
       compile_index_metadata(post_metadata_files, "out/metadata/index.yml")
     end
 
-    gfile 'out/site/index.html' => [
+    grouped_file 'Index', 'out/site/index.html' => [
       'out/metadata/index.yml',
       'src/erb/index.html.erb',
       'out/site'
@@ -103,7 +98,7 @@ build_plan.load do
       compile_index('out/metadata/index.yml', 'out/site/index.html')
     end
 
-    gfile 'out/site/feed.xml' => [
+    grouped_file 'Index', 'out/site/feed.xml' => [
       'src/erb/feed.xml.erb',
       'out/site',
       'out/metadata/index.yml'
@@ -142,7 +137,7 @@ build_plan.load do
   end
 
   Actions::BookIndex.new.tap do |builder|
-    gfile 'out/metadata/book_index.yml' => [
+    grouped_file 'Index (Book)', 'out/metadata/book_index.yml' => [
       'out/metadata/books',
       'out/metadata/index.yml',
     ] + book_metadata_files do
@@ -153,7 +148,7 @@ build_plan.load do
       )
     end
 
-    gfile 'out/site/books/index.html' => [
+    grouped_file 'Index (Book)', 'out/site/books/index.html' => [
       'out/metadata/book_index.yml',
       'src/erb/book_index.html.erb',
       'out/site/books'
@@ -165,7 +160,7 @@ build_plan.load do
       )
     end
 
-    gfile 'out/site/books/feed.xml' => [
+    grouped_file 'Index (Book)', 'out/site/books/feed.xml' => [
       'src/erb/feed.xml.erb',
       'out/site/books',
       'out/metadata/book_index.yml'

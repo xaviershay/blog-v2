@@ -179,7 +179,8 @@ class BuildPlan
         if t.group
           group_stats[t.group] << f - s
         else
-          group_stats["Misc"] << f - s
+          #group_stats["Misc"] << f - s
+          group_stats[t.target] << f - s
           if t.is_a?(Target::IntermediaryFile)
             logger.debug "Building #{seed}"
           end
@@ -244,6 +245,7 @@ class BuildPlan
       # Generate default source file targets if target hasn't been defined
       # yet.  Defining it explicitly later on will override this default.
       task = Target::SourceFile.new(dep)
+      task.group = "Sources"
       tasks[task.target] ||= task
     end
     task = Target::IntermediaryFile.new(target, deps, &block)
@@ -252,6 +254,7 @@ class BuildPlan
 
   def directory(target)
     task = Target::Directory.new(target)
+    task.group = "Directories"
     tasks[task.target] = task
   end
 
@@ -262,9 +265,11 @@ class BuildPlan
         # Generate default source file targets if target hasn't been defined
         # yet.  Defining it explicitly later on will override this default.
         task = Target::SourceFile.new(dep)
+        task.group = "Sources"
         tasks[task.target] ||= task
       end
       task = Target::Synthetic.new(target, deps, &block)
+      task.group = "Synthetics"
       tasks[task.target] = task
     end
   end
