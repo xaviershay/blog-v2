@@ -23,7 +23,7 @@
     </header>
     <nav class='post-list'>
     <% @site.posts.group_by {|x| x.date.year }.each do |year, posts| %>
-      <h2><%= year %></h2>
+      <h3><%= year %></h3>
       <% posts.each do |post| %>
         <div>
           <h3 class='title'><a href="<%= post.url %>"><%=h post.title %></a></h3>
