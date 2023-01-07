@@ -22,7 +22,7 @@ def compile_atom(out)
   @title = "Xavier Shay's Posts"
   @posts = metadata.posts.take(20)
 
-  html = ATOM_TEMPLATE.result
+  html = ATOM_TEMPLATE.result(binding)
   Zlib::GzipWriter.open(out) do |f|
     f.write(html)
   end
