@@ -59,6 +59,10 @@ class Actions::Book < Builder
       stars.to_s
     end
 
+    def primary_genre
+      categories.first
+    end
+
     def stars
       return unless rating
 

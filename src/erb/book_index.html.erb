@@ -82,16 +82,16 @@
             </p>
           <% end %>
           <% books.each do |book| %>
-            <div class='book-summary' data-rating='<%= book.rating %>'>
-                <div class='date-and-rating'>
-                  <%= format_read(book) %>
-                  <span class='rating'><%= book.stars %></span>
-                </div>
-                <div class='title-and-author'>
-                  <a class='title' href="/books/<%= book.slug %>.html">
-                    <%=h book.title %></a>
-                  <em>by <%=h book.author %></em>
-                </div>
+            <div class='book-summary <%= book.primary_genre || 'other' %>' data-rating='<%= book.rating %>'>
+              <div class='date-and-rating'>
+                <%= format_read(book) %>
+                <span class='rating'><%= book.stars %></span>
+              </div>
+              <div class='title-and-author'>
+                <a class='title' href="/books/<%= book.slug %>.html">
+                  <%=h book.title %></a>
+                <em>by <%=h book.author %></em>
+              </div>
             </div>
           <% end %>
         </div>
