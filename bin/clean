@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+rm -rf out
+rm -rf tmp

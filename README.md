@@ -10,11 +10,12 @@ Deployed to [https://blog.xaviershay.com](https://blog.xaviershay.com)
 
 ## Usage
 
-    bin/generate    # Build the website into `out` directory
+    bin/build       # Build the website into `out` directory
     bin/serve       # Serve website at http://localhost:4001
     bin/test-local  # Run specs against local server (assumes already running)
     bin/test-remote # Run specs against production server
     bin/publish     # Publish website to S3/Cloudfront
+    bin/clean       # Remove all generated artifacts (including `out`)
 
 Optional supporting tools:
 
@@ -51,7 +52,9 @@ This led to the following design goals for this project:
 * Smoke tests to aid migration and ensure critical content was being rendered.
 * At least as fast as Jekyll (~1s build time).
   * Like-for-like with just posts this goal was achieved, but with the addition
-    of ~650 source markdown files for books it takes a bit longer now.
+    of ~650 source markdown files for books a clean build takes longer now
+    (haven't added any multithreading yet which would help).
+  * Incremental build is still under 500ms however.
 
 Other static site generators require familiarity with languages other than Ruby
 and/or have reputations for similar backwards incompatible changes and/or bring
@@ -81,9 +84,9 @@ Kramdown is used for converting markdown files into HTML snippets.
 
 ERB is used as a templating language to embed that HTML into a full page.
 
-A custom dependency builder (`src/ruby/build_plan.rb`) ties it all together.
+A custom dependency builder (`Buildfile`) ties it all together.
 This does digest based checking of files and is much faster than whatever Rake
-is doing.
+was doing.
 
 ### Quirks
 
