@@ -4,6 +4,7 @@ group :development do
   gem 'ruby-prof'
   gem 'webrick'
   gem 'kramdown'
+  gem 'http'
 end
 
 group :test do
