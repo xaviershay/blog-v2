@@ -29,7 +29,7 @@ class BuildPlan
 
     class Directory < Base
       def run(digests)
-        if Dir.exists?(target)
+        if Dir.exist?(target)
           false
         else
           FileUtils.mkdir_p(target)
