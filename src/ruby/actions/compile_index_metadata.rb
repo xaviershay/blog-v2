@@ -66,7 +66,11 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
         }
         stats[year]['page_total'] += pages
         stats[year]['book_total'] += 1
-        stats[year]['ratings'][metadata.fetch('rating') - 1] += 1
+        rating = metadata.fetch('rating')
+        unless rating
+          raise "Book is finished but no rating: #{x['slug']}"
+        end
+        stats[year]['ratings'][rating - 1] += 1
         stats[year]['pages'][(pages / 100.0).floor] += 1
         categories = metadata.fetch('categories')
         categories = ["other"] if categories.empty?
