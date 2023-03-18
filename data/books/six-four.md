@@ -4,8 +4,7 @@ title: Six Four
 author: Hideo Yokoyama
 pages: 576
 rating: 4
-categories:
-- fiction
+categories: []
 reads:
 - finished_at: 2023-02-07
   started_at: 2023-01-30
