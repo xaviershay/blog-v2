@@ -32,6 +32,7 @@ class Actions::Book < Builder
 
     @book = hash_to_ostruct(metadata).extend(BookMethods)
     @book.body_html = fragment
+    @book.validate!
 
     erb = load_template(template)
 
@@ -74,6 +75,10 @@ class Actions::Book < Builder
       reads.map do |x|
         format_read(x)
       end.compact
+    end
+
+    def validate!
+      raise "Book doesn't have categories: #{title}" unless categories.is_a?(Array)
     end
   end
 end
