@@ -69,11 +69,11 @@ In addition to Exotic Industries I also played with [Rampant](https://mods.facto
 
 Biters play a really important role in creating an increasing resource sink as the game progresses. The evolution and expansion rates are pretty much the only thing that matters. Default Rampant settings worked pretty well with Exotic Industries through the early and mid game. Unlocking the new minigun tech and charged ammo felt like welcome power spikes that came at the right time. Late game, artillery wasn't balanced so was completely ineffective, taking in excess of five shots to destroy a single spawner. I experimented with [Napalm Artillery](https://mods.factorio.com/mod/NapalmArtillery) but it locked up the game hitting even a moderately busy base so was unusable. I ended up increasing artillery damage by an order of magnitude via a mod, but only then just used it to prevent expansion. The plasma turret arrived too late and was also underpowered against Rampant enemies, though I imagine it would be appropriately OP against normal ones. All clearing was done by hand, which was generally pretty efficient with the minigun. Probably spent too much time inefficiently clearing in the early game, not realising that biters would still attack outside the pollution cloud.
 
-The 100-150h playtime estimate feels about right. I tend to play much faster (but sloppier!) than most players and finished on the low end of that at 102h, with Rampant included. This was a very enjoyable mod and I recommended it to anyone looking to see what Factorio has to offer beyond the vanilla experience.
+The 100-150h playtime estimate feels about right. I tend to play much faster (but sloppier!) than most players and finished on the low end of that at 102h, with Rampant included. I created a [mapshot of the factory for posterity,](https://mapshot.xaviershay.com/ei/index.html) where you can scroll and zoom around it. This was a very enjoyable mod and I recommended it to anyone looking to see what Factorio has to offer beyond the vanilla experience.
 
 <figure>
   <img src='/images/ei/ei-map-cropped.jpg' />
-  <figcaption>Map view</figcaption>
+  <figcaption><a href='https://mapshot.xaviershay.com/ei/index.html'>Map view</a></figcaption>
 </figure>
 
 <figure>
