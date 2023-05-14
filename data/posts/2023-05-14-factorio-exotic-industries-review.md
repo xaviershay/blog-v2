@@ -28,19 +28,19 @@ Not related to Exotic Industries specifically, but for this run I decided to han
   <figcaption>Trains have to run through the base, that's the rule</figcaption>
 </figure>
 
-Unlocking nuclear power began an entirely new power progression that I really enjoyed. The nuclear chain is completely redone, with multiple types of radioactive material and no Kovarex process. Reactors are also rebalanced and don’t get the same neighbour bonuses, leading to new designs. After nuclear, fission energy is unlocked in the late game which provides another completely new system. You configure the reactor with different fuel mixes, temperatures, and injection rates for different outputs. I haven’t seen this “configurable building” pattern before outside of basic things like selecting a rocket location and thought it was a nice touch.
+Unlocking nuclear power began an entirely new power progression that I really enjoyed. The nuclear chain is completely redone, with multiple types of radioactive material and no Kovarex process. Reactors are also rebalanced and don’t get the same neighbour bonuses, leading to new designs. After nuclear, fusion energy is unlocked in the late game which provides another completely new system. You configure the reactor with different fuel mixes, temperatures, and injection rates for different outputs. I haven’t seen this “configurable building” pattern before outside of basic things like selecting a rocket location and thought it was a nice touch.
 
 Two extra tiers of solar panels felt a little lazy design-wise but was still useful. I loathe building giant solar blocks and typically avoid them all together, but I made some use of them here. Induction panels were a fun addition, creating a new mini-game to construct an efficient accumulator. Similar to spaceship construction in Space Exploration but with smaller scope. I enjoyed the power curve of these: felt like they quickly became OP but levelled out again for the endgame.
 
 <figure>
   <img src='/images/ei/ei-fission-cropped.jpg' />
-  <figcaption>A messy fission layout</figcaption>
+  <figcaption>A messy fusion layout</figcaption>
 </figure>
 
 I’m a big fan of beacon restriction, and appreciated that this mod explored that space. Four beacon maximum, and they require liquid nitrogen to operate. I still preferred the direction that Space Exploration’s take pushed me (single beacon with wide area), but this was still way better than vanilla and some variety is good.
 
 
-Flow wise the early and mid games feel right, but the late game doesn’t feel balanced yet. Space science in particular was a grind. Each rocket launch only generated 250 science at a time where each tech needed 2000+ to unlock, and the techs themselves were uninteresting. Increasing moon fish yield might help, but even so each of the five destinations required two technologies each yet didn’t unlock any new mechanics --- just extensions of asteroid mining. The maths for asteroid mining didn’t even come close to working however: even with productivity 5 modules each launch required nearly 50k copper and 12k iron, while returning (for Mars rocks) only 5k of each. Aside from extracting some token helium from Moon rocks, I basically skipped this entire age. Maybe it’s useful if you’re skint on resources, but even then it feels tenuous. I did enjoy the decorative holos for each destination however.
+Flow wise the early and mid games feel right, but the late game doesn’t feel balanced yet. Space science in particular was a grind. Each rocket launch only generated 250 science at a time where each tech needed 2000+ to unlock, and the techs themselves were uninteresting. The amount of rocket fuel needed was wild, I made two massive refineries to try and keep up. Increasing moon fish yield might help, but even so each of the five destinations required two technologies each yet didn’t unlock any new mechanics --- just extensions of asteroid mining. The maths for asteroid mining didn’t even come close to working however: even with productivity 5 modules each launch required nearly 50k copper and 12k iron, while returning (for Mars rocks) only 5k of each. Aside from extracting some token helium from Moon rocks, I basically skipped this entire age. Maybe it’s useful if you’re skint on resources, but even then it feels tenuous. I did enjoy the decorative holos for each destination however.
 
 Black hole science felt like an afterthought. Only needed for a single science, really straightforward recipe, then the game ends. I did enjoy the final black hole challenge though.
 
