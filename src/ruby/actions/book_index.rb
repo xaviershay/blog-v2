@@ -47,7 +47,7 @@ class Actions::BookIndex < Builder
     def yearly_stats
       @yearly_stats ||= stats.sort_by(&:first).filter {|k, v| k > 2009 }
     end
-    
+
     def recommendations_for(year)
       year_reviews[year]
     end

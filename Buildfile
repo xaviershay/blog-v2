@@ -7,6 +7,7 @@ require 'build_plan'
 require 'actions/book'
 require 'actions/post'
 require 'actions/book_index'
+require 'actions/run_index'
 
 require 'actions/compile_index'
 require 'actions/compile_index_metadata'
@@ -175,6 +176,21 @@ build_plan.load do
         'out/metadata/book_index.yml',
         'out/html/books',
         'out/site/books/feed.xml'
+      )
+    end
+  end
+
+  Actions::RunIndex.new.tap do |builder|
+    grouped_file 'Index (Run)', 'out/site/running/index.html' => [
+      'src/erb/run_index.html.erb',
+      LAYOUT_FILE,
+      'out/site/running'
+    ] do
+      builder.compile_erb(
+        LAYOUT_FILE,
+        'src/erb/run_index.html.erb',
+        'out/metadata/run_index.yml',
+        'out/site/running/index.html'
       )
     end
   end

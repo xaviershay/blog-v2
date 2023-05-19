@@ -1,0 +1,26 @@
+<nav class=''>
+  <div class='yearly-summaries'>
+    <table class="year-total-summary charts-css column multiple data-spacing-2 show-labels show-heading show-data">
+      <caption>Volume</caption>
+      <tbody>
+        <% distance_max = @site.yearly_stats.map {|x| x[1].distance }.max.to_f %>
+        <% elevation_max = @site.yearly_stats.map {|x| x[1].elevation }.max.to_f %>
+        <% @site.yearly_stats.each do |year, stats| %>
+          <tr>
+            <th scope="row"><%= year %></th>
+              <td style="--size:<%= stats.elevation / elevation_max %>">
+                <span class='data'><%= "%.1f" % (stats.elevation / 1000) %></span>
+              </td>
+              <td style="--size:<%= stats.distance / distance_max %>">
+                <span class='data'><%= stats.distance.to_i %></span>
+              </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <ul class="charts-css genre-legend legend-inline legend legend-rectangle">
+      <li>Vert</li>
+      <li>Distance</li>
+    </ul>
+  </div>
+</nav>
