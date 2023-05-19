@@ -11,3 +11,9 @@ group :test do
   gem 'rspec'
   gem 'nokogiri'
 end
+
+# PROTOTYPES
+
+gem 'dotenv'
+gem 'strava-ruby-client'
+gem 'polylines'

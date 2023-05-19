@@ -4,3 +4,5 @@ data/.vscode
 tmp
 .digests.json
 profile.html
+.env
+.strava-token

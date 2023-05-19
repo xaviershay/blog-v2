@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'sqlite3'
+require 'json'
+
+db = SQLite3::Database.new("run-data/data.db")
+
+rows = db.execute <<-SQL
+  create table if not exists runs (
+    id varchar,
+    title varchar,
+    description varchar,
+    distance int,
+    duration int,
+    moving_duration int,
+    type varchar,
+    elevation int,
+    date date,
+    map varchar,
+    PRIMARY KEY (id)
+  );
+SQL
+
+db.transaction
+Dir['run-data/processed/*.json'].each do |filename|
+  data = JSON.parse(File.read(filename))
+  db.execute "insert or ignore into runs values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )", data.values_at(*%w(id title description distance duration moving_duration type elevation date map))
+end
+db.commit

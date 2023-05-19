@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+
+require 'pp'
+require 'json'
+require 'date'
+require 'csv'
+
+# For each run, extract: name, description, date, elapsed, duration, map if exists
+# Filter not runs
+
+# Dailymile
+# activity_type.name == "Running"
+
+# Strava
+# type == "Run"
+
+def slugify(string)
+  string.gsub(/[^a-zA-Z0-9]+/, '-').downcase
+end
+
+def workout_type_to_string(int)
+  case int
+  when 0 then "run"
+  when 1 then "race"
+  when 2 then "workout"
+  when 3 then "long_run"
+  else "run"
+  end
+end
+
+
+Dir["run-data/strava/*-*.json"].each do |file|
+  data = JSON.parse(File.read(file))
+
+  next if data["type"] != "Run"
+  x = begin
+        {
+          'id' => "strava-#{data.fetch('id')}",
+          'external_id' => data.fetch('id').to_s,
+          "title" => data.fetch('name'),
+    "description" => data.fetch('description'),
+    "distance" => data.fetch("distance"),
+    "duration" => data.fetch("elapsed_time"), # TODO: Toggle for races vs not
+    "moving_duration" => data.fetch("moving_time"),
+    "type" => workout_type_to_string(data.fetch("workout_type")),
+    "elevation" => data.fetch("total_elevation_gain"),
+    "date" => Date.parse(data.fetch("start_date")).to_s,
+    "map" => data.fetch('map', {}).fetch('summary_polyline', nil)
+  }
+      rescue
+        pp data
+        raise
+      end
+  kms = x['distance'] / 1000.0
+  next unless x['duration'] > 0 && x['distance'] > 0
+  mins_per_k = x['duration'] / kms / 60
+  unless (3.25 .. 12).cover?(mins_per_k)
+    #raise "weird #{mins_per_k}"
+  end
+  filename = "%s-%s.json" % [x['date'], slugify(x['title'])]
+  File.write("run-data/processed/#{filename}", x.to_json)
+end
+
+index =  {}
+csv = CSV.read("run-data/dailymile/activities.csv", headers: true)
+csv.each do |row|
+  index[File.basename(row['filename'])] = row
+end
+Dir["run-data/dailymile/activities/*.json"].each do |file|
+  data = JSON.parse(File.read(file))
+
+  next if data["activity_type"]["name"] != "Running"
+  metadata = index.fetch(File.basename(file))
+  x = begin
+        {
+          'id' => "dm-#{data.fetch('id')}",
+          'external_id' => data.fetch('id').to_s,
+    "title" => metadata['title'] || "Untitled Run",
+    "description" => metadata['text'],
+    "distance" => data.fetch("distance"),
+    "type" => "run",
+    "duration" => data.fetch("duration"),
+    "elevation" => data.fetch("elevation_gain", 0),
+    "date" => Date.parse(data.fetch("completed_at")).to_s,
+    "map" => nil
+  }
+      rescue
+        pp data
+        raise
+      end
+  kms = x['distance'] / 1000.0
+  next unless x['duration'] > 0 && x['distance'] > 0
+  mins_per_k = x['duration'] / kms / 60
+  unless (3.25 .. 12).cover?(mins_per_k)
+    raise "weird #{mins_per_k}"
+  end
+  filename = "%s-%s.json" % [x['date'], slugify(x['title'])]
+  File.write("run-data/processed/#{filename}", x.to_json)
+end

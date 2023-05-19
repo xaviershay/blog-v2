@@ -1,0 +1,148 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'time'
+
+out_dir = "run-data/strava"
+
+class Metadata
+  attr_reader :oldest_activity_at
+
+  def initialize(oldest_activity_at)
+    @oldest_activity_at = oldest_activity_at
+  end
+
+  def self.from_json(json)
+    x = JSON.parse(json)
+    x['oldest_activity_at'] = Time.parse(x['oldest_activity_at'])
+    new(x['oldest_activity_at'])
+  end
+
+  def self.null
+    new(Time.now.utc)
+  end
+
+  def to_h
+    {
+      oldest_activity_at: @oldest_activity_at
+    }
+  end
+
+  def to_json
+    to_h.to_json
+  end
+
+  def update!(activity)
+    if activity.start_date < @oldest_activity_at
+      @oldest_activity_at = activity.start_date
+    end
+  end
+end
+
+METADATA_FILE = File.join(out_dir, "metadata.json")
+metadata =
+  if File.exists?(METADATA_FILE)
+    Metadata.from_json(File.read(METADATA_FILE))
+  else
+    Metadata.null
+  end
+
+class AuthToken
+  attr_reader :access_token, :refresh_token, :expires_at
+
+  def initialize(access_token, refresh_token, expires_at)
+    @access_token = access_token
+    @refresh_token = refresh_token
+    @expires_at = expires_at.to_i
+  end
+
+  def self.null
+    from_hash({})
+  end
+
+  def self.from_hash(hash)
+    hash ||= {}
+
+    AuthToken.new(*hash.values_at('access_token', 'refresh_token', 'expires_at'))
+  end
+
+  def expired?
+    Time.now >= Time.at(expires_at) - 60
+  end
+
+
+  def self.load(string)
+    from_hash(JSON.parse(string)) rescue null
+  end
+
+  def self.dump(token)
+    token.to_h.to_json
+  end
+
+  def to_h
+    {
+      access_token: access_token,
+      refresh_token: refresh_token,
+      expires_at: expires_at
+    }
+  end
+end
+
+require 'dotenv/load'
+require 'strava-ruby-client'
+
+def current_token!
+  token = AuthToken.load(File.read(".strava-token")) rescue AuthToken.null
+
+  return token unless token.expired?
+
+  client = Strava::OAuth::Client.new(
+    client_id: ENV.fetch('STRAVA_CLIENT_ID'),
+    client_secret: ENV.fetch('STRAVA_CLIENT_SECRET')
+  )
+
+  # TODO: Handle failure
+  response = client.oauth_token(
+    refresh_token: token.refresh_token,
+    grant_type: 'refresh_token'
+  )
+
+  new_token = AuthToken.new(
+    response.access_token,
+    response.refresh_token,
+    response.expires_at
+  )
+
+  File.write(".strava-token", AuthToken.dump(new_token))
+
+  new_token
+end
+
+token = current_token!
+client = Strava::Api::Client.new(
+  access_token: token.access_token,
+#logger: Logger.new(STDOUT)
+)
+
+def slugify(string)
+  string.gsub(/[^a-zA-Z0-9]+/, '-').downcase
+end
+
+while true
+  as = client.athlete_activities(
+    before: metadata.oldest_activity_at,
+    per_page: 200
+  )
+
+  break if as.empty?
+
+  as.each do |a|
+    filename = "%s-%s.json" % [a.start_date.strftime("%Y-%m-%d"), slugify(a.name)]
+    File.write(File.join(out_dir, filename), a.to_json)
+    puts filename
+    metadata.update!(a)
+  end
+
+  File.write(METADATA_FILE, metadata.to_json)
+end
+
