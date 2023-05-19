@@ -1,3 +1,5 @@
+$s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+
 require 'rspec'
 require 'tmpdir'
 

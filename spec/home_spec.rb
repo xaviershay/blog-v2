@@ -10,7 +10,7 @@ RSpec.describe "the blog" do
     end
 
     it 'segments posts by year' do
-      expect(page).to have_xpath("//h2[text()='2022']")
+      expect(page).to have_xpath("//h3[text()='2022']")
     end
   end
 

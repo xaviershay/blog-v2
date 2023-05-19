@@ -12,7 +12,7 @@ require 'actions/compile_index'
 require 'actions/compile_index_metadata'
 require 'actions/compile_atom'
 
-HOST = ENV.fetch("HOST", "https://blog.xaviershay.com")
+HOST = ENV.fetch("HOST", "http://localhost:4001")
 
 DIGEST_FILE = File.expand_path(".digests.json", File.dirname(__FILE__))
 
