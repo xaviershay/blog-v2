@@ -1,7 +1,7 @@
 def hash_to_ostruct(x)
   case x
   when Hash
-    if x.keys.all? {|y| y.is_a?(String) }
+    if x.keys.all? {|y| y.is_a?(String) || y.is_a?(Symbol) }
       OpenStruct.new(x.transform_values {|y| hash_to_ostruct(y) })
     else
       x.transform_values {|y| hash_to_ostruct(y) }

@@ -10,6 +10,7 @@ Deployed to [https://blog.xaviershay.com](https://blog.xaviershay.com)
 
 ## Usage
 
+    bin/update-runs # Optional, fetch data from Strava API.
     bin/build       # Build the website into `out` directory
     bin/serve       # Serve website at http://localhost:4001
     bin/test-local  # Run specs against local server (assumes already running)
@@ -21,6 +22,11 @@ Optional supporting tools:
 
 * `aspell` for spell-checking.
 * `ImageOptim` (OSX) or `Trimage` (Linux) for image optimization.
+
+We can also fetch data from Strava, though you'll need to set up an app and handle auth elsewhere (I copied credentials from another project.)
+
+    cp .env.example .env # And customize to taste
+    bin/update-runs
 
 ## History & Motivation
 
@@ -142,6 +148,11 @@ Outside of the standard library, we depend on the following gems:
 * **Kramdown.** Pure ruby library to convert markdown to HTML. Transitive
   dependency on `rexml` which I consider standard library (it was extracted
   to a gem in Ruby 3).
+* **Strava Ruby Client.** The one I'm least fond of, and don't use much of.
+  Could likely redo with `net/http` rather trivially given not using much of
+  it, and for optional functionality.
+  * **Dotenv.** To load env variables from `.env` for Strava. Need to remove
+    this, doesn't provide a heap of value.
 * **WEBrick.** This used to be standard library but is now a gem. Extremely
   stable still though.
 * **RSpec.** I'm ok with this, very stable. Might consider `Test::Unit`
@@ -151,6 +162,7 @@ Outside of the standard library, we depend on the following gems:
 Other dependencies include:
 
 * **AWS CLI.** For publishing the site to production.
+* **Github Actions.** For periodically refreshing run data and re-publishing.
 * **Simple.css** Not a real dependency, it's vendored and used as a starting
   point rather than something I intend to upgrade.
 * **Chart.css** Not a real dependency, it's vendored and used as a starting

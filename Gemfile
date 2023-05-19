@@ -5,9 +5,13 @@ group :development do
   gem 'webrick'
   gem 'kramdown'
   gem 'http'
+
+  gem 'dotenv'
+  gem 'strava-ruby-client'
 end
 
 group :test do
   gem 'rspec'
   gem 'nokogiri'
 end
+

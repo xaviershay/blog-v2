@@ -7,14 +7,18 @@ require 'build_plan'
 require 'actions/book'
 require 'actions/post'
 require 'actions/book_index'
+require 'actions/run_index'
 
 require 'actions/compile_index'
 require 'actions/compile_index_metadata'
 require 'actions/compile_atom'
+require 'actions/compile_run'
 
 HOST = ENV.fetch("HOST", "http://localhost:4001")
 
 DIGEST_FILE = File.expand_path(".digests.json", File.dirname(__FILE__))
+
+LAYOUT_FILE = "src/erb/_layout.html.erb"
 
 SRC_FILES = Dir["src/ruby/**/*.rb"]
 STATIC_FILES = Dir["src/static/**/*.{js,css}"]
@@ -93,9 +97,10 @@ build_plan.load do
     grouped_file 'Index', 'out/site/index.html' => [
       'out/metadata/index.yml',
       'src/erb/index.html.erb',
+      LAYOUT_FILE,
       'out/site'
     ] do
-      compile_index('out/metadata/index.yml', 'out/site/index.html')
+      compile_index(LAYOUT_FILE, 'out/metadata/index.yml', 'out/site/index.html')
     end
 
     grouped_file 'Index', 'out/site/feed.xml' => [
@@ -151,9 +156,11 @@ build_plan.load do
     grouped_file 'Index (Book)', 'out/site/books/index.html' => [
       'out/metadata/book_index.yml',
       'src/erb/book_index.html.erb',
+      LAYOUT_FILE,
       'out/site/books'
     ] do
       builder.compile_erb(
+        LAYOUT_FILE,
         'src/erb/book_index.html.erb',
         'out/metadata/book_index.yml',
         'out/site/books/index.html'
@@ -172,6 +179,29 @@ build_plan.load do
         'out/site/books/feed.xml'
       )
     end
+  end
+
+  Actions::RunIndex.new.tap do |builder|
+    metadata_file = 'out/metadata/running.yml'
+    grouped_file 'Index (Run)', metadata_file => 'tmp/rundata.json.gz' do
+      compile_run('tmp/rundata.json.gz', metadata_file)
+    end
+
+    grouped_file 'Index (Run)', 'out/site/running/index.html' => [
+      'src/erb/run_index.html.erb',
+      'src/static/css/custom.css',
+      metadata_file,
+      LAYOUT_FILE,
+      'out/site/running'
+    ] do
+      builder.compile_erb(
+        LAYOUT_FILE,
+        'src/erb/run_index.html.erb',
+        metadata_file,
+        'out/site/running/index.html'
+      )
+    end
+
   end
 end
 

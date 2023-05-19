@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'zlib'
+require 'json'
+require 'set'
+
+DB_FILE = "tmp/rundata.json.gz"
+
+raw = Zlib::GzipReader.open(DB_FILE) do |f|
+  f.read
+end
+
+db = JSON.parse(raw)
+db['activities'] ||= []
+
+ids = db['activities'].map {|x| x.fetch('id') }
+
+puts ids.size
+if ids.size != ids.uniq.size
+  raise "Duplicate data founds its way in!"
+end

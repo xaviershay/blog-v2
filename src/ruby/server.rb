@@ -20,7 +20,8 @@ class Server < WEBrick::HTTPServlet::DefaultFileHandler
 
     if req.path == to_match ||
        req.path == "/" && to_match == "/index.html" ||
-       req.path == "/books/" && to_match == "/books/index.html"
+       req.path == "/books/" && to_match == "/books/index.html" ||
+       req.path == "/running/" && to_match == "/running/index.html"
 
       super(req, res)
       ext = File.extname(req.path)
@@ -38,6 +39,7 @@ end
 server = WEBrick::HTTPServer.new(:Port => 4001)
 
 server.mount '/books/', Server, File.join(PREFIX, 'books/index.html')
+server.mount '/running/', Server, File.join(PREFIX, 'running/index.html')
 KNOWN_FILES.each do |file|
   server.mount file, Server, File.join(PREFIX, file)
 end

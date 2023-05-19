@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -ex
+
+aws s3 sync s3://blog.xaviershay.com-storage/ tmp --exclude '*' --include rundata.json.gz
+bundle exec bin/update-runs
+aws s3 sync tmp s3://blog.xaviershay.com-storage/ --exclude '*' --include rundata.json.gz
+bin/publish

@@ -45,7 +45,7 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
       read['started_at'] = ensure_date(read['started_at'])
       read['finished_at'] = ensure_date(read['finished_at'])
       read['abandoned_at'] = ensure_date(read['abandoned_at'])
-      date = read.fetch('finished_at') || read.fetch("abandoned_at")
+      date = read.fetch('finished_at') || read.fetch("abandoned_at").dup
       if date
         percentage = read.fetch('percentage', 100)
         pages = metadata.fetch('pages') * percentage.to_f / 100

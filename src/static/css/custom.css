@@ -129,8 +129,12 @@ nav.book-list {
 
 .year-total-summary {
   margin-top: 2rem; /* Make room for negatively positioned labels */
-  --color: var(--color-2);
 }
+.year-total-summary td:nth-of-type(1) { --color: var(--color-2) }
+.year-total-summary td:nth-of-type(2) { --color: var(--color-1) }
+
+.yearly-summaries .charts-css.genre-legend li:nth-of-type(1)::before { background-color: var(--color-2) }
+.yearly-summaries .charts-css.genre-legend li:nth-of-type(2)::before { background-color: var(--color-1) }
 
 .year-genre-summary td:nth-of-type(1) { --color: var(--color-1) }
 .year-genre-summary td:nth-of-type(2) { --color: var(--color-3) }
@@ -428,4 +432,51 @@ em {
 .music-analysis tbody tr th {
   font-size: 0.7rem;
   white-space: nowrap;
+}
+
+/* RUNNING */
+
+.run-index .page-header {
+  background-image: url("/images/running-header.jpg");
+}
+
+.run-index header.page-header > nav {
+  backdrop-filter: opacity(0.3);
+  background-color: rgba(0,0,0,0.3);
+}
+
+table.bests {
+  font-size: 90%
+}
+
+table.bests tr:nth-child(even) ,
+.run-history tr:nth-child(even) {
+  background-color: var(--bg);
+}
+
+.run-history td {
+  background-color: rgb(100%, 64.7%, 0%, var(--amount));
+}
+.run-history th {
+  padding-left: 0.4em;
+}
+
+.run-history .days-heading,
+.run-history .year-heading {
+  border: solid 2px black;
+}
+
+.run-history th.week-label {
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+}
+.run-history td.week-total {
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+}
+
+.run-history .centered {
+  text-align: center;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
 }

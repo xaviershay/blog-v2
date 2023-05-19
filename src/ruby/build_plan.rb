@@ -110,7 +110,11 @@ class BuildPlan
 
   def initialize(digest_file: nil)
     @digests = if digest_file
-       JSON.parse(File.read(digest_file))
+       begin
+         JSON.parse(File.read(digest_file))
+       rescue Errno::ENOENT
+         {}
+       end
     else
       {}
     end
