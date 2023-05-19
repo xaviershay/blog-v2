@@ -4,7 +4,7 @@ require 'actions/book'
 require 'support/load_index_metadata'
 
 class Actions::BookIndex < Builder
-  def compile_erb(template, metadata_file, output)
+  def compile_erb(layout, template, metadata_file, output)
     metadata = load_book_index_metadata(metadata_file)
 
     @site = hash_to_ostruct(metadata)
@@ -13,7 +13,13 @@ class Actions::BookIndex < Builder
       book.extend(Actions::Book::BookMethods)
     end
 
-    html = load_template(template).result(binding)
+    @content = load_template(template).result(binding)
+    @metadata_title = "Books — Xavier Shay"
+    @title = "Books I've Read"
+    @subtitle = ""
+    @class = "book-index"
+
+    html = load_template(layout).result(binding)
     write_gzip output, html
   end
 

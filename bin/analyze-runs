@@ -27,3 +27,7 @@ Dir['run-data/processed/*.json'].each do |filename|
   db.execute "insert or ignore into runs values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )", data.values_at(*%w(id title description distance duration moving_duration type elevation date map))
 end
 db.commit
+
+require 'pp'
+pp(db.execute "SELECT strftime('%Y', date), SUM(distance) / 1000.0, SUM(elevation) / 1000.0, SUM(duration) / 60.0 / 60.0 FROM runs GROUP BY 1 ORDER BY 1")
+pp(db.execute "SELECT * FROM runs WHERE id IN (SELECT id FROM (SELECT id, MAX(distance) FROM runs))")

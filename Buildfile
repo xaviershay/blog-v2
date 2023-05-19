@@ -16,6 +16,8 @@ HOST = ENV.fetch("HOST", "http://localhost:4001")
 
 DIGEST_FILE = File.expand_path(".digests.json", File.dirname(__FILE__))
 
+LAYOUT_FILE = "src/erb/_layout.html.erb"
+
 SRC_FILES = Dir["src/ruby/**/*.rb"]
 STATIC_FILES = Dir["src/static/**/*.{js,css}"]
 POST_FILES = Dir["data/posts/*.md"]
@@ -93,9 +95,10 @@ build_plan.load do
     grouped_file 'Index', 'out/site/index.html' => [
       'out/metadata/index.yml',
       'src/erb/index.html.erb',
+      LAYOUT_FILE,
       'out/site'
     ] do
-      compile_index('out/metadata/index.yml', 'out/site/index.html')
+      compile_index(LAYOUT_FILE, 'out/metadata/index.yml', 'out/site/index.html')
     end
 
     grouped_file 'Index', 'out/site/feed.xml' => [
@@ -151,9 +154,11 @@ build_plan.load do
     grouped_file 'Index (Book)', 'out/site/books/index.html' => [
       'out/metadata/book_index.yml',
       'src/erb/book_index.html.erb',
+      LAYOUT_FILE,
       'out/site/books'
     ] do
       builder.compile_erb(
+        LAYOUT_FILE,
         'src/erb/book_index.html.erb',
         'out/metadata/book_index.yml',
         'out/site/books/index.html'
