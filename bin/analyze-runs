@@ -2,6 +2,7 @@
 
 require 'sqlite3'
 require 'json'
+require 'yaml'
 
 db = SQLite3::Database.new("run-data/data.db")
 
@@ -29,5 +30,14 @@ end
 db.commit
 
 require 'pp'
-pp(db.execute "SELECT strftime('%Y', date), SUM(distance) / 1000.0, SUM(elevation) / 1000.0, SUM(duration) / 60.0 / 60.0 FROM runs GROUP BY 1 ORDER BY 1")
-pp(db.execute "SELECT * FROM runs WHERE id IN (SELECT id FROM (SELECT id, MAX(distance) FROM runs))")
+stats = {
+  'yearly_stats' => {}
+}
+db.execute("SELECT strftime('%Y', date), SUM(distance) / 1000.0, SUM(elevation), SUM(duration) / 60.0 / 60.0 FROM runs GROUP BY 1 ORDER BY 1").map do |row|
+  stats['yearly_stats'][row[0].to_i] = {
+    'distance' => row[1],
+    'elevation' => row[2]
+  }
+end
+File.write("data/stats/running.yml", stats.to_yaml)
+# pp(db.execute "SELECT * FROM runs WHERE id IN (SELECT id FROM (SELECT id, MAX(distance) FROM runs))")

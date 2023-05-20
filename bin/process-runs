@@ -14,6 +14,8 @@ require 'csv'
 # Strava
 # type == "Run"
 
+# There is overlap in the data, dailymile looks strictly better, has
+# descriptions and proper titles, so preference that.
 def slugify(string)
   string.gsub(/[^a-zA-Z0-9]+/, '-').downcase
 end
@@ -28,38 +30,7 @@ def workout_type_to_string(int)
   end
 end
 
-
-Dir["run-data/strava/*-*.json"].each do |file|
-  data = JSON.parse(File.read(file))
-
-  next if data["type"] != "Run"
-  x = begin
-        {
-          'id' => "strava-#{data.fetch('id')}",
-          'external_id' => data.fetch('id').to_s,
-          "title" => data.fetch('name'),
-    "description" => data.fetch('description'),
-    "distance" => data.fetch("distance"),
-    "duration" => data.fetch("elapsed_time"), # TODO: Toggle for races vs not
-    "moving_duration" => data.fetch("moving_time"),
-    "type" => workout_type_to_string(data.fetch("workout_type")),
-    "elevation" => data.fetch("total_elevation_gain"),
-    "date" => Date.parse(data.fetch("start_date")).to_s,
-    "map" => data.fetch('map', {}).fetch('summary_polyline', nil)
-  }
-      rescue
-        pp data
-        raise
-      end
-  kms = x['distance'] / 1000.0
-  next unless x['duration'] > 0 && x['distance'] > 0
-  mins_per_k = x['duration'] / kms / 60
-  unless (3.25 .. 12).cover?(mins_per_k)
-    #raise "weird #{mins_per_k}"
-  end
-  filename = "%s-%s.json" % [x['date'], slugify(x['title'])]
-  File.write("run-data/processed/#{filename}", x.to_json)
-end
+dm_runs = {}
 
 index =  {}
 csv = CSV.read("run-data/dailymile/activities.csv", headers: true)
@@ -94,6 +65,45 @@ Dir["run-data/dailymile/activities/*.json"].each do |file|
   unless (3.25 .. 12).cover?(mins_per_k)
     raise "weird #{mins_per_k}"
   end
+  dm_runs[x['date'].to_s] ||= []
+  dm_runs[x['date'].to_s] << x
   filename = "%s-%s.json" % [x['date'], slugify(x['title'])]
   File.write("run-data/processed/#{filename}", x.to_json)
 end
+Dir["run-data/strava/*-*.json"].each do |file|
+  data = JSON.parse(File.read(file))
+
+  next if data["type"] != "Run"
+  x = begin
+        {
+          'id' => "strava-#{data.fetch('id')}",
+          'external_id' => data.fetch('id').to_s,
+          "title" => data.fetch('name'),
+    "description" => data.fetch('description'),
+    "distance" => data.fetch("distance"),
+    "duration" => data.fetch("elapsed_time"), # TODO: Toggle for races vs not
+    "moving_duration" => data.fetch("moving_time"),
+    "type" => workout_type_to_string(data.fetch("workout_type")),
+    "elevation" => data.fetch("total_elevation_gain"),
+    "date" => Date.parse(data.fetch("start_date")).to_s,
+    "map" => data.fetch('map', {}).fetch('summary_polyline', nil)
+  }
+      rescue
+        pp data
+        raise
+      end
+  kms = x['distance'] / 1000.0
+  next unless x['duration'] > 0 && x['distance'] > 0
+  mins_per_k = x['duration'] / kms / 60
+  unless (3.25 .. 12).cover?(mins_per_k)
+    #raise "weird #{mins_per_k}"
+  end
+  possible_dups = dm_runs[x['date'].to_s]
+  if possible_dups
+    puts "Skipping #{x['date']}"
+    next
+  end
+  filename = "%s-%s.json" % [x['date'], slugify(x['title'])]
+  File.write("run-data/processed/#{filename}", x.to_json)
+end
+
