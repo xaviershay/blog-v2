@@ -433,3 +433,18 @@ em {
   font-size: 0.7rem;
   white-space: nowrap;
 }
+
+/* RUNNING */
+
+.run-index .page-header {
+  background-image: url("/images/running-header.jpg");
+}
+
+.run-index header.page-header > nav {
+  backdrop-filter: opacity(0.3);
+  background-color: rgba(0,0,0,0.3);
+}
+
+table.bests {
+  font-size: 90%
+}

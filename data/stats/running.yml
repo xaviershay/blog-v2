@@ -42,3 +42,46 @@ yearly_stats:
   2023:
     distance: 1234.7154000000007
     elevation: 32613
+bests:
+- event: 1 mile
+  distance: 1579
+  duration: 334
+  date: 2018-03-29
+  activity_href: https://www.strava.com/activities/1477373729
+  activity_title: that's a mile pr that is
+- event: 5K
+  distance: 4902.3
+  duration: 1081
+  date: 2020-04-06
+  activity_href: https://www.strava.com/activities/3260978622
+  activity_title: end of season 5K TT
+- event: 10K
+  distance: 10012.9
+  duration: 2360
+  date: 2019-03-05
+  activity_href: https://www.strava.com/activities/2193098766
+  activity_title: unofficial ten k pr
+- event: Half
+  distance: 21052.8
+  duration: 5203
+  date: 2015-12-12
+  activity_href: https://www.strava.com/activities/448924490
+  activity_title: walnut creek half marathon pr
+- event: Marathon
+  distance: 42817
+  duration: 12379
+  date: 2012-03-25
+  activity_href: https://www.strava.com/activities/5719875
+  activity_title: oakland running festival marathon
+- event: 50K
+  distance: 48380
+  duration: 16903
+  date: 2023-03-10
+  activity_href: https://www.strava.com/activities/8693546298
+  activity_title: lumberjack 50k
+- event: 100K
+  distance: 102303
+  duration: 57018
+  date: 2023-03-31
+  activity_href: https://www.strava.com/activities/8812330177
+  activity_title: bright ugs 100k (day 2)
