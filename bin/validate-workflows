@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+YAML.load_file(".github/workflows/update-running.yml")
