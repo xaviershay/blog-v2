@@ -53,7 +53,7 @@ class AuthToken
     }
   end
 end
-require 'dotenv/load'
+
 require 'strava-ruby-client'
 
 def current_token!
