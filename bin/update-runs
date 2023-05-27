@@ -1,3 +1,152 @@
 #!/usr/bin/env ruby
 
-puts "hi"
+def workout_type_to_string(int)
+  case int
+  when 0 then "run"
+  when 1 then "race"
+  when 2 then "workout"
+  when 3 then "long_run"
+  else "run"
+  end
+end
+
+require 'json'
+require 'set'
+
+class AuthToken
+  attr_reader :access_token, :refresh_token, :expires_at
+
+  def initialize(access_token, refresh_token, expires_at)
+    @access_token = access_token
+    @refresh_token = refresh_token
+    @expires_at = expires_at.to_i
+  end
+
+  def self.null
+    from_hash({})
+  end
+
+  def self.from_hash(hash)
+    hash ||= {}
+
+    AuthToken.new(*hash.values_at('access_token', 'refresh_token', 'expires_at'))
+  end
+
+  def expired?
+    Time.now >= Time.at(expires_at) - 60
+  end
+
+
+  def self.load(string)
+    from_hash(JSON.parse(string)) rescue null
+  end
+
+  def self.dump(token)
+    token.to_h.to_json
+  end
+
+  def to_h
+    {
+      access_token: access_token,
+      refresh_token: refresh_token,
+      expires_at: expires_at
+    }
+  end
+end
+require 'dotenv/load'
+require 'strava-ruby-client'
+
+def current_token!
+  token = AuthToken.load(File.read(".strava-token")) rescue AuthToken.null
+
+  return token unless token.expired?
+
+  client = Strava::OAuth::Client.new(
+    client_id: ENV.fetch('STRAVA_CLIENT_ID'),
+    client_secret: ENV.fetch('STRAVA_CLIENT_SECRET')
+  )
+
+  # TODO: Handle failure
+  response = client.oauth_token(
+    refresh_token: token.refresh_token,
+    grant_type: 'refresh_token'
+  )
+
+  new_token = AuthToken.new(
+    response.access_token,
+    response.refresh_token,
+    response.expires_at
+  )
+
+  File.write(".strava-token", AuthToken.dump(new_token))
+
+  new_token
+end
+require 'zlib'
+
+DB_FILE = "tmp/rundata.json.gz"
+
+raw = begin
+  Zlib::GzipReader.open(DB_FILE) do |f|
+    f.read
+  end
+rescue Errno::ENOENT
+  "{}"
+end
+
+db = JSON.parse(raw)
+db['activities'] ||= []
+
+old_size = db['activities'].size
+
+existing = Set.new(db['activities'].map {|x| x.fetch('external_id') })
+
+token = current_token!
+client = Strava::Api::Client.new(
+  access_token: token.access_token,
+#logger: Logger.new(STDOUT)
+)
+
+epoch = db['activities'].map {|a| Time.parse(a['date']) }.max || Time.new(2000, 1, 1)
+
+while true
+  puts "Fetching since: #{epoch}"
+  as = client.athlete_activities(
+    after: epoch,
+    per_page: 200
+  )
+  break if as.empty?
+
+  as.each do |a|
+    epoch = a.start_date if a.start_date > epoch
+
+    next if existing.include?(a.id.to_s)
+
+    puts "New activity: #{a.id} #{a.start_date} #{a.name}"
+    db['activities'] << {
+      'id'              => "strava-#{a.id}",
+      'external_id'     => a.id.to_s,
+      "title"           => a.name,
+      "description"     => a.description,
+      "distance"        => a.distance,
+      "duration"        => a.elapsed_time, # TODO: Toggle for races vs not
+      "moving_duration" => a.moving_time,
+      "type"            => workout_type_to_string(a.workout_type),
+      "elevation"       => a.total_elevation_gain,
+      "date"            => a.start_date.to_date.to_s,
+      "map"             => a.map&.summary_polyline
+    }
+
+  end
+end
+
+at_exit do
+  if db['activities'].size > old_size
+    puts "New activities, saving data..."
+    Zlib::GzipWriter.open(DB_FILE) do |gz|
+      gz.write db.to_json
+    end
+  else
+    puts "No new activities, not saving data"
+  end
+end
