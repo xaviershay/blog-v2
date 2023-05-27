@@ -55,14 +55,19 @@ class AuthToken
 end
 
 require 'strava-ruby-client'
+require 'dotenv/load'
 
 def current_token!
-  token = AuthToken.load(File.read(".strava-token")) rescue AuthToken.null
+  token = AuthToken.new(
+    nil,
+    ENV.fetch("STRAVA_REFRESH_TOKEN"),
+    nil
+  )
 
   return token unless token.expired?
 
   client = Strava::OAuth::Client.new(
-    client_id: ENV.fetch('STRAVA_CLIENT_ID'),
+    client_id:     ENV.fetch('STRAVA_CLIENT_ID'),
     client_secret: ENV.fetch('STRAVA_CLIENT_SECRET')
   )
 
@@ -77,8 +82,6 @@ def current_token!
     response.refresh_token,
     response.expires_at
   )
-
-  File.write(".strava-token", AuthToken.dump(new_token))
 
   new_token
 end
