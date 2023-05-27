@@ -1,0 +1,35 @@
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs_on: ubuntu-latest
+    steps:
+      - uses: uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: '3.1.2'
+          bundler-cache: true
+      - name: Install dependencies
+        run: bundle install
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::615749242856:role/github-actions-blog-s3
+          aws-region: us-east-1
+      # Upload a file to AWS s3
+      - name:  Copy database locally
+        run: |
+          aws s3 cp s3://blog.xaviershay.com-storage/rundata.json.gz ./tmp/
+      - name:  Unzip it
+        run: |
+          gunzip ./tmp/rundata.json.gz
+      - name: Run some ruby
+        run: |
+          bin/update-runs
+      - name:  Zip it
+        run: |
+          gzip ./tmp/rundata.json
+      - name:  Store database if changed
+        run: |
+          aws s3 sync tmp s3://blog.xaviershay.com-storage/ --exclude '*' --include rundata.json.gz
