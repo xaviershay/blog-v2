@@ -25,9 +25,6 @@ jobs:
       - name:  Copy database locally
         run: |
           aws s3 cp s3://blog.xaviershay.com-storage/rundata.json.gz ./tmp/
-      - name:  Unzip it
-        run: |
-          gunzip ./tmp/rundata.json.gz
       - name: Run some ruby
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
@@ -35,9 +32,6 @@ jobs:
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         run: |
           bundle exec bin/update-runs
-      - name:  Zip it
-        run: |
-          gzip ./tmp/rundata.json
       - name:  Store database if changed
         run: |
           aws s3 sync tmp s3://blog.xaviershay.com-storage/ --exclude '*' --include rundata.json.gz
