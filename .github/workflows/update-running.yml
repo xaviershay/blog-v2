@@ -29,6 +29,9 @@ jobs:
         run: |
           gunzip ./tmp/rundata.json.gz
       - name: Run some ruby
+        env:
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_ACCESS_TOKEN: ${{ secrets.STRAVA_ACCESS_TOKEN }}
         run: |
           bin/update-runs
       - name:  Zip it
