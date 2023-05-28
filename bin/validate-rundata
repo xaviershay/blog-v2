@@ -15,6 +15,7 @@ db['activities'] ||= []
 
 ids = db['activities'].map {|x| x.fetch('id') }
 
+puts ids.size
 if ids.size != ids.uniq.size
   raise "Duplicate data founds its way in!"
 end

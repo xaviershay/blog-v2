@@ -1,83 +1,75 @@
 #!/usr/bin/env ruby
 
-require 'sqlite3'
 require 'date'
+require 'zlib'
 require 'json'
 require 'yaml'
 
-db = SQLite3::Database.new("run-data/data.db")
+DB_FILE = "tmp/rundata.json.gz"
 
-rows = db.execute <<-SQL
-  create table if not exists runs (
-    id varchar,
-    title varchar,
-    description varchar,
-    distance int,
-    duration int,
-    moving_duration int,
-    type varchar,
-    elevation int,
-    date date,
-    map varchar,
-    PRIMARY KEY (id)
-  );
-SQL
-
-db.transaction
-Dir['run-data/processed/*.json'].each do |filename|
-  data = JSON.parse(File.read(filename))
-  db.execute "insert or ignore into runs values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )", data.values_at(*%w(id title description distance duration moving_duration type elevation date map))
+raw = begin
+  Zlib::GzipReader.open(DB_FILE) do |f|
+    f.read
+  end
+rescue Errno::ENOENT
+  "{}"
 end
-db.commit
 
-require 'pp'
-stats = {
-  'yearly_stats' => {},
-  'bests' => []
+db = JSON.parse(raw)
+db['activities'] ||= []
+
+default_yearly_stats = {
+  'distance'  => 0,
+  'elevation' => 0,
+  'duration'  => 0,
 }
-db.execute("SELECT strftime('%Y', date), SUM(distance) / 1000.0, SUM(elevation), SUM(duration) / 60.0 / 60.0 FROM runs GROUP BY 1 ORDER BY 1").map do |row|
-  stats['yearly_stats'][row[0].to_i] = {
-    'distance' => row[1],
-    'elevation' => row[2]
-  }
-end
+
+stats = {
+  'yearly_stats' => (2010..2023).map {|x| [x, default_yearly_stats.dup] }.to_h,
+  'bests'        => [],
+  'history'      => {},
+}
+
 
 bests = {
-  "1 mile" => 1477373729,
-  '5K' => 3260978622,
-  '10K' => 2193098766,
-  'Half' => 448924490,
-  '50K' => 8693546298,
-  '100K' => 8812330177
+  "1 mile"   => 'strava-1477373729',
+  '5K'       => 'strava-3260978622',
+  '10K'      => 'strava-2193098766',
+  'Half'     => 'strava-448924490',
+  'Marathon' => 'strava-5719875',
+  '50K'      => 'strava-8693546298',
+  '100K'     => 'strava-8812330177'
 }
 
-bests.each do |event, strava_id|
-  distance, duration, date, title =
-    *db.execute("SELECT distance, duration, date, title FROM runs WHERE id = ?", "strava-#{strava_id}").first
-  puts [distance, duration, date, title].inspect
+index = {}
+db['activities'].each do |a|
+  index[a.fetch('id')] = a
+  date = Date.parse(a['date'])
+  year = date.strftime('%G').to_i
+  week = date.strftime("%-V").to_i
+  day = (date.wday - 1) % 7
+
+  stat = stats['yearly_stats'][year] ||= default_yearly_stats
+  stat['distance'] += a.fetch('distance') / 1000.0
+  stat['elevation'] += a.fetch('elevation') / 1000.0
+  stat['duration'] += a.fetch('duration') / 3600.0
+
+  stats['history'][year] ||=
+    (1..([Date.new(year, 12, 28), Date.today].min.strftime("%-V").to_i)).map {|x| [x, Array.new(7)] }.to_h
+  stats['history'][year][week][day] ||= 0.0
+  stats['history'][year][week][day] += a.fetch('distance') / 1000.0
+end
+
+bests.each do |event, id|
+  a = index.fetch(id)
   stats['bests'] << {
     'event' => event,
-    'distance' => distance,
-    'duration' => duration,
-    'date' => Date.parse(date),
-    'activity_href' => "https://www.strava.com/activities/#{strava_id}",
-    'activity_title' => title
+    'distance' => a.fetch('distance'),
+    'duration' => a.fetch('duration'),
+    'date' => Date.parse(a.fetch('date')),
+    'activity_href' => "https://www.strava.com/activities/#{a.fetch('external_id')}",
+    'activity_title' => a.fetch('title')
   }
 end
 
-# Marathon is on dailymile which doesn't exist, so hacks. Just gotta run a faster marathon!
-distance, duration, date, title =
-  *db.execute("SELECT distance, duration, date, title FROM runs WHERE id = ?", "dm-NTYtMTMwOTUyNTk").first
-
-stats['bests'] << {
-  'event' => 'Marathon',
-  'distance' => distance,
-  'duration' => duration,
-  'date' => Date.parse(date),
-  'activity_href' => "https://www.strava.com/activities/5719875",
-  'activity_title' => title.downcase
-}
-stats['bests'].sort_by! {|x| x['distance'] }
-
 File.write("data/stats/running.yml", stats.to_yaml)
-# pp(db.execute "SELECT * FROM runs WHERE id IN (SELECT id FROM (SELECT id, MAX(distance) FROM runs))")

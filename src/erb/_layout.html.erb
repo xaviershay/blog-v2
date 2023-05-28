@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/css/simple.css">
     <link rel="stylesheet" href="/css/charts.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/custom.css?<%= Digest::MD5.file("src/static/css/custom.css").hexdigest %>">
 
     <title><%= @metadata_title || @title %></title>
   </head>

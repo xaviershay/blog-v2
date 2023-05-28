@@ -17,6 +17,12 @@ class Actions::RunIndex < Builder
     write_gzip output, html
   end
 
+  def format_thousands(x)
+    parts = x.to_s.split('.')
+    parts[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+    parts.join('.')
+  end
+
   def format_duration(x)
     if x < 3600
       "%i:%02i" % [x / 60, x % 60]

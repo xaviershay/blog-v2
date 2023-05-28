@@ -123,9 +123,10 @@ while true
   as.each do |a|
     epoch = a.start_date if a.start_date > epoch
 
+    next unless ["Run", "TrailRun"].include?(a.sport_type)
     next if existing.include?(a.id.to_s)
 
-    puts "New activity: #{a.id} #{a.start_date} #{a.name}"
+    puts "New activity: #{a.id} #{a.start_date_local} #{a.name}"
     db['activities'] << {
       'id'              => "strava-#{a.id}",
       'external_id'     => a.id.to_s,
@@ -136,7 +137,7 @@ while true
       "moving_duration" => a.moving_time,
       "type"            => workout_type_to_string(a.workout_type),
       "elevation"       => a.total_elevation_gain,
-      "date"            => a.start_date.to_date.to_s,
+      "date"            => a.start_date_local.to_date.to_s,
       "map"             => a.map&.summary_polyline
     }
 

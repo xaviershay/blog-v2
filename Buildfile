@@ -183,6 +183,7 @@ build_plan.load do
   Actions::RunIndex.new.tap do |builder|
     grouped_file 'Index (Run)', 'out/site/running/index.html' => [
       'src/erb/run_index.html.erb',
+      'src/static/css/custom.css',
       'data/stats/running.yml',
       LAYOUT_FILE,
       'out/site/running'

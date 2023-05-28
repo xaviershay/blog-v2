@@ -1,4 +1,7 @@
 <nav class=''>
+  <div>
+    <p>Follow me on <a href="https://www.strava.com/athletes/276401">Strava</a></p>
+  </div>
   <div class='yearly-summaries'>
     <table class="year-total-summary charts-css column multiple data-spacing-2 show-labels show-heading show-data">
       <caption>Volume</caption>
@@ -6,10 +9,11 @@
         <% distance_max = @site.yearly_stats.map {|x| x[1].distance }.max.to_f %>
         <% elevation_max = @site.yearly_stats.map {|x| x[1].elevation }.max.to_f %>
         <% @site.yearly_stats.each do |year, stats| %>
+          <% next unless year >= 2015 %>
           <tr>
             <th scope="row"><%= year %></th>
               <td style="--size:<%= stats.elevation / elevation_max %>">
-                <span class='data'><%= "%.1f" % (stats.elevation / 1000) %></span>
+                <span class='data'><%= "%.1f" % stats.elevation %></span>
               </td>
               <td style="--size:<%= stats.distance / distance_max %>">
                 <span class='data'><%= stats.distance.to_i %></span>
@@ -19,8 +23,8 @@
       </tbody>
     </table>
     <ul class="charts-css genre-legend legend-inline legend legend-rectangle">
-      <li>Vert</li>
-      <li>Distance</li>
+      <li>Vert (K)</li>
+      <li>Distance (K)</li>
     </ul>
   </div>
   <div>
@@ -41,6 +45,41 @@
           <td style='white-space: nowrap;'><%= best.date.strftime("%Y, %B %e") %></td>
           <td><a href='<%= best.activity_href %>'><%= best.activity_title %></a></td>
         </tr>
+      <% end %>
+    </table>
+    <h3>History</h3>
+    <table class='run-history'>
+      <tr class='days-heading'>
+        <th></th>
+        <th class='centered'>M</th>
+        <th class='centered'>T</th>
+        <th class='centered'>W</th>
+        <th class='centered'>T</th>
+        <th class='centered'>F</th>
+        <th class='centered'>S</th>
+        <th class='centered'>S</th>
+        <th></th>
+      </tr>
+      <% @site.history.keys.sort.reverse.each do |year| %>
+        <tr class='year-heading'>
+          <th colspan='8'><%= year %></th>
+          <th class='centered'><%= format_thousands(@site.yearly_stats.fetch(year).distance.round) %></th>
+        </tr>
+        <% weeks = @site.history.fetch(year) %>
+        <% weeks.keys.sort.reverse.each do |index| %>
+          <% date = Date.parse("#{year}W#{"%02i" % index}") rescue raise("#{year}W#{index}") %>
+          <% week = weeks.fetch(index) %>
+          <% month = date.strftime("%b") %>
+          <% last_month = (date - 7).strftime("%b") %>
+          <tr>
+            <th class='week-label'><%= month if month != last_month || index == 1 %></th>
+            <% week.each do |day| %>
+              <td class='centered' style='--amount: <%= "%.2f" % (day.to_f / 30.0) %>'><%= "%.1f" % day if day %></td>
+            <% end %>
+            <% total = week.compact.sum %>
+            <td class='week-total centered' style='--amount: <%= [total / 120.0, 120].min %>'><%= "%.1f" % total %>
+          </tr>
+        <% end %>
       <% end %>
     </table>
   </div>
