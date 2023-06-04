@@ -43,7 +43,7 @@
           <td><%= format_duration(best.duration) %></td>
           <td><%= format_duration(best.duration / (best.distance / 1000.0)) %></td>
           <td style='white-space: nowrap;'><%= best.date.strftime("%Y, %B %e") %></td>
-          <td><a href='<%= best.activity_href %>'><%= best.activity_title %></a></td>
+          <td><a href='<%= best.activity_href %>'><%= best.activity_title.downcase %></a></td>
         </tr>
       <% end %>
     </table>

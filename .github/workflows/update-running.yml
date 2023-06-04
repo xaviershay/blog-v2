@@ -21,17 +21,10 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::615749242856:role/github-actions-blog-s3
           aws-region: us-east-1
-      # Upload a file to AWS s3
-      - name:  Copy database locally
-        run: |
-          aws s3 cp s3://blog.xaviershay.com-storage/rundata.json.gz ./tmp/
-      - name: Run some ruby
+      - name: Sync & Publish
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         run: |
-          bundle exec bin/update-runs
-      - name:  Store database if changed
-        run: |
-          aws s3 sync tmp s3://blog.xaviershay.com-storage/ --exclude '*' --include rundata.json.gz
+          bundle exec bin/sync-and-publish
