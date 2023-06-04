@@ -121,7 +121,7 @@ RSpec.describe BuildPlan do
     end
     builder.build "out"
 
-    expect(Dir.exists?("out")).to eq(true)
+    expect(Dir.exist?("out")).to eq(true)
   end
 
   it 'does not generate file again on subsequent run' do
