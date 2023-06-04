@@ -3,4 +3,3 @@
 set -ex
 
 rm -rf out
-rm -rf tmp

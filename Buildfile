@@ -12,6 +12,7 @@ require 'actions/run_index'
 require 'actions/compile_index'
 require 'actions/compile_index_metadata'
 require 'actions/compile_atom'
+require 'actions/compile_run'
 
 HOST = ENV.fetch("HOST", "http://localhost:4001")
 
@@ -181,20 +182,26 @@ build_plan.load do
   end
 
   Actions::RunIndex.new.tap do |builder|
+    metadata_file = 'out/metadata/running.yml'
+    grouped_file 'Index (Run)', metadata_file => 'tmp/rundata.json.gz' do
+      compile_run('tmp/rundata.json.gz', metadata_file)
+    end
+
     grouped_file 'Index (Run)', 'out/site/running/index.html' => [
       'src/erb/run_index.html.erb',
       'src/static/css/custom.css',
-      'data/stats/running.yml',
+      metadata_file,
       LAYOUT_FILE,
       'out/site/running'
     ] do
       builder.compile_erb(
         LAYOUT_FILE,
         'src/erb/run_index.html.erb',
-        'data/stats/running.yml',
+        metadata_file,
         'out/site/running/index.html'
       )
     end
+
   end
 end
 

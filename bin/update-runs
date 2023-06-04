@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+
 def workout_type_to_string(int)
   case int
   when 0 then "run"
@@ -88,6 +90,8 @@ end
 require 'zlib'
 
 DB_FILE = "tmp/rundata.json.gz"
+
+FileUtils.mkdir_p(File.dirname(DB_FILE))
 
 raw = begin
   Zlib::GzipReader.open(DB_FILE) do |f|

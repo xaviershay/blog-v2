@@ -3,4 +3,4 @@
 * Different format/color for races.
 * Link to yearly reviews that talk about running
 * Make vert toggleable in table
-* Move data/stats/running.yml to out/
+* [DONE] Move data/stats/running.yml to out/
