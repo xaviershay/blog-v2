@@ -18,6 +18,12 @@ jobs:
         with:
           ruby-version: '3.1.2'
           bundler-cache: true
+      - name: Cache Run Data
+        id: cache-run-data
+        uses: actions/cache@v3
+        with:
+          path: tmp
+          key: tmp
       - name: Install dependencies
         run: bundle install
       - name: Configure AWS Credentials
