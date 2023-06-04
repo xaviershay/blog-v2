@@ -52,7 +52,7 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
         x = metadata.except('reads')
         x['slug'] = File.basename(book, ".md.yml")
         x['categories'] = x['categories'].dup
-        x['finished_at'] = date
+        x['finished_at'] = date.dup
         x['started_at'] = read['started_at']
         x['abandoned_at'] = read['abandoned_at']
         x['percentage'] = read['percentage']
