@@ -3,6 +3,16 @@ require 'zlib'
 require 'json'
 require 'yaml'
 
+def type_to_ord(type)
+  case type
+  when 'run' then 1
+  when 'workout' then 2
+  when 'long_run' then 2
+  when "race" then 3
+  else 0
+  end
+end
+
 def compile_run(db_file, out)
   raw = begin
     Zlib::GzipReader.open(db_file) do |f|
@@ -58,6 +68,17 @@ def compile_run(db_file, out)
     stats['history'][year][week][day] ||= {}
     stats['history'][year][week][day]['distance'] ||= 0.0
     stats['history'][year][week][day]['distance'] += a.fetch('distance') / 1000.0
+    existing = stats['history'][year][week][day]['link'] ||= {}
+    x = type_to_ord(a['type'])
+    y = type_to_ord(existing['type'])
+    if x > y || (x == y && a['duration'] > existing['duration'].to_f)
+      existing['href'] = "https://www.strava.com/activities/#{a.fetch('external_id')}"
+      existing['title'] = a.fetch('title')
+      existing['type'] = a.fetch('type')
+      existing['duration'] = a.fetch('duration')
+    end
+    stats['history'][year][week][day]['debug'] ||= []
+    stats['history'][year][week][day]['debug'] << [a.fetch('type'), x, y]
   end
 
   bests.each do |event, id|

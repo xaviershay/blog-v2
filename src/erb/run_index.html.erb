@@ -75,7 +75,11 @@
             <th class='week-label'><%= month if month != last_month || index == 1 %></th>
             <% week.each do |day| %>
               <td class='centered' style='--amount: <%= "%.2f" % (day&.distance.to_f / 30.0) %>'>
-                <%= "%.1f" % day.distance if day && day.distance > 0 %>
+                <% if day && day.distance.to_f > 0 %>
+                  <a href='<%= day.link.href %>' title='<%=h day.link.title %>'>
+                    <%= "%.1f" % day.distance %>
+                  </a>
+                <% end %>
               </td>
             <% end %>
             <% total = week.compact.map(&:distance).sum %>
