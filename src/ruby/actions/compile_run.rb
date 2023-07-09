@@ -36,7 +36,8 @@ def compile_run(db_file, out)
     'Half'     => 'strava-448924490',
     'Marathon' => 'strava-5719875',
     '50K'      => 'strava-8693546298',
-    '100K'     => 'strava-8812330177'
+    '100K'     => 'strava-8812330177',
+    'Vertical K' => 'strava-9391231065'
   }
 
   index = {}
