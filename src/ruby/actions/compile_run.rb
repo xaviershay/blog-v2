@@ -55,8 +55,9 @@ def compile_run(db_file, out)
 
     stats['history'][year] ||=
       (1..([Date.new(year, 12, 28), Date.today].min.strftime("%-V").to_i)).map {|x| [x, Array.new(7)] }.to_h
-    stats['history'][year][week][day] ||= 0.0
-    stats['history'][year][week][day] += a.fetch('distance') / 1000.0
+    stats['history'][year][week][day] ||= {}
+    stats['history'][year][week][day]['distance'] ||= 0.0
+    stats['history'][year][week][day]['distance'] += a.fetch('distance') / 1000.0
   end
 
   bests.each do |event, id|
