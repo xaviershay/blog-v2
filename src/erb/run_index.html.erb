@@ -60,7 +60,7 @@
         <th class='centered'>S</th>
         <th></th>
       </tr>
-      <% @site.history.keys.sort.reverse.each do |year| %>
+      <% (@site.history.keys || []).sort.reverse.each do |year| %>
         <tr class='year-heading'>
           <th colspan='8'><%= year %></th>
           <th class='centered'><%= format_thousands(@site.yearly_stats.fetch(year).distance.round) %></th>

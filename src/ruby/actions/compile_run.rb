@@ -82,7 +82,8 @@ def compile_run(db_file, out)
   end
 
   bests.each do |event, id|
-    a = index.fetch(id)
+    a = index[id]
+    next unless a
     stats['bests'] << {
       'event' => event,
       'distance' => a.fetch('distance'),
