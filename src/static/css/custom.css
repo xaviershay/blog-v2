@@ -133,8 +133,8 @@ nav.book-list {
 .year-total-summary td:nth-of-type(1) { --color: var(--color-2) }
 .year-total-summary td:nth-of-type(2) { --color: var(--color-1) }
 
-.yearly-summaries .charts-css.genre-legend li:nth-of-type(1)::before { background-color: var(--color-2) }
-.yearly-summaries .charts-css.genre-legend li:nth-of-type(2)::before { background-color: var(--color-1) }
+.yearly-summaries.running .charts-css.genre-legend li:nth-of-type(1)::before { background-color: var(--color-2) }
+.yearly-summaries.running .charts-css.genre-legend li:nth-of-type(2)::before { background-color: var(--color-1) }
 
 .year-genre-summary td:nth-of-type(1) { --color: var(--color-1) }
 .year-genre-summary td:nth-of-type(2) { --color: var(--color-3) }
