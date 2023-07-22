@@ -9,11 +9,10 @@ categories:
 - fantasy
 reads:
 - finished_at: 2017-07-20
-- finished_at: 2023-07-23
+- finished_at: 2023-07-08
 ---
 
 Economic/political fantasy, yes please.
-
 
 > She liked his advice better than Pinion’s, because it was full of things to
 > accomplish now rather than things to avoid forever.
