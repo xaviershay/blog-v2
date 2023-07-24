@@ -21,6 +21,7 @@ Deployed to [https://blog.xaviershay.com](https://blog.xaviershay.com)
 Optional supporting tools:
 
 * `aspell` for spell-checking.
+* `imagemagic` for auto-resizing images, see `misc/resize-images.sh`
 * `ImageOptim` (OSX) or `Trimage` (Linux) for image optimization.
 
 We can also fetch data from Strava, though you'll need to set up an app and handle auth elsewhere (I copied credentials from another project.)

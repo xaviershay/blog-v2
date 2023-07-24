@@ -60,9 +60,14 @@
           <% end %>
           </ul>
         <% else %>
-          <a href='<%= credit.link %>'>
-            <em><%=h credit.title %></em> by <%=h credit.author %>
-          </a>
+          <% credit = credits[0] %>
+          <% if credit.text %>
+            <%= credit.text %>
+          <% else %>
+            <a href='<%= credit.link %>'>
+              <em><%=h credit.title %></em> by <%=h credit.author %>
+            </a>
+          <% end %>
         <% end %>
         </details>
       <% end %>
@@ -86,5 +91,6 @@
     </footer>
 
     <script src="/js/metric-imperial-converter.js" type="text/javascript"></script>
+    <script src='/js/image-linker.js' type='text/javascript'></script>
   </body>
 </html>

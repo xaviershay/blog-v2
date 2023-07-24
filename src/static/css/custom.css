@@ -322,11 +322,17 @@ dd {
 
 figure.image-strip img { width: 49% }
 
-.image-strip-2-to-1 img:nth-child(1) { width: 63%; }
-.image-strip-2-to-1 img:nth-child(2) { width: 35.5%; }
+figure:not(.linked) .image-strip-2-to-1 img:nth-child(1) { width: 63%; }
+figure:not(.linked) .image-strip-2-to-1 img:nth-child(2) { width: 35.5%; }
 
-.image-strip-1-to-2 img:nth-child(1) { width: 35.5%; }
-.image-strip-1-to-2 img:nth-child(2) { width: 63%; }
+figure:not(.linked) .image-strip-1-to-2 img:nth-child(1) { width: 35.5%; }
+figure:not(.linked) .image-strip-1-to-2 img:nth-child(2) { width: 63%; }
+
+.image-strip-2-to-1 a:nth-child(1) { width: 63%; display: inline-block }
+.image-strip-2-to-1 a:nth-child(2) { width: 35.5%;  display: inline-block}
+
+.image-strip-1-to-2 a:nth-child(1) { width: 35.5%;  display: inline-block}
+.image-strip-1-to-2 a:nth-child(2) { width: 63%;  display: inline-block}
 
 /* FEATURE IMAGE AND OVERLAY */
 @media only screen and (max-width: 720px) {
