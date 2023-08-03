@@ -51,7 +51,11 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
         pages = metadata.fetch('pages') * percentage.to_f / 100
         x = metadata.except('reads')
         x['slug'] = File.basename(book, ".md.yml")
-        x['categories'] = x['categories'].dup
+        categories = x['categories'].dup
+        if categories.delete('other')
+          categories << 'literature'
+        end
+        x['categories'] = categories
         x['finished_at'] = date.dup
         x['started_at'] = read['started_at']
         x['abandoned_at'] = read['abandoned_at']
@@ -72,8 +76,7 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
         end
         stats[year]['ratings'][rating - 1] += 1
         stats[year]['pages'][(pages / 100.0).floor] += 1
-        categories = metadata.fetch('categories')
-        categories = ["other"] if categories.empty?
+        categories = ["literature"] if categories.empty?
         increment = 1 / categories.size.to_f
         categories.each do |category|
           stats[year]['categories'][category] ||= 0

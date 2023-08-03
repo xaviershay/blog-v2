@@ -24,7 +24,7 @@
     <% categories = stats['categories'].to_h %>
         <tr>
           <th scope="row"><%= year %></th>
-          <% %i(non-fiction sci-fi fantasy literature other).each do |c| %>
+          <% %i(non-fiction sci-fi fantasy literature).each do |c| %>
             <td style="--size:<%= categories[c].to_f / total %>">
               <%# hide-data doesn't work for skinny bars because it keeps the content around. %>
               <span style='display:none' class='data'><%= categories[c].to_f  %></span>
@@ -38,8 +38,7 @@
       <li><a href='#' class='genre-filter' data-genre='non-fiction'>Non-Fiction</a></li>
       <li><a href='#' class='genre-filter' data-genre='sci-fi'>Sci-Fi</a></li>
       <li><a href='#' class='genre-filter' data-genre='fantasy'>Fantasy</a></li>
-      <li><a href='#' class='genre-filter' data-genre='literature'>Literature</a></li>
-      <li><a href='#' class='genre-filter' data-genre='other'>Other</a></li>
+      <li><a href='#' class='genre-filter' data-genre='literature'>Literature & Other</a></li>
     </ul>
   </div>
   <p>
@@ -58,7 +57,7 @@
         </p>
       <% end %>
       <% books.each do |book| %>
-        <div class='book-summary <%= book.primary_genre || 'other' %>' data-rating='<%= book.rating %>'>
+        <div class='book-summary <%= book.primary_genre || 'literature' %>' data-rating='<%= book.rating %>'>
           <div class='date-and-rating'>
             <%= format_read(book) %>
             <span class='rating'><%= book.stars %></span>
