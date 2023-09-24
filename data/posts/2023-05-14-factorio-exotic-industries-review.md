@@ -2,7 +2,7 @@
 layout: post
 title: "Factorio Exotic Industries Review"
 category: articles
-tags: []
+tags: ['factorio']
 description: A review of the Exotic Industries overhaul mod for Factorio.
 image:
   feature: 'ei/ei-base-cropped.jpg'
