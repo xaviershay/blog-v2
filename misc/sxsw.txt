@@ -1,0 +1,1172 @@
+"Can Data Save Democracy?"
+
+The Hon Victor Dominello, Deanne Weir and Kristi Mansfield dive deep into the intricate relationship between data, democracy, and trust at the grassroots.
+
+https://seerdata.ai/
+
+trust + democracy
+
+Victor
+Robocalling around elections with fake voices. "Real impact on democracy"
+
+Probably be the last real elections unless we get really smart about "how we put a matrix around this going forward"
+
+"Anyone can go one smartphone and wreak havoc"
+
+What can be done about trust?
+
+Digital Identity
+Decentralized - more control to individual. More control = empowered.
+"In autocracy, all data goes to state. In democracy, should be individual."
+
+Looking to empower people at community level (Seer person).
+
+Diane
+Australia has dropped down ranks of trust in government. 5 point drop in last 3-4 years.
+Participatory democracy is best way to build trust.
+How do you engage? Involve them in decision making.
+
+CONNECTION to Tia's thing about local government vs federal.
+
+People in local communities know what is wrong, but don't have access to data to prove it. Government comes in over the top, wrong interventions because doesn't tie data with local knowledge.
+
+Good problem solving BUT ALSO reinforcing democractic process.
+
+People don't trust authorities anymore (saw it a lot during COVID). That's a risk to democracy.
+"Be involved in decisions that affect their communities."
+Need to be building trust in media organisations.
+EU introduced new act aimed at big digital media platforms to remove disinformation. Significant fines - 6% of revenue!
+
+Victor
+Rolled out digital licence, 82% adoption(? of what?) very good. (Was this NSW thing?)
+
+What is role of government and institutions in democracy?
+
+Victor:
+Digital Identity is being driven at federal level, most important thing going forward. (There's a bill, it's going.)
+Hypervigilant when it comes to transparency. Pols love cutting ribbons, but need to start cutting transparency ribbons. Need to be excited by it.
+
+Host: NSW leading the way on sharing data. In particular, restricted data into communities.
+
+V: Saw this so powerfully during COVID, health didn't want to disclose data about transmission on virus. "They're doing it in Singapore. If we don't show people, they won't trust us."
+
+D: Contradiction, at federal level, FOI process are completely broken. Actors across the board slowing down and not funding FOI.
+
+Must introduce truth in political information/comment laws. Voice demonstrated this. Can't look at Voice and say we're happy as a democracy for that level of misinformation to be part of our democratic process. Bill in federal parliament being discussed at the moment.
+
+V: 100% agree, but deeper challenge: ultimately parties play war. Outliers in the community that don't play that can wreak havoc (ref smartphone comment earlier). Individuals can just spew out information and get reach with it. (Good balance here with previous D comment)
+
+Audience Q:
+Now seeing taking down of misinformation being played back as a "cover up" or sensorship. What then?
+
+D: this is why trust is so important. Not one fix. Overall, ensure that we rebuild trust in media (e.g. independent like ABC). People don't trust media anymore, or government.
+
+Everyone has right to free speech, but not to "cry fire". With the right to speak freely comes responsibility. The more we import US style politics, that's not who we are. Need to get back to a conversation about balance of responsibility.
+
+Audience Q:
+Lot about bringing back "truth in journalism", how would you ensure everyone is on the same page about the criteria? Watchdog of journalists?
+
+V: truth is so precious. If someone is operating on you, do you want a doctor who hasn't gone to school? Lawyer who hasn't been to school? Regulate industries that are important - and what's more important than the truth. Doesn't stop anyone from saying what they like, but if I know someone has gone through training, is part of a professional body, I'm going to trust that more.
+
+Reminds me of Lion King, Mustafa says "everywhere the sunlight touches, that's our land, shadows are where trouble is". If you want to go in the shadows, fine, but we have an area where the sun touches (trained journalists).
+
+Audience Q:
+Democracy relies on citizen being informed. Now have kids asking google what to believe. Whole generation growing up believing what technology tells them.
+
+D: Need to encourage citizens to be informed. Some people always going to be fact incurious. Encourage people to be critical. Education reform massively increasing cost of arts degrees. Utlitarian view of arts degrees rather than how to critically think.
+
+Great fact checking happens across all accomplished media organisations. Internet not necessarily your friend.
+
+V: Already got filters in place for explicit material. In a better world, why couldn't we apply filters to verifiable sources?
+
+D: Great that we can turn on TV and see what's happening overseas, but can't see what's happening in our backyard.
+
+2021 media bargaining code - require meta+google to pay local media orgs for having news content on platform. $200m back into AU media in first year(?). Most went to newscorp, didn't go to more local/niche organisations. Need to find mechanisms to support them.
+
+Wrapping up: for individuals concerned about data/democracy, what steps can they take?
+
+V: Most important thing: be more informed. Check your sources. So many flat earthers spewing rubbish.
+
+D: Agree. Support local media organisations. At a national level need FOI to be supported. Also truth in political ads laws. ALl need to take responsibilty for democracy.
+
+Seer: calling for national mandate for sharing data at local level.
+
+
+
+SUMMARY
+
+Transparency in government, particularly through making data available, is one of the critical ways we can rebuild waning trust in government. Trust in government is critical for strong democracy.
+
+Opinions of panelists
+* FOI process is shit.
+* Need truth in political advertising laws at federal level (bill in train at the moment), but also the amount of damage an individual can do with a smartphone is rapidly increasing and we need to be wary of that.
+* Need regulation and standards for journalists the same way we do for doctors and lawyers. Trust in media is so important.
+* Need to support local media organisations. Bill to force e.g. Google & Meta to compensate orgs for using their content good step forward - $200m paid in first year(?) - but most of that goes to Newscorp.
+* Feels like we're importing "US style" politics, but that's not who we are. Need to balance free speech with responsibility.
+* Digital Identify is one of the strongest things we need, giving people control over their data.
+* Hypervigilant when it comes to transparency. Pols love cutting ribbons, but need to start cutting transparency ribbons. Need to be excited by it.
+* Host: NSW leading the way on sharing data. In particular, restricted data into communities.  V: Saw this so powerfully during COVID, health didn't want to disclose data about transmission on virus. "They're doing it in Singapore. If we don't show people, they won't trust us."
+* V: Already got filters in place for explicit material. In a better world, why couldn't we apply filters to verifiable sources?
+
+My thoughts
+* News organisations maybe need to rethink how they present? I personally find "rando on Tiktok presenting seeming nuanced analysis" more compelling than "read an article in a newspaper". Feels like an opportunity? NPR economics podcast(?) does a decent job of this, but also what about "journalist breaks down into camera for 3 min"?
+* How do we reconcile "rebuild trust in media" with "newscorp can't be trusted"?
+* Want to learn more about the types of restricted data Seer are making available and what that's leading to.
+* Feel Digital Identity is super critical ... but can't really make the link to trust in government.
+* Feel like journalistic integrity isn't really the issue for me (i.e. I trust that the big orgs are e.g. fact checking and what not).
+* Appreciate link between filtering explicit and trustworthy ... but also don't know to even approach that until we sort out the Newscorp problem.
+
+
+
+Finance Industry Emergency
+$4.4T more than GDP of Italy more than double Australia. $450 per person.
+
+"No evidence that growth of finance industry has helped"
+
+"Future of finance is fucked" <- original title
+
+Lacey, Kane, Nick, JP
+
+JP: ex-APRA, CPA, Lawyer, CRO and counsel for digital bank
+Lacey: MoneySchool Founder, chemical engineer turned finance educator
+Kane: Maslow co-founder, paramedic. Sick of seeing wealth inequality on the road.
+Nick: accountant professor at Monash.
+
+# Raw
+
+Q: Why is finance unique?
+K: Very industry that sells same thing shareholders want. Conflict between customer and shareholders. Doesn't exist in other industries.
+Not just an industry - access to a system. Have to use finance industry. Owner by 5%, extractive industry. "Rort with conflict"
+
+Q: Power imbalance?
+K: When you look at buying coffee/shoes - look at what you're getting and figure out if it's good value. Financial products: market that they're different (they are by 80 page PDS!). Problem: need to maximize returns, need to extract that from customers. "People don't read PDS, that's a power imbalance"
+
+Q: How to combat that?
+L: First comment on previous. Major problem is structural. "Not as good at risk as engineers". Don't follow heirachy of control. ELiminate, substitue, or work around. Substandard: administrative, commissions. Human choice will fail eventually. Problem with design to fix that.
+
+8-9 years "we teach everyone and it's good" (peak of Mt Stupid)
+
+Poverty brain - financial stress, IQ drops by 13 points. People can't make good choices. Feels like less personable responsibility. Magic wand: get rid of commissions.
+
+Q: Nick, why haven't accountants solved it yet?
+N: Trying to. "Saviour" model. But need to step away from the world. Language drives profit maximisation. "Stewardship" gone for some time.
+System change (L's point) - so many forces pushing towards it, but need design principles. Rethink economy + finance system.
+
+International Standards board merged with environmental thing [good!?] Sustainable Standards Board.
+
+SSB making investor primary stakeholder - sees that as dangerous.
+Artists + accountants doing activism at street level.
+
+Q: Not just an industry. Bridges every part of economy. Connects household + businesses, government, international trade. That's sounds great?
+K: In AU, if you're unwell you can walk into a hospital and get treated. We don't want to talk about how financial wellness. Industry charges those that have the least the most to access. Put that industry over the world's largest system.
+Preventative health care. If you can't afford before it evolves, you have a prolbem. Finance industry doesn't allow that approach.
+
+Q: "I gave the customer a comparison tool, surely I've done my job"
+L: Comparison tools are sales tools, some are comparison. The former better at SEO. Gov now has "your super", they stepped in.
+
+Comparison is scary for people coz they think its math. But if you get through grade 5 math you're good.
+K: and you'll make a (bad) decision based on "end price".
+
+JP: Arnie was spruking milton friedman, make sure everyone starts at same time rather than finish at same time. Problems?
+L: Fascinating. Cheaper for all of us if we didn't have people in poverty. Less health care, less centrelink, more productive members of society. Conflict between survival, and rational decisions.
+K: Government provides social welfare to 3m people. Same people finance industry targets eg payday loans to.
+N: Deeper conversations around "enough". Can we bring people out of poverty? (L: yes!) Systemic issues worry me. We can't meet development goals with current planet. Increasing consumption, but we need to be reducing consumption across the board. My profession is driving higher consumption. Has to stop somewhere. ("US sustainable development goals")
+
+K: Of 17 goals, 10 are prevented by wealth inequality. AFfecting extreme polarized views. Harder to save for a holiday this year than last. Financial services biggest contributer. When we're extract from 78% people who use services to 5% of people who own. Products get worse as companies pursue more profit.
+
+L: 50% of median income, poverty line. We have to try - consumption is problem at top 10%, not bottom. Redistribute from top to bottom to get people to basic living standard.
+How much can earth sustain is a science/different question.
+N: Agree but they're not integrated - we talk about these topics separately. We don't educate that way either.
+L: Question: problem you're describing is same as engineering, taught to break problems into parts - opposite of systems thinking. Accounting similar? Is that what you're talking about?
+N: Yeah.
+
+JP: difference between income and wealth inequality. Wealth inequality goes back thousands of years. Solving for income a path to getting there?
+K: Systems change - largest system built to extract, we're at a disadvantage. We all use this system to pull things out of our life and make things harder. Health system isn't like that. Why is finance? Not talking about pulling it.
+JP: Does education help?
+L: Not going to tell you not to learn. Have to play the hand best you can. But. Best time and energy is spent on systemic change. Doesn't teach personal responsbility anymore. Gender pay gap - 13% for full time, 22% for everyone else, they think its proportional. But it's not. Once you cover living costs (fixed for both genders), left over income much bigger difference. Can't have lot of people inheriting houses without anything and telling other people to save better.
+N: 32% of all women liven in 25% of poorest, 16% live in wealthiest 25%.
+
+JP: How to turn it around?
+L: Keen to hear from Nick. Taking accounting and turning into sustainability. How would you change them?
+N: Don't think you can. Curious about integration of financial and non-financial information. Perceived as objective, but accounting isn't. Can we mirror nature? Do it all the time in science (e.g. biochemistry). Now looking at mycillium (tree communication), trees collaborate. Accounting is mycillium for an organisation but speaks a particular language.
+Society built on individualism and collaboration.
+
+In business school created fluid space at top. Only masters of indigineous busines studies (for indiginous only). Impacting back into mainstream business school.
+AU/NZ mow your lawns - could grow food on those strips!
+K: Talk about silos a lot. "Poly crisis" four indepedent: wealth, political ineqality, climate change. Need to understand how its all linked.
+What's coming in next 10 years? AI. Same kinds of problems as finance industry. Wildly polarize employment landscape. Poor issues well into middle class.
+L: Abolish commissions. One thing she'd trial. Pull the conflict out of it.
+("Compassionate Capatilism" panel")
+Change non-exec director responsibilities - can lose personal wealth if shareholders aren't happy today. Can we change how they see that risk?
+
+On personal responsibility: tools for people making good decisions. Tech going to help. Only 750 financial counselors in all of AU. Would love to see MoneySmart and ASIC moving in that direction. "MoneySmart sucks". Refuse to refer out (coz of conflict). Managing risk well, but not delivering service they used to. "It's been in the curriculum for 12 years!" Financial literacy: we're 6 months dumber. Everything that government touches has not worked. Not the people to lead. Can't be people who sell financial products. Not seeing leadship to progress that.
+
+Q: alt solutions for serving products?
+K: Need to change how we sell/provide. Change monetization moment (30s ad for 80 page PDS). Costco model. Charge to get in the door, provide at-cost products.
+
+Change/cap shareholder potential benefit.
+
+
+When we turn on the taps, water comes out. Financial comparable to water - fungible. Not efficient to have two sets of water pipes to our house. Can we utilitise providing basic financial products as a service.
+
+JP: role for government?
+K: Go above regulation, want intent to provide service.
+If Maslow succeeds they do regulators job.
+
+L: What if not commissions?
+Paid up front. Get people to understand they _are_ paying. Make it transparent.
+Don't bury it in bps, excellent idea for bank.
+
+Audience Q: is capitalism threat to future? Ministry of Future [fiction] book reference. Comes up with a carbon coin, "what's in it for us?"
+L: Capitism still best tool we've got. Good theory, bad execution. Based on infinite growth. Need to add back in limits. Billionares get a trophy and a dog park "you won capitalism!".
+
+N: During COVID, nice for liberal government to implement a socialist environment. Money is irrelevant in natural disaster. Only species that "pays to be here". Water becomes new currency in future, not money.
+L: Thinking of UBI?
+N: 100% Meeting peoples basic needs, then moving beyond that.
+
+AQ: Can you see accountants paying for e.g. preseving forests.
+N: About behavioural change. Using artists to take to public how destructive profession is.
+K: Can pull capital over 15yr period, give 90% of control of that to users.
+
+AQ: Elephant in the room, wealth inequality is corporate inequality. Huge pools of capital vacuumed up into corporate. Small businesses can't access that. Seen that in practice. How do you get mountains of capital back into the world, without killing someone (in a polite way)? 30% of capital pool and throw it back into real economy?
+K: Has to happen through and using largest industry as a tool. 5% controls it. Give everyone one vote rather than more votes per money.
+L: Something around company law. Mining companies funding an accelerator, but not signing startup as first customer - "can't take risk". Need skin in the game. Companies _can_ take risk, but corporate responsibility is excuse they fall back on.
+JP: it's about directors being legally required to act in best interests of company full stop. Courts generally see that as best interests of shareholders. But it's about companies having courage - if companies are dead in 10 years coz environment went to shit, that's not good for shareholders. To go to jail it's got to be malicious and with intent.
+
+L: Non-exec director risks personal fortune. Different from executive (mostly).
+JP: About community having courage to say "yes risk, but there are good reasons"
+
+K: So hard for companies in flight to change that. Need to build into corporate governance/constitution.
+
+AQ: Very slow if we need to start a new company to do that. Need to see it at companies like CBA.
+JP: Challenge, could start small.
+AQ: "Give 1%". Then maybe Westpac, then NAB.
+L: It's incentives.
+AQ: Government or psychological.
+
+K: Up about to overtake the majors. What if an Up launched with different approach.
+K: Up has proven that with right message you can acquire customers.
+AQ: For entrepenur to accelerate business, have to put personal wealth at risk. What if e.g. banks had 1% they were investing back in. [...they do? They've all got accelerators?]
+
+JP: Issue is with shareholder base.
+
+JP: 10 seconds to each panelist
+
+L: Remember: poor people don't make decisions, bad decisions when we feel poor
+K: If we don't get largest industry working for people, we're screwed.
+N: Collaborate in all that we do.
+
+## Summary/Theme
+
+
+## Key Opinions
+
+* Finance is a uniquely extractive industry. Only industry selling same thing that shareholders want, creates a conflict between customers and shareholders that doesn't exist in other industries.
+* When buying a coffee or shoes, customer well positioned to evaluate value. For financial products, it's an 80 page PDS.
+* Need to treat providing basic financial products the same as we do providing clean water.
+* Poor people don't make bad decisions. Bad decisions are made when people are poor. Financial stress can lead to 13 point IQ drop.
+* Getting rid of commissions is one of the top things we could do to improve situation. Move to pay upfront model for broker services.
+* Need to change non-executive director responsibilities and incentives. Right now too afraid to take any risk on non-financial outcomes.
+* Many comparison tools are sales funnels. And they are the ones with the best SEO.
+* MoneySmart (ASIC/government program) isn't working. Refuse to refer out (because of conflict) but that means it can't be too useful. They're managing risk well, but not delivering the service they used to.
+* Financial education has been in curriculum for 12 years, but financial literacy outcomes have gone backwards 6 months. Everything government touches hasn't worked. Not the people to lead it. Also can't be people who sell financial products. Who then?
+* Monash offer the only Master of Indigenous Business Leadership, for indigenous Australians, looking in particular to learn from different perspectives.
+* Need to help people best play the hand they are dealth, but personal responsibility approach to finance isn't going to get us there.
+* International Accounting Standards board merged with Sustainable Standards Board, which should be good but still too focused on financial measures.
+* Not thinking about risk like an engineer would. Too reliant on human processes and administrative work as controls, rather than prevention. (Commissions good example of a process that will always fail eventually.)
+* Government provides social welfare to 3 million people. Same people finance industry gives payday loans to.
+* 32% of all women liven in 25% of poorest households, only 16% live in wealthiest 25%.
+* Need to lift everyone out of poverty (it's good for everyone), but some concern that our planet can't support increasing levels of consumption. Needs to be a redistribution from top 10%.
+
+
+## Thoughts
+
+* Not sure I agree finance is uniquely extractive. Same incentives to pass on bad products to customers in pursuit of product exist everywhere?
+* Simarly with "no one reads PDS" argument, true of all T&Cs? Doesn't matter to wider point though I don't think: arguments don't rely on finance being _unique_ in this regard, just on it being big and central - which it inarguably is.
+* From Up's perspective (and Maslow?), weaving "we do the right thing for customers" into our brand ties our hands in some positive ways. e.g. we don't feel like we could release "just another personal credit product", despite that being a traditionally "obvious" move in our position.
+
+# Sport spaces
+
+Take up so much white/blue/green spaces with sport. But so lazy.
+
+About linking natural spaces. How to we make sports space (netball courts etc..) work harder.
+
+Try to apply different terms to spaces.
+
+Showing photos of spaces and brainstorming how to do it differently.
+
+Golf course. Knock down fences. Thinking about pesticide use.
+
+"Designing with country" framework. Walk country with traditional owners to know what country needs. Shifting away from "maintenance" to "care". Moving from bloews & mowers to let it grow.
+"Make the golfers be better, don't give them a green, just make it really hard"
+
+
+# AWS thing
+
+Video of fulfilment centre. All robots! 250-300 globally. 11th gen. 25 million individul products. 1 million in out each day at peak.
+
+Scale + Speed.
+
+Yellow towers, 6ft tower, 5000 in centre. Random distribution of products. More efficient. People aren't needed for this part. (Lights only on for video.) 200m prime customers, aiming for one day delivery. 100 planes, 100k trucks. Make sure the face of the book faces you when you open the box.
+
+Amazon's Culture of Innovation. Enabling eveyone to innovate.
+
+Rob Findlay, Head of Innovation Programs, ANZ
+
+SF = talent, Seattle = book distributors + state taxes.
+Books= non-perishable, easy to ship, unifying ISBNs. Most complicated/diverse categoy of thing they sell (more individual items than any other category). If we can solve that, can solve anything.
+
+"To be Earth's most customer centric company" Second shareholder letter.
+
+Put the customer first, invent, and be patient. (Haven't changed for 20 years)
+(Operating with excellence needs to be taken for granted.)
+
+Hire builders, let them build, support with belief system.
+
+encode behaviours
+
+small, empowered teams
+
+structure to support rapid growth
+
+Leadership Princicles "unless you know better ones". Doing words / actions.
+(feels pretty similar to how we do values...)
+
+Being more explicit about one way vs two way doors?
+
+Good leaders are right a lot. Seek to disconfirm.
+
+"The Loop" interview process, haven't heard this. Peers evaluated against at least 2 leadership principles each. 6 interviews back to back. Find examples in your career to show. Data points and stories, not vibes. Bar raiser role is not in your future team - has veto over hire. "Need to be better than 50% of people on team"
+
+Press Release, FAQs, Visuals
+
+Stubborn on details, flexible on vision = bad. (Opposite it) Use Stubborn on vision for Remix.
+
+# NASA's Artemis program: Australia's role in the moon to mars mission
+
+Jim Friends - leading the mission. Associate Admin for Exploration Systems and Development.
+Enrico - Head of AU Space Agency, decade before that working Virgin Galactic.
+
+Artemis 1 did a flyby of the moon, splash down in December.
+
+25.5 days, didn't take a breath during that time. 121 + 24 flight objectives. About crew safety. Coming back at Mach 32, need to understand heat shielding. Half temperature of sun.
+
+Big plan - person on moon by 2025. Did it 50 years ago. Did we forget how to do it?
+
+No we didn't. Using what we learned on Apollo. Tech + science. Example: lunar dust = almost like shredded glass. Learned how to mitigate. What's different: international group. Artemis accords = set of principles about how we're going to operate. 29 countries (inc. Australia) on board. Before was a race.
+2nd: we've learned about the moon. Apollo went to equator. We're going to south pole, think resources are there e.g. water ice. Science is different there - history of the universe that's captured there is different (older). Stepping stone to Mars.
+
+Less than 20 years - sustainable presence on the moon. Expensive project, lot of problems on earth, why are we doing this? We don't spend a dollar in space, we spend them in earth. From economic perspective, employing people in good paying jobs, and developing technology that applies here. Second: inspiration. Dollar in NASA is a dollar in education system. Dual purpose. Overall, we're also explorers. What's beyond the next horizon?
+
+What it be like if all goes to plan and we get Artemis base camp?
+Gateway space station around the moon. Much smaller than ISS. Means can go anywhere on surface. 4 crew members down. Land near habitation element, pressurized system, can live their for 30 days. Venture into permanently shadowed areas of moon. Experiment on self. How to adapt to partial gravity. Already learned a lot in micro-gravity. How do systems operate?
+
+Radio astronomy on back side of moon.
+
+What are they going to eat?
+
+No agriculture on moon! Lot of transport to begin with, learning from ISS. Interesting work going on at the moment about growing plants in space. U of Adelaide "plants in space centre for excellence". Collected buckwheat, figuring out how to synthensize proteins, medicine, and plastic.
+
+Learning in extreme scarcity, we can bring those learnings back to earth.
+
+What about water?
+
+Recover water from urine processing on ISS. Put more water in the food and recover it?
+Oxygen recovery doing on ISS. CO2 processing. Need to be 98-99% efficient for Mars otherwise logistics don't work.
+
+Mars surface analog mission going on today in Houston. Locked 4 people in a surface habitat simulator.
+
+Which civilians tend to go to space?
+Galactic had a diverse customer base. High proportion of HNW. Scientists, school teachers.
+
+Hurdles
+Will people go mad? Have had 23 years of permanent presence on ISS. Know a lot about isolation. 1.4 second delay to moon, important for mental health.
+
+Tech hurdles
+
+Artemis 4 mission - program lead. 11 programs coming together. Integration an issue. Interfaces always where you can have problems. Still figuring out how heat shield worked on Artemis 1. Performed great but one aspect still working throuhg.
+Landing on moon is hard. Keeping crews safe and bringing them home. Canberra deep space complex used extensively during Artemis 1. Getting all the data back becoming a big challenge.
+
+
+Moon dust is an obstacle.
+Apollo astronaut: "if we plan on doing anything, we need to deal with this dust" "I took my helmet off and almost blinded myself, immediately got my eyes full of junk."
+
+Four tech roadmaps for dust mitigation. 1) Isolate crw coming back in 2) charge the suits electrostatically to not pick up as much 3) materials that won't pick it up 4) brush off/vacuum in airlock.
+
+Radiation?
+China lander calculated astronauts exposed to 200x levels. 2.5x higher than ISS. Can't go to mars without solving this. Invested in facility at ANU to test radiation. Still research to do. Lunar dust might be one of those things? (Regolith?)
+Looking at how to build bricks out of Regolith at another uni.
+
+Australia capability is critical. Research and science focus is so important.
+
+Moonikins went up in Artemis 1 wearing radiation detectors, what did we learn? Combined experiment with Germany and Israel. Can't say yet. Definitely noticed protection going through Van Halen belt. Factored that into Orion capsule.
+
+Weather
+
+Incredibly hot during day. Boil water 127C. Very cold at night, -173C. Moon caves? "Humans evolved living in caves, and to caves we might return" Realistic possibility? Maybe not first presence.
+
+Worried about Artemis 4, 6 and 10. If benefit in it we'd look at it. Depends where lava tubes are. Initially want to spend 6.5 days. Very light limited at south pole.
+
+Why aren't we just using robots? How much of this is competing with China?
+
+Flexibility with humans is tremendous. Not a knock on Mars robots: yesterday was 62nd flight of helicopter on Mars! Robots don't move as fast. Can move 20km in pressurized rover in a day.
+
+"If I worry about what someone else is doing, I'm not worrying about what I'm doing." Open to every country being part of mission. International cooperation is essential. Very open about architecture.
+
+AU playing "critical role". Why are we critical?
+
+Communication capability. Used for a lot of missions. Robotic and remote operations. Australia flying lunar rover to bring back regolith. Science and research.
+
+Lunar rover: NASA flying it to moon for us. Trailblazer program. "Boldest adventure yet". First time AU puts a machine on another celestial body. Two teams. Designing 20kg rover on NASA commerical lander program in 26/27. In a year's time will "downselect" to one team. Very much about the journey as well to develop capabilities. Has to nav without GPS, applications for mining.
+
+How can mining sector play a role?
+
+Lead the world in autnomously operating complex hazardous machinery. Rio Tinto has tech control centre at Perth airport that runs a big part of the Pilbara remotely. Need a paradigm shift in how to do remote operations. Rather than a whole room of people, in Ausrtalia we have a person operating a whole site. Now have facility in Perth doing remote operations in deep sea inspecting pipelines. Soon will be operating space missions in same facilities.
+
+Do you think we can retool mining industry for space?
+We will. Big signal is a non-profit in Perth called "AU centre for remote operations on space and earth". Mining + resources relying on space for GPS, comms + imagery. When you innovate in space, need to design and work in harshest environment. Changes mindset. Where on earth do we target 98% water recovery? We get lazy on earth. But we need that thinking for earth problems for sustainability edge.
+Significant moves from resource companies for space for innovation. Can we do things on a smaller scale?
+
+Not talking about extraction on moon, but some people are. How realistic is that?
+
+Big focus is bringing samples back. Can bring back ~100kg today. Science purposes. Not looking to bring back larger materials. Would love to take advantage of not having to build return capability, keen to partner with commercial projects who are doing it. Can we buy things? Lunar rover put a proposal out. Encourage economic activity. "Lunar ecosystem"
+
+Excited about company in Adelaide Fleetspace technologies. Specialists in satellites to communicate with small thing. Partnered to develop a "geode", measures ambient noise in ground. That + satellites transforming how to locate minerals in a less invasive way. Did that off small amount of funding. Now looking to invest in spider module which is similar kind of thing for the moon.
+
+Is moon gas station for rest of solar system?
+
+Not building architecture to launch/refuel from moon. Orbiting gateway maybe.
+
+
+
+# The Challengers: The Publications Taking On Australia's News Giants
+
+The Daily Aus + Capital Brief
+
+70% owned by newscorp and nine enterntainment, one of the most concerntrated media environments in the world, particularly in english speaking nations.
+
+Capital Brief pitch. 7 weeks in. Want to be for new AU economy, different from old. AU biz has changed, media hasn't changed with it. Different type of people leading C-Suite. Generational shift going on in board room. Millenials taking ownership of AU economy.
+
+Were you looking OS for capital brief?
+Definietly oloked overseas. Few innovations OS: buzzfeed/vice. Seems to be going out. Focus on building massive social audiences. Clickbait to some. Focused on 2016 Axios covering politics+tech+climate. The Information is must read in silicon valley. Semaphore and Puck recently. No reason similar can't be here. Doing things in different ways.
+
+In early stages, are you identifying different streams on content that are working? Pretty good mix. High levels of interest from "innovation community" for want of better phrase. New economy mindset, less about industry. Top performers about future of banking sector, surprising popular. Lot of people in top 4 banks thinking about that.
+
+Pitch for Daily Aus?
+Opposite of competitors with Capital Brief. Their audience is C-Suite. Dialy Aus speaks to next gen - empower young aussies to start conversations. "Non-news people" - bullshit term, that's who they're targeting. Want to know, curious to know, won't actively seek out news. Curiousity wasn't translating into going to website. Bring news to them. Main challenge: can we get young people to care about quality journalism and build sustainable business. Stereotypes of U35 "apathetic", "complacent", "entitled", etc... we see them as heavily engaged. Highest enrolment rate in federal rate ever last year.
+
+So much stuff on the internet, listed off competitors, is their even room in AU?
+Yes. Numbers suggest that is the case. Information diet - invert it, think about town that only has one restaurant. Opening a new one can be good for the whole industry.
+
+What does "new economy" mean?
+
+1. Rewind 10-20 years, startups were around but cute thing in the corner. Their now doing billions of revenue employing thousands of people.
+2. Energy transition. Climate change used to be "in the future". Now it's now.
+3. Generational shift in AU boardrooms.
+4. Geopolitics. China gone from simple trading partner to far more complex relationship.
+
+Two ways to look at it: knowledge economy vs old world mining/manufacturing. All of it facing disrupting threat. Knowledge threat is AI.
+
+Do you feel like you've innovated on content or business model?
+
+Both. Fortunate position to start with a blank sheet. Audience able to pay for things.
+
+They've introduced a new restaurant, but for Daily Aus their was no restaurant (no Maccas).
+
+Youth media space: strong publicliations leaning into _culture_. Was difficult to find one delivering hard news. (Was a passion project at the time.) "Wouldn't do pop culture." Stick to lane of hard news for young people. Not trying to reject audience, but for 30-40 have opportunities for people talking across not down. "We don't do opinion." Hard to find a conservative leaning young news org. Was a lot of heavy left and swearing opinions.
+
+How important is it that you are your audience? (Aside from being journalists)
+Think about a lot. Bit of unfair competitive advantage. Perspective of "looking across". We're 26 and 28, entire newsroom under 32. Trying to fix news avoidance. Why aren't people reading anything? Hard to engage with opinion if you don't understand the underlying. Opening newspaper but don't understand the underlying.
+
+Home and Away. If you turn on Thursday Home & Away, no idea what is going on. Need to take a moment: "this is why Steph having an affair with Luke" always orient people.
+
+Older people have tried to start youth networks in past and hasn't gone well.
+
+Innovated really well in tone.
+Capital Brief trying to do more understated tone. How did you settle with Daily Aus.
+"Trying to be your friend in the news." News can feel really scary + daunting. Tone is how they would start conversations around us. "I know this is a shit topic to talk about it, feel like you want to turn away from it"
+
+Need a living breathing "news brain" - audience has been hit with lot of terrible stories, let's show them photo of longest mullet to break it up.
+
+Is it a race?
+companies in US 5 years ahead. Doesn't mean audience stopped reading/paying WSJ. People expect different things from different publications. Market plenty big enough so long as journalism is good enough.
+
+If you were starting a supermarket, intimidated by Coles/Woolies, do you feel intimidated?
+Not so much - if you're buying insurance you buy one policy. But not for news. Customers have desire and ability to read multiple. Going after different stories.
+
+Why do you think there haven't been more entrants?
+People default to market size: AU too small. Some truth to that. New wave in US proves new business models. Sense that "if you do good journalism you can build a business out of it". Willingness to pay for news on internet has increased. Debunking idea that information has to be free.
+
+Zara how often do you think about competitors?
+Thought about it alot when newscorp launched The Aus. But actually good: big co investing in youth media. Since shut down tho. Think about it differently now. More about content/personality led UGC stuff. Not a lot of businesses, but new _personalities_ with a lot of influence. Erosion of traditional type of media.
+
+Competing for advertising though. Approaching it with a new lens: honest with audience about how they make money. Say to brands: when we chose to do a partnership with you, inviting you into Daily Aus. Can't afford to pick wrong partners. But they have added trust. "We just make sure we're better: e.g. customer service."
+
+When you're reading Daily Aus for 5-10min a day, you're trying to be the best version of you.
+
+Partnership with government cervical cancer screening.
+Partnership with Nike: accelerator for young female sports journalism
+
+Talk about trust a lot. What do Dialy Aus do to maintain it?
+
+Trust takes a long time to build, one second to erode. Small things: commercial partnerships always clearly delineated, no editorial imput.
+
+Example: during COVID, so many messages asking if vaccine companies were sponsoring them. If that's low level of trust people are bringing, need to work actively to rebuild it.
+
+Very blurred line between opinion/analysis/reporting. Meant lot of people turning away.
+
+Capital Brief: absolutely front of mind. Approach with humility - acknowledge there's an issue, data is clear. Two large media companies + one large government broadcaster doesn't help. Doing things every single day. Starting from a brand two months ago that meant nothing to anyone.
+
+Approach: extreme transparency in reporting. Short form briefing format, break stories down rather than beat them up. Include links to source documents. Disclose conflicts in reporting, hasn't been an issue so far.
+
+People understand that media companies need to make money. But if you obsfucate you put things at risk.
+
+"If we fuck up we have to admit it" Bought Taylor Swift tickets, did a giveaway. Turns out you can't do that. Took it down, put up an explainer post. Every news outlet gets things wrong, not everyone admits they got things wrong.
+
+Full time fact checker, Lucy. "Goal keeper." None of us want her job. Fact is important. Keep track of all errors.
+
+Hiring journalists who are 21 and asking them to cover complicated issues. How do you get comfortable that you have the experience to earn trust?
+
+Lot to do with the "body of work". Not just one day of coverage. Can we show up day after day after day and be proud of that work. Day to day rigour of journlism is a beast. No option not to publish. Need to forward plan xmas party and have someone with a laptop. We've chosen that and we love it, but you need to always show up.
+
+CB: Not publishing huge content. 6-8 big pieces a day. Not rushing things out the door. Have experienced journos on staff.
+
+5 years into the future, what does CB look like?
+
+only 2 months in! So confident there is a business opportunity for original, high quality journalism. Known for breaking individual stories, but also body of work. Seen as reasonable voice in the landscape.
+
+AQ: money & risk. New, two "big" rounds of investment. (Raise $500k, then $1.2m second.) Got to think about sustainability. That's part 1. Part 2: what if you're made an offer you can't refuse from 70%. Part 3: huge following on insta, 501k. Meta moving away from news. Could go to a different platform. What's plan B?
+
+Start with Plan B: hyper-aware. "Rented audience". Hurt when FB took news off. That was day they launched newsletter. Social first is funnel. Never depart from that - believe need to mirror consumption habits of audience. Know that's where they are, and trying to target passive audience. But then give them a reason to stay e.g. newsletter, podcast. Away from rented and towards owned.
+
+Sustainability+risk: lot of investors, been very frustrating. Conservative and frugal in how they spend money. e.g. don't hire a weekend team, not enough snacks in office. Best thing we can do is grow business slowly and sustainably. Can't ignore trend of businesses raising millions of dollars + valuations, crumbling overnight. Need to reverse that.
+
+Offer you can't refuse. How much? Only time we'd really entertain them is if we truly felt that we can't take this any further. Our skills and talents have maxed out. This is the first time we've done this. e.g. start TV network? Needs to be right partner. We no longer feel like vision as multi-generational organisation can progress. But still have a lot in the tank now.
+
+AQ: Role of new generation of media published in cutting through "divisive" stories, e.g. The Voice. How did you approach that?
+
+Really challenging. With The Voice, whole purpose was to provide foundation of knowledge. First time doing an outside advertising campaign. Sent journo to remote WA. Hoped that foundation of knowledge people could develop critical skills to identify disinformation - naive and overambitious but that's the goal. Not taking editorial stance was important.
+
+AQ: similar but more direct question: session this morning was media literacy should be taught in schools. [ed: it is!?] Where should that sit?
+
+CB: Not a bad thing. Not sure it's root cause of problem. Filter bubbles likely more of a thing.
+TDA: Dipped toe in this with book. Got a teacher's guide out for how to teach the book.
+Do fear that age people getting to TDA is too late. Already a voter. The Squiz has a schools program and kids' podcast.
+
+AQ: What role does public policy need to play?
+
+CB: No government support line in financial model. Focused on journalism. Not thinking about government much.
+TDA: Traditionally policy has entrenched existing dynamics. Digital Publishers Alliance tries to group together independent players, has been useful. Door is shut outside of that.
+
+
+# The Nanobots are Coming (and that's a good thing)
+
+Articles start with huge problems like climate change or cancer, but at end of article it's not solved. Should bum you out. But doesn't because we've got one stop closer. Started thinking about radical optimism. Don't discount that their are big scary problems, but there is evidence for hope.
+
+billionth of a metre in scale. Atoms.
+
+Karina: work with DNA at 2nm. Solve all heart disease forever! DNA made of four bases. GACT. One side is G base, otheride is always C. A+T also. Think about millions or billions of these bases in a row, start to produce unique code. Unzip DNA to get a single side. e.g. 8000 bases in a ring. Pinch the circle. Looking at short sequences on opposite sides, make a complementary "staple" DNA. Can pin together lots of areas. "DNA origami" Take this concept and build nanorobots. Very simple objects. Making body of robot - big blob of DNA origami. Can't do much by itself. Some else adds "feet'. Someone else sticks on sensors. Fourth works on brain. Can figure out if you have disease months or years before traditional scans.
+
+Individual people aren't going to save the world. But collectively we can. Everyone doing small little part to solve the world.
+
+P. Rothemund 2006 DNA origami
+
+Always start with same scaffold?
+
+What is that scaffold? Where does it come from?
+How does "brain" work?
+What book can I read?
+
+Taylor: 20nm now. Protein cages. Synthetic biologist. Applying principles of engineering to biological molecules, bacteria, etc... Take something that already exists, engineer to solve some other purpose.
+
+Hollow spheres made out of protein. Discovered about 30 years ago. Found in bacteria. Store iron or other things. Using them to address food security.
+
+Photosynthesis how plants go from small to large. Sunlight to sugar to energy.
+Key player is another protein called rubisco. CO2 -> Sugar-ish. Heavy lifting. (Chorophyl does the light stuff.)
+
+Most important proteins on earth! Rubisco has a lot of problems. Really slow, 100 times slower than average protein. Easily confused between CO2 and O. Wastes a lot of energy. Creates a bottleneck in plant growth.
+
+Can we create a cage "home office" for Rubisco to make it idealised so it gets confused less.
+
+Need to double agricultural output in unstable environment.
+
+"I'm just a gal who likes proteins" Didn't think problems like food security were available. People around the world working on solutions I can't even fathom in my wildest dreams, and that's amazing.
+
+Can you design different sizes for different proteins? Goldilocks situation. 3 different sizes for her cages: 18nm to 42nm. Figuring out ways to control size. As of now tricky - really stable, but means can't fiddle with.
+
+Queenie: biomedical engineer. Pretend that I'm a biologist. Work with stem cells. Stem cell by definition can divide while keeping a population of self as well as differentiate into a mature cell (nerve, blood, etc...) Historically think they come from embryos, but moving towards patient-derived. Do know that we can grow them in lab from mature cell of patient. Blood + skin cell, can reprogram back into stem cell state. Powerful for regenerative tissue! Works on retina. Immuno-privileged site. When you transplant certain foreign things, immuno response is less than elsewhere. Cataracts/astimatism is more lens. Retina at back - age-related macular degeneration, glaucoma, diabetic retinopathy.
+
+Growth small "organoid models" in lab, mimic human retina quite well. Ball with all mature cell types of retina. Can grow functional retinal cells, retransplant back into patients! Cell replacement therapy. Done into animals - restored sight in mice. Under clinical trials to assess safety in humans.
+
+Could replace animal testing if we can grow human models in lab.
+
+Q: is this being used in other areas? What else are people working on?
+
+Organoid models - can make one for every organ in the body. Different organs more advanced than others. Great for drug testing. Myocardial tissue beginning to move towards clinical trials. More cell transplantation happening. Leading to personalized medicine.
+
+Q: Science & PR problem. Perception of how science is spoken about in media? What can we do better?
+
+Karina:
+Most of us have been taught about science & scientists. Connective tissue between scienctists excludes most people in population. Only taught about lone geniuses who fought against the establishment. How does that feel for someone who isn't literally head of the class? Will push people away from science. Massive loss to the field. It's never really a lone genius. Particularly now. Person who gets patent or nobel prize, but dozen other reasearchers, assistants, lab techs, etc... Shame and a loss if we only ever think about science being done by individuals. Science only works as sum of its parts. Need to change the face of science so that we don't see as individuals, but a group endeavour.
+
+Try to tackle that problem form the beginning. Half time in career has been spent in science communication from perspective of younger age people. Bringing people from schools into labs.
+
+If we get people believing early on they can be part of science, we end up with a more educated population and a better world.
+
+Science is an evolving process. Try to present best consensus we can, but also need to accept that it's self correcting and will change. Do we talk about the process more? Yes.
+
+If perception is that science "does tests, gets answer" but then they things change, that can undermine trust. During COVID people for first time were let in to scientific process, where we discover things are wrong. If people know that is the process, people won't freak out if it comes to public conciousness again.
+
+100s of years ago, used to be able to say "I'm a chemist" and that's all you'd study, and you'd know everything. Not true anymore! Have to be multidiscinplenary, but also can't know everything anymore!
+
+Only three people can share a Nobel prize. You can guess who gets left off. We know we have a problem in DEI in science, what can we do to make it more inclusive?
+
+Get people as early as possible.
+
+Developed a card game called Remediate based on real science, learning about genetic engineering. Learning terms they might hear on the news. Can help people feel connected to the process.
+
+Started doing science standup.
+
+AQ: are lab grown organoids at risk of going rogue? Can you stop us all from aging?
+
+Queenie:
+Cells can do what they want. Do a lot of quality control. At every stage, taking samples and ensuring they're developing in the ways that they want. CRISPR engineered flurescent proteins so can see e.g. if glowing green then they're good.
+
+Trying to make processes much more controled and reproducible. Stem cells very variable and random, so lot of check points.
+
+AQ: Outside of lab, any examples of nanobots?
+
+Nanobots no (too early, only 15 years old need longer than that to be in the body), nanotech yes. Car engines way lighter and stronger by developing new alloys. Nano isn't all artificial. Examples of nano particles in steel to make it stronger etc... Always been around but haven't known it.
+
+mRNA vaccines are nanobots - inciting change in body for better.
+
+AQ: Seeing rise in public of monetising where you're heading. Stones travelling to get stem cell technology. Worth the money at the moment? Where do you see that field going?
+
+Make sure that the thing you put out is accesbible to the people who need it.
+Gene therapies available today, cost up to $1m today. Lifelong treatments though, upfront cost. Don't have to go to hospital every month.
+
+# Austin story
+
+(Jumped in 15min late)
+
+Vision from 1984, designating different zones.
+
+Sleepy southern conservative town in early days. Few people envisioned more.
+Brought together people in 1983.
+Design & architecture mattered to recruit e.g. tech companies, festivals.
+
+Tech companies maybe interested in suburbs around it, but middle of city was ugly. No way.
+Started doing test fits in periphery, but bad environment degradation, not going to work either.
+Kept pitching centre of city.
+
+City owned six blocks in lower downtown that was flood prone. (2nd st district) Let's completely redo them. Went to Cali, talked to CEO of computer science corp. Come to downtown Austin! Digital district! Convicning them to take 2 blocks. Residencial developer take 2. Retail on ground floor everywhere. Centrepiece new city hall financed by leases. Sold this vision.
+
+Relatively short period of time, got CSE to buy in. CEO said later first time he heard pitch "never happened". But mayor was committed and kept at it. Those tiny 6 blocks got to be pretty cool. Cafes, art cinema, music performance space.
+
+Now that district is full. Two high rise full of Google. Facebook there too. All started with 6 block area.
+
+Also brought biomedical to Austin. Houston had huge centre. Everyone thought that was it for Texas. But nah there's another angle. Experimental. But didn't have a medical school. UT was largest public university that didn't have a medical centre. So got them a medical centre. Created a medical district. 30 huge oak trees, kept every one. Lot of green. Might be about wellness as well as medicine. Two new hospitals going into that district.
+
+Third: tourist city. Not big enough otherwise to support musicians. Maybe Friday/Saturday night but not the rest. Needed festivals. Think of park space as event space.
+Indoor/outdoor events next to mixed use (e.g. cafes and what not) can all mix and reinforce to make a festival city. Convention centre built 30 years ago, was very important. Would be no SXSW without that mixed use.
+
+We got F1!!
+
+Real action happens in the city, party after the race.
+Five weekends a year have UT football games - major event. 100k people. When you go to breakfast on a football weekend, you can tell. City itself became the venue. Massive difference in the economy.
+
+Environment goals
+
+ladybird lake
+Preserving trail around lake. Easy access to nature. Important to recruit great people and projects.
+Designed natural spaces. Barn springs pool first example in 1930. Diverted creek water, takes spring water to feed pool. Best swimming hole ever, anywhere. Cultural icon of city.
+
+Damned Colorado river, raised water level. Didn't have any trees around it. Ladybird johnson (first lady) wanted to plant 1000s of trees. 1960. They're big an mature trees now.
+
+Critters started coming back! Largest urban bat population in the US.
+
+Removed streets/parking lot - just this year moved spaces underground and build mall infront of capitol building.
+Can go 15 blocks through city on hike/bike trails now.
+
+Very very dense mixed use downtime, then into soft green inner neighbourhoods. 100 to 0.
+
+Umbilicals through neighbourhoods medium density (5-7 stories) going out from city, transport corridors.
+
+Tons of suburbs too. That was the DNA of Austin. Goal is to entice people to not live this way. Not live in car culture.
+
+When we started push for downtown living, was a new mayor, Will. Will moved downtown. Would do seminars: "What it is to live downtown?" 400 people living in downtown then we moved there. Now there are 25k. From 2004 to 2020. Once you gave the opportunity, people love the idea.
+
+Ethos goals.
+
+53k students at uni.
+
+Walmart can't exist. Every time they've tried, nope. Uncommon Objects - no reason there should be a shop like this. "It's just things he likes."
+
+We own tacos. I know Mexico owns tacos. But we invented breakfast tacos.
+Also BBQ.
+53 kinds of donut.
+
+You don't just go for the food, you go for the experience of the food.
+
+"BBQ doesn't taste right if it's too fancy"
+
+Hard to maintain. So easy for generic to come in and trump everything.
+
+What's next?
+
+"We're fraeking building a city" Never about the building, always about the city. What are we trying to do as a city? How does this get us there?
+
+Brand new project, brand new convention centre. Current one is 30yr old, totally out of date. 5 block area, "Palm District". Interesting moments, but underdeveloped because creek flowing through it was flood prone. 8 years ago got a diverter tunnel, take it out of flood plain. It's the next place.
+
+Want to re-establish the grid. Traditionally want big foot prints for convention centres. But maybe not? Becomes a divider. Did that with medical centre. Completely changed area - not a blockade, its permeable. Greenway project up the creek. 1.5mi of contiguous trails. New convention centre all about getting onto the trial. Taking interstate highway, state going to sink the whole interstate - put it underground. City going to pay for cap for 8 blocks. Convention centre needs to use that cap to transition to the east. Want to protect the neighbourhood to the east. Need to figure out transition from high to low density over that cap.
+
+Mexican American heritage corridor to preserve and enhance.
+
+2nd st peters out towards the east - want to extend that through convention centre site.
+
+6th st redevelopment to support music industry.
+
+Newer, more experimental venues on red river.
+
+Combining with transit redo.
+
+_That's_ how you design a building! Not about making a cool looking object. Needs to reinforce and support goals of the city.
+
+AQ: How are you dealing with inflow of people from SF?
+Downtown has a lot of new people. I love these people! Austin attracts entrepenurial people. Pepole come to Austin _for a reason_. Already you have someone invested in a community.
+
+AQ: How much are you planning ahead for e.g. house sharing culture, autonomous cars, flying vehicles.
+
+We have tons of driverless vehicles. All over the city. In testing phase.
+Not really changing design of city for that, don't think it'll be that different. Ride share has changed it, need much less parking.
+
+AQ: How you navigate the pressure of commercial interests when pitching green + pedestrian spaces.
+
+Three things
+1. Very good political leadership. City + state owned a ton of land. Both been really good at stepping up.
+2. Really hard to build in Austin. Zoned for about 5-6 story building through downtown. Need to give back to get a density bonus to build above that. e.g. ACL major music venue was a developer give back.
+
+AQ: safety and student experience. America feeling more unsafe. What are you doing to ensure young people feel safe?
+
+Great question. I lived in AU for a year - much less violent culture here. I hate that. Drugs and a guns at a level we don't. In Austin, can't say we've overcome that completely. A lot of what makes people feel unsafe is not unsafe, e.g. homeless people. Crimerate is very low compared to other cities. Doesn't overcome the feeling though.
+
+# Journalism in AI
+
+Personalization is valuable for consumers. Can't imagine opening amazon and it being generic. Ethical considerations around bubbles.
+Arguing that algorithms aren't good enough to have a "full" bubble [really? Have you used tiktok??]
+
+Arms race between google and marketers.
+
+highlights problem of "why" I'm getting served this ad or this story. No way to reboot or escape. Delete cookies, go to incognito.
+
+Personalization being simplified. Doing it in a news cycle - not easy. Shopping experience easier than news experience. [really?]
+
+Pinned, pooled, algorithmic. Pinned = editor chooses. Pooled = here are 5 important stories from editors, but e.g. if someone has read it don't keep recommending. Algorithmic = what you would expect.
+
+Getting back to point - yes I can reboot, but I want to be more active. "I don't want to see that story".
+
+More caution or innovation in AI?
+
+Innovation of course. Nothing really bad on horizon. Once we crack quantum computing - then we're in trouble. Everything will be public! AI not like that.
+
+Objectives aren't aligned, power imbalance is significant.
+
+
+
+### Thylacine Extinction
+
+De-exctinction process.
+
+Colossal. We're de-extincting the Tasmanian Tiger
+Dodo de-extinction and other lost animals
+
+Dr Vanessa, scientist. Moderator.
+CEO of Colossal, Ben Lamm
+Professor Andrew Pask
+
+Q: What is de-exctionction?
+
+Ben: bringing back an extinct species or a proxy, by combining DNA with closest living neighbour, surrogacy process, re-wilding to fill ecological void.
+
+Andrew: science side, can't create life where there is none. Find closest living relative, take living cells, sequence and compare to extinct, then use CRISPR to edit DNR where changes are needed.
+
+Q: What is CRISPR?
+
+Andrew: one of the ways DNA editing, but massive advance in past decade. Very predictable, necessary to do projects like this. Many new techs since but CRISPR was the first.
+
+Q: Kind of like Jurassic Park...
+
+Ben: in JP, educated the world about genome engineering. But reverse JP. They were taking ancient DNA and filling in gaps. We're doing the opposite. Fat-tailed Dunnard closest living relative.
+
+There is no dino DNA.
+
+Q: In the whale world, samples taken from Orca from a skeleton. Took DNA samples from teeth, went to Norway to find if related to current ones.
+
+How to get samples from extinct species?
+
+A: Some "really nicely prepared specimens" available in museums, a rare few have really intact large fragments of DNA. Key-finding that made this all possible. New THIS MORNING, longest strand recovered they've ever seen. Need complete genome to do this ... and we have that for the Thylacine.
+
+Q: Why are we spending any money on bringing back things that are already gone? So many animals that are _about_ to go extinct?
+
+B: Systems problems. NOt solving individual point cases. Their work leads into assistive reproduction, stem cell techniques, etc... Conservation needs better tools & tech. "Give all that technology to the world" Work they're doing on Marsupial research alone is more than anyone has ever funded.
+
+Q: Biggest risk?
+
+Not doing it. Public perception. Lot of resistance in community. But we're changing the planet too quickly.
+
+DEveloped tech to make marsupial steam cells - massive break through.
+
+Can go to areas to collect animal samples, freeze them, if they do go extinct can use tissue to bring them back without current process of having to recreate genome.
+
+Q: elevator pitch: what is a stem cell?
+
+Cell that can give rise to a whole individual. You can take any cell, reprogram it all the way back to embryonic state that can give rise to a new copy. Very different between species - never been able to do it in marsupials before. Bring ga lot of work into "non-model organisms".
+
+Q: Why did you start with thylacine? How do birth one?
+
+A: Always loved it, coolest animal. Found early on in career that could get a sample from museum.
+
+In 2001 put DNA in a mouse and showed could bring it back. Just a matter of scale.
+
+Such a unique marsupial. Looks like a dog, but had a pouch! Apex predator! Austrlia really unusual - no other apex predators! Left a massive gap in ecosystem when we hunted it out.
+
+B: We met right after Colloas launched with mammoth. But actually also thylacine. Challenges are inverse of mammoth. Really good DNA, short gestation cycle, fewer edits because reference species. Mammoth much harder.
+
+Closest living relative is mouse sized marsupial. That's the surrogate genome. Can also be surrogate mum. Works coz marsupials give birth to really small young. Grain of rice when they're born!
+
+Q: Who's going to birth a mammoth!?
+
+Asian elephant is closest relative. Mammoth closer to Asian than asian is to african elephant.
+
+Funny story about PCR testing dog shit until students rebelled.
+
+Q: Can this help with white rhino?
+
+Two females left - functionally extinct. "Bio banking" Then engineer in extra genetic diversity for healthy gene pools.
+
+I thought we really needed to bring back 1-2 species before conservation would lean in, but finding that they're already keen.
+
+Keystone species = particular species that play a pivotal role. E.g. krill in southern ocean.
+
+Consider Mammoth lost keystone?
+Abosolutely. Cold-tolerant mega-fauna could revitalise tundra ecosystem (peer reviewed science). Way more efficient for carbon sequestration.
+
+Q: Concerns about reintroducing where ecosystem has evolved?
+
+Great example is plight of Tassie Devil. Would have gone extinct in the wild. Got wrecked by a disease. Apex predator picks off weak/sick animals. With no one to eat them, they survive - spread disease entire time. Tiger would have prevented disease from wiping them out.
+
+Ecosystems don't evolve that quickly - only 100 years since a good population. Not long enough that things have changed dramatically.
+
+But would do very structured releases, study interaction with environment.
+
+Shown with Dingos that cats don't like predators around. Cats can dissapear.
+
+Seen this with reintroducing wolves into Yellowstone. Reshapes landscape. Predators expend a tremendour amount of energy, they're not going to kill everything. "Cleaning" layer.
+Re-wilding works specifically with predators.
+
+Q: animal ethics? Peer review?
+
+Colossal has different view: goal not to write papers. Goal is to successfully re-wild. Deliver on the science, then follow up with papers.
+
+AQ: Made a lot of breakthroughs, but what's left?
+
+No science gates. We have the tools and technologies. Engineering challenges: how make edits we want reliably. Co-founder well known for multi-plex editing, doing multiple parts of genome at same time. Made "insanely impressive" strides in that area (not published).
+
+Surrogacy, no IVF or anything for marsupials. Developing that now. Can do these things routinely in other animals, but not marsupials yet. And that's great for wider breeding programs anyway.
+
+17 person team working on ex-utero, artifical growing. Multiple shots on goal.
+
+AQ: How long until we have one?
+
+Before 100 years. 2028 is goal for mammoth. Highly likely will a species before that.
+
+AQ: How feasible to deextinct neanderthal?
+
+We've got good genomes, and know the reproductive tech. Hell of a lot easier. Hypothetically speaking. Lot of ethical issues.
+
+AQ: What other animals are on the list?
+
+Handful of candidates, but what's the _intent_? Can't go back 65m years. Was a sabretooth marsupial.
+Would love to do a stellar sea cow, played a really important role in pacific north west, but nothing to surrogate it.
+
+AQ: For re-wilding, where is bridging of nature vs nurture date in replacement of parent. Will they know how hunt?
+
+Marsupials have quite small brains. Lot more instinctive behaviours. Apex Predators a lot of it really is hard wired. Pretty motivated to hunt and kill to eat.
+
+Mis-conception with re-wilding - don't just let the animal go. Re-introduced 21st tassie tiger. Start with small enclosures, then bigger, then bigger, etc... Already working now with indigenous groups and government on path to rewilding.
+
+
+
+
+
+
+
+
+### How Young Australians Can Retire Early In An Uncertain Future
+
+
+Not going to be easy to get to end of life with something that supports you, even if you have a good salary.
+
+Everyone needs to become an investor. Primary residence feeling out of reach.
+
+Increasing income. Everyone can and should be looking to do this.
+
+Might talk about budgeting and saving but hard to speak about it in an engaging way.
+
+Nick, CEO of Pearler
+Anna, Financial Educator, Head of Product & Community at Pearler. Wrote a book "Kids ain't cheap"
+Tash from Tash Invest.
+Brandon, newmoney youtube channel. 800k subs. FT team of 4.
+
+
+Investing isn't hard if you buy everything (ETFs)
+Not as risky as you tuoght.
+
+FIRE - save 25 times yearly expenses, can take out 4% a year to live on.
+
+What's the point where you can pay your rent with investing?
+
+Living off passive income seemed really great. Do that via dividends. Doesn't feel possible when you start. But compounds quickly.
+
+First investing XP vs today over what timespan. 10 years now.
+
+Bought all the ETFs and all the bonds and all the REITs. Lot of overlap, didn't know what was doing. Much simpler now. Don't become a good athlete immediately, same with investing.
+
+Brandon has a slightly different take: got started buying individual stocks, lost money. Uncle brought him around to passive. Then found an interest in buffet style active investing - "great businesses at fair prices". Not a huge part of portfolio. Best book? "Rule One" Four key points of buffet strategy, actinoable steps.
+
+1. Understand whatever you're investing in.
+2. Durable, intrinsic, competitive advantage.
+3. Check the management team. Led by skill and integrity.
+4. Price that makes sense and with margin of safety.
+
+Q: What's most costly mistake you've ever made?
+
+Tash bought inverse leveraged ETF to short market during COVID and lost $4k. Now just buys boring ETFs.
+
+Money in savings that sat there for _years_.
+
+Sky and Space Global, lost 100%.
+
+Should never have been investing money that needed for doing basic things want to do (don't want to be a forced seller)
+
+Pay off high interest debt and get emergency fund first.
+
+Increasing income stream? Tried to start a business. Each person has turned a side hustle into primary source of income.
+
+B: Started making YT videos coz made a heap of mistakes and wanted to talk about it. Consistent, liked community vibe, kept making content. Started 2017. Made call to go all-in on Youtube at 2019. Was earning $60k from physio, $30k from YT. Did some training at the time to plug the hole.
+
+What are the ways you make income?
+
+Stopped doing profitful with ASIC stuff, 1.5 years ago cracked down on finfluencers.
+
+"Overall great thing they're doing"
+
+50% from YT adsense, 50% from sponsors. Used to be 50% courses rather than courses.
+
+Tash - pretty much 100% sponsored content.
+
+"At what point did you think your free insta channel could be sponsored"
+
+Took off quickly, made money in 3 months.  2 and a bit years before going full tiem.
+
+Lessons learned dealing with multi-nationals. Need to know what you're worth and what you want in contracts. Partner with companies who actually align with values.
+
+Been really transparent on channel about "been approached by X"
+
+Anna - employee. Upskilling so important.
+Not everyone wants to be a founder.
+4x income over 8 years.
+Biggest investment in yourself.
+
+What did you put in your employment contract?
+
+Don't talk enough about contracts. Pearler has pay transparency.
+
+So much you can negotiate.
+
+First steps if you have a passion or small following?
+
+Post what you're interested in, don't need a plan.
+
+"No Youtube tax. You can just make a video."
+
+Putting yourself out there helps create opportunities.
+
+AQ:
+
+
+
+
+### What can we learn from the skies of other planets?
+
+Tom Barkely, astrophysicist working for NASA.
+
+Exoplanets today. Planets that orbit other stars.
+
+Dr Benjamin Monte. Senior Lecturer at Physics at UNSW. Research on exoplanetary systems, developing software tools to analyse data.
+
+Dr Alisa Kintana, astrophysicist at NASA. Principle Investigator and lead scientist for Pandara small sat launching in 2025
+
+Kirsten Banks, PhD student. Science communicator.
+
+Last 30 years started to discover exoplanets. Story of surprise.
+
+Solar system "makes sense", small planets close in, larger planets further out.
+
+These fell apart when we discovered 51 Pegasi b. "Hot Jupiter" - size of Jupiter but in close orbit, closer than Mercury. Orbits every 4 days. Doppler effect. Star orbit planet, star moves, doppler effect, can figure out mass.
+
+First 1000 planets found this way, all looked similar because that's what we could see.
+
+Keplar in 2009 changed things. Different way: looked for shadows. Dip in brightness in star. Can figure out size and period.
+2019 follow up mission TESS.
+
+5000 planets nowawadys, most through these methods.
+
+5000 is mind-blowing, but also in astronomical numbers it's very little - 100 billion stars in milky way.
+
+Not directly imaging planet, can only see this for most nearby.
+
+Have only looked in a small cone. We know that they are super common, more common than stars.
+
+Goal at NASA is to understand these planets. Are they habitable? Are they inhabited?
+
+A:
+
+Exoplanets one of most rapidly growing fields in astronomy. Gone from 0 to abundant. To learn about individual planets, use transmission spectroscopy. Planet crossing across star blocks brightness, but also atmosphere filters light, can learn a lot about the atmostphere.
+
+Lot of exoplanets with thick puffy atmospheres are easiest to see with this method. Proven technique with Hubble. Wonderful technique with James Webb Space Telescope. When it was designed, exoplanets didn't exist. Fortunately, it turns out to be excellent for spectography. Point at individual planets, take spectra, we can identify atmospheres. In the future: can we find exoplanets with atmospheres like earth? Could we tell if life had to be present to make that atmosphere?
+
+Big field: identifying "bio signals". Making huge steps with James Webb.
+
+Challenge is that data is complicated and not compelling to look at. Telling stories is how we communicate?
+
+"I would have gone with data is _boring_"
+
+Exoplanet "looks like a graph"
+
+Kepler 186f, first earth like planet discovered around a smaller sun than ours.
+
+5,528 confirmed so far. 1992 was first discovered. 9007 candidates yet to be
+confirmed!
+
+Q: What's process of "confirming"? Independent observation?
+
+HD189773 planet was first to have color confirmed. Looked at all the combined light, then looked at light when planet behind star, then get difference.
+
+Tres 2B - darkest planet ever found. Reflects less light than charcoal.
+
+Kepler 444 planets are favs. 5 earth sized planets, orbiting star over 11B years old (ours is 4.5B). Abundance of earth sized planets.
+This one made you think about what would it look like through time. Evidence of extremely old planets. May have had life but don't know.
+All have neat orbits.
+
+"Big fan of earth, all my friends are here"
+
+Could not survive on any planets we've found - good reminder just how inhospitiable the universe is.
+
+Kepler 10, 10th by Kepler. Very short period planet, less than a day! 15 hours. Can work out temperature. Tidally locked, one side always facing sun. We know temperature on both sides - 1000s of degrees on day side. Very clear evidence of ocean - ocean of magma! Magma one side, hard rock the other side.
+
+Recent discovery of "jumbos" - might be able to have planets without stars!? Even the rogue ones would have been made then ejected.
+
+Clouds made of liquid metal, rains rubies and sapphires!? WASP 121B. most likely explanation we have.
+
+What's next at NASA?
+
+Two flagships in work.
+
+Nancy Grace space telescope in 2026. Wide survey. Several exo capabilities.
+
+Direct imaging is next thing.
+
+Cassini image from Saturn of earth.
+
+Block out star so you can see things around it. Works for giant planets only.
+
+NASA habitable worlds observatory, well in the future. Image earth! (2040s?)
+
+How does chronograph work?
+Bright star in the middle, planets are feint. Older planets much older, not giving off as much thermal emission as younger ones, more reflection component.
+
+Earth 1/10th billionth brightness of sun.
+
+Really hard to do from earth coz of atmosphere. Can almost get to 1/10 billionth level.
+
+Another goal to identify signs of life with this method.
+
+How do balance accuracy with interesting?
+
+JWST images as well - looking at infrared light that's not visible to us.
+
+Planet like earth but with wrong star doesn't work, e.g. get too many solar flares. Need to be care in artist impressions to not give impression have found next earth.
+
+How is AU leading the way?
+
+Large internaltional partnerships
+
+Lot going on in AU though. southern observatory. Network of 8m telescopes in Chile. Four x 8m. Get to apply for time on.
+Large amount of instrumentation work. In Sydney, Australis centre, collab between UNSW, Macquarie, and ANU. Building 35m "extremely large telescope" (ELT out of embarrasment), under construction in Chile. Building instruments for that, eng scene in AU. AAT turning 50 next year. 6 hours away, very impactful.
+Huge presence in AU.
+Big in radio astronomy. SKA telescope.
+
+Which sci-fi best at depicting space science?
+
+Interstellar, Kip Thorne advisory has nobel prize in black holes.
+
+So much existing tech out there - what's the most joyful example of repurposing an existing sensor/technique?
+
+Tree is a telescope! Tree rings with data about solar flares.
+
+State of understanding, what are theories on stars with weird light patterns.
+Observed by Kepler, then had really weird dips. 20% fainter for 2 hours!?
+Asymmetric, aperiodic, a-everything. Tabbi's star. Leading theory is that it's a collision of two asteroids, giant cloud of dust, aftereffects.
+
+Note relatede to science comms: paper came out saying 10 things it good be, last thing was engineered Dyson Sphere.
+
+To confirm
+
+1) Find it.
+once in one orbit not enough.
+seen by another telescope, with same or diff method.
+or same tele with different method
+
+Big survey telescopes can find lots of candidates.
+
+Hard to get tele time just to confirm another hot jupiter.
+
+
+### Riot
+
+LoL, teamfight tactics.
+
+Head of Riot Sydney. League and Valorant. 110 devs in Sydney.
+
+Q: Things have been rough for League, lot of controversy.
+
+Last year, start of this year, bunch of player frustration. Events felt formulaic, lack of variety. Not being proactive or transparent in comms.
+
+"Feeling down was an understatement. Most devs play league, active on reddit"
+
+Player Experience first is core value. Players have said that they didn't feel we were living up to that. What's our process for dealing with that?
+
+"You are not your player". If you want something that you want in the game, you're veering off the wrong path. Need to be listening.
+Without players, there is no Riot. Players don't care about challenges or constraints.
+
+Fortunate that can take a long term focus.
+
+Arena, game mode in league, done phenomenally well. What's the story?
+
+Started exploring in December. Playtests early Jan. Felt like it had a lot of potential. Very rough. But don't feel like we can wait a year. Made a gamble - talked about the plan, keep players updated.
+
+Don't do multi-year roadmaps. Annual cadence. League every other week release cadence.
+
+Q: did player reaction input into that?
+Yeah would have polished it more.
+Realised they need to have more sense of urgency.
+
+Nexus slips live next week. Arena coming back in December. Want to bring back other game modes.
+
+Sydney anniversay - one year. Starting in another area very scary - do designers think the same way? How do they do production? etc etc
+Amazing how much they've shared same values. First time ever doing game play outside of LA.
+
+Sydney studio used to work with World of Tanks. Proven record on AAA. Talent pool exists in Sydney.
+
+How do you know you're doing the right thing, metrics around player XP?
