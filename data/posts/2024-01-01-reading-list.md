@@ -1,0 +1,126 @@
+---
+layout: post
+year: 2023
+title: "2023 Reading List"
+tags: ["reviews", "reading-list"]
+description: I read fifty books this year. Here are my top picks.
+image:
+  feature: 'reading-2023.jpg'
+  feature_credit:
+    author: Ugur Akdemir
+    title: Assorted Book Lot
+    link: https://unsplash.com/photos/assorted-book-lot-XT-o5O458as?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+credits:
+  -
+    title: Cover images
+    author: Open Library
+    link: "https://openlibrary.org/"
+---
+
+I read fifty books this year, slightly above average and with a solid hit rate
+of four and five star books.
+
+Top picks are below, and you can find the full list [over at the
+index](/books/#list-2023). If you only read one, make it _Anxious People_.
+
+<x-reading-graphs year='2023'></x-reading-graphs>
+
+## Non-Fiction
+
+#### Invisible Women _by Caroline Criado Perez_
+
+A trove of research across multiple domains comprehensively documenting the
+“data gap” when it comes to women, and the harm that causes. Much support
+intutitions I already had (e.g. use of “generic masculine” isn’t neutral,
+discrepancy in performance reviews), but many new insights as well (e.g.
+snow-clearing streets “pedestrian-first” (a need that is often hidden in
+transport studies) reduces overall injury rates, the impact of various quota
+systems in political representation.) A big takeaway for me was the importance
+of sex-disaggregating data.
+
+![Invisible Women](https://covers.openlibrary.org/b/olid/OL33734454M-L.jpg){: class="cover" }
+
+#### The Wife Drought _by Annabelle Crabb_
+
+A look at the data and drivers of under-representation of women in the
+workplace ... and of men at home. I hadn't thought much about "glass
+fire-escapes" – social pressures and norms making it hard for men to leave the
+workforce.
+
+#### How We Love _by Clementine Ford_
+
+Beautiful read, raw and honest.
+
+> But one of the many lessons I’m learning as a mother is how to accept that my
+> love cannot be an anchor that drags him beneath the waves. Rather, it must be
+> the deep water itself, buoyant and clear, for him to float in, to swim
+> through, to carry him in its currents to shore when it is time for him to
+> leave it as he surely one day will, as he surely one day must.
+
+#### Noise _by Daniel Kahneman_
+
+Important reading if you manage in an industry that routinely applies
+judgement. Reducing noise can be just as effective at improving decision
+quality as reducing bias: they affect the math in the same way, and noise is
+often a larger contributor and easier to address.
+
+I wrote a more [detailed summary](/books/noise.html) if you're interested.
+
+#### Good For A Girl _by Lauren Fleshman_
+
+The perfect autobiography. Addresses important issues facing women in sport,
+uses her story to illustrate data and research, addresses her own history
+plainly. [More detailed review
+here.](http://localhost:4001/books/good-for-a-girl.html)
+
+> I ignored my loneliness and called it independence.
+
+
+## Fiction
+
+#### Anxious People _by Fredrik Backman_
+
+Only book to ever make me both laugh out loud but also cry. Kept going where I
+didn't expect.
+
+> Because everyone loves someone, and anyone who loves someone has had those
+> desperate nights where we lie awake trying to figure out how we can afford to
+> carry on being human beings. Sometimes that makes us do things that seem
+> ridiculous in hindsight, but which felt like the only way out at the time.
+
+Honorable mention to _Beartown_ by the same author, which has a similar style
+and is also excellent.
+
+#### The Heart's Invisible Furies _by John Boyne_
+
+Story of an adoptee growing up (and then old) gay in Ireland. Tragic at times,
+hilarious throughout.
+
+#### Heat 2 _by Michael Mann_
+
+A straight continuation of the original movie _Heat_, which you definitely need
+to have watched before reading. Great scenes and tension.
+
+![Head 2](https://covers.openlibrary.org/b/olid/OL37688562M-L.jpg){: class="cover" }
+
+## Sci-fi
+
+#### Exhalation _by Ted Chiang_
+
+A unique short story collection. Surprising and thoughtful.
+
+#### The Collapsing Empire Trilogy _by John Scalzi_
+
+Was turned off Scalzi a while ago so was reluctant to pick this up, but I'm
+glad I did. I really enjoy political/economic and this delivers, with a
+surprising and satisfying conclusion.
+
+> Confidence isn’t about knowing you’re right. Confidence is about knowing you
+> can make it right.
+
+#### Valuable Humans In Transit _by qntm_
+
+A new release since I read his back-catalog in 2022. Fantastic collection of
+short stories, very distinctive. Particularly enjoyed _Frame by Frame_.
+
+![Valuable Humans In Transit](https://covers.openlibrary.org/b/olid/OL46084429M-L.jpg){: class="cover" }
