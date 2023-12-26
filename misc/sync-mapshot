@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -ex
+# In game: /mapshot foldername
+
+cd /mnt/hgfs/mapshot
+export X=foldername aws s3 sync $x s3://mapshot/$x
