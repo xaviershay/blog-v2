@@ -92,9 +92,10 @@ packed containers.
   excrutiatingly slow patrol boat. Unlocking hovercraft was a major quality of
   life improvement.
 * Heavy combat aircraft should have a logistics slot so it can self refuel and
-  rearm. Also needed more ammo slots. In practice wasn't that useful for taking
-  out more than a single base, except for loading up the grid with personal
-  lasers which didn't feel that satisfying. [ed: this has since been fixed!]
+  rearm. [ed: this has since been fixed!] Also needed more ammo slots. In
+  practice wasn't that useful for taking out more than a single base, except
+  for loading up the grid with personal lasers which didn't feel that
+  satisfying.
 * Aircraft make a high whining sound. Which is realistic but also too
   aggressive to actually play with. I disabled environmental sounds as a
   result.
