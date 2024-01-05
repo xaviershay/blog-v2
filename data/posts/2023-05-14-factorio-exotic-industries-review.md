@@ -8,7 +8,7 @@ image:
   feature: 'ei/ei-base-cropped.jpg'
 ---
 
-[Exotic Industries](https://mods.factorio.com/mod/exotic-industries) is an overhaul mod for [Factorio](https://www.factorio.com/) that adds a large number of new resources, recipes and mechanics. It’s a significant step up from vanilla, while not being quite as big of a jump as something like [Space Exploration](https://mods.factorio.com/mod/space-exploration). Probably a similar level of "moderate complexity" to [Krastorio 2](https://mods.factorio.com/mod/Krastorio2), though it’s been a while since I’ve played that.
+[Exotic Industries](https://mods.factorio.com/mod/exotic-industries) is an overhaul mod for [Factorio](https://www.factorio.com/) that adds a large number of new resources, recipes and mechanics. It’s a significant step up from vanilla, while not being quite as big of a jump as something like [Space Exploration](https://mods.factorio.com/mod/space-exploration). Probably a similar level of "moderate complexity" to [Krastorio 2](https://mods.factorio.com/mod/Krastorio2), though it’s been a while since I’ve played that. [ed: I [replayed K2,](/articles/factorio-krastorio-2-review.html) Exotic Industries is quite a bit more complex]
 
 The primary gimmick is an “age” system, with six distinct research ages to unlock. Technology costs increase depending on research order rather than having fixed costs.
 

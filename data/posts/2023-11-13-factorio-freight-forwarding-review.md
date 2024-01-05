@@ -53,14 +53,13 @@ frustrating:
   stabilizing. (Being able to read fuel values out of a train would fix this
   and many other issues!)
 * Packed containers had a stack size of 1, where as unpacked had a stack size
-  of 10. This means you can't rely on "just fill the train" conditions and
-  instead need to rely on circuit conditions. Not the biggest deal initially,
-  aside from finding it immersion breaking. Once cargo ships came into the
-  picture, and without cross-island circuit networks, there's no way to avoid
-  large buffers or tell exactly how many containers are in the system at anyone
-  time. It made it effectively impossible to do shared depots in a reliable way
-  ... but that's exactly what is encouraged both mechanically and
-  aesthetically by cargo ships.
+  of 10. This means you can't rely on "just fill the train" conditions. Not the
+  biggest deal initially, just mostly immersion breaking. Once cargo ships came
+  into the picture, and without cross-island circuit networks, there's no way
+  to avoid large buffers or to tell exactly how many containers are in the
+  system at anyone time. It made it effectively impossible to do shared depots
+  in a reliable way ... but that's exactly what is encouraged both mechanically
+  and aesthetically by cargo ships.
 
 Ultimately this was frustrating enough to push me away from regular trains and
 back to fuel loaded mini-trains. If I were to play this mod again I'd remove
@@ -95,7 +94,7 @@ packed containers.
 * Heavy combat aircraft should have a logistics slot so it can self refuel and
   rearm. Also needed more ammo slots. In practice wasn't that useful for taking
   out more than a single base, except for loading up the grid with personal
-  lasers which didn't feel that satisfying.
+  lasers which didn't feel that satisfying. [ed: this has since been fixed!]
 * Aircraft make a high whining sound. Which is realistic but also too
   aggressive to actually play with. I disabled environmental sounds as a
   result.
@@ -103,6 +102,8 @@ packed containers.
   purpose that well.
 * Lava pools don't appear until after you research Titansteel. Aside from being
   immersion breaking, I wasted a large amount of scouting time as a result.
+  [ed: mod author claims this shouldn't be the case, so likely an issue on my
+  end.]
 * Too much complexity in mall items such as assemblers (likely from adding too
   many BZ mods.) Discouraged early mall building, which combined with limited
   stack size led to more manual work.
