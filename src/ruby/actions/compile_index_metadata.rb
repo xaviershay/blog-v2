@@ -3,6 +3,7 @@ require 'date'
 
 def compile_index_metadata(post_metadata, out)
   posts = []
+  factorio_reviews = []
   yearly_archives = {}
 
   post_metadata.each do |post|
@@ -18,13 +19,25 @@ def compile_index_metadata(post_metadata, out)
         yearly_archives[yearly_type] << summary
       end
     end
+    if metadata['tags'].include?('factorio')
+      summary = {
+        "url" => metadata.fetch("url"),
+        "title" => metadata.fetch("title"),
+        "date" => metadata.fetch("date")
+      }
+      factorio_reviews << summary
+    end
     posts << metadata
   end
   posts = posts
     .reject {|x| x['draft'] }
     .sort_by {|x| x.fetch("date") { raise x.inspect } }
     .reverse
-  yaml = {"yearly_archives" => yearly_archives, "posts" => posts}.to_yaml
+  yaml = {
+    "yearly_archives"  => yearly_archives,
+    "posts"            => posts,
+    "factorio_reviews" => factorio_reviews
+  }.to_yaml
   File.write(out, yaml)
 end
 

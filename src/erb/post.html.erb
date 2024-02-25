@@ -83,6 +83,23 @@
           <% end %>
         </nav>
       <% end %>
+
+      <% factorio = ((@post.tags & %w(factorio)).first) && @site.factorio_reviews %>
+      <% if factorio %>
+        <nav class='factorio-reviews'>
+          <h4>More Factorio Mod Reviews</h4>
+          <ul>
+          <% factorio.each do |post| %>
+            <% next if post.url == @post.url %>
+            <li>
+              <a href="<%= post.url %>">
+                <%= post.title.gsub(/Factorio /, '').gsub(/ Review/,'') %>
+              </a>&nbsp;<%= post.date.strftime("%b %-e, %Y") %>
+            </li>
+          <% end %>
+          </ul>
+        </nav>
+      <% end %>
     </article>
     <footer>
       <nav>
