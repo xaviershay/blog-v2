@@ -15,9 +15,8 @@ reads:
 Relationship Anarchy is the application of anarchist principles to the personal
 realm. Primarily:
 
-> The principles of self-managed social anarchism that relationship anarchy has
-> inherited include the concepts of freely accepted and revisable commitments,
-> responsible autonomy, and personal sovereignty - an ethical tripod.
+> the concepts of freely accepted and revisable commitments, responsible
+> autonomy, and personal sovereignty - an ethical tripod.
 
 This doesn't mean individualism however:
 
@@ -27,8 +26,8 @@ This doesn't mean individualism however:
 
 While often considered in the same sphere, relationship anarchy has a distinct
 history, development, and ideological basis from other dominant non-monogamous
-models it is often lumped with. Non-monogamy is possible within this framework,
-but it is a secondary implication and isn't assumed:
+models. Non-monogamy is _possible_ within this framework, but it is a secondary
+implication and isn't _assumed:_
 
 > an anarchist relationship is first and foremost one of cooperation and
 > setting our own rules. By that definition, it is not self-serving but always
@@ -37,8 +36,8 @@ but it is a secondary implication and isn't assumed:
 > it can be about friendship, about romance, about sex, about a selection of
 > those things, but by definition it will be about care.
 
-Anarchy has inherited a number of harmful stereotypes in mainstream culture,
-that are a far cry from the actual ideology. For example, to counter a popular
+Anarchy has accumulated a number of harmful stereotypes in mainstream culture
+that are not present in the actual ideology. For example, to counter a popular
 myth:
 
 > Anarchists are not against organization or structure; rather, they object to
@@ -54,8 +53,8 @@ This quote from Noam Chomsky captures it nicely:
 ### Labels & Normativity
 
 Relationship anarchy seeks to do away with _labels_ such as "couple" and "friend"
-(described as _normative_, i.e. establishing norms of behaviour, which may not
-have been conciously agreed to), instead attempting to explicitly and freely
+(described as _normative_: establishing norms of behaviour, which may not
+have been consciously agreed to), instead attempting to explicitly and freely
 define the commitments and scope of relationships independent of these labels:
 
 > we must pay attention to the possibility that these labels condition us.
@@ -82,7 +81,8 @@ society. They don't need to be avoided, but used with care:
 > suggests that you can design your own commitments with the people around you
 > according to the circumstances, affinities, and the very course of events.
 
-There is an inherent tension in designing commitments while respecting autonomy and personal sovereignity.
+There is an inherent tension in designing commitments while respecting autonomy
+and personal sovereignty:
 
 > Among the many difficulties I can find in putting this into practice, the
 > most basic ones are: how to distinguish a free and voluntary commitment from
@@ -128,15 +128,15 @@ A reframing of commitments helps though:
 
 ### Personal Sovereignty
 
-Where Relationship Anarchy departs most from other ideologies is the sacredness
-of personal sovereignty and autonomy.
+Where Relationship Anarchy departs most from other relationship ideologies is
+the inviolability of personal sovereignty and autonomy.
 
 > Above all, no one grants their own personal sovereignty in exchange for the
 > personal sovereignty of another or others.
 
 While it takes commitments, community and solidarity seriously, it views
 negotiations about aspects outside the "shared space" of a relationship with
-skepticism and concern:
+scepticism and concern:
 
 > Evaluating how ethical it is in terms of my moral principles – whether
 > they’re close to anarchism’s not – to negotiate aspects that go beyond my
@@ -149,7 +149,7 @@ skepticism and concern:
 > interaction at hand – that is, whether it’s ethical to negotiate what can or
 > cannot be done outside of shared spaces and times.
 
-Transparency - at the extreme, a commitment to share everything - would be a
+Transparency---at the extreme, a commitment to share everything---would be a
 violation of this principle, but honesty in a relationship seems like a
 fundamental requirement. Relationship Anarchy reconciles this by introducing
 the concept of _sincerity_:
@@ -157,7 +157,8 @@ the concept of _sincerity_:
 > Sincerity, understood as the need to share what’s important – everything that
 > involves those in a relationship – is a value.
 
-That doesn't mean it's easy to manage, but it does provide language to at least
+That doesn't mean it is easy to manage, but it does provide language to at
+least
 discuss it:
 
 > The most difficult aspect that requires careful analysis is distinguishing
@@ -198,9 +199,7 @@ As another example of a typical difference:
 > the best readings are those that reveal that what you already intuited...
 > wasn’t just in your mind.
 
-Despite the overly-academic language, this was a valuable read that helped me
-better articulate and understand my thoughts.
-
-It's [available for free
+Despite the overly-academic language, this was a valuable read that gave me
+plenty of new insights. It is [available for free
 online](https://theanarchistlibrary.org/library/juan-carlo-perez-cortez-relationship-anarchy)
 if you wish to sample it.
