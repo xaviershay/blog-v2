@@ -27,7 +27,7 @@ overall, though short for an overhaul: I completed it in just under 30 hours.
   <figcaption>The core base.</figcaption>
 </figure>
 
-I _loved_ the theme and flavour text. Joyful, irreverant, but internally
+I _loved_ the theme and flavour text. Joyful, irreverent, but internally
 consistent and aided in understanding.
 
 While many (all?) assets were reused from vanilla and [Krastorio
