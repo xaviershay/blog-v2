@@ -4,9 +4,14 @@ title: "Factorio Space Exploration Review"
 category: articles
 tags: ['factorio']
 description: A review of the Space Exploration mod for Factorio.
-image:
-  feature: 'ultracube-base.jpg'
 ---
+
+[Space Exploration](https://mods.factorio.com/mod/space-exploration) is an epic overhaul mod for Factorio.
+
+I reviewed this mod in video form and intertwined with a base tour, but I've
+extraced the key points below. Despite some minor criticisms, this was one of the best Factorio experiences I've had. One of the best _gaming_ experiences I've had. The scope of this mod is simply remarkable.
+
+[Edit in 2024: There have been a number of major updates to this mod since this review, adding new functionality, significantly changing the tech progression and some recipes, and in general improving the overall experience even further.]
 
 <x-youtube href='https://www.youtube.com/watch?v=iAqeKs6dgh0'>
 </x-youtube>
@@ -15,7 +20,7 @@ image:
 * Slightly extra complexity towards mid-game, requiring new layouts but without increasing difficulty too much.
 * Didn't explore core mining, would like to try it out next run.
 * Loved the beacon rework: much wider area and more module slots, but each machine can only be affected by a single beacon.
-* Fantastic thematic cohesion, with art assets to match: telescopes and radar to scan the skies, mechanical facilities smashing trains together and blowing stuff up to measure forces, large particle colliders, and labs growing stuff. It was a treat discovering each new reseach tech.
+* Fantastic thematic cohesion, with art assets to match: telescopes and radar to scan the skies, mechanical facilities smashing trains together and blowing things up to measure forces, large particle colliders, and labs growing stuff. It was a treat discovering each new reseach tech.
 * Spaceships were really neat to play around with, but always felt a bit janky.
   This was part user error, part not using recommended mods, and part their
   operation changed due to an update. I don't think these issues would be
@@ -25,6 +30,3 @@ image:
 * Arcospheres was a potentially fun programming problem made unfun by a terrible programming environment.
 * Final space ship was a massive grind, mostly because when I thought I was done, I was most definitely not done. Ten hours away not done.
 
-Despite some criticisms, this was one of the best Factorio experiences I have. One of the best _gaming_ experiences I've had. The scope of this mod is simply remarkable.
-
-[Edit in 2024: There have been a number of major updates to this mod since this review, adding new functionality, significantly changing the tech progression and some recipes, and in general improving the overall experience even further.]
