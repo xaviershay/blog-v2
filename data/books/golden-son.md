@@ -9,7 +9,6 @@ categories:
 - sci-fi
 reads:
 - finished_at: '2021-12-13'
-- finished_at: '2021-12-13'
 - finished_at: '2016-10-27'
 ---
 Same review as first one.
