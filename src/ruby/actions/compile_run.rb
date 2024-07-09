@@ -44,7 +44,7 @@ def compile_run(db_file, out)
     '5K'       => 'strava-3260978622',
     '10K'      => 'strava-2193098766',
     'Half'     => 'strava-448924490',
-    'Marathon' => 'strava-5719875',
+    'Marathon' => 'strava-11825521454',
     '50K'      => 'strava-8693546298',
     '100K'     => 'strava-8812330177',
     'Vertical K' => 'strava-9391231065'
