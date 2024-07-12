@@ -9,6 +9,10 @@ image:
     author: City of Gold Coast
     title: Aerial View of City Buildings
     link: https://unsplash.com/photos/aerial-view-of-city-buildings-near-sea-during-daytime-O3ji6Tv0PtY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+credits:
+  -
+    title: Running photo
+    author: Kieran Ryan
 ---
 
 I last raced a marathon [12 years
