@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Yosemite Wilderness"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'tenaya-lake.jpg'
   feature_credit:

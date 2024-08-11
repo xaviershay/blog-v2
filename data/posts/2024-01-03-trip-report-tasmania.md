@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Tasmania"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'tasmania/shipstern-bluff.jpg'
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Nā Pali Coast"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'kauai/waimea-canyon-wide.jpg'
 ---

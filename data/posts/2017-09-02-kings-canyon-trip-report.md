@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Kings Canyon"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'kings-canyon-granite-lake.jpg'
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Bright Trail Running"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'bright-2021/buffalo-pano-2.jpg'
 ---

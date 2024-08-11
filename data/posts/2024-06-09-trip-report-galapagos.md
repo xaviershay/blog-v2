@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Galapagos Islands"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'galapagos/yo-galapagos.jpg'
 ---

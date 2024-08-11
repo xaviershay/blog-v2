@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Hetch Hetchy to Tilden Lake"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'hetch-hetchy.jpg'
   feature_credit:

@@ -2,7 +2,7 @@
 layout: post
 title: "Trip Report: Tour de Trails Chamonix"
 category: articles
-tags: ["other"]
+tags: ["other", 'trip-report']
 image:
   feature: 'chamonix/chamonix-cover.jpg'
 credits:
