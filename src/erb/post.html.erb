@@ -92,9 +92,7 @@
           <% factorio.each do |post| %>
             <% next if post.url == @post.url %>
             <li>
-              <a href="<%= post.url %>">
-                <%= post.title.gsub(/Factorio /, '').gsub(/ Review/,'') %>
-              </a>&nbsp;<%= post.date.strftime("%b %-e, %Y") %>
+              <a href="<%= post.url %>"><%= post.title.gsub(/Factorio /, '').gsub(/ Review/,'') %></a>&nbsp;<%= post.date.strftime("%b %-e, %Y") %>
             </li>
           <% end %>
           </ul>
