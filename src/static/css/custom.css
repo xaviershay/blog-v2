@@ -334,6 +334,12 @@ figure:not(.linked) .image-strip-1-to-2 img:nth-child(2) { width: 63%; }
 .image-strip-1-to-2 a:nth-child(1) { width: 35.5%;  display: inline-block}
 .image-strip-1-to-2 a:nth-child(2) { width: 63%;  display: inline-block}
 
+.image-strip-1-to-3 a:nth-child(1) { width: 27%;  display: inline-block}
+.image-strip-1-to-3 a:nth-child(2) { width: 72%;  display: inline-block}
+
+.image-strip-3-to-1 a:nth-child(1) { width: 75%;  display: inline-block}
+.image-strip-3-to-1 a:nth-child(2) { width: 24%;  display: inline-block}
+
 /* FEATURE IMAGE AND OVERLAY */
 @media only screen and (max-width: 720px) {
   header > nav .featured-image-credit {
@@ -411,7 +417,9 @@ em {
 
 .image-strip {
     text-align: center;
-    margin-bottom: 1em;
+    /* This margin made no sense for Timor-Leste post. But it must be here for
+     * a reason, so this probably breaks some other post... */
+    /* margin-bottom: 1em; */
 }
 .image-strip img {
     display: inline;
