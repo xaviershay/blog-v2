@@ -61,7 +61,7 @@ Nothing game breaking, but I encountered a lot of obvious bugs:
 * Not able to complete a hero help quest.
 * Minor niche issue, but doesn’t support alternate keyboard layouts out of the box.
 
-This is what I mean by being trapped in a AAA shell: everything I dislike about this game feels like it stems from too many incidental things being stuffed into it, yet I love everything about the core experience. Overall this is still an excellent game and you should play it. I’m thinking I’ll take a break to wait for the final DLC to land (4 new heroes with custom side-stories) then try an Ultimate 3 New Game+.
+This is what I mean by being trapped in a AAA shell: everything I dislike about this game feels like it stems from too many incidental things being stuffed into it, yet I love everything about the core experience. Overall this is still an excellent game and you should play it. I’m thinking I’ll take a break to wait for the final DLC to land (4 new heroes with custom side-stories) then try an Ultimate 3 New Game+. _Ed: I did exactly that, see my [updated review.](/articles/midnight-suns-dlc-review.html)_
 
 <figure>
   <img src='/images/midnight-suns-fishing-with-wolverine.jpg' />
