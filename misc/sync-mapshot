@@ -4,4 +4,4 @@ set -ex
 # In game: /mapshot foldername
 
 cd /mnt/hgfs/mapshot
-export X=foldername aws s3 sync $x s3://mapshot/$x
+aws s3 sync $1 s3://mapshot/$1

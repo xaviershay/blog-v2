@@ -1,3 +1,5 @@
+require 'support/kramdown'
+
 class Actions::Post < Builder
   def load_markdown(input)
     load_markdown_from_file2(input)
