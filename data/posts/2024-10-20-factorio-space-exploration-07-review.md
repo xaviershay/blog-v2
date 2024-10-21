@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Factorio Space Exploration 0.7 Review"
+title: "Factorio Space Exploration 0.6 Review"
 category: articles
 tags: ['factorio']
 description: A second review of the Space Exploration mod for Factorio.
@@ -9,7 +9,7 @@ image:
 ---
 
 
-I last played [Space Exploration in 2021.](https://blog.xaviershay.com/articles/factorio-space-exploration-review.html) It’s an epic overhaul mod for [Factorio.](https://factorio.com/) Since then version 0.7 was released, including new utility and production sciences, electric trains, and space elevators! I also wanted to attempt an alternate victory. Spent about 250 hours working towards it before abandoning. Still got through the vast majority of the mod’s content again though, and it just keeps getting better.
+I last played [Space Exploration in 2021.](https://blog.xaviershay.com/articles/factorio-space-exploration-review.html) It’s an epic overhaul mod for [Factorio.](https://factorio.com/) Since then version 0.6 was released, including new science chains and space elevators! I also wanted to attempt an alternate victory. Spent about 250 hours working towards it before abandoning. Still got through the vast majority of the mod’s content again though, and it just keeps getting better.
 
 All alternate victory content has been moved to the end and hidden by default to avoid undesired spoilers.
 
@@ -47,7 +47,7 @@ I skipped core mining last run, so was determined to try it. While I did set up 
 
 [Cybersyn](https://mods.factorio.com/mod/cybersyn) has been a permanent fixture in my runs for a while, but this time I started without it. Using only [Train Control Stations](https://mods.factorio.com/mod/Train_Control_Signals) to set up refuelling stations, I got most of the way into the mid-game but ultimately caved and re-added Cybersyn. It’s simply too helpful for multi-item stations.
 
-Last time I had one giant interconnected space base. This time I wanted to build separate platforms connected by rail, as well as using the space elevator to ferry trains from the surface. This was fun! I briefly tried switching to EM trains but the power usage was far too high for my current production and I never came back to them. (It’d be nice if they were explained a bit better in the documentation.) I built for ~20SPM.
+Last time I had one giant interconnected space base. This time I wanted to build separate platforms connected by rail, as well as using the space elevator to ferry trains from the surface. This was fun! I built for ~20SPM.
 
 <figure class='image-strip'>
   <img src="/images/se07/space-map.jpg" alt="Norbit map" />
@@ -64,7 +64,7 @@ I never intended to avoid delivery cannons, but given how comfortable I’d gott
   <figcaption>The cargo rocket battery to the east of the mall.</figcaption>
 </figure>
 
-Biters were never much of an issue. Efficiency modules in miners mostly kept them out of the pollution cloud. As such never needed a full wall, just laser outposts to deter expansions. First behemoth biter wasn’t until 122 hours. Eventually got a few space lasers set up on auto-glaives to attempt to clear the whole planet, though they didn’t quite get to finish the job.
+Biters were never much of an issue. Efficiency modules in miners mostly kept them out of the pollution cloud. As such never needed a full wall, just laser outposts to deter expansions. The railgun from goodie box after first rocket launched helped quickly clear bases. First behemoth biter wasn’t until 122 hours. Eventually got a few space lasers set up on auto-glaives to attempt to clear the whole planet, though they didn’t quite get to finish the job.
 
 My biggest tip for Space Exploration is liberal use of speakers. There are so many things that can go wrong, and designing robust systems correctly on the first try is near impossible, that extensive alarms help keep the factory running. Standard uses include:
 
