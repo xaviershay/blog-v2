@@ -53,7 +53,10 @@ class Actions::Book < Builder
     end
 
     def updated_at
-      ensure_date(reads.flat_map(&:finished_at).compact.max)
+      x = reads.flat_map(&:finished_at).compact.max
+      ensure_date(x)
+    rescue Date::Error
+      raise "#{title} has an invalid date: #{x}"
     end
 
     def summary
