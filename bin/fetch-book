@@ -8,7 +8,7 @@ require 'yaml'
 
 def cache(key, &block)
   filename = "tmp/cache/#{key.gsub(/[^a-zA-Z\d]/, '--')}"
-  if File.exist?(filename)
+  if ENV['CACHE'] && File.exist?(filename)
     Marshal.load(File.read(filename))
   else
     contents = block.call(key)
