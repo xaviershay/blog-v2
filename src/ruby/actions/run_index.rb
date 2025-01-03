@@ -15,6 +15,10 @@ class Actions::RunIndex < Builder
 
     html = load_template(layout).result(binding)
     write_gzip output, html
+  rescue Psych::BadAlias
+    puts File.read(metadata_file)
+
+    raise "Failed to YAML parse #{metadata_file}"
   end
 
   def format_thousands(x)
