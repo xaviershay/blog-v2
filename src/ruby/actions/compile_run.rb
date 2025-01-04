@@ -38,7 +38,6 @@ def compile_run(db_file, out)
     'history'      => {},
   }
 
-
   bests = {
     "1 mile"   => 'strava-1477373729',
     '5K'       => 'strava-3260978622',
@@ -58,7 +57,7 @@ def compile_run(db_file, out)
     week = date.strftime("%-V").to_i
     day = (date.wday - 1) % 7
 
-    stat = stats['yearly_stats'][year] ||= default_yearly_stats
+    stat = stats['yearly_stats'][year] ||= default_yearly_stats.dup
     stat['distance'] += a.fetch('distance') / 1000.0
     stat['elevation'] += a.fetch('elevation') / 1000.0
     stat['duration'] += a.fetch('duration') / 3600.0
@@ -77,8 +76,8 @@ def compile_run(db_file, out)
       existing['type'] = a.fetch('type')
       existing['duration'] = a.fetch('duration')
     end
-    stats['history'][year][week][day]['debug'] ||= []
-    stats['history'][year][week][day]['debug'] << [a.fetch('type'), x, y]
+    # stats['history'][year][week][day]['debug'] ||= []
+    # stats['history'][year][week][day]['debug'] << [a.fetch('type'), x, y]
   end
 
   bests.each do |event, id|
