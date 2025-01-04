@@ -1,3 +1,5 @@
+require 'ostruct'
+
 def hash_to_ostruct(x)
   case x
   when Hash
