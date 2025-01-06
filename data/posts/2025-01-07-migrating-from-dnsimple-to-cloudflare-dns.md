@@ -18,16 +18,15 @@ As of January 2025, differences I noted between the two services:
   type](https://support.dnsimple.com/articles/alias-record/) to enable
   redirection of queries
   to the apex (i.e. `xaviershay.com`).
-  Cloudflare achieves the same thing by transparently converting `CNAME` records
+  Cloudflare achieves this by transparently converting `CNAME` records
   pointing at the apex, which they call ["CNAME
   flattening."](https://developers.cloudflare.com/dns/cname-flattening/)
   DNSimple also creates a `TXT` record describing the `ALIAS`
-  which is for
-  debugging purposes only, so I excluded them from migration.
-* DNSimple supports a custom `SPF` record type for email security. These were
-  redundant for me as I also had matching `TXT` records, so there were excluded from
-  migration.
-* Any record with a blank name in DNSimple needed to be `@` for Cloudflare.
+  for debugging purposes only, so I excluded them from migration.
+* DNSimple supports a custom `SPF` record type for email security, which creates
+  appropriate `TXT` records for you. Those created `TXT` records were also
+  returned by the API, so the `SPF` records could be safely excluded.
+* Any record with a blank name in DNSimple needs to be `@` for Cloudflare.
 * The DNSimple API returns `NS` and `SOA` records, which Cloudflare needs to
   manage, so these too were excluded.
 
