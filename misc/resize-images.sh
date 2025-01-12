@@ -22,4 +22,10 @@ for image in "$image_dir"/*.jpg; do
         $(mogrify -resize x1024\> $image)
       fi
     fi
+
+    jpegoptim $image
+done
+
+for image in "$image_dir"/*.png; do
+    optipng $image 2>&1 | grep Output
 done

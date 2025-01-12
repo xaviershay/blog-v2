@@ -22,7 +22,7 @@ Optional supporting tools:
 
 * `aspell` for spell-checking.
 * `imagemagic` for auto-resizing images, see `misc/resize-images.sh`
-* `ImageOptim` (OSX) or `Trimage` (Linux) for image optimization.
+* `ImageOptim` (OSX) or `optipng` and `jpegoptim` (Linux) for image optimization. See `misc/resize_images.sh` to do this automatically.
 
 We can also fetch data from Strava, though you'll need to set up an app and handle auth elsewhere (I copied credentials from another project.)
 
