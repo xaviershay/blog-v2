@@ -7,7 +7,7 @@ rating: 4
 categories:
 - non-fiction
 reads:
-  finished_at: 2025-02-17
+- finished_at: "2025-02-17"
   started_at:
 ---
 

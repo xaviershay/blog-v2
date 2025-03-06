@@ -57,6 +57,8 @@ class Actions::Book < Builder
       ensure_date(x)
     rescue Date::Error
       raise "#{title} has an invalid date: #{x}"
+    rescue
+      raise "Invalid read data for #{title}"
     end
 
     def summary
