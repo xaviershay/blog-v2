@@ -3,6 +3,8 @@ layout: post
 title: "Trip Report: Joshua Tree"
 category: articles
 tags: ['trip-report']
+credits:
+  - text: "Bird photos copyright respective owners, cited via eBird link."
 image:
   feature: ''
 ---
