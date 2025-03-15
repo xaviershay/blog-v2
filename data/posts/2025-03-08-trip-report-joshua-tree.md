@@ -41,10 +41,6 @@ Some longer runs:
 First time in the US since I started paying attention to birds, so these were
 all lifers.
 
-<style>
-.birds td:nth-child(1) { min-width: 50px; }
-.birds td:nth-child(2) { width: 70%; }
-</style>
 <table class='birds'>
   <tr>
     <td><a href='https://ebird.org/species/rocwre'><img src='https://cdn.download.ams.birds.cornell.edu/api/v1/asset/308758461/2400' /></a></td>

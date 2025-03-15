@@ -21,7 +21,8 @@ class Actions::Post < Builder
     metadata["source"] = input
     metadata["tags"] ||= []
     metadata.fetch("image", {}).values_at("card", "feature").compact.first
-    if metadata["image"] && metadata["image"]["feature_credit"]
+    if metadata["image"] && (credit = metadata["image"]["feature_credit"])
+      raise "feature_credit should be a hash" unless credit.is_a?(Hash)
       metadata["image"]["feature_credit"]["emphasis"] = true
     end
 
@@ -31,6 +32,8 @@ class Actions::Post < Builder
     end
     metadata["url"] = "/articles/#{metadata["slug"]}.html"
     File.write(output, metadata.to_yaml)
+  rescue
+    raise "Error extracting metadata from #{input}"
   end
 
   def markdown_to_html_fragment(input, output)

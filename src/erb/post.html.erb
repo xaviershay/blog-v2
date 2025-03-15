@@ -49,13 +49,17 @@
           <ul>
           <% credits.each do |credit| %>
             <li>
-              <a href='<%= credit.link %>'>
-                <% if credit.emphasis %>
-                  <em><%=h credit.title %></em>
-                <% else %>
-                  <%=h credit.title %>
-                <% end %> by <%=h credit.author %>
-              </a>
+              <% if credit.text %>
+                <%= credit.text %>
+              <% else %>
+                <a href='<%= credit.link %>'>
+                  <% if credit.emphasis %>
+                    <em><%=h credit.title %></em>
+                  <% else %>
+                    <%=h credit.title %>
+                  <% end %> by <%=h credit.author %>
+                </a>
+              <% end %>
             </li>
           <% end %>
           </ul>

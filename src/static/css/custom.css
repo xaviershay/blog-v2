@@ -499,3 +499,6 @@ table.bests tr:nth-child(even) ,
   color: var(--text);
   text-decoration: none;
 }
+
+.birds td:nth-child(1) { min-width: 50px; }
+.birds td:nth-child(2) { width: 70%; }
