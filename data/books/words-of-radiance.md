@@ -9,5 +9,6 @@ categories:
 - fantasy
 reads:
 - finished_at: '2017-05-14'
+- finished_at: '2025-07-30'
 ---
 ok now we're rolling
