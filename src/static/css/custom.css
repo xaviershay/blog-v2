@@ -226,12 +226,29 @@ nav.book-list {
   width: 100px;
 }
 
+/* Desktop: keep each book row as two columns that wrap within their own cells */
+@media only screen and (min-width: 721px) {
+  .book-summary {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 0.6rem;
+    align-items: center;
+  }
+  .book-summary .date-and-rating {
+    white-space: nowrap; /* prevent breaking between date and rating */
+  }
+  .book-summary .title-and-author {
+    min-width: 0; /* allow the grid item to shrink so text can wrap */
+    overflow-wrap: anywhere; /* wrap long titles within the cell */
+  }
+}
+
 @media only screen and (max-width: 720px) {
   .book-summary {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
   .title-and-author {
-    line-height: 1.0;
+    line-height: 1.2;
     display: block;
   }
 }
@@ -296,10 +313,7 @@ figure.reading-analysis table {
   --color: var(--color-2);
 }
 
-.reading-analysis table td {
-  /*border-radius: 5px 5px 0 0;*/
-  /*border: 1px solid var(--border);*/
-}
+
 
 /* DEFINITION LISTS */
 
