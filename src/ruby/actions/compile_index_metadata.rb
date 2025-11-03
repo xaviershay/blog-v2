@@ -63,50 +63,54 @@ def compile_book_index_metadata(book_metadata, post_index_metadata, out)
     .to_h
 
   book_metadata.each do |book|
-    metadata = YAML.load_file(book, permitted_classes: [Date])
-    metadata.fetch('reads').each do |read|
-      read['started_at'] = ensure_date(read['started_at'])
-      read['finished_at'] = ensure_date(read['finished_at'])
-      read['abandoned_at'] = ensure_date(read['abandoned_at'])
-      date = read.fetch('finished_at') || read.fetch("abandoned_at").dup
-      if date
-        percentage = read.fetch('percentage', 100)
-        pages = metadata.fetch('pages') * percentage.to_f / 100
-        x = metadata.except('reads')
-        x['slug'] = File.basename(book, ".md.yml")
-        categories = x['categories'].dup
-        if categories.delete('other')
-          categories << 'literature'
+    begin
+      metadata = YAML.load_file(book, permitted_classes: [Date])
+      metadata.fetch('reads').each do |read|
+        read['started_at'] = ensure_date(read['started_at'])
+        read['finished_at'] = ensure_date(read['finished_at'])
+        read['abandoned_at'] = ensure_date(read['abandoned_at'])
+        date = read.fetch('finished_at') || read.fetch("abandoned_at").dup
+        if date
+          percentage = read.fetch('percentage', 100)
+          pages = metadata.fetch('pages') * percentage.to_f / 100
+          x = metadata.except('reads')
+          x['slug'] = File.basename(book, ".md.yml")
+          categories = x['categories'].dup
+          if categories.delete('other')
+            categories << 'literature'
+          end
+          x['categories'] = categories
+          x['finished_at'] = date.dup
+          x['started_at'] = read['started_at']
+          x['abandoned_at'] = read['abandoned_at']
+          x['percentage'] = read['percentage']
+          year = date.year
+          stats[year] ||= {
+            'ratings' => Array.new(5, 0),
+            'pages' => Array.new(10, 0),
+            'page_total' => 0,
+            'book_total' => 0,
+            'categories' => Hash.new
+          }
+          stats[year]['page_total'] += pages
+          stats[year]['book_total'] += 1
+          rating = metadata.fetch('rating')
+          unless rating
+            raise "Book is finished but no rating: #{x['slug']}"
+          end
+          stats[year]['ratings'][rating - 1] += 1
+          stats[year]['pages'][[stats[year]['pages'].length - 1, (pages / 100.0).floor].min] += 1
+          categories = ["literature"] if categories.empty?
+          increment = 1 / categories.size.to_f
+          categories.each do |category|
+            stats[year]['categories'][category] ||= 0
+            stats[year]['categories'][category] += increment
+          end
+          readings << x
         end
-        x['categories'] = categories
-        x['finished_at'] = date.dup
-        x['started_at'] = read['started_at']
-        x['abandoned_at'] = read['abandoned_at']
-        x['percentage'] = read['percentage']
-        year = date.year
-        stats[year] ||= {
-          'ratings' => Array.new(5, 0),
-          'pages' => Array.new(10, 0),
-          'page_total' => 0,
-          'book_total' => 0,
-          'categories' => Hash.new
-        }
-        stats[year]['page_total'] += pages
-        stats[year]['book_total'] += 1
-        rating = metadata.fetch('rating')
-        unless rating
-          raise "Book is finished but no rating: #{x['slug']}"
-        end
-        stats[year]['ratings'][rating - 1] += 1
-        stats[year]['pages'][(pages / 100.0).floor] += 1
-        categories = ["literature"] if categories.empty?
-        increment = 1 / categories.size.to_f
-        categories.each do |category|
-          stats[year]['categories'][category] ||= 0
-          stats[year]['categories'][category] += increment
-        end
-        readings << x
       end
+    rescue => e
+      raise "Error extracting metadata from #{book}"
     end
   end
   readings = readings.sort_by {|x| x.fetch("finished_at") || x.fetch("abandoned_at") }.reverse
