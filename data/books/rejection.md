@@ -11,7 +11,7 @@ reads:
   started_at:
 ---
 
-An obsence, disgusting, squirming book that I cannot in good conscience
+An obscence, disgusting, squirming book that I cannot in good conscience
 recommend to anyone but was nevertheless brilliant.
 
 On shame:

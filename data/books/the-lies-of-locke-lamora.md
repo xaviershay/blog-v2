@@ -7,7 +7,7 @@ rating: 3
 categories:
 - fantasy
 reads:
-- finished_at: 2025-12-29
+- finished_at: 2025-12-03
   started_at:
 ---
 
