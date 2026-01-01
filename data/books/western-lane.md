@@ -11,6 +11,6 @@ reads:
   started_at:
 ---
 
-Beautiful little book that says lot with very little.
+Beautiful short book that says lot with very little.
 
 > It was an awful evening, everyone on edge, and I didn’t know why and maybe no one else did either.
