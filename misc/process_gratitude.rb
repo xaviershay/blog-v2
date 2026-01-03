@@ -2,18 +2,20 @@ require 'json'
 require 'pp'
 require 'date'
 
-cutoff = Date.new(2024,1,1)
+cutoff = Date.new(2025,1,1)
 
 puts cutoff
-data = JSON.parse(File.read('tmp/gratitudes-data-2024.json')).fetch('entries')
+data = JSON.parse(File.read('tmp/gratitudes-data-2025.json')).fetch('entries')
   # Entry data is double JSON encoded
   .map {|x| JSON.parse(x) }
   .select {|x| Date.parse(x.fetch('date')) >= cutoff }
+  .select {|x| x.fetch('entry') =~ /loz/i }
 
 data.each do |x|
-  puts x.fetch('date')
-  puts x.fetch('entry')
-  puts
+  print x.fetch('date')
+  print " "
+  puts x.fetch('entry').lines.select {|x| x =~ /loz/i }
+  #puts
 end
 
 # pp data.select {|x| x['entry'] }.filter {|x| x['entry'].lines.any? {|y| y =~ /jodie/i  } }.length
