@@ -1,7 +1,7 @@
 ---
 id: OL25260126M
-slug: my-unlikely-journey-to-ultramarathon-greatness
-title: My unlikely journey to ultramarathon greatness
+slug: eat-and-run
+title: Eat & Run
 author: Scott Jurek
 rating: 4
 pages: 272
