@@ -1,4 +1,5 @@
 require 'kramdown'
+require 'support/tikz'
 
 # Custom tag processing. We use HTML5 custom tag rules, but pre-process them
 # before they actually get into HTML output. Easier that way, but in theory
@@ -31,6 +32,14 @@ class Kramdown::Converter::BookHtml < Kramdown::Converter::Html
   end
 end
 
+# <x-tikz> tag that compiles TikZ source to an SVG image wrapped in a
+# <figure class='tikz'>. Uses :raw content model so that the LaTeX source
+# (which contains blank lines) is preserved as-is rather than being parsed
+# into separate block elements.
+Kramdown::Parser::Html::HTML_CONTENT_MODEL["x-tikz"] = :raw
+Kramdown::Parser::Html::HTML_BLOCK_ELEMENTS << "x-tikz"
+Kramdown::Parser::Html::HTML_ELEMENT["x-tikz"] = true
+
 # <x-youtube> tag that embeds a youtube video with optional caption. Adds a
 # <div> wrapper to allow for mobile responsiveness.
 Kramdown::Parser::Html::HTML_CONTENT_MODEL_BLOCK << "x-youtube"
@@ -45,6 +54,12 @@ Kramdown::Parser::Html::HTML_ELEMENT["x-reading-graphs"] = true
 class Kramdown::Converter::PostHtml < Kramdown::Converter::Html
   def convert_html_element(el, indent)
     case el.value
+    when "x-tikz"
+      tikz_code = el.children.select {|c| c.type == :text }.map(&:value).join.strip
+      figcaption_el = el.children.find {|c| c.type == :html_element && c.value == "figcaption" }
+      figcaption_html = figcaption_el ? "\n  <figcaption>#{inner(figcaption_el, indent)}</figcaption>" : ""
+      url = TikzCompiler.svg_url(tikz_code)
+      "<figure class='tikz'>\n  <img src='#{url}' alt=''/>#{figcaption_html}\n</figure>\n"
     when "x-youtube"
       href = el.attr['href']
       title = el.children.map {|x| convert(x, indent) }.join.strip

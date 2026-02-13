@@ -10,7 +10,7 @@ def truncate(str, n)
 end
 
 def load_markdown_from_file2(input_file)
-  raw = File.read(input_file)
+  raw = File.read(input_file, encoding: 'utf-8')
 
   match = raw.match(YAML_FRONTMATTER_REGEX)
 
