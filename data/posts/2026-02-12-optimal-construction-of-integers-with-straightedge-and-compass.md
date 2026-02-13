@@ -10,6 +10,23 @@ Any integer can be optimally constructed with a [straightedge and compass](https
 
 Define a *step* as the following: given two already-constructed points $m$ and $n$ on a line, construct the point $2n - m$ by intersecting the line through $m$ and $n$ with the circle centred at $n$ passing through $m$. This results in two points: $m$ (by definition), and $n + (n - m) = 2n - m$.
 
+<x-tikz>
+  \begin{tikzpicture}[scale=3.0]
+    % Draw x-axis
+    \draw[<->, black, dashed] (-1.5,0) -- (3.5,0);
+    \draw[black, dashed] (1,0) circle (1);
+  
+    \node[below right=2pt,font=\Large] at (0,0) {$m$};
+    \fill (0,0) circle (1pt);
+    \node[below right=2pt,font=\Large] at (1,0) {$n$};
+    \fill (1,0) circle (1pt);
+    \node[below right=2pt,font=\Large] at (2,0) {$2n - m$};
+    \fill (2,0) circle (1pt);
+  \end{tikzpicture}
+
+  <figcaption>Using a circle and line intersection to construct a new point.</figcaption>
+</x-tikz>
+
 Assume the initial point set is $P_0 = \\{0, 1\\}$.
 
 ### Theorem 1 (Upper bound)
