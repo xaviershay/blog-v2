@@ -39,7 +39,7 @@ class Actions::Post < Builder
   def markdown_to_html_fragment(input, output)
     _, data = load_markdown(input)
 
-    doc = Kramdown::Document.new(data, :book_data => book_data)
+    doc = Kramdown::Document.new(data, :book_data => book_data, math_engine: nil)
 
     html = doc.to_post_html
 

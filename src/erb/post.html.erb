@@ -125,5 +125,8 @@
 
     <script src="/js/metric-imperial-converter.js" type="text/javascript"></script>
     <script src='/js/image-linker.js' type='text/javascript'></script>
+    <% if (@post.tags || []).include?('math') %>
+      <script src="/js/katex-loader.js" type="text/javascript"></script>
+    <% end %>
   </body>
 </html>
