@@ -7,3 +7,4 @@ profile.html
 .env
 .strava-token
 .DS_Store
+.claude
