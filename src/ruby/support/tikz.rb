@@ -6,7 +6,7 @@ require 'tmpdir'
 # Compiles TikZ source to SVG, caching by SHA1 hash of the source.
 # SVGs are stored in data/images/tikz/ and served from /images/tikz/.
 module TikzCompiler
-  SVG_DIR = "data/images/tikz"
+  SVG_BASE_DIR = "data/images/tikz"
 
   LATEX_TEMPLATE = <<~'LATEX'
     \documentclass{standalone}
@@ -19,17 +19,19 @@ module TikzCompiler
   LATEX
 
   # Returns the web-root-relative image path, compiling the SVG if not cached.
-  def self.svg_url(tikz_code)
+  # SVGs are stored in a per-slug subdirectory: data/images/tikz/{slug}/
+  def self.svg_url(tikz_code, slug)
     hash = Digest::SHA1.hexdigest(tikz_code)
     svg_filename = "#{hash}.svg"
-    svg_path = "#{SVG_DIR}/#{svg_filename}"
+    svg_dir = "#{SVG_BASE_DIR}/#{slug}"
+    svg_path = "#{svg_dir}/#{svg_filename}"
 
     unless File.exist?(svg_path)
-      FileUtils.mkdir_p(SVG_DIR)
+      FileUtils.mkdir_p(svg_dir)
       compile(tikz_code, svg_path)
     end
 
-    "/images/tikz/#{svg_filename}"
+    "/images/tikz/#{slug}/#{svg_filename}"
   end
 
   def self.compile(tikz_code, output_path)

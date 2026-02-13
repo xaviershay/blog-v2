@@ -168,6 +168,9 @@ Other dependencies include:
   point rather than something I intend to upgrade.
 * **Chart.css** Not a real dependency, it's vendored and used as a starting
   point rather than something I intend to upgrade.
+* **LaTeX.** For `pdflatex` and `pdf2svg` binaries, used to render tikz
+  diagrams. Rendered diagrams are stored in source tree, so only needed for new
+  or updated ones.
 
 ## Wrong Turns
 

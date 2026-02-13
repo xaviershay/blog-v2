@@ -37,11 +37,27 @@ class Actions::Post < Builder
   end
 
   def markdown_to_html_fragment(input, output)
-    _, data = load_markdown(input)
+    metadata, data = *load_markdown(input)
 
-    doc = Kramdown::Document.new(data, :book_data => book_data, math_engine: nil)
+    slug = metadata["slug"] ||
+      File.basename(input.split('-', 4).drop(3).first.to_s, ".md")
+
+    tikz_produced = []
+    doc = Kramdown::Document.new(
+      data,
+      :book_data => book_data,
+      :slug => slug,
+      :tikz_produced => tikz_produced,
+      math_engine: nil
+    )
 
     html = doc.to_post_html
+
+    tikz_dir = "#{TikzCompiler::SVG_BASE_DIR}/#{slug}"
+    produced_filenames = tikz_produced.map { |url| File.basename(url) }.to_set
+    Dir.glob("#{tikz_dir}/*.svg").each do |existing|
+      File.delete(existing) unless produced_filenames.include?(File.basename(existing))
+    end
 
     File.write(output, html)
   end

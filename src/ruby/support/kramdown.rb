@@ -58,7 +58,9 @@ class Kramdown::Converter::PostHtml < Kramdown::Converter::Html
       tikz_code = el.children.select {|c| c.type == :text }.map(&:value).join.strip
       figcaption_el = el.children.find {|c| c.type == :html_element && c.value == "figcaption" }
       figcaption_html = figcaption_el ? "\n  <figcaption>#{inner(figcaption_el, indent)}</figcaption>" : ""
-      url = TikzCompiler.svg_url(tikz_code)
+      slug = options.fetch(:slug)
+      url = TikzCompiler.svg_url(tikz_code, slug)
+      options[:tikz_produced]&.push(url)
       "<figure class='tikz'>\n  <img src='#{url}' alt=''/>#{figcaption_html}\n</figure>\n"
     when "x-youtube"
       href = el.attr['href']
