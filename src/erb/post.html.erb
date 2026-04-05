@@ -2,40 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="date" content='<%= @post.date %>'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="date" content="<%= @post.date %>">
     <link rel="stylesheet" href="/css/simple.css">
     <link rel="stylesheet" href="/css/charts.css">
     <link rel="stylesheet" href="/css/custom.css">
 
     <meta property="og:locale" content="en_AU">
-    <meta property="og:title" content="<%=h @post.title %>">
-    <meta property="og:description" content="<%=h @post.summary %>">
+    <meta property="og:title" content="<%= h @post.title %>">
+    <meta property="og:description" content="<%= h @post.summary %>">
     <meta property="og:url" content="<%= HOST %><%= @post.url %>">
     <% if @post.card_image %>
       <meta property="og:image" content="<%= HOST %>/images/<%= @post.card_image %>">
     <% end %>
     <meta property="og:site_name" content="Xavier Shay">
 
-    <title><%=h @post.title %></title>
+    <title><%= h @post.title %></title>
   </head>
-  <body class='post-body'>
+  <body class="post-body">
     <% image = @post.image %>
     <% if image %>
-        <header style="background-image: url(/images/<%= image.feature %>)" class='page-header'>
+        <header style="background-image: url(/images/<%= image.feature %>)" class="page-header has-feature-image">
     <% else %>
-      <header class='page-header'>
+      <header class="page-header">
     <% end %>
       <nav>
         <% if image && credit = image.feature_credit %>
           <div class="featured-image-credit">
-            <a href='<%= credit.link %>'>
-              <em><%=h credit.title %></em> by <%=h credit.author %>
+            <a href="<%= credit.link %>">
+              <em><%= h credit.title %></em> by <%= h credit.author %>
             </a>
           </div>
         <% end %>
-        <h1><%=h @post.title %></h1>
-        <p class='date'><%= @post.date.strftime("%b %-e, %Y") %></p>
+        <div class="container">
+            <h1><%= h @post.title %></h1>
+            <p class="date"><%= @post.date.strftime("%b %-e, %Y") %></p>
+        </div>
       </nav>
     </header>
     <article>
@@ -43,7 +45,7 @@
 
       <% credits = @post.all_credits %>
       <% if credits.any? %>
-        <details class='footer-image-credit'>
+        <details class="footer-image-credit">
         <summary>Credits</summary>
         <% if credits.length > 1 %>
           <ul>
@@ -52,12 +54,12 @@
               <% if credit.text %>
                 <%= credit.text %>
               <% else %>
-                <a href='<%= credit.link %>'>
+                <a href="<%= credit.link %>">
                   <% if credit.emphasis %>
-                    <em><%=h credit.title %></em>
+                    <em><%= h credit.title %></em>
                   <% else %>
-                    <%=h credit.title %>
-                  <% end %> by <%=h credit.author %>
+                    <%= h credit.title %>
+                  <% end %> by <%= h credit.author %>
                 </a>
               <% end %>
             </li>
@@ -68,8 +70,8 @@
           <% if credit.text %>
             <%= credit.text %>
           <% else %>
-            <a href='<%= credit.link %>'>
-              <em><%=h credit.title %></em> by <%=h credit.author %>
+            <a href="<%= credit.link %>">
+              <em><%= h credit.title %></em> by <%= h credit.author %>
             </a>
           <% end %>
         <% end %>
@@ -79,18 +81,18 @@
       <% archive_type = (@post.tags & %w(reading-list year-review)).first %>
       <% archive = archive_type && @site.yearly_archives[archive_type] %>
       <% if archive %>
-        <nav class='yearly-archive'>
+        <nav class="yearly-archive">
           Archive –
           <% archive.each.with_index do |summary, i| %>
             <% if i != 0 %><span class="separator">|</span><% end %>
-            <a href='<%= summary.url %>'><%= summary.year %></a>
+            <a href="<%= summary.url %>"><%= summary.year %></a>
           <% end %>
         </nav>
       <% end %>
 
       <% factorio = ((@post.tags & %w(factorio)).first) && @site.factorio_reviews %>
       <% if factorio %>
-        <nav class='factorio-reviews'>
+        <nav class="factorio-reviews">
           <h4>More Factorio Mod Reviews</h4>
           <ul>
           <% factorio.each do |post| %>
@@ -104,7 +106,7 @@
       <% end %>
       <% trip_reports = ((@post.tags & %w(trip-report)).first) && @site.trip_reports %>
       <% if trip_reports %>
-        <nav class='factorio-reviews'>
+        <nav class="factorio-reviews">
           <h4>More Trip Reports</h4>
           <ul>
           <% trip_reports.each do |post| %>
@@ -124,7 +126,7 @@
     </footer>
 
     <script src="/js/metric-imperial-converter.js" type="text/javascript"></script>
-    <script src='/js/image-linker.js' type='text/javascript'></script>
+    <script src="/js/image-linker.js" type="text/javascript"></script>
     <% if (@post.tags || []).include?('math') %>
       <script src="/js/katex-loader.js" type="text/javascript"></script>
     <% end %>
