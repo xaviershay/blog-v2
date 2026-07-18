@@ -8,3 +8,6 @@ profile.html
 .strava-token
 .DS_Store
 .claude
+
+.bundle
+vendor
