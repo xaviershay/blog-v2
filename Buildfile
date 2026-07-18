@@ -1,5 +1,7 @@
 $s = Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
+require 'bundler/setup'
+
 $LOAD_PATH.unshift File.expand_path("./src/ruby", File.dirname(__FILE__))
 
 require 'build_plan'

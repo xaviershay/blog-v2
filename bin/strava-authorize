@@ -7,6 +7,7 @@
 #
 # It prints a URL to open in a browser, then follow the prompts.
 
+require 'bundler/setup'
 require 'net/http'
 require 'uri'
 require 'json'
