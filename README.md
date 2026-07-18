@@ -24,9 +24,10 @@ Optional supporting tools:
 * `imagemagic` for auto-resizing images, see `misc/resize-images.sh`
 * `ImageOptim` (OSX) or `optipng` and `jpegoptim` (Linux) for image optimization. See `misc/resize_images.sh` to do this automatically.
 
-We can also fetch data from Strava, though you'll need to set up an app and handle auth elsewhere (I copied credentials from another project.)
+Run data comes from Strava, using an app ID and client secret.
 
     cp .env.example .env # And customize to taste
+    bin/strava-authorize # Once only, to create STRAVA_REFRESH_TOKEN
     bin/update-runs
 
 ## History & Motivation
