@@ -14,6 +14,7 @@ end
 
 require 'json'
 require 'set'
+require 'time'
 
 class AuthToken
   attr_reader :access_token, :refresh_token, :expires_at
@@ -56,8 +57,10 @@ class AuthToken
   end
 end
 
-require 'strava-ruby-client'
+require_relative '../src/ruby/support/strava_backend'
 require 'dotenv/load'
+
+BACKEND = StravaBackend.for(ENV.fetch('STRAVA_BACKEND', 'gem'))
 
 def current_token!
   token = AuthToken.new(
@@ -68,24 +71,14 @@ def current_token!
 
   return token unless token.expired?
 
-  client = Strava::OAuth::Client.new(
-    client_id:     ENV.fetch('STRAVA_CLIENT_ID'),
-    client_secret: ENV.fetch('STRAVA_CLIENT_SECRET')
-  )
-
   # TODO: Handle failure
-  response = client.oauth_token(
-    refresh_token: token.refresh_token,
-    grant_type: 'refresh_token'
+  hash = BACKEND.refresh_token(
+    client_id:     ENV.fetch('STRAVA_CLIENT_ID'),
+    client_secret: ENV.fetch('STRAVA_CLIENT_SECRET'),
+    refresh_token: token.refresh_token
   )
 
-  new_token = AuthToken.new(
-    response.access_token,
-    response.refresh_token,
-    response.expires_at
-  )
-
-  new_token
+  AuthToken.from_hash(hash)
 end
 require 'zlib'
 
@@ -109,16 +102,13 @@ old_size = db['activities'].size
 existing = Set.new(db['activities'].map {|x| x.fetch('external_id') })
 
 token = current_token!
-client = Strava::Api::Client.new(
-  access_token: token.access_token,
-#logger: Logger.new(STDOUT)
-)
 
 epoch = db['activities'].map {|a| Time.parse(a['date']) }.max || Time.new(2000, 1, 1)
 
 while true
   puts "Fetching since: #{epoch}"
-  as = client.athlete_activities(
+  as = BACKEND.activities(
+    access_token: token.access_token,
     after: epoch,
     per_page: 200
   )
@@ -142,7 +132,7 @@ while true
       "type"            => workout_type_to_string(a.workout_type),
       "elevation"       => a.total_elevation_gain,
       "date"            => a.start_date_local.to_date.to_s,
-      "map"             => a.map&.summary_polyline
+      "map"             => a.summary_polyline
     }
 
   end

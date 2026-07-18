@@ -1,0 +1,80 @@
+#!/usr/bin/env ruby
+# One-off helper to bootstrap a Strava refresh token on a machine that has
+# never authorized this app before. Uses only stdlib (net/http, uri, json) —
+# no gem dependency, so it also serves as a manual connectivity check for
+# the native backend in src/ruby/support/strava_backend.rb.
+#
+# Usage:
+#   bin/strava-authorize
+#
+# It prints a URL to open in a browser. After granting access, Strava
+# redirects to http://localhost/?code=... (the page itself will fail to
+# load, that's expected — copy the `code` value out of the address bar).
+
+require 'net/http'
+require 'uri'
+require 'json'
+require 'dotenv/load'
+
+client_id     = ENV.fetch('STRAVA_CLIENT_ID')
+client_secret = ENV.fetch('STRAVA_CLIENT_SECRET')
+scope         = ENV.fetch('STRAVA_SCOPE', 'read,activity:read_all')
+
+authorize_url = URI('https://www.strava.com/oauth/authorize')
+authorize_url.query = URI.encode_www_form(
+  client_id: client_id,
+  redirect_uri: 'http://localhost',
+  response_type: 'code',
+  approval_prompt: 'auto',
+  scope: scope
+)
+
+puts "1. Open this URL in a browser and authorize the app:"
+puts
+puts "   #{authorize_url}"
+puts
+puts "2. You'll land on a broken http://localhost/?... page. Copy the 'code' param from the address bar."
+print "3. Paste the code here: "
+code = $stdin.gets&.strip
+
+if code.nil? || code.empty?
+  $stderr.puts "No code entered, aborting."
+  exit 1
+end
+
+response = Net::HTTP.post_form(
+  URI('https://www.strava.com/oauth/token'),
+  'client_id'     => client_id,
+  'client_secret' => client_secret,
+  'code'          => code,
+  'grant_type'    => 'authorization_code'
+)
+
+unless response.is_a?(Net::HTTPSuccess)
+  $stderr.puts "Token exchange failed: #{response.code} #{response.body}"
+  exit 1
+end
+
+token = JSON.parse(response.body)
+puts
+puts "Success. Add this to .env:"
+puts
+puts "  STRAVA_REFRESH_TOKEN=#{token.fetch('refresh_token')}"
+puts
+
+# Prove full round-trip connectivity: fetch the athlete profile with the
+# freshly-issued access token.
+athlete_request = Net::HTTP::Get.new('https://www.strava.com/api/v3/athlete')
+athlete_request['Authorization'] = "Bearer #{token.fetch('access_token')}"
+
+athlete_response = Net::HTTP.start('www.strava.com', 443, use_ssl: true) do |http|
+  http.request(athlete_request)
+end
+
+if athlete_response.is_a?(Net::HTTPSuccess)
+  athlete = JSON.parse(athlete_response.body)
+  puts "Connectivity check OK: authenticated as #{athlete['firstname']} #{athlete['lastname']} (id #{athlete['id']})"
+else
+  $stderr.puts "Connectivity check failed: #{athlete_response.code} #{athlete_response.body}"
+  exit 1
+end
