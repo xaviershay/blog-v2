@@ -7,7 +7,6 @@ group :development do
   gem 'http'
 
   gem 'dotenv'
-  gem 'strava-ruby-client'
 end
 
 group :test do

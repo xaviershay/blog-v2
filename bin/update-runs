@@ -62,8 +62,6 @@ $LOAD_PATH.unshift File.expand_path("../src/ruby", File.dirname(__FILE__))
 require 'support/strava_backend'
 require 'dotenv/load'
 
-BACKEND = StravaBackend.for(ENV.fetch('STRAVA_BACKEND', 'gem'))
-
 def current_token!
   token = AuthToken.new(
     nil,
@@ -74,7 +72,7 @@ def current_token!
   return token unless token.expired?
 
   # TODO: Handle failure
-  hash = BACKEND.refresh_token(
+  hash = StravaBackend.refresh_token(
     client_id:     ENV.fetch('STRAVA_CLIENT_ID'),
     client_secret: ENV.fetch('STRAVA_CLIENT_SECRET'),
     refresh_token: token.refresh_token
@@ -109,7 +107,7 @@ epoch = db['activities'].map {|a| Time.parse(a['date']) }.max || Time.new(2000, 
 
 while true
   puts "Fetching since: #{epoch}"
-  as = BACKEND.activities(
+  as = StravaBackend.activities(
     access_token: token.access_token,
     after: epoch,
     per_page: 200

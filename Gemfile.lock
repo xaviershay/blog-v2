@@ -1,42 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.2.2.1)
-      base64
-      benchmark (>= 0.3)
-      bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.3.1)
-      connection_pool (>= 2.2.5)
-      drb
-      i18n (>= 1.6, < 2)
-      logger (>= 1.4.2)
-      minitest (>= 5.1)
-      securerandom (>= 0.3)
-      tzinfo (~> 2.0, >= 2.0.5)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.2.0)
-    benchmark (0.4.0)
-    bigdecimal (3.1.9)
-    concurrent-ruby (1.3.5)
-    connection_pool (2.5.0)
     diff-lcs (1.6.1)
     domain_name (0.6.20240107)
     dotenv (3.1.7)
-    drb (2.2.1)
-    faraday (2.12.2)
-      faraday-net_http (>= 2.0, < 3.5)
-      json
-      logger
-    faraday-multipart (1.1.0)
-      multipart-post (~> 2.0)
-    faraday-net_http (3.4.0)
-      net-http (>= 0.5.0)
     ffi (1.17.1)
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
-    hashie (5.0.0)
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
@@ -46,20 +20,12 @@ GEM
     http-cookie (1.0.8)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    i18n (1.14.7)
-      concurrent-ruby (~> 1.0)
-    json (2.10.2)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     llhttp-ffi (0.5.1)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    logger (1.7.0)
     mini_portile2 (2.8.8)
-    minitest (5.25.5)
-    multipart-post (2.4.1)
-    net-http (0.6.0)
-      uri
     nokogiri (1.18.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -81,15 +47,6 @@ GEM
       rspec-support (~> 3.13.0)
     rspec-support (3.13.2)
     ruby-prof (1.7.1)
-    securerandom (0.4.1)
-    strava-ruby-client (2.2.0)
-      activesupport
-      faraday (>= 2.0)
-      faraday-multipart (>= 1.0)
-      hashie
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
-    uri (1.0.3)
     webrick (1.9.1)
 
 PLATFORMS
@@ -104,7 +61,6 @@ DEPENDENCIES
   nokogiri
   rspec
   ruby-prof
-  strava-ruby-client
   webrick
 
 BUNDLED WITH
