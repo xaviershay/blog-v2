@@ -3,14 +3,6 @@ require 'uri'
 require 'json'
 require 'time'
 
-# Minimal interface used by bin/update-runs, with two interchangeable
-# implementations: Native (stdlib net/http only) and Gem (wraps
-# strava-ruby-client). Select via StravaBackend.for(name).
-#
-# Each backend implements:
-#   refresh_token(client_id:, client_secret:, refresh_token:) -> Hash with
-#     string keys 'access_token', 'refresh_token', 'expires_at'
-#   activities(access_token:, after:, per_page:) -> Array<Activity>
 module StravaBackend
   Activity = Struct.new(
     :id, :name, :description, :distance, :elapsed_time, :moving_time,

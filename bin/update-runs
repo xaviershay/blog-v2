@@ -57,7 +57,9 @@ class AuthToken
   end
 end
 
-require_relative '../src/ruby/support/strava_backend'
+$LOAD_PATH.unshift File.expand_path("../src/ruby", File.dirname(__FILE__))
+
+require 'support/strava_backend'
 require 'dotenv/load'
 
 BACKEND = StravaBackend.for(ENV.fetch('STRAVA_BACKEND', 'gem'))

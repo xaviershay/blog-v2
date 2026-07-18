@@ -1,15 +1,11 @@
 #!/usr/bin/env ruby
-# One-off helper to bootstrap a Strava refresh token on a machine that has
-# never authorized this app before. Uses only stdlib (net/http, uri, json) —
-# no gem dependency, so it also serves as a manual connectivity check for
-# the native backend in src/ruby/support/strava_backend.rb.
+# Helper to bootstrap a Strava refresh token on a machine that has
+# never authorized this app before.
 #
 # Usage:
 #   bin/strava-authorize
 #
-# It prints a URL to open in a browser. After granting access, Strava
-# redirects to http://localhost/?code=... (the page itself will fail to
-# load, that's expected — copy the `code` value out of the address bar).
+# It prints a URL to open in a browser, then follow the prompts.
 
 require 'net/http'
 require 'uri'
