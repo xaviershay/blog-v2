@@ -1,0 +1,102 @@
+#!/usr/bin/env ruby
+# Fetch highlights for a book from the user's Kobo cloud library.
+# Usage: bin/fetch-highlights "<title substring>"
+
+require 'bundler/setup'
+require 'http'
+require 'json'
+require 'dotenv/load'
+
+PLATFORM_ID = "00000000-0000-0000-0000-000000000373"
+APP_VERSION = "4.38.23171"
+CLIENT_KEY  = Base64.strict_encode64(PLATFORM_ID)
+USER_AGENT  = "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0373/4.38.23171)"
+STORE_BASE  = "https://storeapi.kobo.com"
+
+require 'base64'
+
+`mkdir -p tmp/cache tmp/highlights`
+
+def cache(key, &block)
+  filename = "tmp/cache/#{key.gsub(/[^a-zA-Z\d]/, '--')}"
+  if ENV['CACHE'] && File.exist?(filename)
+    Marshal.load(File.read(filename))
+  else
+    contents = block.call(key)
+    File.write(filename, Marshal.dump(contents))
+    contents
+  end
+end
+
+title_query = ARGV.shift
+raise "Usage: bin/fetch-highlights \"<title>\"" unless title_query
+
+refresh_token = ENV.fetch('KOBO_REFRESH_TOKEN') { raise "KOBO_REFRESH_TOKEN missing - run bin/kobo-authorize" }
+device_id     = ENV.fetch('KOBO_DEVICE_ID')     { raise "KOBO_DEVICE_ID missing - run bin/kobo-authorize" }
+
+refresh_body = {
+  "AppVersion" => APP_VERSION,
+  "ClientKey"  => CLIENT_KEY,
+  "PlatformId" => PLATFORM_ID,
+  "RefreshToken" => refresh_token,
+  "DeviceId" => device_id,
+}
+
+refresh_response = cache("auth-refresh-#{refresh_token[0..8]}") do
+  HTTP.headers("User-Agent" => USER_AGENT)
+      .post("#{STORE_BASE}/v1/auth/refresh", json: refresh_body)
+      .body.to_s
+end
+
+refresh_data = JSON.parse(refresh_response)
+access_token = refresh_data.fetch('AccessToken') { raise "No AccessToken in refresh response: #{refresh_response}" }
+
+auth_headers = { "User-Agent" => USER_AGENT, "Authorization" => "Bearer #{access_token}" }
+
+init_response = cache("initialization") do
+  HTTP.headers(auth_headers).get("#{STORE_BASE}/v1/initialization").body.to_s
+end
+resources = JSON.parse(init_response).fetch('Resources')
+library_sync_url = resources.fetch('library_sync')
+
+def fetch_library_page(url, headers, sync_token)
+  request_headers = headers.dup
+  request_headers["x-kobo-synctoken"] = sync_token if sync_token && !sync_token.empty?
+
+  response = HTTP.headers(request_headers).get(url)
+  body = JSON.parse(response.body.to_s)
+
+  next_token = ""
+  if response.headers["x-kobo-sync"] == "continue"
+    next_token = response.headers["x-kobo-synctoken"].to_s
+  end
+
+  [body, next_token]
+end
+
+matches = []
+sync_token = ""
+loop do
+  page, sync_token = fetch_library_page(library_sync_url, auth_headers, sync_token)
+  page.each do |entry|
+    metadata = entry.dig("NewEntitlement", "BookMetadata")
+    next unless metadata
+    title = metadata["Title"]
+    next unless title&.downcase&.include?(title_query.downcase)
+    matches << { title: title, revision_id: metadata["RevisionId"] }
+  end
+  break if sync_token.empty?
+end
+
+if matches.empty?
+  $stderr.puts "No book found matching \"#{title_query}\""
+  exit 1
+elsif matches.size > 1
+  $stderr.puts "Multiple books match \"#{title_query}\":"
+  matches.each { |m| $stderr.puts "  - #{m[:title]}" }
+  $stderr.puts "Use a more specific title."
+  exit 1
+end
+
+book = matches.first
+puts "Matched: #{book[:title]} (RevisionId: #{book[:revision_id]})"
