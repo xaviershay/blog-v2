@@ -6,14 +6,13 @@ require 'bundler/setup'
 require 'http'
 require 'json'
 require 'dotenv/load'
+require 'base64'
 
 PLATFORM_ID = "00000000-0000-0000-0000-000000000373"
 APP_VERSION = "4.38.23171"
 CLIENT_KEY  = Base64.strict_encode64(PLATFORM_ID)
 USER_AGENT  = "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0373/4.38.23171)"
 STORE_BASE  = "https://storeapi.kobo.com"
-
-require 'base64'
 
 `mkdir -p tmp/cache tmp/highlights`
 
@@ -43,9 +42,10 @@ refresh_body = {
 }
 
 refresh_response = cache("auth-refresh-#{refresh_token[0..8]}") do
-  HTTP.headers("User-Agent" => USER_AGENT)
-      .post("#{STORE_BASE}/v1/auth/refresh", json: refresh_body)
-      .body.to_s
+  response = HTTP.headers("User-Agent" => USER_AGENT)
+                  .post("#{STORE_BASE}/v1/auth/refresh", json: refresh_body)
+  raise "Auth refresh failed: #{response.code} #{response.body}" unless response.code == 200
+  response.body.to_s
 end
 
 refresh_data = JSON.parse(refresh_response)
@@ -54,7 +54,9 @@ access_token = refresh_data.fetch('AccessToken') { raise "No AccessToken in refr
 auth_headers = { "User-Agent" => USER_AGENT, "Authorization" => "Bearer #{access_token}" }
 
 init_response = cache("initialization") do
-  HTTP.headers(auth_headers).get("#{STORE_BASE}/v1/initialization").body.to_s
+  response = HTTP.headers(auth_headers).get("#{STORE_BASE}/v1/initialization")
+  raise "Initialization failed: #{response.code} #{response.body}" unless response.code == 200
+  response.body.to_s
 end
 resources = JSON.parse(init_response).fetch('Resources')
 library_sync_url = resources.fetch('library_sync')
@@ -64,6 +66,7 @@ def fetch_library_page(url, headers, sync_token)
   request_headers["x-kobo-synctoken"] = sync_token if sync_token && !sync_token.empty?
 
   response = HTTP.headers(request_headers).get(url)
+  raise "Library sync failed: #{response.code} #{response.body}" unless response.code == 200
   body = JSON.parse(response.body.to_s)
 
   next_token = ""
@@ -78,6 +81,7 @@ matches = []
 sync_token = ""
 loop do
   page, sync_token = fetch_library_page(library_sync_url, auth_headers, sync_token)
+  raise "Unexpected library response: #{page.inspect}" unless page.is_a?(Array)
   page.each do |entry|
     metadata = entry.dig("NewEntitlement", "BookMetadata")
     next unless metadata
