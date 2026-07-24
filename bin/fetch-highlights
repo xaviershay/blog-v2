@@ -100,3 +100,22 @@ end
 
 book = matches.first
 puts "Matched: #{book[:title]} (RevisionId: #{book[:revision_id]})"
+
+slug = book[:title].downcase.gsub(/[^a-zA-Z\d]/, '-')
+revision_id = book[:revision_id]
+
+candidates = [
+  "#{STORE_BASE}/v1/library/#{revision_id}/annotations",
+  "#{STORE_BASE}/v1/user/annotations?entitlementId=#{revision_id}",
+  "#{STORE_BASE}/v1/library/#{revision_id}/bookmarks",
+]
+
+candidates.each_with_index do |url, i|
+  response = HTTP.headers(auth_headers).get(url)
+  outfile = "tmp/highlights/#{slug}-spike-#{i}.json"
+  File.write(outfile, response.body.to_s)
+  puts "#{url} -> #{response.code}, saved to #{outfile}"
+end
+
+puts ""
+puts "Inspect the files above to find which (if any) holds highlight text."
