@@ -27,11 +27,31 @@ def cache(key, &block)
   end
 end
 
+# Kobo rotates both tokens on every /v1/auth/refresh call and invalidates
+# the previous RefreshToken, so the new pair must be persisted immediately
+# or the next run fails.
+def update_env_file(updates)
+  path = ".env"
+  return unless File.exist?(path)
+
+  lines = File.readlines(path)
+  updates.each do |key, value|
+    pattern = /^#{Regexp.escape(key)}=/
+    if lines.any? { |line| line =~ pattern }
+      lines = lines.map { |line| line =~ pattern ? "#{key}=#{value}\n" : line }
+    else
+      lines << "#{key}=#{value}\n"
+    end
+  end
+  File.write(path, lines.join)
+end
+
 title_query = ARGV.shift
 raise "Usage: bin/fetch-highlights \"<title>\"" unless title_query
 
-refresh_token = ENV.fetch('KOBO_REFRESH_TOKEN') { raise "KOBO_REFRESH_TOKEN missing - run bin/kobo-authorize" }
-device_id     = ENV.fetch('KOBO_DEVICE_ID')     { raise "KOBO_DEVICE_ID missing - run bin/kobo-authorize" }
+access_token_env = ENV.fetch('KOBO_ACCESS_TOKEN')  { raise "KOBO_ACCESS_TOKEN missing - run bin/kobo-authorize" }
+refresh_token     = ENV.fetch('KOBO_REFRESH_TOKEN') { raise "KOBO_REFRESH_TOKEN missing - run bin/kobo-authorize" }
+device_id         = ENV.fetch('KOBO_DEVICE_ID')     { raise "KOBO_DEVICE_ID missing - run bin/kobo-authorize" }
 
 refresh_body = {
   "AppVersion" => APP_VERSION,
@@ -41,15 +61,15 @@ refresh_body = {
   "DeviceId" => device_id,
 }
 
-refresh_response = cache("auth-refresh-#{refresh_token[0..8]}") do
-  response = HTTP.headers("User-Agent" => USER_AGENT)
-                  .post("#{STORE_BASE}/v1/auth/refresh", json: refresh_body)
-  raise "Auth refresh failed: #{response.code} #{response.body}" unless response.code == 200
-  response.body.to_s
-end
+refresh_response = HTTP.headers("User-Agent" => USER_AGENT, "Authorization" => "Bearer #{access_token_env}")
+                        .post("#{STORE_BASE}/v1/auth/refresh", json: refresh_body)
+raise "Auth refresh failed: #{refresh_response.code} #{refresh_response.body}" unless refresh_response.code == 200
 
-refresh_data = JSON.parse(refresh_response)
-access_token = refresh_data.fetch('AccessToken') { raise "No AccessToken in refresh response: #{refresh_response}" }
+refresh_data = JSON.parse(refresh_response.body.to_s)
+access_token = refresh_data.fetch('AccessToken') { raise "No AccessToken in refresh response: #{refresh_data}" }
+new_refresh_token = refresh_data.fetch('RefreshToken') { raise "No RefreshToken in refresh response: #{refresh_data}" }
+
+update_env_file("KOBO_ACCESS_TOKEN" => access_token, "KOBO_REFRESH_TOKEN" => new_refresh_token)
 
 auth_headers = { "User-Agent" => USER_AGENT, "Authorization" => "Bearer #{access_token}" }
 

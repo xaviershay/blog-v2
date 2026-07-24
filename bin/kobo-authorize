@@ -98,6 +98,7 @@ final = authenticate_device(device_id, serial_number, user_key: user_key)
 puts ""
 puts "Add these to .env:"
 puts ""
+puts "KOBO_ACCESS_TOKEN=#{final.fetch('AccessToken')}"
 puts "KOBO_REFRESH_TOKEN=#{final.fetch('RefreshToken')}"
 puts "KOBO_USER_KEY=#{final.fetch('UserKey', user_key)}"
 puts "KOBO_DEVICE_ID=#{device_id}"
