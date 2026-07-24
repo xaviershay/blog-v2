@@ -1,0 +1,104 @@
+#!/usr/bin/env ruby
+# Bootstrap Kobo device credentials via browser-based activation.
+# Usage: bin/kobo-authorize
+
+require 'bundler/setup'
+require 'http'
+require 'json'
+require 'securerandom'
+require 'base64'
+require 'cgi'
+
+PLATFORM_ID   = "00000000-0000-0000-0000-000000000373"
+APP_VERSION   = "4.38.23171"
+AFFILIATE     = "Kobo"
+CLIENT_KEY    = Base64.strict_encode64(PLATFORM_ID)
+USER_AGENT    = "Mozilla/5.0 (Linux; U; Android 2.0; en-us;) AppleWebKit/538.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/538.1 (Kobo Touch 0373/4.38.23171)"
+STORE_BASE    = "https://storeapi.kobo.com"
+AUTH_BASE     = "https://auth.kobobooks.com"
+
+def hex(length)
+  SecureRandom.hex((length / 2.0).ceil)[0...length].downcase
+end
+
+device_id      = hex(64)
+serial_number  = hex(32)
+
+def authenticate_device(device_id, serial_number, user_key: nil)
+  body = {
+    "AffiliateName" => AFFILIATE,
+    "AppVersion"    => APP_VERSION,
+    "ClientKey"     => CLIENT_KEY,
+    "DeviceId"      => device_id,
+    "PlatformId"    => PLATFORM_ID,
+    "SerialNumber"  => serial_number,
+  }
+  body["UserKey"] = user_key if user_key
+
+  response = HTTP.headers("User-Agent" => USER_AGENT)
+                 .post("#{STORE_BASE}/v1/auth/device", json: body)
+
+  raise "Device auth failed: #{response.code} #{response.body}" unless response.code == 200
+
+  JSON.parse(response.body.to_s)
+end
+
+puts "Requesting anonymous device token..."
+initial = authenticate_device(device_id, serial_number)
+
+params = {
+  "pwspid" => PLATFORM_ID,
+  "wsa"    => AFFILIATE,
+  "pwsdid" => device_id,
+  "pwsav"  => APP_VERSION,
+  "pwsdm"  => PLATFORM_ID,
+  "pwspos" => "Android",
+  "pwspov" => "2.0",
+}
+
+activate_response = HTTP.headers("User-Agent" => USER_AGENT)
+                         .get("#{AUTH_BASE}/ActivateOnWeb", params: params)
+html = activate_response.body.to_s
+
+poll_match = html.match(/data-poll-endpoint="([^"]+)"/)
+code_match = html.match(%r{qrcodegenerator/generate.+?%26code%3D(\d+)})
+raise "Could not find poll endpoint in ActivateOnWeb response" unless poll_match
+raise "Could not find activation code in ActivateOnWeb response" unless code_match
+
+poll_url = AUTH_BASE + CGI.unescapeHTML(poll_match[1])
+code     = code_match[1]
+
+puts ""
+puts "Open https://www.kobo.com/activate and enter this code: #{code}"
+puts "Waiting for activation (checking every 3s, 5 minute timeout)..."
+
+user_id  = nil
+user_key = nil
+deadline = Time.now + 300
+
+loop do
+  raise "Timed out waiting for activation" if Time.now > deadline
+  sleep 3
+
+  poll_response = HTTP.headers("User-Agent" => USER_AGENT).post(poll_url)
+  poll_body = JSON.parse(poll_response.body.to_s)
+
+  if poll_body["Status"] == "Complete"
+    redirect_uri = URI.parse(poll_body.fetch("RedirectUrl"))
+    query = CGI.parse(redirect_uri.query.to_s)
+    user_id  = query.fetch("userId").first
+    user_key = query.fetch("userKey").first
+    break
+  end
+end
+
+puts "Activated for user #{user_id}. Finalizing account-scoped tokens..."
+final = authenticate_device(device_id, serial_number, user_key: user_key)
+
+puts ""
+puts "Add these to .env:"
+puts ""
+puts "KOBO_REFRESH_TOKEN=#{final.fetch('RefreshToken')}"
+puts "KOBO_USER_KEY=#{final.fetch('UserKey', user_key)}"
+puts "KOBO_DEVICE_ID=#{device_id}"
+puts "KOBO_SERIAL_NUMBER=#{serial_number}"
