@@ -141,6 +141,49 @@ Exact field names above are copied from working code in
   print status + short body snippet for each and move to the next
   candidate rather than raising.
 
+## Findings (post-implementation)
+
+Ran the spike against a real account/book (Private Citizens). Auth flow
+works end-to-end after two live-verification bugs were found and fixed
+(see git log: missing `Authorization: Bearer` header on `/v1/auth/refresh`,
+and lack of rotated-token persistence — Kobo invalidates the previous
+`RefreshToken` on every refresh).
+
+All 3 originally-guessed highlights candidates 404'd. Investigation beyond
+the plan's scripted spike (manual probing, not committed to any script):
+
+- `/v1/initialization`'s `Resources` map (200+ named endpoints) has no
+  `annotations`/`highlights`/`bookmarks` key. The only plausible one is
+  `notebooks` → `https://storeapi.kobo.com/api/internal/notebooks`, which
+  matches Kobo's own "Notebook" feature (their name for combined
+  highlights+notes).
+- `GET` on that endpoint returns `500` with
+  `"Error trying to resolve Service 'Kobo.StoreAPI.WebServices.V1.Products.Notebooks.NotebooksWebService' or one of its autowired dependencies"`
+  — identical regardless of query params tried (`ProductIds`, `productId`,
+  `revisionId`) or HTTP method (`POST` → plain `404`, route doesn't exist).
+  Reads as the backend service itself being broken or retired, not a
+  request-shape problem.
+- `reading_services_host` (`https://readingservices.kobo.com`) is a
+  distinct, live, properly-routed host (returns structured 404 JSON for
+  unmatched paths, unlike `storeapi.kobo.com`'s bare `404`), but every
+  guessed path under it (`/v1/library/<id>/{state,annotations,notes,
+  highlights,bookmarks}`, `/v1/annotations`) 404'd there too.
+- Two independent public how-to guides for exporting Kobo highlights
+  ([gist by samuelsmal](https://gist.github.com/samuelsmal/0f0b7a87fbbfe4798cb572bbf1394de4),
+  [unmesh.dev](https://unmesh.dev/post/kobo_highlights/)) both use USB
+  access to `.kobo/KoboReader.sqlite`'s `Bookmark` table exclusively —
+  neither mentions a cloud API. One notes highlight *export* even on-device
+  requires a hidden `ExportHighlights=true` config flag before Kobo's own
+  UI will do it.
+
+**Conclusion:** no evidence a working cloud highlights endpoint exists
+right now. This isn't "the right URL hasn't been found yet" so much as
+"Kobo's cloud highlights feature may not currently work at all" — the one
+real candidate (`notebooks`) throws a server-side dependency-resolution
+error, and nobody's published a working cloud-based extraction method.
+Paused here per user decision (2026-07-25). If revisited: the USB /
+`KoboReader.sqlite` route is the only method with confirmed prior art.
+
 ## Testing
 
 No automated test suite for this — matches existing `bin/*` scripts, which
