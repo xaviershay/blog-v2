@@ -1,8 +1,8 @@
 ---
 id: OL27160632M
 title: London falling
-author: Paul Cornell
-pages: 420
+author: Patrick Radden Keefe
+pages: 361
 rating: 5
 categories:
 - non-fiction
